@@ -1,0 +1,112 @@
+/* =====================================
+   TÉRMINOS Y CONDICIONES
+   Sonido & Conciencia
+===================================== */
+
+/* Base */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: radial-gradient(circle at top, #111 0%, #000 80%);
+    color: #ccc;
+    line-height: 1.8;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(0,0,0,0.65);
+    border-bottom: 1px solid rgba(212,175,55,0.25);
+    padding: 15px 30px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #d4af37;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #d4af37;
+}
+
+/* Contenedor */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* Título */
+.oro-texto {
+    color: #d4af37;
+    letter-spacing: 1px;
+}
+
+/* Tarjeta legal */
+.card-frecuencia {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,175,55,0.25);
+    border-radius: 14px;
+    padding: 35px;
+    box-shadow: 0 0 30px rgba(212,175,55,0.08);
+}
+
+/* Subtítulos */
+.card-frecuencia h3 {
+    color: #d4af37;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Listas */
+.card-frecuencia ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.card-frecuencia li {
+    margin-bottom: 8px;
+    color: #bbb;
+}
+
+/* Texto */
+.card-frecuencia p {
+    font-size: 0.95rem;
+    color: #bbb;
+}
+
+/* Footer */
+.disclaimer-legal {
+    text-align: center;
+    padding: 35px 15px;
+    border-top: 1px solid rgba(212,175,55,0.2);
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .card-frecuencia {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}

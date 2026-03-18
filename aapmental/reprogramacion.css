@@ -1,0 +1,242 @@
+/* ==============================
+   🌑 BASE GENERAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.bg-dark {
+    background: radial-gradient(circle at top, #0c0c0c, #000);
+    color: #ddd;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* ==============================
+   🎨 VARIABLES
+================================ */
+
+:root {
+    --oro: #d4af37;
+}
+
+/* ==============================
+   🧭 NAVBAR PRINCIPAL
+================================ */
+
+.navbar {
+    background: #000;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--oro);
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.nav-links a:hover {
+    color: var(--oro);
+}
+
+/* ==============================
+   ⬇ DROPDOWN
+================================ */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #0b0b0b;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    z-index: 10;
+}
+
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ==============================
+   🌐 IDIOMA
+================================ */
+
+.nav-lang select {
+    background: #000;
+    color: #aaa;
+    border: 1px solid #333;
+    padding: 5px;
+}
+
+/* ==============================
+   🧭 NAVEGACIÓN SECUNDARIA
+================================ */
+
+.navigation {
+    padding: 15px 20px;
+}
+
+.btn-back {
+    color: var(--oro);
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.btn-back:hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+   🧠 HEADER
+================================ */
+
+.header-reprogramacion {
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.oro-texto {
+    color: var(--oro);
+    font-size: 2.5rem;
+}
+
+.subtitulo-cientifico {
+    color: #aaa;
+    font-size: 0.95rem;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* ==============================
+   📦 CONTENEDOR
+================================ */
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ==============================
+   🎥 VIDEO
+================================ */
+
+.video-principal-box {
+    margin-top: 30px;
+}
+
+.titulo-video {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.video-descripcion {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #bbb;
+    text-align: center;
+}
+
+/* ==============================
+   🔬 TARJETAS CONCEPTOS
+================================ */
+
+.grid-frecuencias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card-frecuencia {
+    background: #0e0e0e;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 14px;
+    padding: 25px;
+    text-align: center;
+}
+
+.hz-circulo {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.card-frecuencia h3 {
+    color: var(--oro);
+    margin-bottom: 10px;
+}
+
+.card-frecuencia p {
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+/* ==============================
+   🔘 BOTÓN FINAL
+================================ */
+
+.btn-stop {
+    border: none;
+    padding: 16px 50px;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-stop:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
+}
+
+/* ==============================
+   🦶 FOOTER
+================================ */
+
+.footer-simple {
+    margin-top: 70px;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #777;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}

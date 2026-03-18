@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grounding - Conexión a Tierra</title>
+    <link rel="stylesheet" href="grounding.css">
+</head>
+<body class="lectura-body">
+
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="index.html" id="nav-inicio">Inicio</a></li>
+                    <li class="dropdown">
+                        <a href="#" id="nav-terapias">Terapias ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="grounding.html">Grounding</a></li>
+                            <li><a href="solfeguio.html">Solfeggio</a></li>
+                            <li><a href="sanacion-cuantica.html" id="nav-sanacion">Sanación Cuántica</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" id="nav-mente">Mente & Ciencia ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="reprogramacion-neuronal.html" id="nav-repro">Reprogramación</a></li>
+                            <li><a href="mecanica-quantica.html" id="nav-mecanica">Mecánica Cuántica</a></li>
+                            <li><a href="lectura-kybalion.html" id="nav-kybalion">El Kybalión</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="masa-corporal.html" id="nav-salud">Salud</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="nav-lang">
+            <select id="idioma-nav">
+                <option value="es">ESPAÑOL</option>
+                <option value="en">ENGLISH</option>
+                <option value="fr">FRANCAIS</option>
+                <option value="it">ITALIANO</option>
+            </select>
+        </div>
+    </header>
+
+    <section class="hero-grounding">
+        <div class="hero-overlay">
+            <h1>Grounding</h1>
+            <p id="hero-subtitulo">Conexión consciente con la Tierra</p> 
+        </div>
+    </section>
+
+    <main class="container">
+        <div style="text-align: center; margin-top: 40px;">
+            <span id="header-seccion" class="oro-texto">PRÁCTICA FINAL</span>
+            <h1 id="header-titulo" style="font-size: 2.8rem; margin: 10px 0;">Conexión a Tierra</h1>
+            <p id="header-subtitulo" style="color: #888;">Descarga la carga estática y absorbe electrones de la Tierra.</p>
+        </div>
+    
+        <section class="grounding-wrapper">
+            <div id="reloj" class="reloj-circular">10:00</div>
+            
+            <p id="instruccion-actual" class="estado-texto">LISTO PARA COMENZAR</p>
+    
+            <ul class="pasos-lista">
+                </ul>
+    
+            <div style="margin-top: 40px;">
+                <button id="btn-control" onclick="alternarPractica()" class="btn" 
+                    style="background: #d4af37; color: #000; font-weight: bold; width: 250px;">
+                    INICIAR CONEXIÓN
+                </button>
+            </div>
+        </section>
+
+        <footer style="margin: 50px 0; text-align: center;">
+            <button id="btn-finalizar" 
+                style="border: 2px solid #d4af37; background: #222; color: #d4af37; font-weight: bold; padding: 12px 25px; border-radius: 12px; font-size: 1rem;">
+                Finalizar Sesión Completa
+            </button>
+        </footer>
+    </main>
+
+    <script>
+        // ==========================================
+// PARTE 1: VARIABLES Y NAVBAR
+// ==========================================
+
+let tiempoRestante = 600; 
+let cronometroActivo = false;
+let idIntervalo;
+
+const textosGlobales = {
+    es: {
+        NAV_INICIO: "Inicio", NAV_TERAPIAS: "Terapias ▾", NAV_SANACION: "Sanación Cuántica",
+        NAV_MENTE: "Mente & Ciencia ▾", NAV_REPRO: "Reprogramación", NAV_MECANICA: "Mecánica Cuántica",
+        NAV_KYBALION: "El Kybalión", NAV_SALUD: "Salud"
+    },
+    en: {
+        NAV_INICIO: "Home", NAV_TERAPIAS: "Therapies ▾", NAV_SANACION: "Quantum Healing",
+        NAV_MENTE: "Mind & Science ▾", NAV_REPRO: "Reprogramming", NAV_MECANICA: "Quantum Mechanics",
+        NAV_KYBALION: "The Kybalion", NAV_SALUD: "Health"
+    },
+    fr: {
+        NAV_INICIO: "Accueil", NAV_TERAPIAS: "Thérapies ▾", NAV_SANACION: "Guérison Quantique",
+        NAV_MENTE: "Esprit et Science ▾", NAV_REPRO: "Reprogrammation", NAV_MECANICA: "Mécanique Quantique",
+        NAV_KYBALION: "Le Kybalion", NAV_SALUD: "Santé"
+    },
+    it: {
+        NAV_INICIO: "Inizio", NAV_TERAPIAS: "Terapie ▾", NAV_SANACION: "Guarigione Quantica",
+        NAV_MENTE: "Mente e Scienza ▾", NAV_REPRO: "Riprogrammazione", NAV_MECANICA: "Meccanica Quantistica",
+        NAV_KYBALION: "Il Kybalion", NAV_SALUD: "Salute"
+    }
+};
+
+// ==========================================
+// PARTE 2: TEXTOS DE GROUNDING Y 5 PASOS
+// ==========================================
+
+const textos = {
+    es: {
+        INICIAR: "INICIAR CONEXIÓN", PAUSAR: "PAUSAR PRÁCTICA", REANUDAR: "REANUDAR CONEXIÓN",
+        CONECTANDO: "CONECTANDO CON LA TIERRA...", PAUSA: "PRÁCTICA EN PAUSA", LISTO: "LISTO PARA COMENZAR",
+        COMPLETADO: "¡CONEXIÓN COMPLETADA!", ALERTA: "Has equilibrado tu carga energética. ¡Excelente trabajo!",
+        FINALIZAR: "Finalizar Sesión Completa", HEADER_TITULO: "Conexión a Tierra",
+        HEADER_SUBTITULO: "Descarga la carga estática y absorbe electrones de la Tierra.",
+        HEADER_SECCION: "PRÁCTICA FINAL",
+        HERO_SUB: "Conexión consciente con la Tierra",
+        HEADER_TITULO: "Conexión a Tierra",
+    },
+    en: {
+        INICIAR: "START CONNECTION", PAUSAR: "PAUSE PRACTICE", REANUDAR: "RESUME CONNECTION",
+        CONECTANDO: "CONNECTING WITH THE EARTH...", PAUSA: "PRACTICE PAUSED", LISTO: "READY TO START",
+        COMPLETADO: "CONNECTION COMPLETE!", ALERTA: "You have balanced your energy. Great job!",
+        FINALIZAR: "Finish Full Session", HEADER_TITULO: "Grounding Connection",
+        HEADER_SUBTITULO: "Discharge static load and absorb electrons from the Earth.",
+        HEADER_SECCION: "FINAL PRACTICE",
+        HERO_SUB: "Conscious connection with the Earth",
+        HEADER_TITULO: "Grounding Connection",
+    },
+    fr: {
+        INICIAR: "COMMENCER LA CONNEXION", PAUSAR: "PAUSE PRATIQUE", REANUDAR: "REPRENDRE CONNEXION",
+        CONECTANDO: "CONNEXION À LA TERRE...", PAUSA: "PRATIQUE EN PAUSE", LISTO: "PRÊT À COMMENCER",
+        COMPLETADO: "CONNEXION TERMINÉE!", ALERTA: "Vous avez équilibré votre énergie. Excellent travail!",
+        FINALIZAR: "Terminer la session", HEADER_TITULO: "Connexion à la Terre",
+        HEADER_SUBTITULO: "Déchargez la charge statique et absorbez les électrons.",
+        HEADER_SECCION: "PRATIQUE FINALE",
+        HERO_SUB: "Connexion consciente avec la Terre",
+        HEADER_TITULO: "Connexion à la Terre",
+    },
+    it: {
+        INICIAR: "AVVIA CONNESSIONE", PAUSAR: "PAUSA PRATICA", REANUDAR: "RIPRENDI CONNESSIONE",
+        CONECTANDO: "CONNESSIONE CON LA TERRA...", PAUSA: "PRATICA IN PAUSA", LISTO: "PRONTO PER INIZIARE",
+        COMPLETADO: "CONNESSIONE COMPLETATA!", ALERTA: "Hai bilanciato la tua energia. Ottimo lavoro!",
+        FINALIZAR: "Termina sessione", HEADER_TITULO: "Connessione con la Terra",
+        HEADER_SUBTITULO: "Scarica la carica statica e assorbi elettroni dalla Terra.",
+        HEADER_SECCION: "PRATICA FINALE",
+        HERO_SUB: "Connessione consapevole con la Terra",
+        HEADER_TITULO: "Connessione con la Terra",
+    }
+};
+
+const pasos = {
+    es: [
+        "👣 Paso 1: Quítate los zapatos y calcetines.",
+        "🌿 Paso 2: Busca una superficie natural (grama, tierra o piedra).",
+        "🧘 Paso 3: Mantén la columna recta y respira profundo.",
+        "⚡ Paso 4: Visualiza la energía pesada saliendo por tus plantas.",
+        "✨ Paso 5: Siente la calma y el equilibrio fluyendo en ti."
+    ],
+    en: [
+        "👣 Step 1: Remove your shoes and socks.",
+        "🌿 Step 2: Find a natural surface (grass, soil, or stone).",
+        "🧘 Step 3: Keep your spine straight and breathe deeply.",
+        "⚡ Step 4: Visualize heavy energy leaving through your feet.",
+        "✨ Step 5: Feel the calm and balance flowing within you."
+    ],
+    fr: [
+        "👣 Étape 1 : Retirez vos chaussures et chaussettes.",
+        "🌿 Étape 2 : Trouvez une surface naturelle (herbe, terre ou pierre).",
+        "🧘 Étape 3 : Gardez la colonne vertébrale droite et respirez.",
+        "⚡ Étape 4 : Visualisez l'énergie lourde quittant vos pieds.",
+        "✨ Étape 5 : Ressentez le calme et l'équilibre en vous."
+    ],
+    it: [
+        "👣 Passo 1: Togli le scarpe e i calzini.",
+        "🌿 Passo 2: Trova una superficie naturale (erba, terra o pietra).",
+        "🧘 Passo 3: Mantieni la colonna dritta e respira profondo.",
+        "⚡ Passo 4: Visualizza l'energia pesante che esce dai piedi.",
+        "✨ Passo 5: Senti la calma e l'equilibrio fluire in te."
+    ]
+};
+
+// ==========================================
+// PARTE 3: FUNCIONES DE ACTUALIZACIÓN Y RELOJ
+// ==========================================
+
+// Función para actualizar la lista de los 5 pasos
+// ==========================================
+// PARTE 3: FUNCIONES DE ACTUALIZACIÓN Y RELOJ
+// ==========================================
+
+function actualizarPasos() {
+    const idioma = document.getElementById("idioma-nav").value || "es";
+    const lista = document.querySelector(".pasos-lista");
+    if (lista) {
+        lista.innerHTML = pasos[idioma].map(p => `<li>${p}</li>`).join("");
+    }
+}
+
+function actualizarIdiomaCompleto() {
+    const idioma = document.getElementById("idioma-nav").value || "es";
+    const tg = textosGlobales[idioma];
+    const t = textos[idioma];
+
+    // 1. Traducir Navbar
+    document.getElementById("nav-inicio").textContent = tg.NAV_INICIO;
+    document.getElementById("nav-terapias").textContent = tg.NAV_TERAPIAS;
+    document.getElementById("nav-sanacion").textContent = tg.NAV_SANACION;
+    document.getElementById("nav-mente").textContent = tg.NAV_MENTE;
+    document.getElementById("nav-repro").textContent = tg.NAV_REPRO;
+    document.getElementById("nav-mecanica").textContent = tg.NAV_MECANICA;
+    document.getElementById("nav-kybalion").textContent = tg.NAV_KYBALION;
+    document.getElementById("nav-salud").textContent = tg.NAV_SALUD;
+
+    // 2. Traducir Hero, Encabezados y Footer (Aquí es donde debe ir)
+    document.getElementById("hero-subtitulo").textContent = t.HERO_SUB; 
+    document.getElementById("header-seccion").textContent = t.HEADER_SECCION;
+    document.getElementById("header-titulo").textContent = t.HEADER_TITULO;
+    document.getElementById("header-subtitulo").textContent = t.HEADER_SUBTITULO;
+    document.getElementById("btn-finalizar").textContent = t.FINALIZAR;
+    
+    // 3. Traducir Botón de Control y Estado según cronómetro
+    const btn = document.getElementById('btn-control');
+    const estadoTxt = document.getElementById('instruccion-actual');
+    
+    if (!cronometroActivo) {
+        btn.innerHTML = tiempoRestante < 600 ? t.REANUDAR : t.INICIAR;
+        estadoTxt.innerHTML = tiempoRestante < 600 ? t.PAUSA : t.LISTO;
+    } else {
+        btn.innerHTML = t.PAUSAR;
+        estadoTxt.innerHTML = t.CONECTANDO;
+    }
+
+    actualizarPasos();
+}
+
+function actualizarReloj() {
+    const min = Math.floor(tiempoRestante / 60);
+    const seg = tiempoRestante % 60;
+    document.getElementById('reloj').innerHTML = `${min}:${seg < 10 ? '0' : ''}${seg}`;
+}
+
+// ==========================================
+// PARTE 4: BOTONES Y EVENTOS FINALES
+// ==========================================
+
+function alternarPractica() {
+    if (!cronometroActivo) {
+        cronometroActivo = true;
+        idIntervalo = setInterval(() => {
+            tiempoRestante--;
+            actualizarReloj();
+            if (tiempoRestante <= 0) finalizarGrounding();
+        }, 1000);
+    } else {
+        cronometroActivo = false;
+        clearInterval(idIntervalo);
+    }
+    actualizarIdiomaCompleto();
+}
+
+function finalizarGrounding() {
+    clearInterval(idIntervalo);
+    const idioma = document.getElementById("idioma-nav").value || "es";
+    alert(textos[idioma].ALERTA);
+    window.location.href = "index.html";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Traducir todo por primera vez
+    actualizarIdiomaCompleto();
+
+    // Escuchar cambios de idioma
+    const selectorIdioma = document.getElementById("idioma-nav");
+    if (selectorIdioma) {
+        selectorIdioma.addEventListener("change", actualizarIdiomaCompleto);
+    }
+
+    // Configurar botón finalizar
+    const btnFinalizar = document.getElementById("btn-finalizar");
+    if (btnFinalizar) {
+        btnFinalizar.addEventListener("click", finalizarGrounding);
+    }
+});
+</script>
+</body>
+</html>

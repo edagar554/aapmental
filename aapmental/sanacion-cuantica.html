@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanación Cuántica & Metafísica</title>
+    <link rel="stylesheet" href="sanacion.css">
+</head>
+<body class="lectura-body">
+
+<nav class="navbar">
+    <div class="nav-container">
+        <ul class="nav-links">
+            <li><a href="index.html" data-i18n="menu_inicio">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#" data-i18n="menu_terapias">Terapias ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="grounding.html" data-i18n="menu_grounding">Grounding</a></li>
+                    <li><a href="solfeguio.html" data-i18n="menu_solfeggio">Solfeggio</a></li>
+                    <li><a href="sanacion-cuantica.html" data-i18n="menu_sanacion">Sanación</a></li>
+                    <li><a href="isometricos.html" data-i18n="menu_isometricos">Isométricos</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" data-i18n="menu_mente_ciencia">Mente & Ciencia ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="reprogramacion-neuronal.html" data-i18n="menu_reprogramacion">Reprogramación</a></li>
+                    <li><a href="mecanica-cuantica.html" data-i18n="menu_mecanica">Mecánica Cuántica</a></li>
+                    <li><a href="lectura-kybalion.html" data-i18n="menu_kybalion">Kybalión</a></li>
+                </ul>
+            </li>
+            <li><a href="masa-corporal.html" data-i18n="menu_salud">Masa Corporal</a></li>
+        </ul>
+
+        <div class="nav-lang">
+            <select id="idioma-nav">
+                <option value="es">ESPAÑOL</option>
+                <option value="en">ENGLISH</option>
+                <option value="fr">FRANCAIS</option>
+                <option value="it">ITALIANO</option>
+            </select>
+        </div>
+    </div>
+</nav>
+
+<main class="container">
+  <header class="seccion-encabezado" style="text-align: center; margin-top: 30px;">
+      <div class="badge-etapa">ETAPA FINAL: INTEGRACIÓN</div>
+      <h1 class="oro-texto" data-i18n="sanacion_titulo">Sanación Cuántica</h1>
+      <p class="subtitulo-italico" data-i18n="sanacion_frase">"Donde la ciencia y la metafísica se unen para restaurar tu salud."</p>
+  </header>
+
+  <section class="seccion-video-avanzado">
+      <h2 style="color: #fff; text-align: center; font-size: 1.2rem; margin-bottom: 20px;">
+          Audiolibro: Los 12 Secretos Metafísicos de los Sabios
+      </h2>
+
+      <div class="contenedor-video">
+          <iframe 
+              src="https://www.youtube.com/embed/VXp1N13nljg?rel=0" 
+              title="Los 12 Secretos Metafísicos" 
+              allowfullscreen>
+          </iframe>
+      </div>
+
+      <div class="guia-estudio">
+          <h3 data-i18n="sanacion_resumen_titulo">Resumen de las Claves</h3>
+          <ul class="lista-claves">
+              <li data-i18n="sanacion_clave_1"></li>
+              <li data-i18n="sanacion_clave_2"></li>
+              <li data-i18n="sanacion_clave_3"></li>
+              <li data-i18n="sanacion_clave_4"></li>
+              <li data-i18n="sanacion_clave_5"></li>
+              <li data-i18n="sanacion_clave_6"></li>
+          </ul>
+      </div>
+  </section>
+</main>
+<footer class="footer-sanacion" style="text-align: center; padding: 40px 20px;">
+  <p style="margin-bottom: 20px; color: #888;" data-i18n="sanacion_completado">Has completado el ciclo de hoy.</p>
+  
+  <button onclick="location.href='index.html'" class="btn-oro" data-i18n="sanacion_btn_volver">
+      ← Volver al Menú Principal
+  </button>
+
+  <div class="aviso-responsabilidad" style="max-width: 800px; margin: 40px auto; font-size: 0.8rem; color: #666;">
+      <p><strong>Aviso de Responsabilidad:</strong> <span data-i18n="sanacion_aviso">Este contenido es educativo y no sustituye el diagnóstico médico.</span></p>
+  </div>
+</footer>
+
+
+<script>
+
+        
+  const textosGlobales = {
+es: {
+  menu_inicio: "Inicio",
+  menu_terapias: "Terapias ▾",
+  menu_grounding: "Grounding",
+  menu_solfeggio: "Solfeggio",
+  menu_sanacion: "Sanación",
+  menu_mente_ciencia: "Mente & Ciencia ▾",
+  menu_reprogramacion: "Reprogramación",
+  menu_mecanica: "Mecánica Cuántica",
+  menu_kybalion: "Kybalión",
+  menu_salud: "Masa Corporal"
+},
+
+en: {
+  menu_inicio: "Home",
+  menu_terapias: "Therapies ▾",
+  menu_grounding: "Grounding",
+  menu_solfeggio: "Solfeggio",
+  menu_sanacion: "Healing",
+  menu_mente_ciencia: "Mind & Science ▾",
+  menu_reprogramacion: "Reprogramming",
+  menu_mecanica: "Quantum Mechanics",
+  menu_kybalion: "Kybalion",
+  menu_salud: "Body Mass"
+},
+
+fr: {
+  menu_inicio: "Accueil",
+  menu_terapias: "Thérapies ▾",
+  menu_grounding: "Grounding",
+  menu_solfeggio: "Solfeggio",
+  menu_sanacion: "Guérison",
+  menu_mente_ciencia: "Esprit & Science ▾",
+  menu_reprogramacion: "Reprogrammation",
+  menu_mecanica: "Mécanique Quantique",
+  menu_kybalion: "Kybalion",
+  menu_salud: "Masse Corporelle"
+},
+
+it: {
+  menu_inicio: "Home",
+  menu_terapias: "Terapie ▾",
+  menu_grounding: "Grounding",
+  menu_solfeggio: "Solfeggio",
+  menu_sanacion: "Guarigione",
+  menu_mente_ciencia: "Mente & Scienza ▾",
+  menu_reprogramacion: "Riprogrammazione",
+  menu_mecanica: "Meccanica Quantistica",
+  menu_kybalion: "Kybalion",
+  menu_salud: "Massa Corporea"
+}
+}; 
+      const textosSanacion = {
+        es: {
+          sanacion_resumen_titulo: "Resumen de las Claves",
+          sanacion_titulo: "Sanación Cuántica",
+          sanacion_frase: "Donde la ciencia y la metafísica se unen para restaurar tu salud.",
+          sanacion_clave_1: "La Mente Condensada: el cuerpo refleja tus pensamientos.",
+          sanacion_clave_2: "Emoción Cristalizada: emociones atrapadas afectan órganos.",
+          sanacion_clave_3: "El Poder de la Palabra: tus células escuchan tus decretos.",
+          sanacion_clave_4: "Epigenética: puedes cambiar la expresión de tu ADN.",
+          sanacion_clave_5: "El Silencio que Regenera: allí ocurre la reparación celular.",
+          sanacion_clave_6: "Tú eres el Sanador: reconoce tu poder interno.",
+          sanacion_completado: "Has completado el ciclo de hoy.",
+          sanacion_btn_volver: "← Volver al Menú Principal",
+          sanacion_aviso: "Este contenido es educativo y no sustituye asesoramiento médico profesional."
+        },
+      
+        en: {
+          sanacion_resumen_titulo: "Summary of the Keys",
+          sanacion_titulo: "Quantum Healing",
+          sanacion_frase: "Where science and metaphysics unite to restore your health.",
+          sanacion_clave_1: "Condensed Mind: the body mirrors your thoughts.",
+          sanacion_clave_2: "Crystallized Emotion: trapped emotions affect organs.",
+          sanacion_clave_3: "The Power of Words: your cells listen to your commands.",
+          sanacion_clave_4: "Epigenetics: you can change gene expression.",
+          sanacion_clave_5: "The Regenerative Silence: true cellular repair occurs there.",
+          sanacion_clave_6: "You Are the Healer: recognize your inner power.",
+          sanacion_completado: "You have completed today’s cycle.",
+          sanacion_btn_volver: "← Back to Main Menu",
+          sanacion_aviso: "This content is educational and does not replace medical advice."
+        },
+      
+        fr: {
+          sanacion_resumen_titulo: "Résumé des Clés",
+          sanacion_titulo: "Guérison Quantique",
+          sanacion_frase: "Là où la science et la métaphysique s’unissent pour restaurer votre santé.",
+          sanacion_clave_1: "Esprit condensé : le corps reflète vos pensées.",
+          sanacion_clave_2: "Émotion cristallisée : les émotions bloquées affectent les organes.",
+          sanacion_clave_3: "Le pouvoir de la parole : vos cellules écoutent.",
+          sanacion_clave_4: "Épigénétique : vous pouvez changer l’expression de l’ADN.",
+          sanacion_clave_5: "Le silence régénérateur : la réparation cellulaire s’y produit.",
+          sanacion_clave_6: "Vous êtes le guérisseur : reconnaissez votre pouvoir.",
+          sanacion_completado: "Vous avez terminé le cycle d’aujourd’hui.",
+          sanacion_btn_volver: "← Retour au menu principal",
+          sanacion_aviso: "Ce contenu est éducatif et ne remplace pas un avis médical."
+        },
+      
+        it: {
+          sanacion_resumen_titulo: "Riepilogo delle Chiavi",
+          sanacion_titulo: "Guarigione Quantica",
+          sanacion_frase: "Dove scienza e metafisica si uniscono per guarirti.",
+          sanacion_clave_1: "Mente condensata: il corpo riflette i pensieri.",
+          sanacion_clave_2: "Emozione cristallizzata: le emozioni bloccate colpiscono gli organi.",
+          sanacion_clave_3: "Il potere della parola: le cellule ascoltano.",
+          sanacion_clave_4: "Epigenetica: puoi cambiare l’espressione del DNA.",
+          sanacion_clave_5: "Il silenzio che rigenera: qui avviene la riparazione.",
+          sanacion_clave_6: "Tu sei il guaritore: riconosci il tuo potere.",
+          sanacion_completado: "Hai completato il ciclo di oggi.",
+          sanacion_btn_volver: "← Torna al menu principale",
+          sanacion_aviso: "Contenuto educativo, non sostituisce il parere medico."
+        }
+      };
+
+      /* ============================================================
+   🧠 MOTOR DE TRADUCCIÓN INTEGRAL
+   ============================================================ */
+/* ============================================================
+🧠 MOTOR DE TRADUCCIÓN INTEGRAL
+============================================================ */
+
+function aplicarIdioma(idioma) {
+
+const textos = {
+  ...textosGlobales[idioma],
+  ...textosSanacion[idioma]
+};
+
+document.querySelectorAll("[data-i18n]").forEach(el => {
+
+  const clave = el.getAttribute("data-i18n");
+
+  if (textos[clave]) {
+    el.textContent = textos[clave];
+  }
+
+});
+
+}
+
+/* ============================================================
+🌍 SELECTOR DE IDIOMA
+============================================================ */
+
+const selectorIdioma = document.getElementById("idioma-nav");
+
+selectorIdioma.addEventListener("change", (e) => {
+
+const idioma = e.target.value;
+
+aplicarIdioma(idioma);
+
+localStorage.setItem("idioma", idioma);
+
+});
+
+/* ============================================================
+🚀 CARGA INICIAL
+============================================================ */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+const idiomaGuardado = localStorage.getItem("idioma") || "es";
+
+selectorIdioma.value = idiomaGuardado;
+
+aplicarIdioma(idiomaGuardado);
+
+});
+
+      
+     
+
+      </script>
+
+
+
+<script src="main.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrenamiento Isométrico Pro</title>
+    <link rel="stylesheet" href="isometricos.css">
+</head>
+
+<header>
+  <h1 data-i18n="titulo_guia">Guía de Ejercicios Isométricos</h1>
+  <div class="sanacion-header">
+      <h2 data-i18n="titulo_sanacion_1">Sanación Cuántica</h2>
+      <p data-i18n="frase_sanacion_1">Donde la ciencia y la metafísica se unen para restaurar tu salud.</p>
+      <small data-i18n="subtitulo_integracion">Etapa final de integración</small>
+  </div>
+</header>
+
+
+
+<body>
+
+   <!-- ====== NAVBAR ====== -->
+   <nav class="navbar">
+    <div class="nav-container">
+      
+
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="menu_inicio">Inicio</a></li>
+
+        <li class="dropdown">
+          <a href="#" data-i18n="menu_terapias">Terapias ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="grounding.html" data-i18n="menu_grounding">Grounding</a></li>
+            <li><a href="solfeguio.html" data-i18n="menu_solfeggio">Solfeggio</a></li>
+            <li><a href="sanacion-cuantica.html" data-i18n="menu_sanacion">Sanación</a></li>
+            <li><a href="isometricos.html" data-i18n="menu_isometricos">isometricos</a></li>
+            <li><a href="mutricion.html" data-i18n="menu_nutricion">nutricion</a></li>
+            <li><a href="mecanica-cuantica.html" data-i18n="menu_sanacion">mecanica</a></li>
+
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" data-i18n="menu_mente_ciencia">Mente & Ciencia ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="reprogramacion-neuronal.html" data-i18n="menu_reprogramacion">Reprogramación</a></li>
+            <li><a href="mecanica-quantica.html" data-i18n="menu_mecanica">Mecánica Cuántica</a></li>
+            <li><a href="lectura-kybalion.html" data-i18n="menu_kybalion">Kybalión</a></li>
+            <li><a href="nutricion.html" data-i18n="menu_nutricion">nutricion</a></li>
+          </ul>
+        </li>
+
+        <li><a href="masa-corporal.html" data-i18n="menu_salud">masa-corporal</a></li>
+      </ul>
+
+      
+      <div class="nav-lang">
+        <select id="idioma-nav">
+          <option value="es">ESPAÑOL</option>
+          <option value="en">ENGLISH</option>
+          <option value="fr">FRANÇAIS</option>
+          <option value="it">ITALIANO</option>
+        </select>
+      </div>
+    </div>
+</nav>
+
+  
+
+  
+
+<section class="info-card">
+  <h2 data-i18n="titulo_sanacion_2">Sanación Cuántica</h2>
+  <p data-i18n="frase_sanacion_2">Donde la ciencia y la metafísica se unen para restaurar tu salud.</p>
+  <small data-i18n="subtitulo_integracion">Etapa final de integración</small>
+</section>
+
+
+
+<!-- TIMER -->
+<div class="timer-box">
+    <h2 id="display">01:00</h2>
+
+    <button onclick="iniciarTimer()" data-i18n="btn_iniciar"></button>
+     <button onclick="pausarTimer()" data-i18n="btn_pausar"></button>
+     <button onclick="resetTimer()" data-i18n="btn_reset"></button>
+
+    
+    <button onclick="configurarTiempo()" data-i18n="btn_configurar">Configurar</button>
+</div>
+
+
+
+<!-- CONTENIDO -->
+<main>
+    <section class="info-card">
+      <h2 data-i18n="beneficios_titulo"></h2>
+  
+      <p data-i18n="beneficios_desc"></p>
+      <input type="number" id="minutosInput" placeholder="Minutos" min="1" step="1">
+      <ul class="lista-beneficios">
+        <li data-i18n="beneficio_articular"></li>
+        <li data-i18n="beneficio_motor"></li>
+        <li data-i18n="beneficio_oseo"></li>
+      </ul>
+    </section>
+  
+    <div class="grid-ejercicios">
+  
+      <article class="card">
+        <h3 data-i18n="ej_sentadilla"></h3>
+        <iframe
+          src="https://www.youtube.com/embed/VYKSFaFiRhQ"
+          title="Sentadilla Profunda Isométrica"
+          allowfullscreen>
+        </iframe>
+        <button class="btn-timer"
+                onclick="iniciarCronometro(this)"
+                data-i18n="btn_reto_60">
+        </button>
+      </article>
+  
+      <article class="card">
+        <h3 data-i18n="ej_mabu"></h3>
+        <iframe
+          src="https://www.youtube.com/embed/E3B4QawryeU"
+          title="Posición a Caballo Isométrica"
+          allowfullscreen>
+        </iframe>
+        <button class="btn-timer"
+                onclick="iniciarCronometro(this)"
+                data-i18n="btn_reto_60">
+        </button>
+      </article>
+  
+      <article class="card">
+        <h3 data-i18n="ej_suspension"></h3>
+        <iframe
+          src="https://www.youtube.com/embed/PORNGj-x4Ao"
+          title="Suspensión Muerta Isométrica"
+          allowfullscreen>
+        </iframe>
+        <button class="btn-timer"
+                onclick="iniciarCronometro(this)"
+                data-i18n="btn_reto_60">
+        </button>
+      </article>
+  
+      <article class="card">
+        <h3 data-i18n="ej_plancha"></h3>
+        <iframe
+          src="https://www.youtube.com/embed/3AM7L2k7BEw"
+          title="Plancha Abdominal Isométrica"
+          allowfullscreen>
+        </iframe>
+        <button class="btn-timer"
+                onclick="iniciarCronometro(this)"
+                data-i18n="btn_reto_60">
+        </button>
+      </article>
+  
+    </div>
+
+    </main>
+
+
+  
+
+    
+
+
+
+<script>
+const textosGlobales = {
+  es: {
+    menu_inicio: "Inicio", menu_terapias: "Terapias ▾", menu_grounding: "Grounding",
+    menu_solfeggio: "Solfeggio", menu_sanacion: "Sanación", menu_mente_ciencia: "Mente & Ciencia ▾",
+    menu_reprogramacion: "Reprogramación", menu_mecanica: "Mecánica Cuántica",
+    menu_kybalion: "Kybalión", menu_salud: "Masa Corporal"
+  },
+  en: {
+    menu_inicio: "Home", menu_terapias: "Therapies ▾", menu_grounding: "Grounding",
+    menu_solfeggio: "Solfeggio", menu_sanacion: "Healing", menu_mente_ciencia: "Mind & Science ▾",
+    menu_reprogramacion: "Reprogramming", menu_mecanica: "Quantum Mechanics",
+    menu_kybalion: "Kybalion", menu_salud: "Body Mass"
+  },
+  fr: {
+    menu_inicio: "Accueil", menu_terapias: "Thérapies ▾", menu_grounding: "Grounding",
+    menu_solfeggio: "Solfeggio", menu_sanacion: "Guérison", menu_mente_ciencia: "Esprit & Science ▾",
+    menu_reprogramacion: "Reprogrammation", menu_mecanica: "Mécanique Quantique",
+    menu_kybalion: "Kybalion", menu_salud: "Masse Corporelle"
+  },
+  it: {
+    menu_inicio: "Home", menu_terapias: "Terapie ▾", menu_grounding: "Grounding",
+    menu_solfeggio: "Solfeggio", menu_sanacion: "Guarigione", menu_mente_ciencia: "Mente & Scienza ▾",
+    menu_reprogramacion: "Riprogrammazione", menu_mecanica: "Meccanica Quantistica",
+    menu_kybalion: "Kybalion", menu_salud: "Massa Corporea"
+  }
+};
+
+  // 2. TEXTOS ESPECÍFICOS DE ISOMÉTRICOS
+const textosIsometricos = {
+  es: {
+    btn_iniciar: "Iniciar", btn_pausar: "Pausar", btn_reset: "Reiniciar", btn_configurar: "Configurar",
+    titulo_guia: "Guía de Ejercicios Isométricos",
+    beneficios_titulo: "Beneficios del Entrenamiento Isométrico",
+    beneficios_desc: "Los ejercicios isométricos fortalecen el cuerpo sin movimiento articular.",
+    beneficio_articular: "Protege articulaciones", beneficio_motor: "Control motor", beneficio_oseo: "Densidad ósea",
+    ej_sentadilla: "Sentadilla Isométrica", ej_mabu: "Postura Ma Bu", ej_suspension: "Suspensión Muerta", ej_plancha: "Plancha",
+    btn_reto_60: "Reto 60 segundos",
+    // LINEAS DE SANACION CUANTICA
+    titulo_sanacion_1: "Sanación Cuántica",
+    frase_sanacion_1: "Donde la ciencia y la metafísica se unen para restaurar tu salud.",
+    subtitulo_integracion: "Etapa final de integración",
+    titulo_sanacion_2: "Sanación Cuántica",
+    frase_sanacion_2: "Donde la ciencia y la metafísica se unen para restaurar tu salud."
+  },
+  en: {
+    btn_iniciar: "Start", btn_pausar: "Pause", btn_reset: "Reset", btn_configurar: "Set Time",
+    titulo_guia: "Isometric Exercise Guide",
+    beneficios_titulo: "Benefits of Isometric Training",
+    beneficios_desc: "Isometric exercises strengthen the body without joint movement.",
+    beneficio_articular: "Protects joints", beneficio_motor: "Motor control", beneficio_oseo: "Bone density",
+    ej_sentadilla: "Isometric Squat", ej_mabu: "Ma Bu Stance", ej_suspension: "Dead Hang", ej_plancha: "Plank Hold",
+    btn_reto_60: "60-second challenge",
+    titulo_sanacion_1: "Quantum Healing",
+    frase_sanacion_1: "Where science and metaphysics unite to restore your health.",
+    subtitulo_integracion: "Final integration stage",
+    titulo_sanacion_2: "Quantum Healing",
+    frase_sanacion_2: "Where science and metaphysics unite to restore your health."
+  },
+
+  fr: {
+    btn_iniciar: "Démarrer", btn_pausar: "Pause", btn_reset: "Réinitialiser", btn_configurar: "Configurer",
+    titulo_guia: "Guide des Exercices Isométriques",
+    beneficios_titulo: "Bienfaits de l’Entraînement Isométrique",
+    beneficios_desc: "Les exercices isométriques renforcent le corps sans mouvement articulaire.",
+    beneficio_articular: "Protège y renforce les articulations",
+    beneficio_motor: "Améliore le contrôle neuromusculaire",
+    beneficio_oseo: "Stimule la densité osseuse",
+    ej_sentadilla: "Squat Isométrique Profond",
+    ej_mabu: "Position du Cavalier (Ma Bu)",
+    ej_suspension: "Suspension Passive",
+    ej_plancha: "Planche Abdominale",
+    btn_reto_60: "Défi 60 secondes",
+    // LIGNES DE GUÉRISON QUANTIQUE
+    titulo_sanacion_1: "Guérison Quantique",
+    frase_sanacion_1: "Là où la science et la métaphysique s'unissent pour restaurer votre santé.",
+    subtitulo_integracion: "Étape finale d'intégration",
+    titulo_sanacion_2: "Guérison Quantique",
+    frase_sanacion_2: "Là où la science et la métaphysique s'unissent pour restaurer votre santé."
+  },
+  it: {
+    btn_iniciar: "Avvia", btn_pausar: "Pausa", btn_reset: "Reset", btn_configurar: "Configura",
+    titulo_guia: "Guida agli Esercizi Isometrici",
+    beneficios_titulo: "Benefici dell’Allenamento Isometrico",
+    beneficios_desc: "Gli esercizi isometrici rafforzano il corpo senza movimento articolare.",
+    beneficio_articular: "Protegge e rafforza le articolazioni",
+    beneficio_motor: "Migliora il controllo neuromuscolare",
+    beneficio_oseo: "Stimola la densità ossea",
+    ej_sentadilla: "Squat Isometrico Profondo",
+    ej_mabu: "Posizione del Cavallo (Ma Bu)",
+    ej_suspension: "Sospensione Passiva",
+    ej_plancha: "Plank Isometrico",
+    btn_reto_60: "Sfida 60 secondi",
+    titulo_sanacion_1: "Guarigione Quantistica",
+    frase_sanacion_1: "Dove la scienza e la metafisica si uniscono per ripristinare la tua salute.",
+    subtitulo_integracion: "Fase finale di integrazione",
+    titulo_sanacion_2: "Guarigione Quantistica",
+    frase_sanacion_2: "Dove la scienza e la metafisica si uniscono per ripristinare la tua salute."
+  },
+};
+
+
+// 3. LOGICA DEL CRONOMETRO
+let tiempoRestante = 60;
+let timerInterval;
+
+function actualizarDisplay(segundos) {
+    const display = document.getElementById('display');
+    if (!display) return;
+    const mins = Math.floor(segundos / 60);
+    const secs = segundos % 60;
+    display.innerText = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+}
+
+function iniciarTimer() {
+    clearInterval(timerInterval);
+    timerInterval = setInterval(() => {
+        if (tiempoRestante > 0) {
+            tiempoRestante--;
+            actualizarDisplay(tiempoRestante);
+        } else {
+            clearInterval(timerInterval);
+            alert("¡Tiempo cumplido!");
+        }
+    }, 1000);
+}
+
+function pausarTimer() { clearInterval(timerInterval); }
+function resetTimer() { clearInterval(timerInterval); tiempoRestante = 60; actualizarDisplay(60); }
+function iniciarCronometro(elemento) {
+    tiempoRestante = 60;
+    actualizarDisplay(60);
+    iniciarTimer();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function configurarTiempo() {
+    const input = document.getElementById('minutosInput');
+    if (input && input.value > 0) {
+        tiempoRestante = input.value * 60;
+        actualizarDisplay(tiempoRestante);
+    }
+}
+
+function iniciarCronometro(elemento) {
+    tiempoRestante = 60;
+    actualizarDisplay(60);
+    iniciarTimer();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// 4. FUNCION DE TRADUCCION Y DOM LOAD
+function aplicarIdiomaIsometricos(idioma) {
+    document.documentElement.lang = idioma;
+    localStorage.setItem("idioma", idioma);
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.dataset.i18n;
+        const texto = (textosIsometricos[idioma] && textosIsometricos[idioma][key]) || 
+                      (textosGlobales[idioma] && textosGlobales[idioma][key]);
+
+        if (texto) {
+            el.innerHTML = texto;
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const idiomaGuardado = localStorage.getItem("idioma") || "es";
+    const selector = document.getElementById("idioma-nav");
+
+    if (selector) {
+        selector.value = idiomaGuardado;
+        selector.addEventListener("change", e => aplicarIdiomaIsometricos(e.target.value));
+    }
+    aplicarIdiomaIsometricos(idiomaGuardado);
+});
+</script>
+<script src="main.js"></script>
+
+</body>
+</html>

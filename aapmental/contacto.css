@@ -1,0 +1,184 @@
+/* ==============================
+   🌑 BASE GENERAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.bg-dark {
+    background: #000;
+    color: #ddd;
+    font-family: Arial, sans-serif;
+}
+
+/* ==============================
+   🎨 VARIABLES
+================================ */
+
+:root {
+    --oro: #d4af37;
+}
+
+/* ==============================
+   🧭 NAVBAR
+================================ */
+
+.navbar {
+    background: #000;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--oro);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.nav-links a:hover {
+    color: var(--oro);
+}
+
+/* ==============================
+   📦 CONTENEDOR
+================================ */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ==============================
+   🟡 TITULOS
+================================ */
+
+.oro-texto {
+    color: var(--oro);
+}
+
+/* ==============================
+   📞 CONTACTO
+================================ */
+
+.contacto-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.info-contacto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-contacto h2 {
+    color: var(--oro);
+    margin-bottom: 10px;
+}
+
+.info-contacto p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.info-contacto i {
+    color: var(--oro);
+    margin-right: 10px;
+}
+
+/* ==============================
+   📝 FORMULARIO
+================================ */
+
+.formulario-box {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(212,175,55,0.2);
+}
+
+.formulario-box label {
+    display: block;
+    color: var(--oro);
+    margin-bottom: 5px;
+    font-size: 0.85rem;
+}
+
+.formulario-box input,
+.formulario-box textarea {
+    width: 100%;
+    padding: 10px;
+    background: #111;
+    border: 1px solid #444;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.formulario-box input:focus,
+.formulario-box textarea:focus {
+    outline: none;
+    border-color: var(--oro);
+}
+
+/* ==============================
+   🔘 BOTÓN
+================================ */
+
+.btn {
+    padding: 14px;
+    border-radius: 30px;
+    background: var(--oro);
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* ==============================
+   ⚠️ FOOTER LEGAL
+================================ */
+
+.disclaimer-legal {
+    margin-top: 60px;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(212,175,55,0.2);
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.disclaimer-legal p:last-child {
+    font-size: 0.7rem;
+    opacity: 0.5;
+}

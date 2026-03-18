@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nutrición Consciente | Medicina Bioenergética</title>
+
+<link rel="stylesheet" href="nutricion.css">
+
+<meta name="description" content="Alquimia alimentaria y nutrición consciente para elevar tu frecuencia vibracional.">
+
+</head>
+
+   
+
+
+<body class="lectura-body bg-dark">
+
+    <nav class="navbar">
+        <div class="nav-container">
+          
+    
+          <ul class="nav-links">
+            <li><a href="index.html" data-i18n="menu_inicio">Inicio</a></li>
+    
+            <li class="dropdown">
+              <a href="#" data-i18n="menu_terapias">Terapias ▾</a>
+              <ul class="dropdown-content">
+                <li><a href="grounding.html" data-i18n="menu_grounding">Grounding</a></li>
+                <li><a href="solfeguio.html" data-i18n="menu_solfeggio">Solfeggio</a></li>
+                <li><a href="sanacion-cuantica.html" data-i18n="menu_sanacion">Sanación</a></li>
+                <li><a href="isometricos.html" data-i18n="menu_isometricos">isometricos</a></li>
+                <li><a href="nutricion.html" data-i18n="menu_nutricion">nutricion</a></li>
+              </ul>
+            </li>
+    
+            <li class="dropdown">
+              <a href="#" data-i18n="menu_mente_ciencia">Mente & Ciencia ▾</a>
+              <ul class="dropdown-content">
+                <li><a href="reprogramacion-neuronal.html" data-i18n="menu_reprogramacion">Reprogramación</a></li>
+                <li><a href="mecanica-cuantica.html" data-i18n="menu_mecanica">Mecánica Cuántica</a></li>
+                <li><a href="lectura-kybalion.html" data-i18n="menu_kybalion">Kybalión</a></li>
+                <li><a href="nutricion.html" data-i18n="menu_nutricion">nutricion</a></li>
+              </ul>
+            </li>
+    
+            <li><a href="masa-corporal.html" data-i18n="menu_salud">masa-corporal</a></li>
+          </ul>
+    
+          
+          <div class="nav-lang">
+            <select id="idioma-nav" onchange="cambiarIdioma(this.value)">
+                <option value="es">ESPAÑOL</option>
+                <option value="en">ENGLISH</option>
+                <option value="fr">FRANÇAIS</option>
+                <option value="it">ITALIANO</option>
+                </select>
+          </div>
+        </div>
+    </nav>
+
+<main class="container">
+
+<header class="header-nutricion">
+
+
+
+  <span id="templo" class="oro-texto">
+    EL TEMPLO DEL ESPÍRITU
+    </span>
+
+<h1 id="titulo">
+Alquimia Alimentaria
+</h1>
+
+
+
+<p id="subtitulo">
+Nutre tu cuerpo para sintonizar con tu conciencia superior.
+</p>
+
+
+</header>
+
+<section class="hidratacion">
+
+
+
+
+<div class="hidratacion-calculadora">
+
+  <label for="peso-agua" id="label-agua">
+  Peso corporal (kg)
+  </label>
+  
+  <input type="number" id="peso-agua" placeholder="Ej: 70">
+  
+  <button onclick="calcularAgua()" class="tab-btn" id="btn-agua">
+    Calcular Hidratación
+    </button>
+  
+  <p id="resultado-agua"></p>
+  
+  </div>
+
+  <div class="hidratacion-calculadora">
+
+    
+    
+    
+    
+    <div id="vasos-container" class="vasos-container"></div>
+    
+    </div>
+    
+      <h2 id="hidratacionTitulo">
+        💧 Hidratación Cuántica
+        </h2>
+        
+        <p id="hidratacionTexto">
+        Calcula 35ml por kilo para asegurar la conductividad eléctrica de tus células.
+        </p>
+    
+    
+    
+    
+   
+
+</section>
+
+<div class="fitness-nav">
+
+    <button id="tab-vegetariano" class="tab-btn active">
+        Vegetariano
+        </button>
+        
+        <button id="tab-vegano" class="tab-btn">
+        Vegano
+        </button>
+        
+        <button id="tab-jugos" class="tab-btn">
+        Alquimia Líquida
+        </button>
+    </div>
+    
+    <div class="recetario-container">
+    
+    <div id="vegetariano" class="categoria-content active">
+    
+    <div class="receta-card">
+    
+    <h3 id="quinoa">
+    Quinoa: Estabilidad Terrenal
+    </h3>
+    
+    <p id="quinoa-txt">
+    Proteína completa para tus neurotransmisores.
+    </p>
+    
+    </div>
+    
+    <div class="receta-card">
+    
+    <h3 id="berenjena">
+    Berenjena: Nutrición Celular
+    </h3>
+    
+    <p id="berenjena-txt">
+    Reduce la inflamación para un flujo energético puro.
+    </p>
+    
+    </div>
+    
+    </div>
+    
+    
+    <div id="vegano" class="categoria-content">
+    
+    <div class="receta-card">
+    
+    <h3 id="seitan">
+    Seitán: Fuerza y Vigor
+    </h3>
+    
+    <p id="seitan-txt">
+    Alta densidad proteica para la reparación de tejidos.
+    </p>
+    
+    </div>
+    
+    <div class="receta-card">
+    
+    <h3 id="tofu">
+    Tofu & Cúrcuma: Luz Líquida
+    </h3>
+    
+    <p id="tofu-txt">
+    Limpia el organismo y reduce el estrés oxidativo.
+    </p>
+    
+    </div>
+    
+    </div>
+    
+    
+    <div id="jugos" class="categoria-content">
+    
+    <div class="receta-card">
+    
+    <h3 id="elixir">
+    Elixir Renacimiento Verde
+    </h3>
+    
+    <p id="elixir-txt">
+    Alcaliniza tu pH para ser un receptor puro de frecuencias.
+    </p>
+    
+    </div>
+    
+    <div class="receta-card">
+    
+    <h3 id="jengibre">
+    Activador de Jengibre
+    </h3>
+    
+    <p id="jengibre-txt">
+    Aumenta el fuego interno y fortalece tu campo bioeléctrico.
+    </p>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+
+    <footer class="footer-nutricion">
+
+        <p id="aviso">
+        
+        <strong>Aviso:</strong>
+        
+        Información educativa de medicina complementaria.
+        Consulta siempre a un profesional de la salud.
+        
+        </p>
+        
+        <br>
+        
+        <button
+id="btn-regresar"
+onclick="window.location.href='index.html'"
+class="tab-btn">
+
+← Regresar
+
+</button>
+        
+        </footer>
+        
+        </main>
+        
+        
+        
+        
+ <script>
+
+
+const textosGlobales = {
+
+es:{
+menu_inicio:"Inicio",
+menu_terapias:"Terapias ▾",
+menu_grounding:"Grounding",
+menu_solfeggio:"Solfeggio",
+menu_sanacion:"Sanación",
+menu_isometricos:"Isométricos",
+menu_nutricion:"Nutrición",
+
+menu_mente_ciencia:"Mente & Ciencia ▾",
+menu_reprogramacion:"Reprogramación",
+menu_mecanica:"Mecánica Cuántica",
+menu_kybalion:"Kybalión",
+
+menu_salud:"Masa Corporal"
+},
+
+en:{
+menu_inicio:"Home",
+menu_terapias:"Therapies ▾",
+menu_grounding:"Grounding",
+menu_solfeggio:"Solfeggio",
+menu_sanacion:"Quantum Healing",
+menu_isometricos:"Isometrics",
+menu_nutricion:"Nutrition",
+
+menu_mente_ciencia:"Mind & Science ▾",
+menu_reprogramacion:"Reprogramming",
+menu_mecanica:"Quantum Mechanics",
+menu_kybalion:"Kybalion",
+
+menu_salud:"Body Mass"
+},
+
+fr:{
+menu_inicio:"Accueil",
+menu_terapias:"Thérapies ▾",
+menu_grounding:"Grounding",
+menu_solfeggio:"Solfeggio",
+menu_sanacion:"Guérison Quantique",
+menu_isometricos:"Isométriques",
+menu_nutricion:"Nutrition",
+
+menu_mente_ciencia:"Esprit & Science ▾",
+menu_reprogramacion:"Reprogrammation",
+menu_mecanica:"Mécanique Quantique",
+menu_kybalion:"Kybalion",
+
+menu_salud:"Masse Corporelle"
+},
+
+it:{
+menu_inicio:"Inizio",
+menu_terapias:"Terapie ▾",
+menu_grounding:"Grounding",
+menu_solfeggio:"Solfeggio",
+menu_sanacion:"Guarigione Quantica",
+menu_isometricos:"Isometrici",
+menu_nutricion:"Nutrizione",
+
+menu_mente_ciencia:"Mente & Scienza ▾",
+menu_reprogramacion:"Riprogrammazione",
+menu_mecanica:"Meccanica Quantistica",
+menu_kybalion:"Kybalion",
+
+menu_salud:"Massa Corporea"
+}
+
+};
+
+
+
+    
+
+ const textos = {
+
+es:{
+titulo:"Alquimia Alimentaria",
+subtitulo:"Nutre tu cuerpo para sintonizar con tu conciencia superior.",
+templo:"EL TEMPLO DEL ESPÍRITU",
+
+hidratacionTitulo:"💧 Hidratación Cuántica",
+hidratacionTexto:"Calcula 35ml por kilo para asegurar la conductividad eléctrica de tus células.",
+
+tabs:{
+vegetariano:"Vegetariano",
+vegano:"Vegano",
+jugos:"Alquimia Líquida"
+},
+
+recetas:{
+
+quinoa:"Quinoa: Estabilidad Terrenal",
+quinoaTxt:"Proteína completa para tus neurotransmisores.",
+
+berenjena:"Berenjena: nutricion celular",
+berenjenaTxt:"Rica en antioxidantes que protegen tus células.",
+
+seitan:"Seitán: Fuerza Vegetal",
+seitanTxt:"Alta proteína vegetal que fortalece tu energía vital.",
+
+tofu:"Tofu: Equilibrio Interior",
+tofuTxt:"Fuente suave de proteína que armoniza el organismo.",
+
+elixir:"Elixir Verde",
+elixirTxt:"Mezcla de hojas verdes que revitaliza tu energía.",
+
+jengibre:"Jengibre: Fuego Digestivo",
+jengibreTxt:"Activa tu metabolismo y fortalece tu sistema digestivo."
+
+},
+
+aviso:"Esta información es educativa y no sustituye consejo médico.",
+btnRegresar:"← Regresar",
+
+labelAgua:"Peso corporal (kg)",
+
+botonAgua:"Calcular Hidratación",
+
+resultadoAgua:"Hidratación recomendada:",
+
+errorAgua:"Ingresa un peso válido.",
+
+
+
+},
+
+en:{
+titulo:"Food Alchemy",
+subtitulo:"Nourish your body to tune into your higher consciousness.",
+templo:"THE TEMPLE OF THE SPIRIT",
+
+hidratacionTitulo:"💧 Quantum Hydration",
+hidratacionTexto:"Calculate 35ml per kilo to ensure electrical conductivity of your cells.",
+
+tabs:{
+vegetariano:"Vegetarian",
+vegano:"Vegan",
+jugos:"Liquid Alchemy"
+},
+
+recetas:{
+
+quinoa:"Quinoa: Earth Stability",
+quinoaTxt:"Complete protein for your neurotransmitters.",
+
+berenjena:"Eggplant: Solar Transformation",
+berenjenaTxt:"Rich in antioxidants that protect your cells.",
+
+seitan:"Seitan: Plant Strength",
+seitanTxt:"High plant protein that strengthens your vital energy.",
+
+tofu:"Tofu: Inner Balance",
+tofuTxt:"A gentle protein source that harmonizes the body.",
+
+elixir:"Green Elixir",
+elixirTxt:"A mix of green leaves that revitalizes your energy.",
+
+jengibre:"Ginger: Digestive Fire",
+jengibreTxt:"Activates metabolism and strengthens digestion.",
+
+},
+
+labelAgua:"Body weight (kg)",
+
+botonAgua:"Calculate Hydration",
+
+resultadoAgua:"Recommended hydration:",
+
+errorAgua:"Enter a valid weight.",
+
+aviso:"This information is educational and does not replace medical advice.",
+btnRegresar:"← Back",
+
+},
+
+fr:{
+titulo:"Alchimie Alimentaire",
+subtitulo:"Nourrissez votre corps pour vous connecter à votre conscience supérieure.",
+templo:"LE TEMPLE DE L’ESPRIT",
+
+hidratacionTitulo:"💧 Hydratation Quantique",
+hidratacionTexto:"Calculez 35 ml par kilo pour assurer la conductivité électrique de vos cellules.",
+
+tabs:{
+vegetariano:"Végétarien",
+vegano:"Végétalien",
+jugos:"Alchimie Liquide"
+},
+
+recetas:{
+
+quinoa:"Quinoa : Stabilité Terrestre",
+quinoaTxt:"Protéine complète pour vos neurotransmetteurs.",
+
+berenjena:"Aubergine : Transformation Solaire",
+berenjenaTxt:"Riche en antioxydants qui protègent vos cellules.",
+
+seitan:"Seitan : Force Végétale",
+seitanTxt:"Protéine végétale qui renforce votre énergie vitale.",
+
+tofu:"Tofu : Équilibre Intérieur",
+tofuTxt:"Source douce de protéines qui harmonise le corps.",
+
+elixir:"Élixir Vert",
+elixirTxt:"Mélange de feuilles vertes qui revitalise votre énergie.",
+
+jengibre:"Gingembre : Feu Digestif",
+jengibreTxt:"Active le métabolisme et renforce la digestion."
+
+},
+
+labelAgua:"Poids corporel (kg)",
+
+botonAgua:"Calculer l'hydratation",
+
+resultadoAgua:"Hydratation recommandée:",
+
+errorAgua:"Entrez un poids valide.",
+
+aviso:"Ces informations sont éducatives et ne remplacent pas un avis médical.",
+btnRegresar:"← Retour",
+
+},
+
+it:{
+titulo:"Alchimia Alimentare",
+subtitulo:"Nutri il tuo corpo per connetterti con la tua coscienza superiore.",
+templo:"IL TEMPIO DELLO SPIRITO",
+
+hidratacionTitulo:"💧 Idratazione Quantica",
+hidratacionTexto:"Calcola 35 ml per chilo per garantire la conducibilità elettrica delle cellule.",
+
+tabs:{
+vegetariano:"Vegetariano",
+vegano:"Vegano",
+jugos:"Alchimia Liquida"
+},
+
+recetas:{
+
+quinoa:"Quinoa: Stabilità Terrestre",
+quinoaTxt:"Proteina completa per i tuoi neurotrasmettitori.",
+
+berenjena:"Melanzana: Trasformazione Solare",
+berenjenaTxt:"Ricca di antiossidanti che proteggono le cellule.",
+
+seitan:"Seitan: Forza Vegetale",
+seitanTxt:"Proteina vegetale che rafforza l'energia vitale.",
+
+tofu:"Tofu: Equilibrio Interiore",
+tofuTxt:"Fonte delicata di proteine che armonizza il corpo.",
+
+elixir:"Elisir Verde",
+elixirTxt:"Miscela di foglie verdi che rivitalizza l'energia.",
+
+jengibre:"Zenzero: Fuoco Digestivo",
+jengibreTxt:"Attiva il metabolismo e rafforza la digestione."
+
+},
+labelAgua:"Peso corporeo (kg)",
+
+botonAgua:"Calcola idratazione",
+
+resultadoAgua:"Idratazione raccomandata:",
+
+errorAgua:"Inserisci un peso valido.",
+
+aviso:"Queste informazioni sono educative e non sostituiscono il parere medico.",
+btnRegresar:"← Indietro",
+
+}
+
+ };
+
+ document.addEventListener("DOMContentLoaded",()=>{
+
+const idiomaNavegador = navigator.language.slice(0,2);
+
+const idiomasPermitidos = ["es","en","fr","it"];
+
+const idioma =
+localStorage.getItem("idioma") ||
+(idiomasPermitidos.includes(idiomaNavegador) ? idiomaNavegador : "es");
+
+localStorage.setItem("idioma", idioma);
+
+const i18n = textos[idioma];
+
+const set=(id,txt)=>{
+const el=document.getElementById(id);
+if(el) el.textContent=txt;
+};
+
+/* NAVBAR */
+
+document.querySelectorAll("[data-i18n]").forEach(el=>{
+
+const clave = el.dataset.i18n;
+
+if(textosGlobales[idioma][clave]){
+el.textContent = textosGlobales[idioma][clave];
+}
+
+});
+
+/* HIDRATACIÓN Y TITULOS */
+
+set("templo", i18n.templo);
+set("titulo", i18n.titulo);
+set("subtitulo", i18n.subtitulo);
+set("hidratacionTitulo", i18n.hidratacionTitulo);
+set("hidratacionTexto", i18n.hidratacionTexto);
+set("label-agua", i18n.labelAgua);
+set("btn-agua", i18n.botonAgua);
+/* TABS */
+
+set("tab-vegetariano", i18n.tabs.vegetariano);
+set("tab-vegano", i18n.tabs.vegano);
+set("tab-jugos", i18n.tabs.jugos);
+
+/* RECETAS */
+
+set("quinoa", i18n.recetas.quinoa);
+set("quinoa-txt", i18n.recetas.quinoaTxt);
+
+set("berenjena", i18n.recetas.berenjena);
+set("berenjena-txt", i18n.recetas.berenjenaTxt);
+
+set("seitan", i18n.recetas.seitan);
+set("seitan-txt", i18n.recetas.seitanTxt);
+
+set("tofu", i18n.recetas.tofu);
+set("tofu-txt", i18n.recetas.tofuTxt);
+
+set("elixir", i18n.recetas.elixir);
+set("elixir-txt", i18n.recetas.elixirTxt);
+
+set("jengibre", i18n.recetas.jengibre);
+set("jengibre-txt", i18n.recetas.jengibreTxt);
+
+/* FOOTER */
+
+set("aviso", i18n.aviso);
+set("btn-regresar", i18n.btnRegresar);
+
+/* selector idioma */
+
+const selector=document.getElementById("idioma-nav");
+if(selector) selector.value=idioma;
+
+});
+
+
+
+
+function cambiarIdioma(idioma){
+
+localStorage.setItem("idioma",idioma);
+
+document.documentElement.lang = idioma;
+
+location.reload();
+
+}
+
+/* ======================================
+   SISTEMA DE PESTAÑAS RECETARIO
+====================================== */
+
+const botones = document.querySelectorAll(".tab-btn");
+const contenidos = document.querySelectorAll(".categoria-content");
+
+botones.forEach(boton => {
+
+boton.addEventListener("click", () => {
+
+botones.forEach(btn => btn.classList.remove("active"));
+contenidos.forEach(con => con.classList.remove("active"));
+
+boton.classList.add("active");
+
+let id = boton.id.replace("tab-","");
+
+document.getElementById(id).classList.add("active");
+
+});
+
+});
+
+function calcularAgua(){
+
+const idioma = localStorage.getItem("idioma") || "es";
+const i18n = textos[idioma];
+
+const peso = parseFloat(document.getElementById("peso-agua").value);
+const resultado = document.getElementById("resultado-agua");
+const vasosContainer = document.getElementById("vasos-container");
+
+if(peso > 0){
+
+const aguaML = peso * 35;
+const litros = aguaML / 1000;
+
+const vasos = Math.round(aguaML / 250);
+
+resultado.textContent =
+i18n.resultadoAgua + " " +
+litros.toFixed(2) +
+" L";
+
+vasosContainer.innerHTML = "";
+
+for(let i=0;i<vasos;i++){
+vasosContainer.innerHTML += "🥤";
+}
+
+}else{
+
+resultado.textContent = i18n.errorAgua;
+vasosContainer.innerHTML = "";
+
+}
+
+}
+
+
+</script>
+        
+        </body>
+        </html>
+
+
+
