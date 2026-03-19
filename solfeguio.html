@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+
+  
+
+  <title>Solfeggio | Frecuencias de Sanación</title>
+  <meta name="description" content="Explora las frecuencias Solfeggio para armonización, sanación y expansión de la conciencia.">
+
+  <link rel="stylesheet" href="solfeguio.css">
+  <link rel="canonical" href="https://tuweb.com/solfeguio.html">
+
+</head>
+
+<body class="bg-dark">
+
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <ul class="nav-links">
+        <li><a href="index.html" data-i18n="menu_inicio">Inicio</a></li>
+
+        <li class="dropdown">
+          <a href="#" data-i18n="menu_terapias">Terapias ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="grounding.html" data-i18n="menu_grounding">Grounding</a></li>
+            <li><a href="solfeguio.html" data-i18n="menu_solfeggio">Solfeggio</a></li>
+            <li><a href="sanacion-cuantica.html" data-i18n="menu_sanacion">Sanación</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" data-i18n="menu_mente_ciencia">Mente & Ciencia ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="reprogramacion-neuronal.html" data-i18n="menu_reprogramacion">Reprogramación</a></li>
+            <li><a href="mecanica-quantica.html" data-i18n="menu_mecanica">Mecánica Cuántica</a></li>
+            <li><a href="lectura-kybalion.html" data-i18n="menu_kybalion">Kybalión</a></li>
+          </ul>
+        </li>
+
+        <li><a href="masa-corporal.html" data-i18n="menu_salud">Masa Corporal</a></li>
+      </ul>
+
+      <!-- Selector de idioma (ÚNICO) -->
+      <div class="nav-lang">
+        <select id="idioma-nav">
+          <option value="es">ESPAÑOL</option>
+          <option value="en">ENGLISH</option>
+          <option value="fr">FRANÇAIS</option>
+          <option value="it">ITALIANO</option>
+          
+        </select>
+      </div>
+
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1 data-i18n="titulo">Frecuencias Solfeggio</h1>
+    <p class="cita" data-i18n="cita"></p>
+  </header>
+
+  <main class="container">
+
+    <section class="grid-frecuencias">
+
+      <div class="card-frecuencia">
+        <h3 data-i18n="f396_titulo">Liberar Miedo</h3>
+        <p data-i18n="f396_desc">
+          Ayuda a convertir la pena en alegría y a liberarse de la culpa.
+        </p>
+        <button onclick="mostrarFrecuencia(396)">396Hz</button>
+
+        <div id="info-frecuencia-396"></div>
+        
+      </div>
+
+      <div class="card-frecuencia">
+        <h3 data-i18n="f417_titulo">Cambio y Transformación</h3>
+        <p data-i18n="f417_desc">
+          Facilita procesos de cambio y renovación interior.
+        </p>
+        <button onclick="mostrarFrecuencia(417)">417 Hz</button>
+        <div id="info-frecuencia-417"></div>
+      </div>
+
+      <div class="card-frecuencia">
+        <h3 data-i18n="f528_titulo">Amor y Sanación</h3>
+        <p data-i18n="f528_desc">
+          Conocida como la frecuencia del amor y la reparación del ADN.
+        </p>
+        <button onclick="mostrarFrecuencia(528)">528 Hz</button>
+        <div id="info-frecuencia-528"></div>
+      </div>
+
+      <div class="card-frecuencia">
+        <h3 data-i18n="f639_titulo">Conexión y Relaciones</h3>
+        <p data-i18n="f639_desc">
+          Armoniza relaciones y fomenta la comunicación consciente.
+        </p>
+        <button onclick="mostrarFrecuencia(639)">639 Hz</button>
+        <div id="info-frecuencia-639"></div>
+      </div>
+
+      <div class="card-frecuencia">
+        <h3 data-i18n="f741_titulo">Expresión y Limpieza</h3>
+        <p data-i18n="f741_desc">
+          Ayuda a liberar toxinas y patrones mentales negativos.
+        </p>
+        <!-- Llamamos a la función que reproduce el sonido y muestra info -->
+        <button onclick="mostrarFrecuencia(741)">741 Hz</button>
+        <!-- ID único para este bloque -->
+        <div id="info-frecuencia-741"></div>
+    </div>
+
+    <div class="card-frecuencia">
+      <h3 data-i18n="f852_titulo">Intuición y Conciencia</h3>
+      <p data-i18n="f852_desc">
+          Despierta la intuición y la conexión espiritual.
+      </p>
+      <!-- Botón que muestra info y reproduce el sonido -->
+      <button onclick="mostrarFrecuencia(852)">852 Hz</button>
+      <!-- ID único para este bloque -->
+      <div id="info-frecuencia-852"></div>
+  </div>
+  
+
+    </section>
+
+    <section class="controles-audio">
+      <button class="btn-stop" onclick="detenerFrecuencia()" data-i18n="btn_detener">
+        ⏹ Detener sonido
+      </button>
+    </section>
+
+  </main>
+
+
+
+  <script>
+ 
+
+ let audioCtx = null;
+let oscilador = null;
+let gainNode = null;
+
+function reproducirFrecuencia(freq) {
+
+  detenerFrecuencia();
+
+  if (!audioCtx) {
+    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  }
+
+  oscilador = audioCtx.createOscillator();
+  gainNode = audioCtx.createGain();
+
+  oscilador.type = "sine";
+  oscilador.frequency.value = freq;
+
+  gainNode.gain.value = 0.2;
+
+  oscilador.connect(gainNode);
+  gainNode.connect(audioCtx.destination);
+
+  oscilador.start();
+
+}
+function mostrarFrecuencia(freq) {
+    reproducirFrecuencia(freq);
+
+    const textos = {
+        396: "Liberar Miedo: convierte la pena en alegría y libera culpa",
+        417: "Cambio y Transformación: facilita renovación interior",
+        528: "Amor y Sanación: frecuencia del amor y reparación ADN",
+        639: "Conexión y Relaciones: armoniza comunicación",
+        741: "Expresión y Limpieza: limpia toxinas y patrones negativos",
+        852: "Intuición y Conciencia: despierta intuición espiritual"
+    };
+
+    const divInfo = document.getElementById("info-frecuencia-" + freq);
+    if (divInfo) {
+        divInfo.innerText = textos[freq];
+    }
+}
+
+
+
+function detenerFrecuencia() {
+
+  if (oscilador) {
+    try {
+      oscilador.stop();
+    } catch(e) {}
+
+    oscilador.disconnect();
+    oscilador = null;
+  }
+
+}
+
+
+
+if (audioCtx) {
+  audioCtx.close();
+  audioCtx = null;
+}
+
+    const textosGlobales = {
+  es: {
+    menu_inicio: "Inicio",
+    menu_terapias: "Terapias ▾",
+    menu_grounding: "Grounding",
+    menu_solfeggio: "Solfeggio",
+    menu_sanacion: "Sanación",
+    menu_mente_ciencia: "Mente & Ciencia ▾",
+    menu_reprogramacion: "Reprogramación",
+    menu_mecanica: "Mecánica Cuántica",
+    menu_kybalion: "Kybalión",
+    menu_salud: "Masa Corporal"
+  },
+
+  en: {
+    menu_inicio: "Home",
+    menu_terapias: "Therapies ▾",
+    menu_grounding: "Grounding",
+    menu_solfeggio: "Solfeggio",
+    menu_sanacion: "Healing",
+    menu_mente_ciencia: "Mind & Science ▾",
+    menu_reprogramacion: "Reprogramming",
+    menu_mecanica: "Quantum Mechanics",
+    menu_kybalion: "Kybalion",
+    menu_salud: "Body Mass"
+  },
+
+  fr: {
+    menu_inicio: "Accueil",
+    menu_terapias: "Thérapies ▾",
+    menu_grounding: "Grounding",
+    menu_solfeggio: "Solfeggio",
+    menu_sanacion: "Guérison",
+    menu_mente_ciencia: "Esprit & Science ▾",
+    menu_reprogramacion: "Reprogrammation",
+    menu_mecanica: "Mécanique Quantique",
+    menu_kybalion: "Kybalion",
+    menu_salud: "Masse Corporelle"
+  },
+
+  it: {
+    menu_inicio: "Home",
+    menu_terapias: "Terapie ▾",
+    menu_grounding: "Grounding",
+    menu_solfeggio: "Solfeggio",
+    menu_sanacion: "Guarigione",
+    menu_mente_ciencia: "Mente & Scienza ▾",
+    menu_reprogramacion: "Riprogrammazione",
+    menu_mecanica: "Meccanica Quantistica",
+    menu_kybalion: "Kybalion",
+    menu_salud: "Massa Corporea"
+  }
+}; 
+  
+    const textosSolfeggio = {
+  
+      es: {
+        titulo: "Frecuencias Solfeggio",
+        cita: "La vibración correcta armoniza cuerpo, mente y espíritu.",
+        btn_detener: "⏹ Detener sonido",
+        f396_titulo: "Liberar Miedo",
+        f396_desc: "Ayuda a convertir la pena en alegría y a liberarse de la culpa.",
+        f417_titulo: "Cambio y Transformación",
+        f417_desc: "Facilita procesos de cambio y renovación interior.",
+        f528_titulo: "Amor y Sanación",
+        f528_desc: "Conocida como la frecuencia del amor y la reparación del ADN.",
+        f639_titulo: "Conexión y Relaciones",
+        f639_desc: "Armoniza relaciones y fomenta la comunicación consciente.",
+        f741_titulo: "Expresión y Limpieza",
+        f741_desc: "Ayuda a liberar toxinas y patrones mentales negativos.",
+        f852_titulo: "Intuición y Conciencia",
+        f852_desc: "Despierta la intuición y la conexión espiritual."
+      },
+  
+      en: {
+        titulo: "Solfeggio Frequencies",
+        cita: "Correct vibration harmonizes body, mind and spirit.",
+        btn_detener: "⏹ Stop sound",
+        f396_titulo: "Release Fear",
+        f396_desc: "Transforms grief into joy and releases guilt.",
+        f417_titulo: "Change and Transformation",
+        f417_desc: "Facilitates change and inner renewal.",
+        f528_titulo: "Love and Healing",
+        f528_desc: "Known as the frequency of love and DNA repair.",
+        f639_titulo: "Connection and Relationships",
+        f639_desc: "Harmonizes relationships and communication.",
+        f741_titulo: "Expression and Detox",
+        f741_desc: "Helps cleanse toxins and negative patterns.",
+        f852_titulo: "Intuition and Awareness",
+        f852_desc: "Awakens intuition and spiritual connection."
+      },
+  
+      fr: {
+        titulo: "Fréquences Solfeggio",
+        cita: "La bonne vibration harmonise le corps, l'esprit et l'âme.",
+        btn_detener: "⏹ Arrêter le son",
+        f396_titulo: "Libérer la Peur",
+        f396_desc: "Aide à transformer le chagrin en joie et à libérer la culpabilité.",
+        f417_titulo: "Changement et Transformation",
+        f417_desc: "Facilite le changement et le renouveau intérieur.",
+        f528_titulo: "Amour et Guérison",
+        f528_desc: "Connue comme la fréquence de l'amour et de la réparation de l'ADN.",
+        f639_titulo: "Connexion et Relations",
+        f639_desc: "Harmonise les relations et la communication consciente.",
+        f741_titulo: "Expression et Nettoyage",
+        f741_desc: "Aide à éliminer les toxines et les schémas mentaux négatifs.",
+        f852_titulo: "Intuition et Conscience",
+        f852_desc: "Éveille l'intuition et la connexion spirituelle."
+      },
+  
+      it: {
+        titulo: "Frequenze Solfeggio",
+        cita: "La giusta vibrazione armonizza corpo, mente e spirito.",
+        btn_detener: "⏹ Ferma suono",
+        f396_titulo: "Liberare la Paura",
+        f396_desc: "Aiuta a trasformare il dolore in gioia e a liberarsi dal senso di colpa.",
+        f417_titulo: "Cambiamento e Trasformazione",
+        f417_desc: "Facilita il cambiamento e il rinnovamento interiore.",
+        f528_titulo: "Amore e Guarigione",
+        f528_desc: "Conosciuta come la frequenza dell'amore e della riparazione del DNA.",
+        f639_titulo: "Connessione e Relazioni",
+        f639_desc: "Armonizza le relazioni e la comunicazione consapevole.",
+        f741_titulo: "Espressione e Purificazione",
+        f741_desc: "Aiuta a eliminare tossine e schemi mentali negativi.",
+        f852_titulo: "Intuizione e Consapevolezza",
+        f852_desc: "Risveglia l'intuizione e la connessione spirituale."
+      }
+  
+    };
+  
+
+
+ function aplicarIdiomaSolfeggio(idioma) {
+  localStorage.setItem("idioma", idioma);
+  document.documentElement.lang = idioma;
+
+  const global = textosGlobales[idioma];
+  const pagina = textosSolfeggio[idioma];
+
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.dataset.i18n;
+
+    if (global && global[key]) {
+      el.textContent = global[key];
+    } 
+    else if (pagina && pagina[key]) {
+      el.textContent = pagina[key];
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const selector = document.getElementById("idioma-nav");
+  const idiomaGuardado = localStorage.getItem("idioma") || "es";
+
+  if (selector) {
+    selector.value = idiomaGuardado;
+
+    selector.addEventListener("change", e => {
+      aplicarIdiomaSolfeggio(e.target.value);
+    });
+  }
+
+  aplicarIdiomaSolfeggio(idiomaGuardado);
+});
+
+    
+      
+
+  
+</script>
+
+</body>
+</html>

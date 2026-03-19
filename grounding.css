@@ -1,0 +1,353 @@
+/* ==============================
+   🌍 BASE GENERAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.lectura-body {
+    background: radial-gradient(circle at top, #0d0d0d, #000);
+    color: #ddd;
+    font-family: Arial, sans-serif;
+}
+
+/* ==============================
+   🎨 VARIABLES
+================================ */
+
+:root {
+    --oro: #d4af37;
+}
+
+/* ==============================
+   🧭 NAVBAR
+================================ */
+
+/* ==============================
+   🧭 NAVBAR ELEGANTE Y ORDENADO
+================================ */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.95);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 14px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* LOGO */
+.logo {
+    color: var(--oro);
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: var(--oro);
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 130%;
+    left: 0;
+
+    background: #0b0b0b;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 10px;
+
+    min-width: 200px;
+    padding: 8px 0;
+
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: all 0.25s ease;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 18px;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.dropdown-content a:hover {
+    background: rgba(212, 175, 55, 0.08);
+    color: var(--oro);
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* IDIOMA */
+.nav-lang select {
+    background: #000;
+    color: var(--oro);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+/* ==============================
+   📦 CONTENEDOR
+================================ */
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ==============================
+   🟡 TEXTOS
+================================ */
+
+.oro-texto {
+    color: var(--oro);
+    letter-spacing: 2px;
+}
+
+/* ==============================
+   🌱 GROUNDING WRAPPER
+================================ */
+
+.grounding-wrapper {
+    text-align: center;
+    padding: 40px 20px;
+    background: radial-gradient(circle, #282828 0%, #0a0a0a 100%);
+    border-radius: 30px;
+    border: 2px solid var(--oro);
+    margin-top: 30px;
+}
+
+/* ==============================
+   ⏱ RELOJ
+================================ */
+
+.reloj-circular {
+    width: 200px;
+    height: 200px;
+    border: 8px solid #333;
+    border-top: 8px solid var(--oro);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    font-size: 3rem;
+    font-family: 'Courier New', monospace;
+    color: var(--oro);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+    transition: all 0.5s ease;
+}
+
+/* ==============================
+   📋 PASOS
+================================ */
+
+.pasos-lista {
+    text-align: left;
+    max-width: 500px;
+    margin: 30px auto;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+.pasos-lista li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #222;
+    padding-bottom: 5px;
+}
+
+/* ==============================
+   🔔 ESTADO
+================================ */
+
+.estado-texto {
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    min-height: 24px;
+}
+
+/* ==============================
+   🌱 HERO PORTADA GROUNDING
+================================ */
+
+.hero-grounding {
+    width: 100%;
+    height: auto; /* se ajusta a la altura de la imagen */
+    min-height: 500px; /* para que no quede demasiado pequeña en pantallas grandes */
+    background: url('imagenes/imagen2.jpg') center top / contain no-repeat;
+    position: relative;
+    display: flex;
+    align-items: flex-end; /* texto al fondo */
+    justify-content: center;
+    padding-bottom: 50px; /* separa texto de borde */
+}
+/* capa suave para que el texto se lea bien */
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.45);
+    padding: 40px 50px;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-overlay h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.hero-overlay p {
+    font-size: 1.1rem;
+    opacity: 0.85;
+}
+
+/* ==============================
+   💓 ANIMACIÓN
+================================ */
+
+.animar-pulso {
+    animation: pulso 2s infinite;
+}
+
+@keyframes pulso {
+    0% { transform: scale(1); box-shadow: 0 0 0px var(--oro); }
+    50% { transform: scale(1.05); box-shadow: 0 0 20px var(--oro); }
+    100% { transform: scale(1); box-shadow: 0 0 0px var(--oro); }
+}
+
+/* ==============================
+   🔘 BOTONES
+================================ */
+
+.btn {
+    padding: 14px 30px;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .hero-grounding {
+        height: 70vh;
+    }
+
+    .hero-overlay h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-overlay p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Estilos específicos para la experiencia de Grounding */
+.grounding-wrapper {
+    text-align: center;
+    padding: 40px 20px;
+    background: radial-gradient(circle, rgba(40,40,40,1) 0%, rgba(10,10,10,1) 100%);
+    border-radius: 30px;
+    border: 2px solid #d4af37;
+    margin-top: 30px;
+}
+
+.reloj-circular {
+    width: 200px;
+    height: 200px;
+    border: 8px solid #333;
+    border-top: 8px solid #d4af37;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    font-size: 3rem;
+    font-family: 'Courier New', monospace;
+    color: #d4af37;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+    transition: all 0.5s ease;
+}
+
+.pasos-lista {
+    text-align: left;
+    max-width: 500px;
+    margin: 30px auto;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+.pasos-lista li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #222;
+    padding-bottom: 5px;
+}
+
+.estado-texto {
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    min-height: 24px;
+}
+
+.animar-pulso {
+    animation: pulso 2s infinite;
+}
+
+@keyframes pulso {
+    0% { transform: scale(1); box-shadow: 0 0 0px #d4af37; }
+    50% { transform: scale(1.05); box-shadow: 0 0 20px #d4af37; }
+    100% { transform: scale(1); box-shadow: 0 0 0px #d4af37; }
+}

@@ -1,0 +1,110 @@
+/* ================================
+   QUIÉNES SOMOS
+   Sonido & Conciencia
+================================ */
+
+/* Base */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: radial-gradient(circle at top, #111 0%, #000 75%);
+    color: #ccc;
+    line-height: 1.8;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(0, 0, 0, 0.65);
+    border-bottom: 1px solid rgba(212,175,55,0.25);
+    padding: 15px 30px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #d4af37;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #d4af37;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* Título */
+.oro-texto {
+    color: #d4af37;
+    letter-spacing: 1px;
+}
+
+/* Tarjeta de contenido */
+.card-frecuencia {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(212,175,55,0.25);
+    border-radius: 14px;
+    padding: 35px;
+    box-shadow: 0 0 30px rgba(212,175,55,0.08);
+}
+
+/* Subtítulos */
+.card-frecuencia h3 {
+    color: #d4af37;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* Texto */
+.card-frecuencia p {
+    font-size: 0.95rem;
+    color: #bbb;
+}
+
+/* Cita */
+section > div:last-of-type {
+    margin-top: 40px;
+    border-left: 2px solid #d4af37;
+    padding-left: 20px;
+    font-style: italic;
+    color: #888;
+}
+
+/* Footer */
+.disclaimer-legal {
+    text-align: center;
+    padding: 35px 15px;
+    border-top: 1px solid rgba(212,175,55,0.2);
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .card-frecuencia {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}

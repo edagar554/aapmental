@@ -1,0 +1,269 @@
+/* ==============================
+   VARIABLES
+================================ */
+:root {
+    --oro: #d4af37;
+    --oscuro: #0b0b0b;
+    --negro: #000;
+    --texto: #eaeaea;
+    --gris: #999;
+}
+
+/* ==============================
+   RESET
+================================ */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body.lectura-body{
+    font-family:Arial, Helvetica, sans-serif;
+    background: radial-gradient(circle at top, #111, #000 70%);
+    color:var(--texto);
+    min-height:100vh;
+}
+
+/* ==============================
+   NAVBAR
+================================ */
+
+.navbar{
+    background:rgba(0,0,0,0.9);
+    border-bottom:1px solid rgba(212,175,55,0.25);
+}
+
+.nav-container{
+    max-width:1100px;
+    margin:auto;
+    padding:12px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:var(--oro);
+    text-decoration:none;
+    letter-spacing:2px;
+    font-size:0.9rem;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:18px;
+}
+
+.nav-links a{
+    color:var(--texto);
+    text-decoration:none;
+    font-size:0.85rem;
+}
+
+.nav-links a:hover{
+    color:var(--oro);
+}
+
+/* ==============================
+   DROPDOWN
+================================ */
+
+.dropdown{
+    position:relative;
+}
+
+.dropdown-content{
+    display:none;
+    position:absolute;
+    background:#0b0b0b;
+    border:1px solid rgba(212,175,55,0.25);
+    border-radius:6px;
+    min-width:200px;
+    padding:8px 0;
+    z-index:100;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+.dropdown-content li a{
+    display:block;
+    padding:8px 16px;
+    font-size:0.8rem;
+}
+
+/* ==============================
+   CONTENEDOR
+================================ */
+
+.container{
+    max-width:700px;
+    margin:auto;
+    padding:40px 20px 60px;
+}
+
+/* ==============================
+   CABECERA
+================================ */
+
+.oro-texto{
+    color:var(--oro);
+    letter-spacing:3px;
+    font-size:0.7rem;
+    text-transform:uppercase;
+}
+
+/* ==============================
+   TARJETA IMC
+================================ */
+
+.imc-card{
+    margin-top:40px;
+    background:rgba(255,255,255,0.04);
+    padding:30px;
+    border-radius:12px;
+    border-left:4px solid var(--oro);
+}
+
+/* ==============================
+   INPUTS
+================================ */
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:18px;
+}
+
+.input-group label{
+    font-size:0.85rem;
+    margin-bottom:6px;
+    color:var(--gris);
+}
+
+.input-group input{
+    padding:10px;
+    border-radius:6px;
+    border:1px solid #333;
+    background:#000;
+    color:#fff;
+    font-size:0.9rem;
+}
+
+.input-group input:focus{
+    outline:none;
+    border-color:var(--oro);
+}
+
+/* ==============================
+   BOTONES
+================================ */
+
+.btn{
+    padding:10px 18px;
+    border-radius:6px;
+    border:none;
+    cursor:pointer;
+    font-size:0.85rem;
+    transition:all 0.3s ease;
+}
+
+.btn:hover{
+    opacity:0.85;
+}
+
+/* ==============================
+   RESULTADO IMC
+================================ */
+
+#resultado-caja{
+    display:none;
+    margin-top:25px;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    transition: all 0.4s ease;
+        
+}
+
+.valor-imc{
+    font-size:2.8rem;
+    font-weight:bold;
+}
+
+.mensaje-imc{
+    margin-top:10px;
+    font-size:0.9rem;
+}
+
+/* ==============================
+   MEDIDOR IMC (BARRA)
+================================ */
+
+.medidor-imc{
+    margin-top:30px;
+    width:100%;
+}
+
+.barra-imc{
+    position:relative;
+    display:flex;
+    height:25px;
+    width:100%;
+    border-radius:12px;
+    overflow:hidden;
+    background:#333;
+}
+
+.zona{
+    flex:1;
+}
+
+.bajo{
+    background:#f1c40f;
+}
+
+.normal{
+    background:#2ecc71;
+}
+
+.sobrepeso{
+    background:#e67e22;
+}
+
+.obesidad{
+    background:#e74c3c;
+}
+
+.labels-imc{
+    display:flex;
+    justify-content:space-between;
+    margin-top:8px;
+    font-size:12px;
+    color:#aaa;
+}
+
+
+
+
+
+
+
+/* ==============================
+   RESPONSIVE
+================================ */
+
+@media (max-width:600px){
+
+    h1{
+        font-size:1.8rem !important;
+    }
+
+    .imc-card{
+        padding:22px;
+    }
+
+}

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcualadora IMC - Salud Física</title>
+    <link rel="stylesheet" href="masa-corporal.css">
+   
+</head>
+
+
+<body class="lectura-body">
+
+  
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+        
+        <ul class="nav-links">
+        
+        <li>
+        <a href="index.html" data-i18n="menu_inicio">Inicio</a>
+        </li>
+        
+        <li class="dropdown">
+        
+        <a href="#" data-i18n="menu_terapias">Terapias ▾</a>
+        
+        <ul class="dropdown-content">
+        
+        <li><a href="grounding.html" data-i18n="menu_grounding">Grounding</a></li>
+        
+        <li><a href="solfeguio.html" data-i18n="menu_solfeggio">Solfeggio</a></li>
+        
+        <li><a href="sanacion-cuantica.html" data-i18n="menu_sanacion">Sanación</a></li>
+        
+        <li><a href="isometricos.html" data-i18n="menu_isometricos">Isométricos</a></li>
+        
+        <li><a href="nutricion.html" data-i18n="menu_nutricion">Nutrición</a></li>
+        
+        </ul>
+        
+        </li>
+        
+        <li class="dropdown">
+        
+        <a href="#" data-i18n="menu_mente">Mente & Ciencia ▾</a>
+        
+        <ul class="dropdown-content">
+        
+        <li><a href="reprogramacion-neuronal.html" data-i18n="menu_reprogramacion">Reprogramación</a></li>
+        
+        <li><a href="mecanica-cuantica.html" data-i18n="menu_mecanica">Mecánica Cuántica</a></li>
+        
+        <li><a href="lectura-kybalion.html" data-i18n="menu_kybalion">Kybalión</a></li>
+        
+        </ul>
+        
+        </li>
+        
+        <li>
+        <a href="masa-corporal.html" data-i18n="menu_salud">Salud</a>
+        </li>
+        
+        </ul>
+        
+        <div class="nav-lang">
+        
+        <select id="idioma-nav" onchange="cambiarIdioma(this.value)">
+        
+        <option value="es">ESPAÑOL</option>
+        
+        <option value="en">ENGLISH</option>
+        
+        <option value="fr">FRANÇAIS</option>
+        
+        <option value="it">ITALIANO</option>
+        
+        </select>
+        
+        </div>
+        
+        </div>
+        
+        </nav>
+            
+        
+
+        
+
+    <main class="container">
+        <header style="text-align: center; margin-top: 50px;">
+            <span class="oro-texto" id="titulo">TEMPLO DEL CUERPO</span>
+
+<h1 id="subtitulo" style="font-size: 2.5rem;">
+Índice de Masa Corporal
+</h1>
+
+<p id="descripcion" style="color: #888;">
+  Monitorea tu estado físico para una vida plena.
+  </p>
+        </header>
+
+        <section class="imc-card">
+
+          <div class="input-group">
+            <label for="peso" id="label-peso">Peso actual (kg):</label>
+            <input type="number" id="peso" placeholder="Ej: 75" step="0.1">
+          </div>
+        
+          <div class="input-group">
+            <label for="estatura" id="label-estatura">Estatura (metros):</label>
+            <input type="number" id="estatura" placeholder="Ej: 1.75" step="0.01">
+          </div>
+        
+          <button id="btn-calcular" onclick="calcularIMC()" class="btn">
+            CALCULAR ESTADO FÍSICO
+          </button>
+        
+          <div id="resultado-caja">
+            <span id="imc-numero" class="valor-imc">0.0</span>
+            <p id="imc-mensaje" class="mensaje-imc"></p>
+          </div>
+        
+        
+          <!-- MEDIDOR HORIZONTAL -->
+        
+          <div class="medidor-imc">
+        
+            <div class="barra-imc">
+        
+              <div class="zona bajo"></div>
+              <div class="zona normal"></div>
+              <div class="zona sobrepeso"></div>
+              <div class="zona obesidad"></div>
+        
+              
+        
+            </div>
+        
+            <div class="labels-imc">
+              <span id="imc-bajo">Bajo</span>
+              <span id="imc-normal">Normal</span>
+              <span id="imc-sobrepeso">Sobrepeso</span>
+              <span id="imc-obesidad">Obesidad</span>
+            </div>
+        
+          </div>
+        
+        
+        
+        
+        </section>
+
+        <footer style="text-align: center; margin-top: 40px; padding-bottom: 50px;">
+            <button id="btn-volver" onclick="window.location.href='index.html'" class="btn">
+                ← Volver al Inicio
+                </button>
+        </footer>
+    </main>
+
+    
+
+    
+
+<script>
+
+const textosGlobales = {
+
+es:{
+
+menu_inicio:"Inicio",
+
+menu_terapias:"Terapias ▾",
+menu_grounding:"Grounding",
+menu_isometricos:"Isométricos",
+menu_solfeggio:"Solfeggio",
+
+menu_mente:"Mente & Ciencia ▾",
+menu_reprogramacion:"Reprogramación",
+menu_mecanica:"Mecánica Cuántica",
+menu_kybalion:"El Kybalión",
+
+menu_salud:"Salud"
+
+},
+
+en:{
+
+menu_inicio:"Home",
+
+menu_terapias:"Therapies ▾",
+menu_grounding:"Grounding",
+menu_isometricos:"Isometrics",
+menu_solfeggio:"Solfeggio",
+
+menu_mente:"Mind & Science ▾",
+menu_reprogramacion:"Reprogramming",
+menu_mecanica:"Quantum Mechanics",
+menu_kybalion:"The Kybalion",
+
+menu_salud:"Health"
+
+},
+
+fr:{
+
+menu_inicio:"Accueil",
+
+menu_terapias:"Thérapies ▾",
+menu_grounding:"Grounding",
+menu_isometricos:"Isométriques",
+menu_solfeggio:"Solfeggio",
+
+menu_mente:"Esprit & Science ▾",
+menu_reprogramacion:"Reprogrammation",
+menu_mecanica:"Mécanique Quantique",
+menu_kybalion:"Le Kybalion",
+
+menu_salud:"Santé"
+
+},
+
+it:{
+
+menu_inicio:"Home",
+
+menu_terapias:"Terapie ▾",
+menu_grounding:"Grounding",
+menu_isometricos:"Isometrici",
+menu_solfeggio:"Solfeggio",
+
+menu_mente:"Mente & Scienza ▾",
+menu_reprogramacion:"Riprogrammazione",
+menu_mecanica:"Meccanica Quantistica",
+menu_kybalion:"Il Kybalion",
+
+menu_salud:"Salute"
+
+}
+
+};
+
+const textos = {
+
+es:{
+titulo:"TEMPLO DEL CUERPO",
+subtitulo:"Índice de Masa Corporal",
+descripcion:"Monitorea tu estado físico para una vida plena.",
+
+labelPeso:"Peso actual (kg):",
+labelEstatura:"Estatura (metros):",
+
+botonCalcular:"CALCULAR ESTADO FÍSICO",
+botonVolver:"← Volver al Inicio",
+
+imcLabels:{
+bajo:"Bajo",
+normal:"Normal",
+sobrepeso:"Sobrepeso",
+obesidad:"Obesidad"
+},
+
+
+resultados:{
+bajo:"Tu peso es bajo. ¡Nutre tu cuerpo con consciencia!",
+normal:"¡FELICITACIONES! Estás en un peso saludable. Mantén ese equilibrio.",
+sobrepeso:"Tienes sobrepeso ligero. Un poco de movimiento y disciplina te vendrán bien.",
+obesidad:"Atención: Obesidad detectada. Tu cuerpo es tu templo, es momento de cuidarlo."
+},
+
+
+
+error:"Por favor ingresa valores válidos para peso y estatura."
+
+},
+
+en:{
+titulo:"BODY TEMPLE",
+subtitulo:"Body Mass Index",
+descripcion:"Monitor your physical condition for a fulfilling life.",
+
+labelPeso:"Current Weight (kg):",
+labelEstatura:"Height (meters):",
+
+botonCalcular:"CALCULATE PHYSICAL STATE",
+botonVolver:"← Back to Home",
+
+
+resultados:{
+bajo:"Your weight is low. Nourish your body with awareness!",
+normal:"CONGRATULATIONS! You are at a healthy weight. Keep that balance.",
+sobrepeso:"You have slight overweight. A bit more movement and discipline will help.",
+obesidad:"Attention: Obesity detected. Your body is your temple, take care of it."
+},
+
+imcLabels:{
+bajo:"Low",
+normal:"Normal",
+sobrepeso:"Overweight",
+obesidad:"Obesity"
+},
+
+error:"Please enter valid values for weight and height."
+
+},
+
+fr:{
+titulo:"TEMPLE DU CORPS",
+subtitulo:"Indice de Masse Corporelle",
+descripcion:"Surveillez votre état physique pour une vie épanouie.",
+
+labelPeso:"Poids actuel (kg):",
+labelEstatura:"Taille (mètres):",
+
+botonCalcular:"CALCULER L'ÉTAT PHYSIQUE",
+botonVolver:"← Retour à l'accueil",
+
+
+resultados:{
+bajo:"Votre poids est faible. Nourrissez votre corps avec conscience!",
+normal:"FÉLICITATIONS! Vous avez un poids sain. Maintenez cet équilibre.",
+sobrepeso:"Vous avez un léger surpoids. Un peu plus de mouvement sera bénéfique.",
+obesidad:"Attention : Obésité détectée. Votre corps est votre temple, prenez-en soin."
+},
+
+imcLabels:{
+bajo:"Faible",
+normal:"Normal",
+sobrepeso:"Surpoids",
+obesidad:"Obésité"
+},
+
+error:"Veuillez entrer des valeurs valides pour le poids et la taille."
+
+},
+
+it:{
+titulo:"TEMPIO DEL CORPO",
+subtitulo:"Indice di Massa Corporea",
+descripcion:"Monitora la tua condizione fisica per una vita piena.",
+
+labelPeso:"Peso attuale (kg):",
+labelEstatura:"Altezza (metri):",
+
+botonCalcular:"CALCOLA STATO FISICO",
+botonVolver:"← Torna alla Home",
+
+
+resultados:{
+bajo:"Il tuo peso è basso. Nutri il tuo corpo con consapevolezza!",
+normal:"CONGRATULAZIONI! Hai un peso sano. Mantieni questo equilibrio.",
+sobrepeso:"Hai un leggero sovrappeso. Un po' più di movimento ti aiuterà.",
+obesidad:"Attenzione: obesità rilevata. Il tuo corpo è il tuo tempio, prenditene cura."
+},
+
+imcLabels:{
+bajo:"Basso",
+normal:"Normale",
+sobrepeso:"Sovrappeso",
+obesidad:"Obesità"
+},
+
+error:"Inserisci valori validi per peso e altezza."
+
+}
+
+};
+
+
+  /* =========================================================
+  🌐 APLICAR IDIOMA
+  ========================================================= */
+  
+  document.addEventListener("DOMContentLoaded", () => {
+
+const idioma = localStorage.getItem("idioma") || "es";
+const global = textosGlobales[idioma];
+const i18n = textos[idioma];
+
+const set = (id, txt) => {
+  const el = document.getElementById(id);
+  if(el) el.textContent = txt;
+};
+
+// Textos globales (navbar)
+set("menu-inicio", global.menu_inicio);
+set("menu-terapias", global.menu_terapias);
+set("menu-grounding", global.menu_grounding);
+set("menu-isometricos", global.menu_isometricos);
+set("menu-solfeggio", global.menu_solfeggio);
+set("menu-mente", global.menu_mente);
+set("menu-reprogramacion", global.menu_reprogramacion);
+set("menu-mecanica", global.menu_mecanica);
+set("menu-kybalion", global.menu_kybalion);
+set("menu-salud", global.menu_salud);
+
+set("imc-bajo", i18n.imcLabels.bajo);
+set("imc-normal", i18n.imcLabels.normal);
+set("imc-sobrepeso", i18n.imcLabels.sobrepeso);
+set("imc-obesidad", i18n.imcLabels.obesidad);
+
+document.querySelectorAll("[data-i18n]").forEach(el => {
+  const clave = el.dataset.i18n;
+  if(textosGlobales[idioma][clave]){
+    el.textContent = textosGlobales[idioma][clave];
+  }
+});
+
+// Textos específicos de la página
+set("titulo", i18n.titulo);
+set("subtitulo", i18n.subtitulo);
+set("btn-calcular", i18n.botonCalcular);
+set("btn-volver", i18n.botonVolver);
+set("label-peso", i18n.labelPeso);
+set("label-estatura", i18n.labelEstatura);
+set("descripcion", i18n.descripcion);
+
+const selector = document.getElementById("idioma-nav");
+if(selector) selector.value = idioma;
+
+});
+function calcularIMC(){
+
+const idioma = localStorage.getItem("idioma") || "es";
+const i18n = textos[idioma];
+
+const peso = parseFloat(document.getElementById("peso").value);
+const estatura = parseFloat(document.getElementById("estatura").value);
+
+const caja = document.getElementById("resultado-caja");
+const nDisplay = document.getElementById("imc-numero");
+const mDisplay = document.getElementById("imc-mensaje");
+
+if(peso>0 && estatura>0){
+
+  const imc = (peso/(estatura*estatura)).toFixed(1);
+  
+
+  caja.style.display="block";
+  nDisplay.textContent = imc;
+
+  let color="";
+  let mensaje="";
+
+  if(imc < 18.5){
+    color="#ffcc00";
+    mensaje=i18n.resultados.bajo;
+  }
+  else if(imc <= 24.9){
+    color="#2ecc71";
+    mensaje=i18n.resultados.normal;
+  }
+  else if(imc <= 29.9){
+    color="#e67e22";
+    mensaje=i18n.resultados.sobrepeso;
+  }
+  else{
+    color="#e74c3c";
+    mensaje=i18n.resultados.obesidad;
+  }
+
+  caja.style.backgroundColor = color+"22";
+  caja.style.border = "1px solid "+color;
+  nDisplay.style.color = color;
+  mDisplay.style.color = color;
+  mDisplay.textContent = mensaje;
+
+ 
+
+} 
+else {
+  alert(i18n.error);
+}
+
+}
+
+
+
+
+function cambiarIdioma(lang){
+
+const rutas = {
+  es:"masa-corporal.html",
+  en:"masa-corporal.html",
+  fr:"masa-corporal.html",
+  it:"masa-corporal.html"
+};
+
+if(rutas[lang]){
+  localStorage.setItem("idioma", lang);
+  window.location.href = rutas[lang];
+}
+
+}
+
+</script>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+/* ==============================
+   🌑 BASE GENERAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.bg-dark {
+    background: radial-gradient(circle at top, #0b0b0b, #000);
+    color: #ddd;
+    font-family: 'Arial', sans-serif;
+}
+
+/* ==============================
+   🎨 VARIABLES
+================================ */
+
+:root {
+    --oro: #d4af37;
+}
+
+/* ==============================
+   🧭 NAVEGACIÓN
+================================ */
+.navbar {
+    background: #050505;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 0.9rem;
+    transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: var(--oro);
+}
+
+.navigation {
+    padding: 20px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background: #0c0c0c;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 10px;
+    display: none;
+    min-width: 180px;
+    z-index: 10;
+}
+
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    font-size: 0.85rem;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-lang select {
+    background: #000;
+    color: var(--oro);
+    border: 1px solid var(--oro);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+}
+
+.btn-back {
+    color: var(--oro);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.btn-back:hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+   🔱 HEADER
+================================ */
+
+.hero {
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.hero h1 {
+    color: var(--oro);
+    font-size: 2.6rem;
+}
+
+.hero .cita {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+.oro-texto {
+    color: var(--oro);
+    font-size: 2.5rem;
+}
+
+.cita {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+/* ==============================
+   📦 CONTENEDOR
+================================ */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ==============================
+   🔊 GRID FRECUENCIAS
+================================ */
+
+.grid-frecuencias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card-frecuencia {
+    background: #0c0c0c;
+    border-radius: 14px;
+    padding: 25px 20px;
+    text-align: center;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-frecuencia:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+}
+
+/* ==============================
+   🔢 CÍRCULO Hz
+================================ */
+
+.hz-circulo {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    border: 2px solid var(--oro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--oro);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* ==============================
+   📝 TEXTO
+================================ */
+
+.card-frecuencia h3 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.card-frecuencia p {
+    font-size: 0.85rem;
+    color: #bbb;
+}
+
+/* ==============================
+   ▶ BOTÓN PLAY
+================================ */
+
+.btn-play {
+    margin-top: 15px;
+    background: transparent;
+    border: 1px solid var(--oro);
+    color: var(--oro);
+    padding: 8px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.btn-play:hover {
+    background: var(--oro);
+    color: #000;
+}
+
+/* ==============================
+   ⏹ CONTROLES AUDIO
+================================ */
+
+.controles-audio {
+    text-align: center;
+    margin: 60px 0 40px;
+}
+
+.btn-stop {
+    background: transparent;
+    border: 1px solid #555;
+    color: #aaa;
+    padding: 14px 40px;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.btn-stop:hover {
+    border-color: var(--oro);
+    color: var(--oro);
+}
+
+/* ==============================
+   🦶 FOOTER
+================================ */
+
+.footer-simple {
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.8rem;
+    color: #777;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}

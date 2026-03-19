@@ -1,0 +1,321 @@
+/* ==============================
+   🌐 VARIABLES GLOBALES
+================================ */
+:root {
+    --oro: #d4af37;
+    --negro: #000;
+    --oscuro: #0b0b0b;
+    --texto: #eaeaea;
+    --gris: #aaa;
+    --fuente-principal: 'Arial', sans-serif;
+}
+
+/* ==============================
+   🔄 RESET BÁSICO
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background: radial-gradient(circle at top, #111, #000 70%);
+    color: var(--texto);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==============================
+   🧭 NAVBAR
+================================ */
+.navbar {
+    background: rgba(0, 0, 0, 0.85);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--texto);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--oro);
+}
+
+/* ==============================
+   📂 DROPDOWN
+================================ */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background: #0b0b0b;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 6px;
+    list-style: none;
+    padding: 10px 0;
+    min-width: 200px;
+    display: none;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ==============================
+   🌍 SELECTOR DE IDIOMA
+================================ */
+.nav-lang select {
+    background: #000;
+    color: var(--oro);
+    border: 1px solid var(--oro);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+/* ==============================
+   🌄 PORTADA
+================================ */
+.portada {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contenido-portada h1 {
+    font-size: 2rem;
+    line-height: 1.4;
+    margin-bottom: 25px;
+    color: var(--oro);
+}
+
+.contenido-portada img {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 12px;
+    margin: 20px auto;
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.25);
+}
+
+.subtitulo {
+    margin-top: 15px;
+    letter-spacing: 3px;
+    font-size: 0.75rem;
+    color: var(--gris);
+}
+
+/* ==============================
+   📦 CONTENEDOR GENERAL
+================================ */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* ==============================
+   📱 RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .contenido-portada h1 {
+        font-size: 1.6rem;
+    }
+}
+
+/* ==============================
+   ❤️ BOTONES DE INTERACCIÓN
+================================ */
+.interaccion-bar {
+    margin-top: 20px;
+}
+
+.acciones {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn-accion {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(212,175,55,0.3);
+    color: var(--oro);
+    padding: 10px 16px;
+    border-radius: 999px; /* magia aquí */
+    font-size: 0.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-accion i {
+    font-size: 0.9rem;
+}
+
+.btn-accion:hover {
+    background: rgba(212,175,55,0.1);
+    box-shadow: 0 0 12px rgba(212,175,55,0.35);
+    transform: translateY(-1px);
+}
+
+/* Botón especial suscribir */
+.btn-suscribir {
+    border-color: var(--oro);
+    background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(212,175,55,0.05));
+}
+
+    
+    
+
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.8);
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+    }
+    
+    .modal-contenido{
+    background:#0b0b0b;
+    padding:30px;
+    border-radius:10px;
+    width:320px;
+    text-align:center;
+    color:white;
+    }
+    
+    .modal-contenido input{
+    width:100%;
+    padding:10px;
+    margin:15px 0;
+    border-radius:5px;
+    border:none;
+    }
+    
+    .modal-contenido button{
+    background:#d4af37;
+    border:none;
+    padding:10px 20px;
+    cursor:pointer;
+    border-radius:5px;
+    }
+    
+    .cerrar{
+    float:right;
+    font-size:25px;
+    cursor:pointer;
+    }
+.btn-accion .fas.fa-heart {
+    animation: latido 0.4s ease;
+}
+
+@keyframes latido {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+/* ==============================
+   🦶 FOOTER
+================================ */
+.footer-simple {
+    background: radial-gradient(circle at top, #111, #000 80%);
+    border-top: 1px solid rgba(212,175,55,0.25);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-brand {
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px; /* si lo quieres totalmente cuadrado, usa 0 */
+    box-shadow: 0 0 30px rgba(212,175,55,0.25);
+}
+
+.footer-links {
+    margin: 20px 0;
+    font-size: 0.85rem;
+}
+
+.footer-links a {
+    color: var(--gris);
+    text-decoration: none;
+    margin: 0 6px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--oro);
+}
+
+.footer-identidad {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: var(--oro);
+    margin-top: 15px;
+    opacity: 0.85;
+}
+
+.footer-copy {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.7rem;
+    opacity: 0.5;
+}
+

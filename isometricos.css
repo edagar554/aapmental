@@ -1,0 +1,286 @@
+/* ==============================
+   🌱 RESET & VARIABLES
+================================ */
+
+:root {
+    --oro: #d4af37;
+    --oro-brillante: #f1c40f;
+    --oscuro-puro: #0a0a0a;
+    --oscuro-suave: #161616;
+    --fondo: #121212;
+    --tarjeta: #1e1e1e;
+    --texto-principal: #e0e0e0;
+    --texto-secundario: #a0a0a0;
+    --transicion: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ==============================
+   🧱 LAYOUT GENERAL
+================================ */
+
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--oscuro-puro);
+    color: var(--texto-principal);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
+}
+
+/* ==============================
+   🎨 COMPONENTES & SECCIONES
+================================ */
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #2980b9, #2c3e50);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* NAVBAR */
+
+/* ==============================
+   🧭 NAVBAR ORDENADO
+================================ */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(10,10,10,0.95);
+    border-bottom: 1px solid rgba(212,175,55,0.3);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 👈 CLAVE */
+}
+
+/* LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: var(--texto-principal);
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--oro);
+}
+
+/* DROPDOWN */
+.dropdown-content {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background: #111;
+    border: 1px solid rgba(212,175,55,0.3);
+    border-radius: 8px;
+    min-width: 190px;
+    padding: 8px 0;
+    list-style: none;
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: all 0.25s ease;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    color: var(--texto-secundario);
+}
+
+.dropdown-content a:hover {
+    background: rgba(212,175,55,0.08);
+    color: var(--oro);
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* SELECTOR IDIOMA */
+.nav-lang select {
+    background: #000;
+    color: var(--oro);
+    border: 1px solid var(--oro);
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.navbar {
+    position: sticky; /* O fixed si quieres que te siga siempre */
+    top: 0;
+    width: 100%;
+    z-index: 9999; /* Asegúrate de que sea el número más alto */
+    background: #0a0a0a; /* Ponle un color sólido para probar */
+    border-bottom: 2px solid var(--oro);
+}
+
+.nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+
+/* GRID EJERCICIOS */
+.grid-ejercicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* TARJETAS */
+.card {
+    background: #252525;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* TIMER */
+/* ==============================
+   ⏱️ TIMER ESTILO
+================================ */
+/* Esto es lo que controla el número 01:00 */
+#display {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--oro); /* El dorado que definiste en tus variables */
+    margin-bottom: 15px;
+    display: block; /* Para que los botones bajen */
+}
+
+/* Tiempo principal */
+.timer-box .tiempo {
+    font-size: 2.6rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: var(--oro);
+}
+
+/* Texto secundario */
+.timer-box .etiqueta {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--texto-secundario);
+    margin-bottom: 20px;
+}
+
+/* Botones */
+.timer-box button {
+    background: transparent;
+    border: 1px solid var(--oro);
+    color: var(--oro);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.timer-box button:hover {
+    background: var(--oro);
+    color: #000;
+}
+
+
+/* 👉 AQUÍ PUEDES PEGAR
+   TODO lo demás que ya tienes
+   (mensajes flotantes, comentarios, imc, legal, etc.) */
+
+
+
+   /* ==============================
+   🦶 FOOTER FINAL
+================================ */
+
+.footer-simple {
+    margin-top: auto;
+    padding: 40px 20px 30px;
+    background: linear-gradient(180deg, #0b0b0b, #000);
+    border-top: 1px solid rgba(212, 175, 55, 0.25);
+    text-align: center;
+    color: #aaa;
+}
+
+.footer-logo {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: var(--oro);
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin: 0 6px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-identidad {
+    font-size: 0.8rem;
+    margin: 10px 0;
+}
+
+.footer-copy {
+    font-size: 0.75rem;
+    opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    
+}

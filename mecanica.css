@@ -1,0 +1,289 @@
+/* ==============================
+   🌌 ESTILOS GENERALES
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.bg-dark {
+    background-color: #000;
+    color: #ddd;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* ==============================
+   🎨 COLORES Y TEXTO
+================================ */
+
+:root {
+    --oro: #d4af37;
+}
+
+.oro-texto {
+    color: var(--oro);
+}
+
+.subtitulo-cientifico {
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+/* ==============================
+   🧭 NAVEGACIÓN
+================================ */
+
+.navigation {
+    padding: 20px;
+}
+
+.btn-back {
+    color: var(--oro);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.btn-back:hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+   🧠 HEADER CUÁNTICO
+================================ */
+
+.header-cuantica h1 {
+    font-size: 2.5rem;
+}
+
+.header-cuantica p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ==============================
+   📦 CONTENEDOR
+================================ */
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ==============================
+   🎥 VIDEO
+================================ */
+
+.video-principal-box {
+    margin-top: 90px;
+}
+
+.video-descripcion p {
+    font-size: 0.95rem;
+    color: #bbb;
+}
+
+/* ==============================
+   🔮 GRID FRECUENCIAS
+================================ */
+
+.grid-frecuencias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card-frecuencia {
+    background: #0e0e0e;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+}
+
+.card-frecuencia h3 {
+    color: var(--oro);
+    margin: 15px 0 10px;
+}
+
+.card-frecuencia p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.hz-circulo {
+    font-size: 2.5rem;
+}
+
+/* ==============================
+   🔘 BOTÓN FINAL
+================================ */
+
+.btn-stop {
+    border: none;
+    border-radius: 40px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-stop:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* ==============================
+   🦶 FOOTER
+================================ */
+
+.footer-simple {
+    margin-top: 80px;
+    padding: 30px 20px;
+    background: linear-gradient(180deg, #0b0b0b, #000);
+    border-top: 1px solid rgba(212, 175, 55, 0.25);
+    text-align: center;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+/* ==============================
+   🌐 NAVBAR PRINCIPAL
+================================ */
+
+.navbar{
+    background:#0b0b0b;
+    border-bottom:1px solid rgba(212,175,55,0.25);
+    padding:15px 30px;
+}
+
+/* contenedor del menú */
+
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* links del menú */
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:#ddd;
+    text-decoration:none;
+    font-size:0.9rem;
+    transition:color 0.2s ease;
+}
+
+.nav-links a:hover{
+    color:var(--oro);
+}
+
+/* ==============================
+   📂 DROPDOWN
+================================ */
+
+.dropdown{
+    position:relative;
+}
+
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#0e0e0e;
+    border:1px solid rgba(212,175,55,0.25);
+    border-radius:8px;
+    list-style:none;
+    padding:10px 0;
+    min-width:180px;
+}
+
+.dropdown-content li{
+    padding:8px 15px;
+}
+
+.dropdown-content a{
+    display:block;
+    color:#ccc;
+}
+
+.dropdown-content a:hover{
+    color:var(--oro);
+}
+
+/* mostrar dropdown */
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+/* ==============================
+   🌍 SELECTOR IDIOMA
+================================ */
+
+.nav-lang select{
+    background:#111;
+    color:#ddd;
+    border:1px solid rgba(212,175,55,0.3);
+    border-radius:6px;
+    padding:5px 8px;
+    font-size:0.8rem;
+}
+/* ==============================
+   📚 RESUMEN KUSHI
+================================ */
+.resumen-kushi {
+    background: #0e0e0e; /* fondo similar a tus cards */
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 40px 0;
+    color: #ddd;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.resumen-kushi h2 {
+    color: var(--oro);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.resumen-kushi h3 {
+    color: #d4af37;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.resumen-kushi p {
+    margin-bottom: 12px;
+    color: #ccc;
+}
+
+.resumen-kushi ul {
+    padding-left: 20px;
+    margin-bottom: 12px;
+}
+
+.resumen-kushi ul li {
+    margin-bottom: 8px;
+}
+
+/* Resaltar tiempos o referencias */
+.resumen-kushi span.tiempo {
+    color: var(--oro);
+    font-weight: bold;
+}
