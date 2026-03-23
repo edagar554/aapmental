@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.aapmental.org/sitemap.xml
+Sitemap: https://www.aapmental.org/sitemap-videos.xml
+

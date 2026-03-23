@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+  <url>
+    <loc>https://www.aapmental.org/index.html</loc>
+    <video:video>
+      <video:title>Regeneración y curación corporal</video:title>
+      <video:description>Cura física y emocional</video:description>
+      <video:thumbnail_loc>https://img.youtube.com/vi/AisJ-2ku5Do/maxresdefault.jpg</video:thumbnail_loc>
+      <video:content_loc>https://www.youtube.com/watch?v=AisJ-2ku5Do</video:content_loc>
+      <video:embed_loc>https://www.youtube.com/embed/AisJ-2ku5Do</video:embed_loc>
+      <video:publication_date>2019-11-03</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <url>
+    <loc>https://www.aapmental.org/sanacion-cuantica.html</loc>
+    <video:video>
+      <video:title>Los 12 secretos metafísicos de los sabios para sanar el cuerpo</video:title>
+      <video:description>Audiolibro de sanación y liberación de bloqueos emocionales como origen de enfermedades físicas</video:description>
+      <video:thumbnail_loc>https://img.youtube.com/vi/VXp1N13nljg/maxresdefault.jpg</video:thumbnail_loc>
+      <video:content_loc>https://www.youtube.com/watch?v=VXp1N13nljg</video:content_loc>
+      <video:embed_loc>https://www.youtube.com/embed/VXp1N13nljg</video:embed_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <url>
+    <loc>https://www.aapmental.org/reprogramacion-neuronal.html</loc>
+    <video:video>
+      <video:title>La ley invisible que está controlando tu vida ahora mismo</video:title>
+      <video:description>Cómo el pensamiento puede ser el arquitecto de nuestra vida</video:description>
+      <video:thumbnail_loc>https://img.youtube.com/vi/PE1VQvHEnhg/maxresdefault.jpg</video:thumbnail_loc>
+      <video:content_loc>https://www.youtube.com/watch?v=PE1VQvHEnhg</video:content_loc>
+      <video:embed_loc>https://www.youtube.com/embed/PE1VQvHEnhg</video:embed_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <url>
+    <loc>https://www.aapmental.org/mecanica-cuantica.html</loc>
+    <video:video>
+      <video:title>Experimento de la doble rendija</video:title>
+      <video:description>Experimento de mecánica cuántica sobre el efecto del observador en la materia</video:description>
+      <video:thumbnail_loc>https://img.youtube.com/vi/1SqfHr0ukaU/maxresdefault.jpg</video:thumbnail_loc>
+      <video:content_loc>https://www.youtube.com/watch?v=1SqfHr0ukaU</video:content_loc>
+      <video:embed_loc>https://www.youtube.com/embed/1SqfHr0ukaU</video:embed_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <url>
+    <loc>https://www.aapmental.org/isometricos.html</loc>
+    <video:video>
+      <video:title>Por qué los asiáticos practican la sentadilla profunda</video:title>
+      <video:description>Posición isométrica para estimular los órganos internos</video:description>
+      <video:thumbnail_loc>https://img.youtube.com/vi/VYKSFaFiRhQ/maxresdefault.jpg</video:thumbnail_loc>
+      <video:content_loc>https://www.youtube.com/watch?v=VYKSFaFiRhQ</video:content_loc>
+      <video:embed_loc>https://www.youtube.com/embed/VYKSFaFiRhQ</video:embed_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <url>
+    <loc>https://www.aapmental.org/isometricos.html#caballo</loc>
+    <video:video>
+      <video:title>Postura del caballo</video:title>
+      <video:description>Postura isométrica para fortalecer el tren inferior</video:description>
+      <video:thumbnail_loc>https://img.youtube.com/vi/E3B4QawryeU/maxresdefault.jpg</video:thumbnail_loc>
+      <video:content_loc>https://www.youtube.com/watch?v=E3B4QawryeU</video:content_loc>
+      <video:embed_loc>https://www.youtube.com/embed/E3B4QawryeU</video:embed_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <url>
+    <loc>https://www.aapmental.org/isometricos.html#suspension</loc>
+    <video:video>
+      <video:title>Suspensión muerta</video:title>
+      <video:description>Suspensión pasiva isométrica</video:description>
+      <video:thumbnail_loc>https://img.youtube.com/vi/PORNGj-x4Ao/maxresdefault.jpg</video:thumbnail_loc>
+      <video:content_loc>https://www.youtube.com/watch?v=PORNGj-x4Ao</video:content_loc>
+      <video:embed_loc>https://www.youtube.com/embed/PORNGj-x4Ao</video:embed_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <url>
+    <loc>https://www.aapmental.org/isometricos.html#plancha</loc>
+    <video:video>
+      <video:title>Isométrico para fortalecer el core</video:title>
+      <video:description>Ejercicio de plancha abdominal para fortalecer el núcleo del cuerpo</video:description>
+      <video:thumbnail_loc>https://img.youtube.com/vi/3AM7L2k7BEw/maxresdefault.jpg</video:thumbnail_loc>
+      <video:content_loc>https://www.youtube.com/watch?v=3AM7L2k7BEw</video:content_loc>
+      <video:embed_loc>https://www.youtube.com/embed/3AM7L2k7BEw</video:embed_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+</urlset>

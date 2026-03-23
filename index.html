@@ -2,10 +2,21 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Sonido & Conciencia - Práctica</title>
+    <meta name="description" content="Descubre técnicas de bioenergía, grounding, sanación emocional y desarrollo personal. Mejora tu bienestar mental con prácticas guiadas en AAPMental.">
+
+<meta name="keywords" content="bioenergia, grounding, solfeggio, conciencia, meditacion, salud mental, energia, desarrollo personal">
+
+<meta name="author" content="AAPMental">
+<title>Bioenergía, Grounding y Sanación Mental | AAPMental</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="AAPMental - Bioenergía y Conciencia">
+<meta property="og:description" content="Plataforma de bienestar mental, grounding y sanación emocional.">
+<meta property="og:image" content="https://www.aapmental.org/imagenes/imagen1.jpg">
+<meta property="og:url" content="https://www.aapmental.org/">
+<meta property="og:type" content="website">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="index.css">
+
 </head>
 <body>
 
@@ -34,7 +45,7 @@
                 <li><a href="reprogramacion-neuronal.html" data-i18n="menu_reprogramacion">Reprogramación</a></li>
                 <li><a href="mecanica-cuantica.html" data-i18n="menu_mecanica">Mecánica Cuántica</a></li>
                 <li><a href="lectura-kybalion.html" data-i18n="menu_kybalion">Kybalión</a></li>
-                <li><a href="nutricion.html" data-i18n="menu_nutricion">nutricion</a></li>
+                
               </ul>
             </li>
 
@@ -62,11 +73,15 @@
                 de lo superficial a lo profundo.
             </h1>
 
-            <img src="imagenes/imagen1.jpg" alt="portada">
+            <img src="imagenes/imagen1.jpg" alt="Conexión interior, energía y crecimiento personal">
 
             <p class="subtitulo" data-i18n="portada_subtitulo">
                 GROUNDING + ARBORTERAPIA
             </p>
+
+            <p data-i18n="portada_intro" style="color:#ddd; margin-top:15px; max-width:600px; line-height:1.6;"></p>
+
+            
         </div>
     </section>
 
@@ -90,6 +105,8 @@
                     <p style="font-style: italic; color: #ccc; margin-bottom: 20px;" data-i18n="frase_kybalion">
                         "El TODO es Mente; el Universo es Mental."
                     </p>
+
+                    
         
                     <!-- Video embebido -->
                     <div class="video-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin-bottom: 15px;">
@@ -142,6 +159,7 @@
                                     <i class="fas fa-envelope"></i> Suscribirse
                                     </button>
                         </div>
+                        
         
                         <!-- Comentarios -->
                         <div class="comentarios-label">
@@ -169,6 +187,8 @@
                     <div class="instrucciones-practica" style="font-size: 0.9rem; line-height: 1.6; margin-top: 20px;" data-i18n="instrucciones">
                         Observa tus pensamientos como si fueras un espectador. No los juzgues, solo reconoce que tú eres el creador de ese espacio mental.
                     </div>
+
+                    <p data-i18n="beneficio_practica" style="color:#ccc; margin-top:10px; line-height:1.6;"></p>
         
                 </section>
         
@@ -180,6 +200,7 @@
 
                     <!-- ====== FOOTER ====== -->
     <footer class="footer-simple">
+        <p data-i18n="footer_descripcion" style="color:#aaa; font-size:0.8rem; margin-top:10px; max-width:600px;"></p>
         <p data-i18n="footer_texto">
             Aplicación gratuita · Respira · Siente · Vibra
         </p>
@@ -204,7 +225,8 @@
     menu_mecanica: "Mecánica Cuántica",
     menu_kybalion: "Kybalión",
     menu_salud: "Masa Corporal",
-    menu_nutricion: "nutricion"
+    menu_nutricion: "nutricion",
+    
   },
 
   en: {
@@ -218,7 +240,8 @@
     menu_mecanica: "Quantum Mechanics",
     menu_kybalion: "Kybalion",
     menu_salud: "Body Mass",
-    menu_nutricion:"nutrition"
+    menu_nutricion:"nutrition",
+   
   },
 
   fr: {
@@ -232,7 +255,8 @@
     menu_mecanica: "Mécanique Quantique",
     menu_kybalion: "Kybalion",
     menu_salud: "Masse Corporelle",
-    menu_nutricion:"nutrition"
+    menu_nutricion:"nutrition",
+   
   },
 
   it: {
@@ -246,86 +270,100 @@
     menu_mecanica: "Meccanica Quantistica",
     menu_kybalion: "Kybalion",
     menu_salud: "Massa Corporea",
-    menu_nutricion: "nutrizione"
+    menu_nutricion: "nutrizione",
+   
   }
 }; 
         
-        const traducciones = {
-            es: {
-                portada_texto: "Construyendo, poco a poco;<br>de lo fácil a lo difícil,<br>de lo superficial a lo profundo.",
-                portada_subtitulo: "GROUNDING + ARBORTERAPIA",
-                practica_curso: "Práctica en curso",
-                principio_titulo: "Principio I: Mentalismo",
-                frase_kybalion: "El TODO es Mente; el Universo es Mental.",
-                instrucciones: "Observa tus pensamientos como si fueras un espectador. No los juzgues.",
-                consejo_practica: "Practica de 20 a 30 minutos diarios para regenerar tu energía.",
-                btn_iniciar: "Iniciar frecuencia de sanación",
-                footer_texto: "Aplicación gratuita · Respira · Siente · Vibra",
-                principio_titulo: "Principio I: Mentalismo",
-frase_kybalion: "El TODO es Mente; el Universo es Mental.",
+const traducciones = {
+  es: {
+    portada_texto: "Construyendo, poco a poco;<br>de lo fácil a lo difícil,<br>de lo superficial a lo profundo.",
+    portada_subtitulo: "GROUNDING + ARBORTERAPIA",
+    practica_curso: "Práctica en curso",
+    principio_titulo: "Principio I: Mentalismo",
+    frase_kybalion: "El TODO es Mente; el Universo es Mental.",
+    instrucciones: "Observa tus pensamientos como si fueras un espectador. No los juzgues.",
+    consejo_practica: "Practica de 20 a 30 minutos diarios para regenerar tu energía.",
+    btn_iniciar: "Iniciar frecuencia de sanación",
+    footer_texto: "Aplicación gratuita · Respira · Siente · Vibra",
 
-                btn_like: "Me gusta",
-btn_compartir: "Compartir",
-btn_suscribir: "Suscribirse",
-comentarios_comunidad: "Publicaciones de la comunidad",
-btn_publicar: "Publicar",
+    btn_like: "Me gusta",
+    btn_compartir: "Compartir",
+    btn_suscribir: "Suscribirse",
+    comentarios_comunidad: "Publicaciones de la comunidad",
+    btn_publicar: "Publicar",
 
-            },
-            en: {
-                portada_texto: "Building, step by step;<br>from easy to difficult,<br>from superficial to deep.",
-                portada_subtitulo: "GROUNDING + ARBORTHERAPY",
-                practica_curso: "Practice in progress",
-                principio_titulo: "Principle I: Mentalism",
-                frase_kybalion: "The ALL is Mind; the Universe is Mental.",
-                instrucciones: "Observe your thoughts as a spectator. Do not judge them.",
-                consejo_practica: "Practice 20 to 30 minutes daily to regenerate your energy.",
-                btn_iniciar: "Start healing frequency",
-                footer_texto: "Free application · Breathe · Feel · Vibrate",
-                principio_titulo: "Principle I: Mentalism",
-                frase_kybalion: "The ALL is Mind; the Universe is Mental.",
-                btn_like: "Like",
-btn_compartir: "Share",
-btn_suscribir: "Subscribe",
-comentarios_comunidad: "Community Posts",
-btn_publicar: "Publish",
-            },
-            fr: {
-                portada_texto: "Construire étape par étape;<br>du facile au difficile,<br>de la surface à la profondeur.",
-                portada_subtitulo: "GROUNDING + ARBORTHÉRAPIE",
-                practica_curso: "Pratique en cours",
-                principio_titulo: "Principe I: Mentalisme",
-                frase_kybalion: "Le TOUT est Esprit; l’Univers est Mental.",
-                instrucciones: "Observez vos pensées comme un spectateur. Ne les jugez pas.",
-                consejo_practica: "Pratiquez 20 à 30 minutes par jour pour régénérer votre énergie.",
-                btn_iniciar: "Démarrer la fréquence",
-                footer_texto: "Application gratuite · Respirez · Ressentez · Vibrez",
-                principio_titulo: "Principe I : Mentalisme",
-                frase_kybalion: "Le TOUT est Esprit ; l’Univers est Mental.",
-                btn_like: "J'aime",
-btn_compartir: "Partager",
-btn_suscribir: "S'abonner",
-comentarios_comunidad: "Publications de la communauté",
-btn_publicar: "Publier",
-            },
-            it: {
-                portada_texto: "Costruire passo dopo passo;<br>dal facile al difficile,<br>dalla superficie alla profondità.",
-                portada_subtitulo: "GROUNDING + ARBORTERAPIA",
-                practica_curso: "Pratica in corso",
-                principio_titulo: "Principio I: Mentalismo",
-                frase_kybalion: "TUTTO è Mente; l’Universo è Mentale.",
-                instrucciones: "Osserva i tuoi pensieri come uno spettatore. Non giudicarli.",
-                consejo_practica: "Pratica 20-30 minuti al giorno per rigenerare la tua energia.",
-                btn_iniciar: "Avvia frequenza",
-                footer_texto: "Applicazione gratuita · Respira · Senti · Vibra",
-                principio_titulo: "Principio I: Mentalismo",
-                frase_kybalion: "Il TUTTO è Mente; l’Universo è Mentale.",
-                btn_like: "Mi piace",
-btn_compartir: "Condividi",
-btn_suscribir: "Iscriviti",
-comentarios_comunidad: "Pubblicazioni della comunità",
-btn_publicar: "Pubblica",
-            }
-        };
+    portada_intro: "Bienvenido a AAPMental.org, un espacio dedicado a tu bienestar mental y emocional. Aquí encontrarás técnicas de grounding, bioenergía y desarrollo personal para mejorar tu calidad de vida y reconectar con tu energía interior.",
+
+    beneficio_practica: "Estas prácticas de conciencia y mentalismo ayudan a entrenar la mente, reducir el estrés y mejorar el bienestar mental. Incorporarlas a tu rutina diaria puede transformar tu percepción, fortalecer tu equilibrio emocional y potenciar tu desarrollo personal."
+  },
+
+  en: {
+    portada_texto: "Building, step by step;<br>from easy to difficult,<br>from superficial to deep.",
+    portada_subtitulo: "GROUNDING + ARBORTHERAPY",
+    practica_curso: "Practice in progress",
+    principio_titulo: "Principle I: Mentalism",
+    frase_kybalion: "The ALL is Mind; the Universe is Mental.",
+    instrucciones: "Observe your thoughts as a spectator. Do not judge them.",
+    consejo_practica: "Practice 20 to 30 minutes daily to regenerate your energy.",
+    btn_iniciar: "Start healing frequency",
+    footer_texto: "Free application · Breathe · Feel · Vibrate",
+
+    btn_like: "Like",
+    btn_compartir: "Share",
+    btn_suscribir: "Subscribe",
+    comentarios_comunidad: "Community Posts",
+    btn_publicar: "Publish",
+
+    portada_intro: "Welcome to AAPMental.org, a space dedicated to your mental and emotional well-being. Here you will find grounding techniques, bioenergetics, and personal development methods to improve your quality of life and reconnect with your inner energy.",
+
+    beneficio_practica: "These mindfulness and mentalism practices help train your mind, reduce stress, and improve overall well-being. Practicing daily can transform your perception and strengthen emotional balance."
+  },
+
+  fr: {
+    portada_texto: "Construire étape par étape;<br>du facile au difficile,<br>de la surface à la profondeur.",
+    portada_subtitulo: "GROUNDING + ARBORTHÉRAPIE",
+    practica_curso: "Pratique en cours",
+    principio_titulo: "Principe I : Mentalisme",
+    frase_kybalion: "Le TOUT est Esprit ; l’Univers est Mental.",
+    instrucciones: "Observez vos pensées comme un spectateur. Ne les jugez pas.",
+    consejo_practica: "Pratiquez 20 à 30 minutes par jour pour régénérer votre énergie.",
+    btn_iniciar: "Démarrer la fréquence",
+    footer_texto: "Application gratuite · Respirez · Ressentez · Vibrez",
+
+    btn_like: "J'aime",
+    btn_compartir: "Partager",
+    btn_suscribir: "S'abonner",
+    comentarios_comunidad: "Publications de la communauté",
+    btn_publicar: "Publier",
+
+    portada_intro: "Bienvenue sur AAPMental.org, un espace dédié à votre bien-être mental et émotionnel. Vous y trouverez des techniques de grounding, de bioénergétique et de développement personnel.",
+
+    beneficio_practica: "Ces pratiques aident à entraîner l’esprit, réduire le stress et améliorer l’équilibre émotionnel."
+  },
+
+  it: {
+    portada_texto: "Costruire passo dopo passo;<br>dal facile al difficile,<br>dalla superficie alla profondità.",
+    portada_subtitulo: "GROUNDING + ARBORTERAPIA",
+    practica_curso: "Pratica in corso",
+    principio_titulo: "Principio I: Mentalismo",
+    frase_kybalion: "Il TUTTO è Mente; l’Universo è Mentale.",
+    instrucciones: "Osserva i tuoi pensieri come uno spettatore. Non giudicarli.",
+    consejo_practica: "Pratica 20-30 minuti al giorno per rigenerare la tua energia.",
+    btn_iniciar: "Avvia frequenza",
+    footer_texto: "Applicazione gratuita · Respira · Senti · Vibra",
+
+    btn_like: "Mi piace",
+    btn_compartir: "Condividi",
+    btn_suscribir: "Iscriviti",
+    comentarios_comunidad: "Pubblicazioni della comunità",
+    btn_publicar: "Pubblica",
+
+    portada_intro: "Benvenuto su AAPMental.org, uno spazio dedicato al tuo benessere mentale ed emotivo.",
+
+    beneficio_practica: "Queste pratiche aiutano a ridurre lo stress e migliorare l’equilibrio mentale."
+  }
+};   
 
         // ===== FUNCION CAMBIO DE IDIOMA =====
         const selectorIdioma = document.getElementById('idioma-nav');
@@ -462,47 +500,62 @@ alert("Enlace copiado. Puedes pegarlo y compartirlo.");
 
 
 
-<footer class="footer-simple">
 
-    <div class="footer-brand">
-      <img src="imagenes/logo.jpg" alt="Logo Tecnologia-Bioenergetica" class="footer-logo">
-    </div>
+
+    
   
-    <nav class="footer-links">
-      <a href="privacidad.html">Política de privacidad</a> ·
-      <a href="terminos.html">Términos y condiciones</a> ·
-      <a href="contacto.html">Contacto</a>
-    </nav>
-  
-    <p class="footer-identidad">
-      Tecnología-Bioenergética · Desarrollo web & medicina bioenergética
-    </p>
-  
-    <small class="footer-copy">
-      © 2026 — Tecnologia -Bioenergetica  · Todos los derechos reservados
-    </small>
-  
-  </footer>
+   
+
+
   <div id="modalSuscripcion" class="modal">
-
     <div class="modal-contenido">
+      
+      <span class="cerrar">&times;</span>
+      
+      <h2>📩 Únete a nuestra comunidad</h2>
+      
+      <form action="https://formsubmit.info@aapmental.org" method="POST">
+          <input type="email" name="email" placeholder="Tu correo electrónico" required>
+          <button type="submit">Suscribirme</button>
+          
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="Nueva suscripción desde mi web">
+      </form>
+  
+    </div>
+  </div>
     
-    <span class="cerrar">&times;</span>
-    
-    <h2>📩 Únete a nuestra comunidad</h2>
-    
-    <form action="https://formsubmit.co/edagarmed@gmail.com" method="POST">
-
-        <input type="email" name="email" placeholder="Tu correo electrónico" required>
-        
-        <button type="submit">Suscribirme</button>
-        
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="Nueva suscripción desde mi web">
-        
-        </form>
 
   </main>
+
+  
+      
+
+  <footer class="footer-simple" style="background: #111; color: #aaa; padding: 20px; text-align: center; font-size: 0.9rem;">
+    <div class="footer-content" style="max-width: 700px; margin: auto;">
+      
+      <!-- Contacto y enlaces legales -->
+      <p style="margin: 5px 0;">
+        <a href="mailto:info@aapmental.org" style="color:#d4af37; text-decoration:none;">
+          <i class="fas fa-envelope"></i> info@aapmental.org
+        </a> ·
+        <a href="privacidad.html" style="color:#aaa; text-decoration:none;">Política de privacidad</a> ·
+        <a href="terminos.html" style="color:#aaa; text-decoration:none;">Términos y condiciones</a> ·
+        <a href="contacto.html" style="color:#aaa; text-decoration:none;">Contacto</a>
+      </p>
+  
+      <!-- Información de la empresa -->
+      <p style="margin: 5px 0;">
+        Tecnología-Bioenergética 
+      </p>
+  
+      <!-- Derechos reservados -->
+      <small style="opacity:0.6; display:block; margin-top:8px;">
+        Diseño y seguridad web · Todos los derechos reservados.
+      </small>
+  
+    </div>
+  </footer>
 
   <script>
 
