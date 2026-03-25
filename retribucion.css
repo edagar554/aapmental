@@ -1,0 +1,215 @@
+/* Configuración General */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: #333;
+    background-color: #f4f9f4;
+}
+
+/* Contenedor principal para alineación */
+.contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Hero con la imagen de la cascada - USANDO LA RUTA imagenes/reciclaje.jpg */
+.hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), 
+                url('imagenes/reciclaje.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+/* Sección de Concientización */
+.conciencia h2 {
+    color: #2d5a27;
+}
+
+.nota-importante {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-left: 5px solid #2d5a27;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/* Grid de Cards */
+.grid-plasticos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.simbolo {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Colores de identificación específicos por card */
+.pet .simbolo { color: #00aaff; } /* Azul PET */
+.pead .simbolo { color: #ffcc00; } /* Amarillo PEAD */
+.pvc .simbolo { color: #ff4400; } /* Rojo/Naranja PVC */
+.pebd .simbolo { color: #00aa44; } /* Verde PEBD */
+
+.video-placeholder {
+    background-color: #eee;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.info-adicional {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Footer de Acción */
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #e8f5e9;
+    margin-top: 40px;
+}
+
+.btn-volver {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #2d5a27;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Contenedor de las tarjetas */
+.grid-plasticos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo base de la tarjeta */
+.card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid #ccc; /* Color por defecto */
+}
+
+/* Efecto al pasar el mouse */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Colores dinámicos por tipo de plástico */
+.card.pet  { border-top-color: #3498db; } /* Azul */
+.card.pead { border-top-color: #f1c40f; } /* Amarillo */
+.card.pvc  { border-top-color: #e74c3c; } /* Rojo */
+.card.pebd { border-top-color: #2ecc71; } /* Verde */
+.card.pp   { border-top-color: #e67e22; } /* Naranja */
+.card.ps   { border-top-color: #95a5a6; } /* Gris */
+
+/* Estilo para el símbolo (el número en el círculo) */
+.simbolo {
+    width: 40px;
+    height: 40px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* Para que los videos no se salgan de la tarjeta */
+.video-container {
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Para tablets y pantallas medianas */
+@media (max-width: 1024px) {
+    .grid-plasticos {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+        gap: 15px;
+        padding: 15px;
+    }
+}
+
+/* Para celulares (pantallas pequeñas) */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 1.8rem; /* Título un poco más pequeño para que no se corte */
+        padding: 0 10px;
+    }
+
+    .grid-plasticos {
+        grid-template-columns: 1fr; /* 1 sola columna: una tarjeta debajo de la otra */
+        padding: 10px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+
+    /* Ajustamos el video para que no sea tan alto en móviles */
+    .video-container iframe {
+        height: 180px;
+    }
+
+    .btn-volver {
+        display: block;
+        width: 90%;
+        margin: 20px auto;
+        text-align: center;
+    }
+}

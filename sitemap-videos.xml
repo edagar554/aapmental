@@ -99,4 +99,76 @@
     </video:video>
   </url>
 
+  <url>
+    <loc>https://www.aapmental.org/retribucion.html</loc>
+    <video:video>
+      <video:title>Reciclaje de Plástico PET (1)</video:title>
+      <video:description>Guía sobre el reciclaje de Tereftalato de Polietileno, ideal para botellas y envases.</video:description>
+      <video:thumbnail_loc>https://img.youtube.com/vi/-R_-TuiDyys/maxresdefault.jpg</video:thumbnail_loc>
+      <video:content_loc>https://www.youtube.com/watch?v=-R_-TuiDyys</video:content_loc>
+      <video:embed_loc>https://www.youtube.com/embed/-R_-TuiDyys</video:embed_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <url>
+    <loc>https://www.aapmental.org/retribucion.html#pead</loc>
+    <video:video>
+      <video:title>Reciclaje de Plástico PEAD (2)</video:title>
+      <video:description>Cómo reciclar Polietileno de Alta Densidad usado en envases rígidos y detergentes.</video:description>
+      <video:thumbnail_loc>https://img.youtube.com/vi/Nkd0gglRMso/maxresdefault.jpg</video:thumbnail_loc>
+      <video:content_loc>https://www.youtube.com/watch?v=Nkd0gglRMso</video:content_loc>
+      <video:embed_loc>https://www.youtube.com/embed/Nkd0gglRMso</video:embed_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <url>
+    <loc>https://www.aapmental.org/retribucion.html#pvc</loc>
+    <video:video>
+      <video:title>Reciclaje de Plástico PVC (3)</video:title>
+      <video:description>Identificación y gestión del Policloruro de Vinilo en materiales de construcción.</video:description>
+      <video:thumbnail_loc>https://img.youtube.com/vi/JZvpjak2aT4/maxresdefault.jpg</video:thumbnail_loc>
+      <video:content_loc>https://www.youtube.com/watch?v=JZvpjak2aT4</video:content_loc>
+      <video:embed_loc>https://www.youtube.com/embed/JZvpjak2aT4</video:embed_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <url>
+    <loc>https://www.aapmental.org/retribucion.html#pebd</loc>
+    <video:video>
+      <video:title>Reciclaje de Plástico PEBD (4)</video:title>
+      <video:description>Proceso de reciclaje del Polietileno de Baja Densidad como bolsas y films.</video:description>
+      <video:thumbnail_loc>https://img.youtube.com/vi/vTAR9NuzM_M/maxresdefault.jpg</video:thumbnail_loc>
+      <video:content_loc>https://www.youtube.com/watch?v=vTAR9NuzM_M</video:content_loc>
+      <video:embed_loc>https://www.youtube.com/embed/vTAR9NuzM_M</video:embed_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <url>
+    <loc>https://www.aapmental.org/retribucion.html#pp</loc>
+    <video:video>
+      <video:title>Reciclaje de Plástico PP (5)</video:title>
+      <video:description>Guía sobre el Polipropileno, resistente al calor y común en tapas y envases médicos.</video:description>
+      <video:thumbnail_loc>https://img.youtube.com/vi/2lachAj5A_E/maxresdefault.jpg</video:thumbnail_loc>
+      <video:content_loc>https://www.youtube.com/watch?v=2lachAj5A_E</video:content_loc>
+      <video:embed_loc>https://www.youtube.com/embed/2lachAj5A_E</video:embed_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
+  <url>
+    <loc>https://www.aapmental.org/retribucion.html#ps</loc>
+    <video:video>
+      <video:title>Reciclaje de Plástico PS (6)</video:title>
+      <video:description>Cómo gestionar el Poliestireno e icopor para reducir el impacto ambiental.</video:description>
+      <video:thumbnail_loc>https://img.youtube.com/vi/T-we-f51VVI/maxresdefault.jpg</video:thumbnail_loc>
+      <video:content_loc>https://www.youtube.com/watch?v=T-we-f51VVI</video:content_loc>
+      <video:embed_loc>https://www.youtube.com/embed/T-we-f51VVI</video:embed_loc>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
+
 </urlset>

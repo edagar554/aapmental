@@ -76,9 +76,12 @@
 
         <footer style="margin: 50px 0; text-align: center;">
             <button id="btn-finalizar" 
-                style="border: 2px solid #d4af37; background: #222; color: #d4af37; font-weight: bold; padding: 12px 25px; border-radius: 12px; font-size: 1rem;">
-                Finalizar Sesión Completa
+                style="border: 2px solid #d4af37; background: #222; color: #d4af37; font-weight: bold; padding: 12px 25px; border-radius: 12px; font-size: 1rem; cursor: pointer;">
+                Finalizar y Retribuir
             </button>
+            <p style="color: #666; margin-top: 15px; font-size: 0.9rem;">
+                Al terminar, recuerda separar tus residuos. <a href="retribucion.html" style="color: #d4af37;">Ver guía de reciclaje</a>
+            </p>
         </footer>
     </main>
 
@@ -274,8 +277,17 @@ function alternarPractica() {
 function finalizarGrounding() {
     clearInterval(idIntervalo);
     const idioma = document.getElementById("idioma-nav").value || "es";
-    alert(textos[idioma].ALERTA);
-    window.location.href = "index.html";
+    
+    // Un mensaje que conecte ambos conceptos
+    const mensaje = idioma === 'es' 
+        ? "¡Sesión completada! Ahora que estás en equilibrio, ¿qué tal si le devuelves algo a la Tierra?" 
+        : "Session complete! Now that you are in balance, how about giving something back to the Earth?";
+
+    if (confirm(mensaje)) {
+        window.location.href = "retribucion.html"; // Lo mandamos a reciclar
+    } else {
+        window.location.href = "index.html"; // O al inicio si prefiere
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
