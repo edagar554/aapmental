@@ -1,0 +1,143 @@
+/* --- VARIABLES GLOBALES --- */
+:root {
+    --oro: #d4af37;
+    --oro-brillo: #f9e297;
+    --negro-fondo: #0a0a0a;
+    --gris-texto: #cccccc;
+    --borde-dorado: rgba(212, 175, 55, 0.3);
+}
+
+/* --- ESTILOS BASE --- */
+body.lectura-body {
+    background-color: var(--negro-fondo);
+    color: var(--gris-texto);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- TEXTOS DORADOS --- */
+.oro-texto {
+    color: var(--oro);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+.subtitulo-italico {
+    font-style: italic;
+    color: var(--oro-brillo);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* --- COMPONENTES DE DISEÑO --- */
+.badge-etapa {
+    background: var(--oro);
+    color: black;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.ritual-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--borde-dorado);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 30px 0;
+    box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.05);
+}
+
+/* --- VIDEO --- */
+.contenedor-video {
+    position: relative;
+    padding-bottom: 56.25%; /* Ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 2px solid var(--borde-dorado);
+    margin: 20px 0;
+}
+
+.contenedor-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- BOTONES --- */
+.btn-oro {
+    background: transparent;
+    color: var(--oro);
+    border: 2px solid var(--oro);
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.btn-oro:hover {
+    background: var(--oro);
+    color: black;
+    box-shadow: 0 0 20px var(--oro);
+    transform: translateY(-3px);
+}
+
+/* --- NAVEGACIÓN (OPCIONAL) --- */
+.navbar {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--borde-dorado);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+    color: var(--oro);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    .oro-texto {
+        font-size: 1.5rem;
+    }
+}
