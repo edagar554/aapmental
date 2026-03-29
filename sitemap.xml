@@ -3,72 +3,84 @@
 
   <url>
     <loc>https://www.aapmental.org/</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  
-
   <url>
-    <loc>https://www.aapmental.org/grounding.html</loc>
-     <lastmod>2026-03-19</lastmod>
+    <loc>https://www.aapmental.org/tuconexion.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.aapmental.org/solfeguio.html</loc>
-     <lastmod>2026-03-19</lastmod>
+    <loc>https://www.aapmental.org/retribucion.html</loc>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.aapmental.org/sanacion-cuantica.html</loc>
-     <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aapmental.org/grounding.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aapmental.org/solfeguio.html</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.aapmental.org/reprogramacion-neuronal.html</loc>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.aapmental.org/isometricos.html</loc>
-     <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.aapmental.org/nutricion.html</loc>
-     <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.aapmental.org/reprogramacion-neuronal.html</loc>
-     <lastmod>2026-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
     <loc>https://www.aapmental.org/mecanica-cuantica.html</loc>
-     <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.aapmental.org/lectura-kybalion.html</loc>
-     <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.aapmental.org/masa-corporal.html</loc>
-     <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
