@@ -1,0 +1,83 @@
+:root {
+    --verde-primario: #2e7d32;
+    --verde-claro: #e8f5e9;
+    --blanco: #ffffff;
+    --gris-suave: #f9f9f9;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--gris-suave);
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: var(--verde-primario);
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.jugo-card {
+    background: var(--blanco);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-left: 5px solid var(--verde-primario);
+}
+
+.jugo-card h2 {
+    color: var(--verde-primario);
+    margin-top: 0;
+}
+
+.ingredientes {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ingredientes li::before {
+    content: "🍏 ";
+}
+
+.btn-preparacion {
+    background: var(--verde-primario);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Ocultar el banner de Google Translate si molesta */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+body {
+    top: 0px !important;
+}
+
+/* Darle estilo al selector para que combine con el verde */
+#google_translate_element select {
+    border: 1px solid #2e7d32;
+    border-radius: 5px;
+    padding: 5px;
+    color: #2e7d32;
+    background-color: white;
+}
+
+.info-nutricional {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 0.9rem;
+    background-color: #f1f8e9;
+    border-left: 4px solid #2e7d32;
+    color: #33691e;
+    border-radius: 6px;
+}

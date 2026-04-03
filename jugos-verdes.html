@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre jugos verdes naturales para mejorar tu salud según tu IMC. Recetas fáciles, nutritivas y conscientes para tu bienestar.">
+    <meta name="google" content="notranslate">
+    <title>Jugos Verdes - Bienestar Consciente</title>
+    <link rel="stylesheet" href="jugos.css">
+</head>
+<body>
+    <nav style="padding: 15px; background: white;">
+        <a href="masa-corporal.html" style="text-decoration: none; color: #2e7d32; font-weight: bold; display: flex; align-items: center; gap: 8px;">
+            <span>⬅️</span> Volver a Calculadora de IMC
+        </a>
+    </nav>
+    
+    <header>
+        <h1>Guía de Jugos Verdes</h1>
+        <p>Complementa tu IMC con nutrición natural</p>
+    </header>
+
+    <main id="contenedor-jugos">
+    </main>
+
+    <section class="instrucciones-generales">
+        <h2>Pasos para la preparación perfecta</h2>
+        <ol>
+            <li>Lava bien todas las frutas y verduras.</li>
+            <li>Trocea e introduce en la licuadora con el agua.</li>
+            <li>Bebe de inmediato para aprovechar los nutrientes.</li>
+        </ol>
+    </section>
+
+    <footer style="text-align: center; margin-top: 50px; padding: 40px 20px; border-top: 1px solid #e0e0e0;">
+    
+        <div class="traductor-seccion" style="margin-bottom: 20px;">
+            <p style="font-size: 0.9rem; color: #666; margin-bottom: 10px;">Selecciona tu idioma / Select your language:</p>
+            <div id="google_translate_element"></div>
+        </div>
+    
+        <div style="margin-top: 30px;">
+            <button onclick="window.location.href='masa-corporal.html'" class="btn" style="background-color: transparent; color: #2e7d32; border: 2px solid #2e7d32;">
+                ← Volver a Calculadora de IMC
+            </button>
+        </div>
+    
+        <p style="margin-top: 20px; font-size: 0.8rem; color: #888;">&copy; 2026 AAPMental - Bienestar Consciente</p>
+    </footer>
+
+    <div id="modal-preparacion" class="modal-jugos" style="display: none;">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModalJugos()">&times;</span>
+            
+            <div class="pasos-detalle">
+                <ol>
+                    <li><strong>Lavar:</strong> Desinfecta bien todas las frutas y verduras.</li>
+                    <li><strong>Trocear:</strong> Corta los ingredientes en trozos pequeños para no forzar la licuadora.</li>
+                    <li><strong>Licuar:</strong> Procesa con el agua indicada hasta que sea una mezcla homogénea.</li>
+                    <li><strong>Consumir:</strong> ¡Bebe de inmediato! Así aprovechas el 100% de las vitaminas.</li>
+                </ol>
+            </div>
+            
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es', // Tu idioma base es español
+                includedLanguages: 'en,fr,it,pt,de', // Idiomas que quieres ofrecer
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script async src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="jugos.js"></script>
+</body>
+</html>
