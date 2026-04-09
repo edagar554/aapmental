@@ -5,51 +5,31 @@
   <url>
     <loc>https://www.aapmental.org/tuconexion.html</loc>
     <video:video>
-      <video:title>El SECRETO del Chakra del Ombligo: el ERROR que APAGA tu ENERGÍA</video:title>
-      <video:description>Descubre cómo proteger tu centro energético y sellar tu vitalidad cada mañana con técnicas ancestrales.</video:description>
       <video:thumbnail_loc>https://img.youtube.com/vi/glwYZsz2fao/maxresdefault.jpg</video:thumbnail_loc>
-      <video:content_loc>https://www.youtube.com/watch?v=glwYZsz2fao</video:content_loc>
-      <video:embed_loc>https://www.youtube.com/embed/glwYZsz2fao</video:embed_loc>
-      <video:publication_date>2025-10-30</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
+      <video:title>El SECRETO del Chakra del Ombligo</video:title>
+      <video:description>Técnicas para sellar tu vitalidad energética.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/glwYZsz2fao</video:player_loc>
     </video:video>
   </url>
 
   <url>
-    <loc>https://www.aapmental.org/index.html</loc>
+    <loc>https://www.aapmental.org/isometria.html</loc>
     <video:video>
-      <video:title>Regeneración y curación corporal</video:title>
-      <video:description>Cura física y emocional</video:description>
-      <video:thumbnail_loc>https://img.youtube.com/vi/AisJ-2ku5Do/maxresdefault.jpg</video:thumbnail_loc>
-      <video:content_loc>https://www.youtube.com/watch?v=AisJ-2ku5Do</video:content_loc>
-      <video:embed_loc>https://www.youtube.com/embed/AisJ-2ku5Do</video:embed_loc>
-      <video:publication_date>2019-11-03</video:publication_date>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
-  </url>
-
-  <url>
-    <loc>https://www.aapmental.org/sanacion-cuantica.html</loc>
-    <video:video>
-      <video:title>Los 12 secretos metafísicos de los sabios para sanar el cuerpo</video:title>
-      <video:description>Audiolibro de sanación y liberación de bloqueos emocionales</video:description>
-      <video:thumbnail_loc>https://img.youtube.com/vi/VXp1N13nljg/maxresdefault.jpg</video:thumbnail_loc>
-      <video:content_loc>https://www.youtube.com/watch?v=VXp1N13nljg</video:content_loc>
-      <video:embed_loc>https://www.youtube.com/embed/VXp1N13nljg</video:embed_loc>
-      <video:family_friendly>yes</video:family_friendly>
-    </video:video>
-  </url>
-
-  <url>
-    <loc>https://www.aapmental.org/reprogramacion-neuronal.html</loc>
-    <video:video>
-      <video:title>La ley invisible que está controlando tu vida ahora mismo</video:title>
-      <video:description>Cómo el pensamiento es el arquitecto de nuestra vida</video:description>
       <video:thumbnail_loc>https://img.youtube.com/vi/PE1VQvHEnhg/maxresdefault.jpg</video:thumbnail_loc>
-      <video:content_loc>https://www.youtube.com/watch?v=PE1VQvHEnhg</video:content_loc>
-      <video:embed_loc>https://www.youtube.com/embed/PE1VQvHEnhg</video:embed_loc>
-      <video:family_friendly>yes</video:family_friendly>
+      <video:title>Ejercicios Isométricos y Fuerza</video:title>
+      <video:description>Guía técnica de ejercicios de resistencia estática.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/PE1VQvHEnhg</video:player_loc>
     </video:video>
   </url>
 
-  </urlset>
+  <url>
+    <loc>https://www.aapmental.org/retribucion.html</loc>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/AisJ-2ku5Do/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Manual de Reciclaje de Plásticos</video:title>
+      <video:description>Cómo clasificar PET, PEAD y otros materiales.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/AisJ-2ku5Do</video:player_loc>
+    </video:video>
+  </url>
+
+</urlset>
