@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-
   <url>
     <loc>https://www.aapmental.org/tuconexion.html</loc>
     <video:video>
@@ -11,7 +10,6 @@
       <video:player_loc>https://www.youtube.com/embed/glwYZsz2fao</video:player_loc>
     </video:video>
   </url>
-
   <url>
     <loc>https://www.aapmental.org/isometria.html</loc>
     <video:video>
@@ -21,7 +19,6 @@
       <video:player_loc>https://www.youtube.com/embed/PE1VQvHEnhg</video:player_loc>
     </video:video>
   </url>
-
   <url>
     <loc>https://www.aapmental.org/retribucion.html</loc>
     <video:video>
@@ -31,5 +28,4 @@
       <video:player_loc>https://www.youtube.com/embed/AisJ-2ku5Do</video:player_loc>
     </video:video>
   </url>
-
 </urlset>
