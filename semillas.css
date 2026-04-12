@@ -1,0 +1,117 @@
+/* --- Estilos para la Nueva Portada Semillas --- */
+
+:root {
+    --verde-botanico: #4f7942; /* O el color principal de aapmental */
+    --blanco: #ffffff;
+    --texto-oscuro: #333333;
+    --tierra-suave: #fdfaf6;
+    --sombra-portada: rgba(0, 0, 0, 0.4); /* Para oscurecer la imagen y leer el texto */
+}
+
+/* Contenedor Principal de la Portada */
+.portada-semillas {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa todo el alto de la pantalla */
+    overflow: hidden;
+}
+
+/* La Imagen de Fondo */
+.portada-imagen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* El Overlay (Capa oscura sobre la imagen) */
+.portada-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--sombra-portada);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido de la Portada */
+.portada-contenido {
+    text-align: center;
+    color: var(--blanco);
+    padding: 20px;
+    max-width: 900px;
+}
+
+/* Estilo del Título Principal */
+.portada-titulo {
+    font-size: 3rem; /* Más grande y elegante */
+    font-weight: 700;
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+/* Estilo de la Frase Sugestiva */
+.portada-frase {
+    font-size: 1.6rem;
+    font-style: italic;
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+
+/* Estilo del Subtítulo (el que estaba antes) */
+.portada-subtitulo {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+/* Botón Regresar (adaptado a la portada oscura) */
+.btn-regresar-portada {
+    position: absolute;
+    top: 30px;
+    left: 5%;
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.btn-regresar-portada:hover {
+    opacity: 0.7;
+}
+
+/* Botón para bajar (Explorar Guía) */
+.btn-scroll-down {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--verde-botanico);
+    color: var(--blanco);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-scroll-down:hover {
+    background-color: var(--blanco);
+    color: var(--verde-botanico);
+}
+
+/* Ajustes Responsive */
+@media (max-width: 768px) {
+    .portada-titulo { font-size: 2.2rem; }
+    .portada-frase { font-size: 1.3rem; }
+    .portada-subtitulo { font-size: 1rem; }
+    .portada-contenido { padding: 40px; }
+}

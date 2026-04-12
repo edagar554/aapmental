@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semillas & Conciencia - aapmental</title>
+    <link rel="stylesheet" href="semillas.css"> 
+</head>
+<body>
+
+    <main class="semillas-page">
+        <a href="nutricion.html" class="btn-regresar">← Volver a Nutrición</a>
+        
+     
+                
+                
+                <h1 class="portada-titulo">Semillas & Conciencia</h1>
+                <p class="portada-frase">El Poder Energético en una Semilla</p>
+                <span class="portada-subtitulo">Información vital basada en estudios para tu bienestar integral</span>
+                
+                <a href="#contenedor-semillas" class="btn-scroll-down">Explorar Guía</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main id="guiasemillas" class="semillas-page">
+
+    <div class="portada-semillas">
+    <div class="portada-imagen" 
+         style="background-image: url('imagenes/semillas2.png');" 
+         role="img" 
+         aria-label="Agricultores cultivando semillas de chía y quinua de forma sostenible en campo abierto">
+        
+        <div class="portada-overlay">
+            <div class="portada-contenido">
+                </div>
+        </div>
+    </div>
+</div>
+    <div id="contenedor-semillas" class="grid-semillas">
+        </div>
+</main>
+
+        <div id="contenedor-semillas" class="grid-semillas">
+            </div>
+    </main>
+
+    <script type="module">
+        import semillas from './semillas.js';
+
+        const contenedor = document.getElementById('contenedor-semillas');
+
+        semillas.forEach(s => {
+            const div = document.createElement('div');
+            div.className = 'card';
+            div.style.borderLeftColor = s.color;
+
+            div.innerHTML = `
+                <h2 style="color: ${s.color}">${s.nombre}</h2>
+                <p><em>${s.descripcion}</em></p>
+                <ul>
+                    ${s.beneficios.map(b => `<li>${b}</li>`).join('')}
+                </ul>
+                <div class="prep-info">
+                    <strong>Modo de uso:</strong> ${s.preparacion}<br>
+                    <strong>Sugerencia:</strong> ${s.dosis}
+                </div>
+            `;
+            contenedor.appendChild(div);
+        });
+    </script>
+    <div class="google-translate-container" style="text-align: center; margin: 20px 0;">
+    <div id="google_translate_element"></div>
+</div>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'es', 
+            includedLanguages: 'en,fr,it,pt,de', // Los idiomas que prefieras
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
