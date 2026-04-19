@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="betarraga.css">
+    <title>Nutrición: La Betarraga</title>
+</head>
+<body>
+    <div id="google_translate_element" style="text-align: right; padding: 10px;"></div>
+
+    <header>
+        <div class="navegacion-superior">
+            <a href="nutricion.html" class="btn-volver">← Volver a Nutrición</a>
+        </div>
+        <h1>Betarraga: El Superalimento Púrpura</h1>
+        <img src="imagenes/betarraga.jpg" alt="Portada de Betarragas Frescas" class="imagen-portada">
+    </header>
+
+    <main>
+        <section id="beneficios">
+            <h2>10 Beneficios Principales</h2>
+            <div class="grid-beneficios" id="listaBeneficios">
+                </div>
+        </section>
+
+        <section id="precauciones" class="warning-box">
+            <h2>Consideraciones y Precauciones</h2>
+            <ul id="listaPrecauciones">
+                </ul>
+        </section>
+
+        <section id="recetas">
+            <h2>Recetario de Jugos</h2>
+            <div id="contenedorRecetas">
+                </div>
+        </section>
+    </main>
+
+    <script src="betarraga.js"></script>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es', 
+                includedLanguages: 'en,fr,it,pt,de', 
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
