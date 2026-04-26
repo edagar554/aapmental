@@ -231,11 +231,17 @@ let oscilador = null;
 let gainNode = null;
 
 function reproducirFrecuencia(freq) {
-
   detenerFrecuencia();
 
+  // Si no existe, lo creamos
   if (!audioCtx) {
     audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  }
+
+  // ¡ESTA ES LA CLAVE! 
+  // Si el contexto está suspendido (bloqueo del navegador), lo reanudamos
+  if (audioCtx.state === 'suspended') {
+    audioCtx.resume();
   }
 
   oscilador = audioCtx.createOscillator();
@@ -243,14 +249,12 @@ function reproducirFrecuencia(freq) {
 
   oscilador.type = "sine";
   oscilador.frequency.value = freq;
-
-  gainNode.gain.value = 0.2;
+  gainNode.gain.value = 0.1; // Un poco más bajo para no aturdir
 
   oscilador.connect(gainNode);
   gainNode.connect(audioCtx.destination);
 
   oscilador.start();
-
 }
 function mostrarFrecuencia(freq) {
     reproducirFrecuencia(freq);
