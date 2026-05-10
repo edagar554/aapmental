@@ -1,11 +1,18 @@
 :root {
-    --color-principal: #6b0f1a; /* Bordó Beterraga */
-    --color-secundario: #f39c12; /* Naranja */
-    --fondo-suave: #f9f9f9;
+    --color-principal: #8a0b1a; /* Bordó Beterraga Profundo */
+    --color-secundario: #d4af37; /* Dorado Metálico */
+    --oro-brillante: #f1c40f;
+    --fondo-suave: #fdfcfc;
+    --texto: #2c3e50;
+    --blanco-cristal: rgba(255, 255, 255, 0.95);
 }
 
-body { font-family: 'Segoe UI', sans-serif; background: var(--fondo-suave); }
-
+body { 
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    background: var(--fondo-suave); 
+    color: var(--texto);
+    margin: 0;
+}
 .grid-beneficios {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -24,4 +31,93 @@ body { font-family: 'Segoe UI', sans-serif; background: var(--fondo-suave); }
     border: 1px solid #ffeeba;
     padding: 20px;
     border-radius: 8px;
+}
+
+
+/* ==============================
+   🧭 NAVBAR
+================================ */
+.navbar {
+    background: var(--blanco-cristal);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--color-secundario);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* El logo con el gradiente de "Oro Rojo" */
+.nav-logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-principal);
+}
+.nav-logo span { color: var(--color-secundario); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--texto);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-principal);
+}
+
+/* --- DROPDOWN PRO --- */
+.dropdown-content {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: white;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 10px;
+    min-width: 220px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    
+    /* Animación invisible a visible */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.dropdown-content li a:hover {
+    background: linear-gradient(90deg, var(--color-principal), #b31224);
+    color: white !important;
 }

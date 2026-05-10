@@ -25,23 +25,102 @@
 <meta property="og:url" content="https://www.aapmental.org/retribucion.html">
 
 <meta property="og:image" content="https://www.aapmental.org/img/portada-retribucion.jpg">
+
+
+
+       
+
+
     </head>
 <body>
 
-    <div class="nav-lang" style="text-align: right; padding: 10px;">
-        <select id="idioma-nav">
-            <option value="es">ESPAÑOL</option>
-            <option value="en">ENGLISH</option>
-            <option value="fr">FRANCAIS</option>
-            <option value="it">ITALIANO</option>
-        </select>
+    <nav class="navbar">
+    <div class="nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="nav-logo">
+            AAP<span>Mental</span>
+        </a>
+
+        <!-- Menu Toggle para Móvil -->
+        <div class="nav-menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- Enlaces -->
+        <ul class="nav-links">
+            <li><a href="index.html" data-i18n="menu_inicio">Inicio</a></li>
+            
+            <li class="dropdown">
+                <a href="#" data-i18n="menu_terapias">Terapias ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="grounding.html" data-i18n="menu_grounding">Grounding</a></li>
+                    <li><a href="solfeguio.html" data-i18n="menu_solfeggio">Solfeggio</a></li>
+                    <li><a href="retribucion.html" data-i18n="menu_retribucion">Reciclaje</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-lang-container">
+                <select id="idioma-nav" class="lang-select">
+                    <option value="es">ES</option>
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                    <option value="it">IT</option>
+                </select>
+            </li>
+        </ul>
     </div>
+</nav>
+    
     
     <header class="hero">
         <div class="hero-content">
             <h1 data-i18n="HERO_H1" class="fade-in">EL OCÉANO COMIENZA EN CASA</h1>
             <p data-i18n="HERO_P">Tu acto de gratitud hoy es la vida del planeta mañana.</p>
         </div>
+
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Guía de Retribución y Reciclaje de Plásticos - AAPMental",
+  "description": "Manual técnico para la identificación de polímeros (PET, HDPE, PVC, LDPE, PP, PS) y su impacto en el bienestar ambiental.",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.aapmental.org/retribucion.html"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "AAPMental",
+    "url": "https://www.aapmental.org"
+  },
+  "image": "https://www.aapmental.org/img/portada-retribucion.jpg",
+  "keywords": "reciclaje de plásticos, polímeros, economía circular, sostenibilidad, PET, HDPE",
+  "publisher": {
+    "@type": "Organization",
+    "name": "AAPMental",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.aapmental.org/favicon.ico"
+    }
+  },
+  "step": [
+    {
+      "@type": "HowToStep",
+      "text": "Identificar el símbolo de reciclaje en la base del envase."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Limpiar el envase para evitar la contaminación cruzada con residuos orgánicos."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Clasificar según el número (1 al 6) en el contenedor correspondiente."
+    }
+  ]
+}
+</script>
     </header>
     
     <section class="conciencia">
@@ -65,10 +144,18 @@
                 Es uno de los más reciclados. Transparente e impermeable al oxígeno, ideal para botellas de agua, refrescos y envases de alimentos.
             </p>
             
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/-R_-TuiDyys" frameborder="0"></iframe>
-            </div>
+            
         </article>
+        <div class="video-container">
+       <iframe 
+        src="https://www.youtube.com/embed/-R_-TuiDyys" 
+        frameborder="0" 
+        loading="lazy" 
+        title="Reciclaje de Plástico PET"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+     </div>
         
         </section>
         <article class="card pead">
@@ -79,7 +166,17 @@
                 Plástico rígido y resistente. Se usa en envases de detergentes, champús, lácteos y tuberías de agua potable.
             </p>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/Nkd0gglRMso" frameborder="0"></iframe>
+                <iframe
+                src="https://www.youtube.com/embed/Nkd0gglRMso" 
+                frameborder="0" 
+                 loading="lazy" 
+                 title="Reciclaje de Plástico POLIETILENO"
+                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+                
+
+            </iframe>
+                
             </div>
         </article>
 
@@ -91,7 +188,10 @@
                 Muy resistente y duradero. Común en tuberías, cables, mangueras y marcos de ventanas. Requiere manejo especial.
             </p>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/JZvpjak2aT4" frameborder="0"></iframe>
+                <iframe 
+                src="https://www.youtube.com/embed/JZvpjak2aT4" frameborder="0">
+            
+            </iframe>
             </div>
         </article>
 
@@ -103,7 +203,16 @@
                 Flexible y transparente. Se encuentra en bolsas de supermercado, films de embalaje y botellas exprimibles.
             </p>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/vTAR9NuzM_M" frameborder="0"></iframe>
+                <iframe 
+                src="https://www.youtube.com/embed/vTAR9NuzM_M" 
+                frameborder="0"
+                loading="lazy" 
+                title="Reciclaje de Plástico PVC"
+                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                 allowfullscreen>
+
+            
+            </iframe>
             </div>
         </article>
 
@@ -115,7 +224,14 @@
                 Resistente al calor y a químicos. Ideal para envases de comida caliente, tapas de botellas y envases de yogur.
             </p>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/2lachAj5A_E" frameborder="0"></iframe>
+                <iframe src="https://www.youtube.com/embed/2lachAj5A_E" 
+                frameborder="0"
+                loading="lazy" 
+                title="Reciclaje de Plástico PVC"
+                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                 allowfullscreen>
+
+            </iframe>
             </div>
         </article>
 
@@ -127,7 +243,14 @@
                 Ligero y buen aislante. Usado en cubiertos desechables, envases de comida rápida e icopor (corcho blanco).
             </p>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/T-we-f51VVI" frameborder="0"></iframe>
+                <iframe src="https://www.youtube.com/embed/T-we-f51VVI"
+                 frameborder="0"
+                  loading="lazy" 
+                title="Reciclaje de Plástico POLIETILENO DE BAJA DENSIDAD"
+                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                 allowfullscreen>
+            
+            </iframe>
             </div>
         </article>
 
@@ -135,13 +258,57 @@
 
 
 
-    </section>
+    
 
     <footer>
         <p>¿Realizaste tu retribución hoy?</p>
-        <a href="grounding.html" class="btn-volver">Volver a mi Centro</a>
     </footer>
     <script>
+
+
+const textosGlobales = {
+  es: {
+    menu_inicio: "Inicio",
+    menu_terapias: "Terapias ▾",
+    menu_grounding: "Grounding",
+    menu_solfeggio: "Solfeggio",
+   menu_universo:"universo conciente",
+   menu_retribucion:"reciclaje",
+
+   
+    
+  },
+
+  en: {
+    menu_inicio: "Home",
+    menu_terapias: "Therapies ▾",
+    menu_grounding: "Grounding",
+    menu_solfeggio: "Solfeggio",
+     menu_universo:"conscious universe",
+     menu_retribucion:"recycling",
+    
+  },
+
+  fr: {
+    menu_inicio: "Accueil",
+    menu_terapias: "Thérapies ▾",
+    menu_grounding: "Grounding",
+    menu_solfeggio: "Solfeggio",
+    menu_universo:"univers conscient",
+    menu_retribucion:"recyclage",
+  },
+
+  it: {
+    menu_inicio: "Home",
+    menu_terapias: "Terapie ▾",
+    menu_grounding: "Grounding",
+    menu_solfeggio: "Solfeggio",
+     menu_universo:"universo cosciente",
+    menu_retribucion:"riciclaggio",
+   
+  }
+}; 
+
         const traducciones = {
     es: {
         HERO_H1: "EL OCÉANO COMIENZA EN CASA",
@@ -236,25 +403,32 @@
     }
 };
 /* --- EL MOTOR DE TRADUCCIÓN (EL SCRIPT) --- */
-
 function aplicarTraduccion() {
-    // 1. Capturamos el idioma seleccionado en el <select>
     const selector = document.getElementById("idioma-nav");
-    if (!selector) return; // Seguridad: si no existe el select, salimos.
+    if (!selector) return;
 
     const lang = selector.value;
-    const t = traducciones[lang];
+    
+    // Actualizamos el atributo 'lang' del HTML para SEO y accesibilidad
+    document.documentElement.lang = lang;
 
-    // 2. Buscamos TODOS los elementos que tengan el atributo 'data-i18n'
+    // Unimos los dos diccionarios (el del menú y el del contenido)
+    // Usamos el operador spread (...) para combinar ambos en uno solo
+    const t = { 
+        ...(textosGlobales[lang] || {}), 
+        ...(traducciones[lang] || {}) 
+    };
+
     const elementosParaTraducir = document.querySelectorAll("[data-i18n]");
 
     elementosParaTraducir.forEach(el => {
-        const llave = el.getAttribute("data-i18n"); // Ej: "SIGLAS_1", "HERO_H1"
+        const llave = el.getAttribute("data-i18n");
         
-        // Si la llave existe en nuestro diccionario de traducciones
-        if (t && t[llave]) {
-            // Si el texto tiene etiquetas HTML (como <strong> o 🌱), usamos innerHTML
-            if (t[llave].includes("<") || t[llave].includes("🌱") || t[llave].includes("⚠️")) {
+        if (t[llave]) {
+            // Verificamos si el texto contiene HTML o emojis especiales
+            const tieneFormato = /[<>]|🌱|⚠️|🌍|💧/.test(t[llave]);
+            
+            if (tieneFormato) {
                 el.innerHTML = t[llave];
             } else {
                 el.innerText = t[llave];
@@ -262,9 +436,10 @@ function aplicarTraduccion() {
         }
     });
 
-    // 3. Guardamos la elección del usuario en la memoria del navegador (localStorage)
     localStorage.setItem("idioma-aapmental", lang);
 }
+
+
 
 /* --- CONFIGURACIÓN DE EVENTOS --- */
 
@@ -284,7 +459,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Ejecutamos la traducción inicial
     aplicarTraduccion();
 });
-        </script>
+ </script>
+
+
 
 </body>
 </html>

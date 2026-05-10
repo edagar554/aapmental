@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAPSleep | Frecuencias para Dormir</title>
+    <style>
+        /* Estilos Relajantes para AAPSleep */
+        :root {
+            --fondo-noche: #0a0e14;
+            --azul-relajante: #1e3a5f;
+            --dorado-suave: #d4af37;
+            --blanco-tenue: #e0e0e0;
+        }
+
+        body {
+            background-color: var(--fondo-noche);
+            color: var(--blanco-tenue);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        header h1 {
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 0;
+        }
+
+        header span {
+            color: var(--dorado-suave);
+            font-weight: bold;
+        }
+
+        /* Animación del Círculo de Respiración */
+        .breath-circle {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, var(--azul-relajante), transparent);
+            border-radius: 50%;
+            margin: 40px auto;
+            box-shadow: 0 0 20px var(--azul-relajante);
+            animation: breathe 8s infinite ease-in-out;
+        }
+
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.4); opacity: 1; }
+        }
+
+        .controls {
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .audio-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        button.audio-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--azul-relajante);
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button.audio-btn:hover, button.audio-btn.active {
+            background: var(--azul-relajante);
+        }
+
+        .timer-section {
+            margin: 20px 0;
+        }
+
+        input[type=range] {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .play-footer {
+            margin-top: 20px;
+        }
+
+        #start-btn {
+            background-color: var(--dorado-suave);
+            color: black;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+        
+/* ==============================
+   🧭 NAVBAR
+================================ */
+.navbar {
+    background: rgba(0, 0, 0, 0.85);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--texto);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--oro);
+}
+
+/* ==============================
+   📂 DROPDOWN
+================================ */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background: #0b0b0b;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 6px;
+    list-style: none;
+    padding: 10px 0;
+    min-width: 200px;
+    display: none;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+    </style>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "AAPSleep - Frecuencias para Dormir",
+  "description": "Herramienta de audio generativo para el descanso profundo. Incluye sonidos de río, lluvia y frecuencias Delta.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Web",
+  "author": {
+    "@type": "Organization",
+    "name": "AAPMental"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+
+
+</head>
+<body>
+
+     <nav class="navbar">
+        <div class="nav-container">
+          
+
+          <ul class="nav-links">
+            <li><a href="index.html" data-i18n="menu_inicio">Inicio</a></li>
+
+            <li class="dropdown">
+              <a href="#" data-i18n="menu_terapias">Terapias ▾</a>
+              <ul class="dropdown-content">
+                <li><a href="grounding.html" data-i18n="menu_grounding">Grounding</a></li>
+                <li><a href="solfeguio.html" data-i18n="menu_solfeggio">Solfeggio</a></li>
+                <li><a href="sanacion-cuantica.html" data-i18n="menu_sanacion">Sanación</a></li>
+                <li><a href="isometricos.html" data-i18n="menu_isometricos">isometricos</a></li>
+                <li><a href="nutricion.html" data-i18n="menu_nutricion">nutricion</a></li>
+                <li><a href="semillas.html" data-i18n="menu_semillas">semillas</a></li>
+                <li><a href="tuconexion.html" data-i18n="menu_conexion">conexion</a></li>
+                <li><a href="jugos-verdes.html" data-i18n="menu_jugos_verdes">jugos verdes</a></li>
+                <li><a href="betarraga.html" data-i18n="menu_betarraga">Betarraga</a></li>
+                
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" data-i18n="menu_mente_ciencia">Mente & Ciencia ▾</a>
+              <ul class="dropdown-content">
+                <li><a href="reprogramacion-neuronal.html" data-i18n="menu_reprogramacion">Reprogramación</a></li>
+                <li><a href="mecanica-cuantica.html" data-i18n="menu_mecanica">Mecánica Cuántica</a></li>
+                <li><a href="lectura-kybalion.html" data-i18n="menu_kybalion">Kybalión</a></li>
+                <li><a href="universo-conciente.html" data-i18n="menu_universo">universo-conciente</a></li>
+                <li><a href="retribucion.html" data-i18n="menu_retribucion">reciclaje</a></li>
+                
+              </ul>
+            </li>
+
+            <li><a href="masa-corporal.html" data-i18n="menu_salud">masa-corporal</a></li>
+            
+          </ul>
+</nav>
+
+
+
+
+
+
+    <header>
+        <h1>AAP<span>Sleep</span></h1>
+        <p>Fluye hacia el descanso profundo</p>
+        <p>elige tu frecuencia favorita y dar click en iniciar flujo</p>
+    </header>
+
+    <!-- El círculo ahora representa el fluir del agua -->
+    <div class="breath-circle" id="visual-element"></div>
+
+    <main class="controls">
+        <div class="audio-options">
+            <!-- Cambiamos los nombres para reflejar el nuevo enfoque -->
+            <button class="audio-btn active" onclick="configurarModo('rio')">Río de Cristal</button>
+            <button class="audio-btn" onclick="configurarModo('lluvia')">Lluvia Suave</button>
+            <button class="audio-btn" onclick="configurarModo('oceano')">Mar Profundo</button>
+            <button class="audio-btn" onclick="configurarModo('delta')">Frecuencia Delta</button>
+        </div>
+
+        <div class="timer-section">
+            <p>El sonido se desvanecerá en: <span id="timer-val">20</span> min</p>
+            <input type="range" id="timer-slider" min="5" max="90" step="5" value="20" oninput="updateTimer(this.value)">
+        </div>
+
+        <div class="play-footer">
+            <button id="start-btn" onclick="toggleDescanso()">INICIAR FLUJO</button>
+        </div>
+    </main>
+
+    <script>
+        let audioCtx, whiteNoise, lowPass, gainNode, animacionFiltro;
+        let estaSonando = false;
+
+        function updateTimer(val) {
+            document.getElementById('timer-val').innerText = val;
+        }
+
+        function configurarModo(modo) {
+            // Aquí podemos ajustar la frecuencia base según el modo
+            console.log("Cambiando a modo: " + modo);
+            document.querySelectorAll('.audio-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            if(estaSonando) {
+                detenerRio();
+                iniciarRio();
+            }
+        }
+
+        function iniciarRio() {
+            if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+            // Generador de sonido orgánico
+            const bufferSize = 2 * audioCtx.sampleRate;
+            const noiseBuffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+            const output = noiseBuffer.getChannelData(0);
+            for (let i = 0; i < bufferSize; i++) {
+                output[i] = Math.random() * 2 - 1;
+            }
+
+            whiteNoise = audioCtx.createBufferSource();
+            whiteNoise.buffer = noiseBuffer;
+            whiteNoise.loop = true;
+
+            lowPass = audioCtx.createBiquadFilter();
+            lowPass.type = 'lowpass';
+            lowPass.frequency.setValueAtTime(400, audioCtx.currentTime);
+
+            gainNode = audioCtx.createGain();
+            gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+            gainNode.gain.linearRampToValueAtTime(0.15, audioCtx.currentTime + 2);
+
+            whiteNoise.connect(lowPass);
+            lowPass.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+
+            whiteNoise.start();
+
+            // Movimiento del agua
+            animacionFiltro = setInterval(() => {
+                const variacion = Math.sin(audioCtx.currentTime * 0.4) * 150;
+                lowPass.frequency.setValueAtTime(450 + variacion, audioCtx.currentTime);
+            }, 100);
+        }
+
+        function detenerRio() {
+            if (whiteNoise) {
+                gainNode.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 1);
+                setTimeout(() => {
+                    whiteNoise.stop();
+                    clearInterval(animacionFiltro);
+                }, 1000);
+            }
+        }
+
+        function toggleDescanso() {
+            const btn = document.getElementById('start-btn');
+            const visual = document.getElementById('visual-element');
+
+            if (!estaSonando) {
+                iniciarRio();
+                btn.innerText = "DETENER FLUJO";
+                btn.style.backgroundColor = "#450a0a";
+                btn.style.color = "white";
+                visual.style.animationPlayState = "running";
+                estaSonando = true;
+            } else {
+                detenerRio();
+                btn.innerText = "INICIAR FLUJO";
+                btn.style.backgroundColor = "#d4af37";
+                btn.style.color = "black";
+                visual.style.animationPlayState = "paused";
+                estaSonando = false;
+            }
+        }
+    </script>
+
+    <!-- Contenedor del Traductor -->
+<div style="text-align: center; margin: 20px 0; opacity: 0.7;">
+    <div id="google_translate_element"></div>
+</div>
+
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'es',
+            includedLanguages: 'en,fr,it,pt,de', // Idiomas sugeridos para tu perfil
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</body>
+</html>

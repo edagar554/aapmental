@@ -1,22 +1,118 @@
-/* --- Estilos para la Nueva Portada Semillas --- */
-
+/* ==============================
+    🎨 VARIABLES (Corregidas)
+================================ */
 :root {
-    --verde-botanico: #4f7942; /* O el color principal de aapmental */
+    --verde-botanico: #4f7942;
     --blanco: #ffffff;
+    --blanco-cristal: rgba(255, 255, 255, 0.9);
     --texto-oscuro: #333333;
     --tierra-suave: #fdfaf6;
-    --sombra-portada: rgba(0, 0, 0, 0.4); /* Para oscurecer la imagen y leer el texto */
+    --sombra-portada: rgba(0, 0, 0, 0.4);
+    --oro: #d4af37;
+    --color-principal: #4f7942; /* Ajustado al verde botánico */
+    --color-secundario: #d4af37; /* Ajustado a oro para coherencia */
+    --texto: #333333;
 }
 
-/* Contenedor Principal de la Portada */
+/* ==============================
+    🧭 NAVBAR (Funcional)
+================================ */
+.navbar {
+    background: var(--blanco-cristal);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--color-secundario);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-principal);
+}
+
+.nav-logo span { color: var(--color-secundario); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--texto);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-principal);
+}
+
+/* --- DROPDOWN --- */
+.dropdown { position: relative; }
+
+.dropdown-content {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: white;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 10px;
+    min-width: 220px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ==============================
+    🌍 SELECTOR DE IDIOMA
+================================ */
+.nav-lang select {
+    background: #000;
+    color: var(--oro);
+    border: 1px solid var(--oro);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+/* ==============================
+    🌿 PORTADA SEMILLAS
+================================ */
 .portada-semillas {
     position: relative;
     width: 100%;
-    height: 100vh; /* Ocupa todo el alto de la pantalla */
+    height: 100vh;
     overflow: hidden;
 }
 
-/* La Imagen de Fondo */
 .portada-imagen {
     position: absolute;
     top: 0;
@@ -26,9 +122,9 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    z-index: -1;
 }
 
-/* El Overlay (Capa oscura sobre la imagen) */
 .portada-overlay {
     position: absolute;
     top: 0;
@@ -41,7 +137,6 @@
     align-items: center;
 }
 
-/* Contenido de la Portada */
 .portada-contenido {
     text-align: center;
     color: var(--blanco);
@@ -49,16 +144,13 @@
     max-width: 900px;
 }
 
-/* Estilo del Título Principal */
 .portada-titulo {
-    font-size: 3rem; /* Más grande y elegante */
+    font-size: 3rem;
     font-weight: 700;
     letter-spacing: -2px;
     margin-bottom: 15px;
-    margin-top: 30px;
 }
 
-/* Estilo de la Frase Sugestiva */
 .portada-frase {
     font-size: 1.6rem;
     font-style: italic;
@@ -66,7 +158,6 @@
     margin-bottom: 10px;
 }
 
-/* Estilo del Subtítulo (el que estaba antes) */
 .portada-subtitulo {
     display: block;
     font-size: 1.1rem;
@@ -75,23 +166,6 @@
     margin-bottom: 40px;
 }
 
-/* Botón Regresar (adaptado a la portada oscura) */
-.btn-regresar-portada {
-    position: absolute;
-    top: 30px;
-    left: 5%;
-    color: var(--blanco);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: all 0.2s ease;
-}
-
-.btn-regresar-portada:hover {
-    opacity: 0.7;
-}
-
-/* Botón para bajar (Explorar Guía) */
 .btn-scroll-down {
     display: inline-block;
     padding: 12px 30px;
@@ -108,10 +182,396 @@
     color: var(--verde-botanico);
 }
 
-/* Ajustes Responsive */
+/* ==============================
+    📱 RESPONSIVE
+================================ */
 @media (max-width: 768px) {
     .portada-titulo { font-size: 2.2rem; }
     .portada-frase { font-size: 1.3rem; }
-    .portada-subtitulo { font-size: 1rem; }
+    .nav-links { display: none; } /* Considerar menú hamburguesa aquí */
+    .portada-contenido { padding: 40px; }
+}/* ==============================
+    🎨 VARIABLES (Corregidas)
+================================ */
+:root {
+    --verde-botanico: #4f7942;
+    --blanco: #ffffff;
+    --blanco-cristal: rgba(255, 255, 255, 0.9);
+    --texto-oscuro: #333333;
+    --tierra-suave: #fdfaf6;
+    --sombra-portada: rgba(0, 0, 0, 0.4);
+    --oro: #d4af37;
+    --color-principal: #4f7942; /* Ajustado al verde botánico */
+    --color-secundario: #d4af37; /* Ajustado a oro para coherencia */
+    --texto: #333333;
+}
+
+/* ==============================
+    🧭 NAVBAR (Funcional)
+================================ */
+.navbar {
+    background: var(--blanco-cristal);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--color-secundario);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-principal);
+}
+
+.nav-logo span { color: var(--color-secundario); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--texto);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-principal);
+}
+
+/* --- DROPDOWN --- */
+.dropdown { position: relative; }
+
+.dropdown-content {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: white;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 10px;
+    min-width: 220px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ==============================
+    🌍 SELECTOR DE IDIOMA
+================================ */
+.nav-lang select {
+    background: #000;
+    color: var(--oro);
+    border: 1px solid var(--oro);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+/* ==============================
+    🌿 PORTADA SEMILLAS
+================================ */
+.portada-semillas {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.portada-imagen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.portada-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--sombra-portada);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portada-contenido {
+    text-align: center;
+    color: var(--blanco);
+    padding: 20px;
+    max-width: 900px;
+}
+
+.portada-titulo {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+}
+
+.portada-frase {
+    font-size: 1.6rem;
+    font-style: italic;
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+
+.portada-subtitulo {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+.btn-scroll-down {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--verde-botanico);
+    color: var(--blanco);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-scroll-down:hover {
+    background-color: var(--blanco);
+    color: var(--verde-botanico);
+}
+
+/* ==============================
+    📱 RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+    .portada-titulo { font-size: 2.2rem; }
+    .portada-frase { font-size: 1.3rem; }
+    .nav-links { display: none; } /* Considerar menú hamburguesa aquí */
+    .portada-contenido { padding: 40px; }
+}/* ==============================
+    🎨 VARIABLES (Corregidas)
+================================ */
+:root {
+    --verde-botanico: #4f7942;
+    --blanco: #ffffff;
+    --blanco-cristal: rgba(255, 255, 255, 0.9);
+    --texto-oscuro: #333333;
+    --tierra-suave: #fdfaf6;
+    --sombra-portada: rgba(0, 0, 0, 0.4);
+    --oro: #d4af37;
+    --color-principal: #4f7942; /* Ajustado al verde botánico */
+    --color-secundario: #d4af37; /* Ajustado a oro para coherencia */
+    --texto: #333333;
+}
+
+/* ==============================
+    🧭 NAVBAR (Funcional)
+================================ */
+.navbar {
+    background: var(--blanco-cristal);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--color-secundario);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-principal);
+}
+
+.nav-logo span { color: var(--color-secundario); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--texto);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-principal);
+}
+
+/* --- DROPDOWN --- */
+.dropdown { position: relative; }
+
+.dropdown-content {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: white;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 10px;
+    min-width: 220px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ==============================
+    🌍 SELECTOR DE IDIOMA
+================================ */
+.nav-lang select {
+    background: #000;
+    color: var(--oro);
+    border: 1px solid var(--oro);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+/* ==============================
+    🌿 PORTADA SEMILLAS
+================================ */
+.portada-semillas {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.portada-imagen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.portada-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--sombra-portada);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portada-contenido {
+    text-align: center;
+    color: var(--blanco);
+    padding: 20px;
+    max-width: 900px;
+}
+
+.portada-titulo {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+}
+
+.portada-frase {
+    font-size: 1.6rem;
+    font-style: italic;
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+
+.portada-subtitulo {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+.btn-scroll-down {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--verde-botanico);
+    color: var(--blanco);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-scroll-down:hover {
+    background-color: var(--blanco);
+    color: var(--verde-botanico);
+}
+
+/* ==============================
+    📱 RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+    .portada-titulo { font-size: 2.2rem; }
+    .portada-frase { font-size: 1.3rem; }
+    .nav-links { display: none; } /* Considerar menú hamburguesa aquí */
     .portada-contenido { padding: 40px; }
 }

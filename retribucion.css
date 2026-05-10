@@ -173,24 +173,136 @@ footer {
     margin: 15px 0;
 }
 
-/* --- RESPONSIVE DESIGN --- */
 
-/* Para tablets y pantallas medianas */
-@media (max-width: 1024px) {
-    .grid-plasticos {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
-        gap: 15px;
-        padding: 15px;
-    }
+
+/* ==============================
+   🧭 NAVBAR EVOLUCIONADO (Elegante & Pro)
+================================ */
+/* NAVBAR BASE */
+
+:root {
+    --primary: #2ecc71; /* Verde esmeralda vibrante */
+    --primary-dark: #27ae60;
+    --accent: #adff2f; /* Greenyellow para toques eléctricos */
+    --dark: #1a1a1a;
+    --glass: rgba(255, 255, 255, 0.15);
+    --text: #2c3e50;
+    --gradient: linear-gradient(135deg, #2ecc71 0%, #adff2f 100%);
 }
 
-/* Para celulares (pantallas pequeñas) */
-@media (max-width: 600px) {
-    .hero h1 {
-        font-size: 1.8rem; /* Título un poco más pequeño para que no se corte */
-        padding: 0 10px;
-    }
 
+
+
+.navbar {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(173, 255, 47, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 70px; /* Altura fija para control */
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    /* 1. Definimos el gradiente */
+    background-image: linear-gradient(135deg, #2ecc71 0%, #adff2f 100%);
+    
+    /* 2. Aplicamos el recorte al texto */
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+    /* 3. HACEMOS EL COLOR TRANSPARENTE (Esto es clave) */
+    color: transparent;
+    -webkit-text-fill-color: transparent; 
+
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* DROPDOWN - Aquí estaba el desorden */
+.dropdown {
+    position: relative; /* Clave para que el contenido no flote por cualquier lado */
+}
+
+/* El contenedor del submenú */
+.dropdown-content {
+    position: absolute;
+    top: 120%; /* Separado del menú principal para que respire */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    
+    /* Fondo con un toque de color y transparencia */
+    background: rgba(255, 255, 255, 0.98); 
+    backdrop-filter: blur(10px);
+    
+    min-width: 220px;
+    border-radius: 18px; /* Bordes bien redondeados */
+    padding: 12px;
+    
+    /* Borde brillante que le da el toque pro */
+    border: 2px solid #adff2f; 
+    
+    /* Sombra profunda para que parezca que flota */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efecto elástico */
+    z-index: 1001;
+}
+
+/* Cuando pasas el mouse por "Terapias" */
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Los links dentro del dropdown */
+.dropdown-content li a {
+    color: #2d5a27 !important; /* Verde profundo */
+    font-weight: 600 !important;
+    text-transform: none; /* Quitamos las mayúsculas para que sea más elegante */
+    padding: 12px 15px;
+    margin: 5px 0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* Efecto Hover en cada opción del submenú */
+.dropdown-content li a:hover {
+    background: linear-gradient(90deg, #2ecc71, #adff2f); /* Gradiente vibrante */
+    color: white !important;
+    padding-left: 25px; /* Se desplaza un poquito a la derecha */
+}
     .grid-plasticos {
         grid-template-columns: 1fr; /* 1 sola columna: una tarjeta debajo de la otra */
         padding: 10px;
@@ -212,4 +324,5 @@ footer {
         margin: 20px auto;
         text-align: center;
     }
-}
+
+

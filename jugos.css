@@ -82,6 +82,112 @@ body {
     border-radius: 6px;
 }
 
+/* --- CONFIGURACIÓN DEL NAVBAR --- */
+.navbar {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 2px solid #8bc34a; /* Línea verde brillante */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 75px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Estilo del Logo */
+.nav-logo {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #2d5a27;
+}
+
+.nav-logo span {
+    color: #8bc34a;
+}
+
+/* Enlaces Principales */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #8bc34a;
+}
+
+/* --- DROPDOWN MEJORADO --- */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: white;
+    min-width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border: 1px solid rgba(139, 195, 74, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    padding: 10px 0;
+    list-style: none;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-content a {
+    padding: 12px 20px;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+    background: #f1f8e9;
+    color: #2d5a27;
+}
+
+/* Selector de Idioma */
+#idioma-nav {
+    border: 2px solid #8bc34a;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background: transparent;
+    cursor: pointer;
+    font-weight: bold;
+    color: #2d5a27;
+}
+
 /* --- RESPONSIVE DESIGN --- */
 
 /* Tablets y pantallas medianas */

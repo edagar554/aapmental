@@ -9,11 +9,30 @@
     <link rel="stylesheet" href="jugos.css">
 </head>
 <body>
-    <nav style="padding: 15px; background: white;">
-        <a href="masa-corporal.html" style="text-decoration: none; color: #2e7d32; font-weight: bold; display: flex; align-items: center; gap: 8px;">
-            <span>⬅️</span> Volver a Calculadora de IMC
+   <!-- NAVBAR EVOLUCIONADO - EDICIÓN BIENESTAR -->
+<nav class="navbar">
+    <div class="nav-container">
+        
+        <a href="index.html" class="nav-logo">
+            AAP<span>Mental</span>
         </a>
-    </nav>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            
+            <!-- Dropdown de Terapias y Salud -->
+            <li class="dropdown">
+                <a href="#" class="dropdown-trigger">Explorar ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="nutricion.html">Nutrición</a></li>
+                    <li><a href="masa-corporal.html">Calculadora IMC</a></li>
+                    <li><a href="grounding.html">Grounding</a></li>
+                </ul>
+            </li>
+
+           
+    </div>
+</nav>
     
     <header style="text-align: center; background-color: #f9fbf9; padding-bottom: 40px; border-bottom: 1px solid #e0eadd;">
     
@@ -31,6 +50,55 @@
                 — Hipócrates
             </p>
         </div>
+
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Jugo Verde Desintoxicante para Bienestar Consciente",
+  "url": "https://aapmental.org/jugos-verdes.html",
+  "image": [
+    "https://aapmental.org/imagenes/imagenJugos.png"
+  ],
+  "author": {
+    "@type": "Organization",
+    "name": "AAPMental"
+  },
+  "datePublished": "2026-05-07",
+  "description": "Receta optimizada de jugo verde basada en principios de nutrición celular e hidratación bioeléctrica.",
+  "prepTime": "PT5M",
+  "cookTime": "PT0M",
+  "totalTime": "PT5M",
+  "keywords": "jugo verde, nutrición, bienestar, detox, AAPMental",
+  "recipeYield": "1 porción",
+  "recipeCategory": "Bebida Saludable",
+  "recipeCuisine": "Natural",
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "calories": "85 calories"
+  },
+  "recipeIngredient": [
+    "2 tazas de espinaca fresca",
+    "1 manzana verde",
+    "1/2 pepino",
+    "1 vaso de agua mineral"
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "text": "Lavar y desinfectar todos los vegetales y frutas."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Trocear los ingredientes para facilitar el licuado."
+    },
+    {
+      "@type": "HowToStep",
+      "text": "Procesar en licuadora hasta obtener una mezcla homogénea y beber de inmediato."
+    }
+  ]
+}
+</script>
         
         
 
@@ -57,11 +125,7 @@
             <div id="google_translate_element"></div>
         </div>
     
-        <div style="margin-top: 30px;">
-            <button onclick="window.location.href='index.html'" class="btn" style="background-color: transparent; color: #2e7d32; border: 2px solid #2e7d32;">
-                ← Volver al inicio
-            </button>
-        </div>
+        
     
         <p style="margin-top: 20px; font-size: 0.8rem; color: #888;">&copy; 2026 AAPMental - Bienestar Consciente</p>
     </footer>
