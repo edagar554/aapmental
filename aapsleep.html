@@ -13,7 +13,7 @@
             --blanco-tenue: #e0e0e0;
         }
 
-        body {
+       body {
             background-color: var(--fondo-noche);
             color: var(--blanco-tenue);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -21,10 +21,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            height: 100vh;
-            overflow: hidden;
+            justify-content: flex-start; /* Cambiado de center a flex-start para que el contenido fluya hacia abajo */
+            min-height: 100vh;           /* Cambiado de height a min-height para dar espacio al texto */
+            overflow-y: auto;            /* Habilita el scroll vertical cuando el contenido sea largo */
+            overflow-x: hidden;          /* Evita el molesto scroll horizontal */
             text-align: center;
+            padding-bottom: 40px;        /* Un respiro al final de la página */
         }
 
         header h1 {
@@ -104,144 +106,259 @@
             cursor: pointer;
         }
         
-/* ==============================
-   🧭 NAVBAR
-================================ */
-.navbar {
-    background: rgba(0, 0, 0, 0.85);
-    border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+        /* ==============================
+           🧭 NAVBAR
+        ================================ */
+        .navbar {
+            background: rgba(0, 0, 0, 0.85);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-.nav-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 12px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
+        .nav-links a {
+            color: var(--texto);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
 
-.nav-links a {
-    color: var(--texto);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-}
+        .nav-links a:hover {
+            color: var(--oro);
+        }
 
-.nav-links a:hover {
-    color: var(--oro);
-}
+        /* ==============================
+           📂 DROPDOWN
+        ================================ */
+        .dropdown {
+            position: relative;
+        }
 
-/* ==============================
-   📂 DROPDOWN
-================================ */
-.dropdown {
-    position: relative;
-}
+        .dropdown-content {
+            position: absolute;
+            top: 120%;
+            left: 0;
+            background: #0b0b0b;
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 6px;
+            list-style: none;
+            padding: 10px 0;
+            min-width: 200px;
+            display: none;
+        }
 
-.dropdown-content {
-    position: absolute;
-    top: 120%;
-    left: 0;
-    background: #0b0b0b;
-    border: 1px solid rgba(212, 175, 55, 0.25);
-    border-radius: 6px;
-    list-style: none;
-    padding: 10px 0;
-    min-width: 200px;
-    display: none;
-}
+        .dropdown-content li a {
+            display: block;
+            padding: 8px 16px;
+            font-size: 0.85rem;
+        }
 
-.dropdown-content li a {
-    display: block;
-    padding: 8px 16px;
-    font-size: 0.85rem;
-}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
+        /* =======================================================
+           📖 ESTILOS AGREGADOS: OPTIMIZACIÓN NATURAL DEL SUEÑO
+        ======================================================= */
+        .header-banner {
+            background-color: #1a2b4c;
+            color: #ffffff;
+            margin: 25px -20px;
+            padding: 30px 15mm;
+            text-align: center;
+            border-radius: 8px;
+        }
+        
+        .subtitle {
+            font-size: 12pt;
+            color: #cbd5e1;
+            margin: 0;
+        }
+        
+        h2 {
+            font-size: 14pt;
+            color: var(--dorado-suave);
+            border-left: 4px solid var(--azul-relajante);
+            padding-left: 10px;
+            margin-top: 35px;
+            margin-bottom: 12px;
+            text-align: left;
+        }
+        
+        h3 {
+            font-size: 11.5pt;
+            color: #cbd5e1;
+            margin-top: 22px;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+        
+        p {
+            margin: 0 0 12px 0;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin: 0 0 15px 0;
+            padding-left: 20px;
+            text-align: left;
+        }
+        
+        li {
+            margin-bottom: 6px;
+        }
+        
+        .strong-term {
+            color: var(--dorado-suave);
+            font-weight: bold;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0 20px 0;
+            font-size: 10pt;
+            color: var(--blanco-tenue);
+        }
+        
+        th {
+            background-color: var(--azul-relajante);
+            color: #ffffff;
+            font-weight: bold;
+            text-align: left;
+            padding: 10px 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        td {
+            padding: 10px 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background-color: rgba(255,255,255,0.02);
+            vertical-align: top;
+            text-align: left;
+        }
+        
+        tr:nth-child(even) td {
+            background-color: rgba(255,255,255,0.05);
+        }
+        
+        .callout-box {
+            background-color: rgba(30, 58, 95, 0.3);
+            border-left: 4px solid var(--azul-relajante);
+            padding: 12px 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+            text-align: left;
+        }
+        
+        .callout-box p {
+            margin: 0;
+            color: #cbd5e1;
+        }
+        
+        .food-grid {
+            margin-top: 10px;
+            text-align: left;
+        }
+        
+        .food-item {
+            background-color: rgba(255,255,255,0.02);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            padding: 14px;
+            margin-bottom: 12px;
+            border-radius: 6px;
+        }
+        
+        .food-title {
+            font-weight: bold;
+            color: var(--dorado-suave);
+            margin-bottom: 6px;
+        }
+        
+        .math {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+            font-weight: bold;
+            color: var(--dorado-suave);
+        }
+        
+        .source-tag {
+            font-size: 8.5pt;
+            color: #6b7280;
+            font-style: italic;
+        }
     </style>
 
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "AAPSleep - Frecuencias para Dormir",
-  "description": "Herramienta de audio generativo para el descanso profundo. Incluye sonidos de río, lluvia y frecuencias Delta.",
-  "applicationCategory": "HealthApplication",
-  "operatingSystem": "Web",
-  "author": {
-    "@type": "Organization",
-    "name": "AAPMental"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  }
-}
-</script>
-
-
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AAPSleep - Frecuencias para Dormir",
+      "description": "Herramienta de audio generativo para el descanso profundo. Incluye sonidos de río, lluvia y frecuencias Delta.",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "author": {
+        "@type": "Organization",
+        "name": "AAPMental"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
 </head>
 <body>
 
-     <nav class="navbar">
+    <nav class="navbar">
         <div class="nav-container">
-          
-
-          <ul class="nav-links">
-            <li><a href="index.html" data-i18n="menu_inicio">Inicio</a></li>
-
-            <li class="dropdown">
-              <a href="#" data-i18n="menu_terapias">Terapias ▾</a>
-              <ul class="dropdown-content">
-                <li><a href="grounding.html" data-i18n="menu_grounding">Grounding</a></li>
-                <li><a href="solfeguio.html" data-i18n="menu_solfeggio">Solfeggio</a></li>
-                <li><a href="sanacion-cuantica.html" data-i18n="menu_sanacion">Sanación</a></li>
-                <li><a href="isometricos.html" data-i18n="menu_isometricos">isometricos</a></li>
-                <li><a href="nutricion.html" data-i18n="menu_nutricion">nutricion</a></li>
-                <li><a href="semillas.html" data-i18n="menu_semillas">semillas</a></li>
-                <li><a href="tuconexion.html" data-i18n="menu_conexion">conexion</a></li>
-                <li><a href="jugos-verdes.html" data-i18n="menu_jugos_verdes">jugos verdes</a></li>
-                <li><a href="betarraga.html" data-i18n="menu_betarraga">Betarraga</a></li>
-                
-              </ul>
-            </li>
-
-            <li class="dropdown">
-              <a href="#" data-i18n="menu_mente_ciencia">Mente & Ciencia ▾</a>
-              <ul class="dropdown-content">
-                <li><a href="reprogramacion-neuronal.html" data-i18n="menu_reprogramacion">Reprogramación</a></li>
-                <li><a href="mecanica-cuantica.html" data-i18n="menu_mecanica">Mecánica Cuántica</a></li>
-                <li><a href="lectura-kybalion.html" data-i18n="menu_kybalion">Kybalión</a></li>
-                <li><a href="universo-conciente.html" data-i18n="menu_universo">universo-conciente</a></li>
-                <li><a href="retribucion.html" data-i18n="menu_retribucion">reciclaje</a></li>
-                
-              </ul>
-            </li>
-
-            <li><a href="masa-corporal.html" data-i18n="menu_salud">masa-corporal</a></li>
-            
-          </ul>
-</nav>
-
-
-
-
-
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="menu_inicio">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#" data-i18n="menu_terapias">Terapias ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="grounding.html" data-i18n="menu_grounding">Grounding</a></li>
+                        <li><a href="solfeguio.html" data-i18n="menu_solfeggio">Solfeggio</a></li>
+                        <li><a href="equilibrio-cuantico.html" data-i18n="menu_equilibrio">Equilibrio</a></li>
+                        <li><a href="isometricos.html" data-i18n="menu_isometricos">isometricos</a></li>
+                        <li><a href="nutricion.html" data-i18n="menu_nutricion">nutricion</a></li>
+                        <li><a href="semillas.html" data-i18n="menu_semillas">semillas</a></li>
+                        <li><a href="tuconexion.html" data-i18n="menu_conexion">conexion</a></li>
+                        <li><a href="jugos-verdes.html" data-i18n="menu_jugos_verdes">jugos verdes</a></li>
+                        <li><a href="betarraga.html" data-i18n="menu_betarraga">Betarraga</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-i18n="menu_mente_ciencia">Mente & Ciencia ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="reprogramacion-neuronal.html" data-i18n="menu_reprogramacion">Reprogramación</a></li>
+                        <li><a href="mecanica-cuantica.html" data-i18n="menu_mecanica">Mecánica Cuántica</a></li>
+                        <li><a href="lectura-kybalion.html" data-i18n="menu_kybalion">Kybalión</a></li>
+                        <li><a href="universo-conciente.html" data-i18n="menu_universo">universo-conciente</a></li>
+                        <li><a href="retribucion.html" data-i18n="menu_retribucion">reciclaje</a></li>
+                    </ul>
+                </li>
+                <li><a href="masa-corporal.html" data-i18n="menu_salud">masa-corporal</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <header>
         <h1>AAP<span>Sleep</span></h1>
@@ -254,11 +371,10 @@
 
     <main class="controls">
         <div class="audio-options">
-            <!-- Cambiamos los nombres para reflejar el nuevo enfoque -->
-            <button class="audio-btn active" onclick="configurarModo('rio')">Río de Cristal</button>
-            <button class="audio-btn" onclick="configurarModo('lluvia')">Lluvia Suave</button>
-            <button class="audio-btn" onclick="configurarModo('oceano')">Mar Profundo</button>
-            <button class="audio-btn" onclick="configurarModo('delta')">Frecuencia Delta</button>
+            <button class="audio-btn active" onclick="configurarModo('rio', event)">Río de Cristal</button>
+            <button class="audio-btn" onclick="configurarModo('lluvia', event)">Lluvia Suave</button>
+            <button class="audio-btn" onclick="configurarModo('oceano', event)">Mar Profundo</button>
+            <button class="audio-btn" onclick="configurarModo('delta', event)">Frecuencia Delta</button>
         </div>
 
         <div class="timer-section">
@@ -271,20 +387,150 @@
         </div>
     </main>
 
+    <!-- =======================================================
+         📖 SECCIÓN CONTENIDO: OPTIMIZACIÓN NATURAL DEL SUEÑO
+    ======================================================= -->
+    <section style="max-width: 600px; margin: 40px auto; padding: 0 20px;">
+
+        <div class="header-banner">
+            <h1 style="font-size: 20pt; margin: 0 0 8px 0; font-weight: bold; letter-spacing: -0.5px;">Optimización Natural del Sueño</h1>
+            <div class="subtitle">Guía de Frecuencias Sonoras, Ritmos Circadianos y Nutrición Terapéutica</div>
+        </div>
+
+        <p>Las frecuencias de sonido terapéuticas actúan como un guía biológico, orientando las ondas cerebrales hacia estados de relajación profunda. Mediante el uso de herramientas como los pulsos binaurales, los tonos isocrónicos o los sonidos ambientales de la naturaleza, es posible disminuir de manera controlada la actividad mental acelerada y facilitar una transición armónica hacia el descanso.</p>
+
+        <h2>1. Tipos de Frecuencias y Ondas Cerebrales</h2>
+        <p>El cerebro humano opera en diferentes rangos de frecuencia según su nivel de actividad. La estimulación auditiva externa permite sintonizar estas ondas para propósitos terapéuticos específicos:</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 25%;">Onda / Frecuencia</th>
+                    <th style="width: 20%;">Rango de Medida</th>
+                    <th style="width: 55%;">Efecto Fisiológico y Aplicación Práctica</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="strong-term">Ondas Delta</span></td>
+                    <td><span class="math">0.5 &rarr; 4 Hz</span></td>
+                    <td>Representan la frecuencia ideal para el sueño profundo y reparador. Escucharlas antes de dormir ayuda a conciliar el sueño con mayor rapidez y reduce significativamente los despertares nocturnos espontáneos.</td>
+                </tr>
+                <tr>
+                    <td><span class="strong-term">Ondas Theta</span></td>
+                    <td><span class="math">4 &rarr; 8 Hz</span></td>
+                    <td>Asociadas directamente con la fase inicial del sueño ligero y la etapa del sueño REM. Son excelentes herramientas para mitigar los estados de ansiedad y propiciar una relajación mental profunda.</td>
+                </tr>
+                <tr>
+                    <td><span class="strong-term">Ondas Alfa</span></td>
+                    <td><span class="math">8 &rarr; 13 Hz</span></td>
+                    <td>Vinculadas a un estado de calma despierta (similar al estado alcanzado durante la meditación). Ayudan a transicionar del estrés cognitivo diario a un estado de relajación física y mental.</td>
+                </tr>
+                <tr>
+                    <td><span class="strong-term">Tono Holístico 432 Hz</span></td>
+                    <td>Frecuencia Base</td>
+                    <td>Conocida tradicionalmente como la frecuencia de la naturaleza. Estudios sugieren que disminuye la frecuencia cardíaca y estimula un incremento en el tiempo de permanencia en las fases de sueño profundo.</td>
+                </tr>
+                <tr>
+                    <td><span class="strong-term">Tono Holístico 174 Hz</span></td>
+                    <td>Frecuencia Base</td>
+                    <td>Funciona en terapias alternativas como un analgésico natural tanto físico como mental, ayudando a disipar las tensiones musculares acumuladas y a inducir bienestar general.</td>
+                </tr>
+                <tr>
+                    <td><span class="strong-term">Tono Holístico 528 Hz</span></td>
+                    <td>Frecuencia Base</td>
+                    <td>Denominada la frecuencia de la transformación o reparación (asociada históricamente a la optimización celular). Promueve un entorno de relajación mental óptimo para reducir el insomnio.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>2. Estimulación de la Melatonina y Control Circadiano</h2>
+        <p>La melatonina es la hormona fundamental encargada de regular el reloj biológico humano. Su segregación natural está intrínsecamente ligada a la ausencia de luz. Para optimizar su producción de forma orgánica, se recomienda estructurar los hábitos diarios en torno a tres pilares fundamentales:</p>
+
+        <h3>A. Control estricto de la exposición a la luz</h3>
+        <ul>
+            <li><span class="strong-term">Luz natural diurna:</span> Exponerse entre 5 y 10 minutos a la luz solar al aire libre inmediatamente después de despertar. Esta acción suprime la melatonina matutina e indica al cerebro el inicio óptimo del ciclo diario.</li>
+            <li><span class="strong-term">Restricción de luz azul:</span> Apagar dispositivos emisores de luz azul (televisores, computadoras y teléfonos móviles) de 1 a 2 horas antes de acostarse. La luz azul inhibe de forma drástica la secreción de melatonina. En caso de uso inevitable, se deben activar filtros de tono cálido.</li>
+            <li><span class="strong-term">Oscuridad nocturna total:</span> Mantener el dormitorio en un estado de oscuridad absoluta. El uso de cortinas opacas (blackout) previene que la contaminación lumínica externa altere los receptores oculares durante la noche.</li>
+        </ul>
+
+        <h3>B. Ajuste dietético estratégico</h3>
+        <ul>
+            <li><span class="strong-term">Precursores bioquímicos:</span> Incorporar alimentos con un alto contenido de triptófano, un aminoácido esencial indispensable para que el organismo sintetice serotonina y, posteriormente, melatonina. Entre ellos destacan los lácteos, huevos, avena, almendras, nueces y legumbres.</li>
+            <li><span class="strong-term">Fuentes alimenticias directas:</span> Consumir alimentos que contienen concentraciones medibles de melatonina en su propia matriz biológica, tales como el arroz integral, la avena, el maíz dulce, los tomates y las cerezas ácidas.</li>
+        </ul>
+
+        <h3>C. Modificación de hábitos y entorno</h3>
+        <ul>
+            <li><span class="strong-term">Cena ligera y oportuna:</span> Evitar ingestas copiosas o elevadas en grasas saturadas al menos 2 horas antes de acostarse para asegurar que los procesos digestivos pesados no interfieran con las fases iniciales del sueño.</li>
+            <li><span class="strong-term">Planificación del ejercicio:</span> Limitar los entrenamientos de alta intensidad a altas horas de la noche, dado que elevan la temperatura corporal central y el cortisol, retrasando la conciliación del descanso.</li>
+            <li><span class="strong-term">Ritual de desconexión:</span> Disminuir de manera progresiva la intensidad de las luces del hogar al caer la noche y realizar actividades de baja demanda cognitiva, tales como la lectura con luz tenue o ejercicios de respiración consciente orientados a reducir el cortisol.</li>
+        </ul>
+
+        <div class="callout-box">
+            <p><strong>Nota técnica:</strong> De acuerdo con directrices de salud de instituciones especializadas como <em>GoodRx Health</em>, la sincronización correcta de estos hábitos reduce la necesidad de recurrir a suplementos exógenos y mejora la arquitectura natural del sueño.</p>
+        </div>
+
+        <h2>3. Análisis Detallado de Alimentos Reguladores</h2>
+        <p>A continuación se desglosan los principales elementos de la dieta que impactan positivamente en la calidad del descanso, validados por fuentes científicas y clínicas de referencia:</p>
+
+        <div class="food-grid">
+            <div class="food-item">
+                <div class="food-title">Nueces y Frutos Secos <span class="source-tag">(Fuente: WebMD / Healthline)</span></div>
+                <p>Destacan especialmente los pistachos y las almendras como fuentes sobresalientes de melatonina natural. Adicionalmente, aportan un perfil rico en antioxidantes, minerales y ácidos grasos insaturados saludables. Debido a su alta densidad calórica, se aconseja su consumo en porciones moderadas como refrigerio diurno.</p>
+            </div>
+
+            <div class="food-item">
+                <div class="food-title">Plátano <span class="source-tag">(Fuente: Healthline)</span></div>
+                <p>Además de contener dosis moderadas de la hormona, posee una combinación sinérgica de magnesio y triptófano. El magnesio actúa reduciendo los niveles sistémicos de cortisol (la hormona del estrés) y relajando el sistema neuromuscular, mientras que el triptófano es metabolizado directamente en serotonina.</p>
+            </div>
+
+            <div class="food-item">
+                <div class="food-title">Cerezas Ácidas <span class="source-tag">(Fuente: WebMD)</span></div>
+                <p>Es uno de los recursos naturales con mayor concentración fitoquímica de melatonina. Las revisiones clínicas sugieren consumir la fruta en su estado fresco o en extractos puros no endulzados, evitando jugos comerciales que adicionan azúcares refinados perjudiciales para los picos glucémicos nocturnos.</p>
+            </div>
+
+            <div class="food-item">
+                <div class="food-title">Carbohidratos Complejos (Arroz, Avena y Maíz Dulce) <span class="source-tag">(Fuente: Dietary Sources and Bioactivities of Melatonin)</span></div>
+                <p>Los carbohidratos de bajo índice glucémico facilitan bioquímicamente el cruce del triptófano a través de la barrera hematoencefálica. Las mayores concentraciones se localizan específicamente en las variedades de arroz negro no glutinoso y en el arroz integral.</p>
+            </div>
+
+            <div class="food-item">
+                <div class="food-title">Tomates <span class="source-tag">(Fuente: GoodRx Health)</span></div>
+                <p>Aportan una base de melatonina combinada con altos niveles de licopeno, un potente antioxidante celular. Sus nutrientes ayudan a mitigar los procesos inflamatorios crónicos y el estrés oxidativo de los tejidos, variables que suelen fragmentar el sueño.</p>
+            </div>
+        </div>
+
+        <h2>4. Beneficios Clínicos de la Melatonina Natural</h2>
+        <p>El mantenimiento de niveles óptimos de melatonina de procedencia orgánica genera impactos positivos integrales en la homeostasis del cuerpo humano:</p>
+        <ul>
+            <li><span class="strong-term">Regulación del ciclo circadiano:</span> Optimiza de forma precisa las fases del sueño. Es altamente efectiva para sincronizar el reloj interno tras sufrir desajustes por cambios de zona horaria (<em>jet lag</em>) o turnos laborales rotativos.</li>
+            <li><span class="strong-term">Establecimiento de higiene del sueño:</span> Provee una base sólida para un patrón de descanso consistente tanto en adultos como en la población pediátrica.</li>
+            <li><span class="strong-term">Soporte en condiciones pediátricas específicas:</span> La evidencia clínica demuestra que una correcta gestión de la melatonina coadyuva de forma muy positiva en la estabilización y mejora de la calidad del descanso en niños que presentan condiciones crónicas asociadas como el asma, la dermatitis atópica y el Trastorno por Déficit de Atención e Hiperactividad (TDAH).</li>
+        </ul>
+    </section>
+
     <script>
-        let audioCtx, whiteNoise, lowPass, gainNode, animacionFiltro;
+        // Añadimos variables para oscilador, filtros extras y control de modo
+        let audioCtx, whiteNoise, lowPass, highPass, oscilador, gainNode, animacionFiltro;
         let estaSonando = false;
+        let modoActual = 'rio'; // Rastrea qué sonido está activo
 
         function updateTimer(val) {
             document.getElementById('timer-val').innerText = val;
         }
 
         function configurarModo(modo) {
-            // Aquí podemos ajustar la frecuencia base según el modo
-            console.log("Cambiando a modo: " + modo);
-            document.querySelectorAll('.audio-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+            modoActual = modo; // Guardamos el modo seleccionado
             
+            document.querySelectorAll('.audio-btn').forEach(btn => btn.classList.remove('active'));
+            
+            // Corregido: Usamos event.currentTarget o buscamos el botón activo con seguridad
+            if (event && event.target) {
+                event.target.classList.add('active');
+            }
+            
+            // Si ya está sonando, reinicia el flujo inmediatamente con la nueva acústica
             if(estaSonando) {
                 detenerRio();
                 iniciarRio();
@@ -294,7 +540,7 @@
         function iniciarRio() {
             if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
-            // Generador de sonido orgánico
+            // 1. Generador de ruido base (sirve para Río, Lluvia y Mar)
             const bufferSize = 2 * audioCtx.sampleRate;
             const noiseBuffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
             const output = noiseBuffer.getChannelData(0);
@@ -306,35 +552,98 @@
             whiteNoise.buffer = noiseBuffer;
             whiteNoise.loop = true;
 
+            // 2. Inicialización de Filtros
             lowPass = audioCtx.createBiquadFilter();
             lowPass.type = 'lowpass';
-            lowPass.frequency.setValueAtTime(400, audioCtx.currentTime);
+            
+            highPass = audioCtx.createBiquadFilter();
+            highPass.type = 'highpass';
 
+            // 3. Nodo de Volumen Principal (Gain)
             gainNode = audioCtx.createGain();
             gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
             gainNode.gain.linearRampToValueAtTime(0.15, audioCtx.currentTime + 2);
 
-            whiteNoise.connect(lowPass);
-            lowPass.connect(gainNode);
+            // ==========================================
+            // 🎛️ ARQUITECTURA DINÁMICA SEGÚN EL MODO
+            // ==========================================
+            if (modoActual === 'rio') {
+                lowPass.frequency.setValueAtTime(400, audioCtx.currentTime);
+                whiteNoise.connect(lowPass);
+                lowPass.connect(gainNode);
+                whiteNoise.start();
+
+                // Movimiento fluido del agua del río
+                animacionFiltro = setInterval(() => {
+                    const variacion = Math.sin(audioCtx.currentTime * 0.4) * 150;
+                    lowPass.frequency.setValueAtTime(450 + variacion, audioCtx.currentTime);
+                }, 100);
+
+            } else if (modoActual === 'lluvia') {
+                // Frecuencias más altas y dispersas para gotas de lluvia
+                lowPass.frequency.setValueAtTime(1300, audioCtx.currentTime);
+                highPass.frequency.setValueAtTime(400, audioCtx.currentTime);
+                
+                whiteNoise.connect(highPass);
+                highPass.connect(lowPass);
+                lowPass.connect(gainNode);
+                whiteNoise.start();
+
+                // Pequeño siseo variable de la tormenta
+                animacionFiltro = setInterval(() => {
+                    const variacion = Math.sin(audioCtx.currentTime * 1.5) * 50;
+                    lowPass.frequency.setValueAtTime(1300 + variacion, audioCtx.currentTime);
+                }, 120);
+
+            } else if (modoActual === 'oceano') {
+                // Filtro ultra bajo para simular la masa del mar profundo
+                lowPass.frequency.setValueAtTime(200, audioCtx.currentTime);
+                whiteNoise.connect(lowPass);
+                lowPass.connect(gainNode);
+                whiteNoise.start();
+
+                // Oleaje lento (ciclos largos simulando la marea)
+                animacionFiltro = setInterval(() => {
+                    const oleaje = Math.sin(audioCtx.currentTime * 0.15) * 100;
+                    lowPass.frequency.setValueAtTime(220 + oleaje, audioCtx.currentTime);
+                }, 60);
+
+            } else if (modoActual === 'delta') {
+                // Las ondas Delta reales no usan ruido, requieren tonos puros (Oscilador)
+                oscilador = audioCtx.createOscillator();
+                oscilador.type = 'sine';
+                // Tono base sub-grave de 80Hz modulado para inducir el estado
+                oscilador.frequency.setValueAtTime(80, audioCtx.currentTime);
+                
+                lowPass.frequency.setValueAtTime(120, audioCtx.currentTime);
+                oscilador.connect(lowPass);
+                lowPass.connect(gainNode);
+                oscilador.start();
+
+                // Oscilación entnergetica Delta sutil de ~2.5Hz
+                animacionFiltro = setInterval(() => {
+                    const pulsoDelta = Math.sin(audioCtx.currentTime * 2.5) * 8;
+                    oscilador.frequency.setValueAtTime(80 + pulsoDelta, audioCtx.currentTime);
+                }, 40);
+            }
+
             gainNode.connect(audioCtx.destination);
-
-            whiteNoise.start();
-
-            // Movimiento del agua
-            animacionFiltro = setInterval(() => {
-                const variacion = Math.sin(audioCtx.currentTime * 0.4) * 150;
-                lowPass.frequency.setValueAtTime(450 + variacion, audioCtx.currentTime);
-            }, 100);
         }
 
         function detenerRio() {
-            if (whiteNoise) {
-                gainNode.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 1);
-                setTimeout(() => {
-                    whiteNoise.stop();
-                    clearInterval(animacionFiltro);
-                }, 1000);
+            clearInterval(animacionFiltro);
+            
+            if (gainNode && audioCtx) {
+                try {
+                    gainNode.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 1);
+                } catch(e){}
             }
+
+            // Apagado limpio de las fuentes activas
+            setTimeout(() => {
+                if (whiteNoise) { try { whiteNoise.stop(); } catch(e){} whiteNoise = null; }
+                if (oscilador) { try { oscilador.stop(); } catch(e){} oscilador = null; }
+            }, 1000);
         }
 
         function toggleDescanso() {
@@ -360,22 +669,20 @@
     </script>
 
     <!-- Contenedor del Traductor -->
-<div style="text-align: center; margin: 20px 0; opacity: 0.7;">
-    <div id="google_translate_element"></div>
-</div>
+    <div style="text-align: center; margin: 20px 0; opacity: 0.7;">
+        <div id="google_translate_element"></div>
+    </div>
 
-<script type="text/javascript">
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'es',
-            includedLanguages: 'en,fr,it,pt,de', // Idiomas sugeridos para tu perfil
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false
-        }, 'google_translate_element');
-    }
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</body>
-
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                includedLanguages: 'en,fr,it,pt,de', // Idiomas sugeridos para tu perfil
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

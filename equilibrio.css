@@ -1,0 +1,221 @@
+/* ==============================
+   🌑 BASE GENERAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.lectura-body {
+    background-color: #000;
+    color: #ddd;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.7;
+}
+
+/* ==============================
+   🎨 VARIABLES
+================================ */
+
+:root {
+    --oro: #d4af37;
+}
+
+/* ==============================
+   📦 CONTENEDOR
+================================ */
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ==============================
+   🏷️ ETAPA / CABECERA
+================================ */
+
+.badge-etapa {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid var(--oro);
+    color: var(--oro);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.oro-texto {
+    color: var(--oro);
+}
+
+/* ==============================
+   🎥 SECCIÓN VIDEO
+================================ */
+
+.seccion-video-avanzado {
+    margin-top: 60px;
+}
+
+.seccion-video-avanzado h2 {
+    margin-bottom: 25px;
+}
+
+.contenedor-video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 14px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.contenedor-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ==============================
+   📘 GUÍA DE ESTUDIO
+================================ */
+
+.guia-estudio {
+    margin-top: 40px;
+    padding: 30px;
+    background: #0c0c0c;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.guia-estudio h3 {
+    color: var(--oro);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.guia-estudio ul {
+    list-style: none;
+}
+
+.guia-estudio li {
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.guia-estudio strong {
+    color: #fff;
+}
+
+/* ==============================
+   🔘 BOTÓN
+================================ */
+
+.btn {
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    background-color: var(--oro);
+    color: #000;
+}
+
+/* ==============================
+   ⚠️ AVISO LEGAL
+================================ */
+
+.aviso {
+    font-size: 0.85rem;
+    color: #777;
+    text-align: center;
+}
+
+/* ==============================
+    🧭 NAVBAR (Navegación Pro)
+================================ */
+
+.navbar {
+    background: rgba(10, 10, 10, 0.98);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--oro);
+}
+
+/* === DROPDOWN (Desplegables) === */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #111;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    border: 1px solid var(--oro);
+    border-radius: 8px;
+    z-index: 1;
+    top: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+    font-size: 0.8rem;
+}
+
+/* === SELECTOR IDIOMA === */
+#idioma-nav {
+    background: transparent;
+    color: var(--oro);
+    border: 1px solid var(--oro);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
