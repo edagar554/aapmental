@@ -1,143 +1,1077 @@
-/* --- VARIABLES GLOBALES --- */
-:root {
-    --oro: #d4af37;
-    --oro-brillo: #f9e297;
-    --negro-fondo: #0a0a0a;
-    --gris-texto: #cccccc;
-    --borde-dorado: rgba(212, 175, 55, 0.3);
+/* =====================================================
+   AAPMENTAL - CONEXION.CSS
+   PARTE 1 DE 3
+   Variables, Base, Navbar y Hero
+===================================================== */
+
+/* ===========================
+   VARIABLES GLOBALES
+=========================== */
+
+:root{
+
+    --oro:#d4af37;
+    --oro-brillo:#f9e297;
+
+    --negro:#050505;
+    --negro-secundario:#0f0f0f;
+    --gris:#b8b8b8;
+
+    --texto:#ececec;
+    --titulo:#ffffff;
+
+    --borde:rgba(212,175,55,.18);
+    --borde-hover:rgba(212,175,55,.45);
+
+    --sombra:0 20px 45px rgba(0,0,0,.55);
+
+    --radio:18px;
+
+    --transicion:.45s cubic-bezier(.165,.84,.44,1);
+
+    --fuente:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+
 }
 
-/* --- ESTILOS BASE --- */
-body.lectura-body {
-    background-color: var(--negro-fondo);
-    color: var(--gris-texto);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    line-height: 1.6;
+/* ===========================
+   RESET
+=========================== */
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
 }
 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
+html{
+
+scroll-behavior:smooth;
+
 }
 
-/* --- TEXTOS DORADOS --- */
-.oro-texto {
-    color: var(--oro);
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+body.lectura-body{
+
+background:
+
+linear-gradient(
+180deg,
+#050505,
+#090909,
+#0b0b0b);
+
+color:var(--texto);
+
+font-family:var(--fuente);
+
+line-height:1.8;
+
+overflow-x:hidden;
+
+-webkit-font-smoothing:antialiased;
+
 }
 
-.subtitulo-italico {
-    font-style: italic;
-    color: var(--oro-brillo);
-    text-align: center;
-    margin-bottom: 30px;
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
 }
 
-/* --- COMPONENTES DE DISEÑO --- */
-.badge-etapa {
-    background: var(--oro);
-    color: black;
-    display: inline-block;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 0.8rem;
-    margin-bottom: 10px;
+::-webkit-scrollbar-track{
+
+background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--oro);
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:var(--oro-brillo);
+
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+position:sticky;
+
+top:0;
+
+z-index:999;
+
+background:rgba(5,5,5,.88);
+
+backdrop-filter:blur(14px);
+
+-webkit-backdrop-filter:blur(14px);
+
+border-bottom:1px solid var(--borde);
+
+box-shadow:0 10px 30px rgba(0,0,0,.45);
+
+}
+
+.nav-container{
+
+width:min(1200px,92%);
+
+margin:auto;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 0;
+
+}
+
+.nav-links{
+
+display:flex;
+
+gap:28px;
+
+list-style:none;
+
+}
+
+.nav-links li{
+
+position:relative;
+
+}
+
+.nav-links a{
+
+color:#d0d0d0;
+
+text-decoration:none;
+
+font-size:.95rem;
+
+font-weight:500;
+
+transition:var(--transicion);
+
+}
+
+.nav-links a:hover{
+
+color:var(--oro-brillo);
+
+}
+
+/* ===========================
+   DROPDOWN
+=========================== */
+
+.dropdown{
+
+position:relative;
+
+}
+
+.dropdown-content{
+
+position:absolute;
+
+left:50%;
+
+top:100%;
+
+transform:translateX(-50%) translateY(15px);
+
+min-width:230px;
+
+background:#121212;
+
+border-radius:15px;
+
+border:1px solid var(--borde);
+
+padding:12px 0;
+
+list-style:none;
+
+opacity:0;
+
+visibility:hidden;
+
+transition:var(--transicion);
+
+box-shadow:0 20px 40px rgba(0,0,0,.55);
+
+}
+
+.dropdown:hover .dropdown-content{
+
+opacity:1;
+
+visibility:visible;
+
+transform:translateX(-50%) translateY(5px);
+
+}
+
+.dropdown-content li{
+
+padding:0;
+
+}
+
+.dropdown-content a{
+
+display:block;
+
+padding:12px 22px;
+
+font-size:.92rem;
+
+color:#d0d0d0;
+
+}
+
+.dropdown-content a:hover{
+
+background:rgba(212,175,55,.08);
+
+color:var(--oro);
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero-conexion{
+
+min-height:70vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:130px 20px;
+
+position:relative;
+
+overflow:hidden;
+
+background:
+
+linear-gradient(
+
+rgba(0,0,0,.55),
+
+rgba(0,0,0,.80)
+
+),
+
+url("../img/conexion.webp")
+
+center center/cover;
+
+}
+
+.hero-conexion::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+radial-gradient(
+
+circle,
+
+transparent 20%,
+
+rgba(0,0,0,.55) 100%
+
+);
+
+}
+
+/* ===========================
+   CONTENEDOR
+=========================== */
+
+.container{
+
+width:min(900px,92%);
+
+margin:auto;
+
+padding:70px 0;
+
+position:relative;
+
+z-index:2;
+
+}
+
+/* ===========================
+   TITULOS
+=========================== */
+
+.oro-texto{
+
+font-size:
+
+clamp(2rem,5vw,3.6rem);
+
+font-weight:800;
+
+text-align:center;
+
+text-transform:uppercase;
+
+letter-spacing:3px;
+
+margin-bottom:15px;
+
+background:
+
+linear-gradient(
+
+135deg,
+
+#ffffff,
+
+var(--oro-brillo)
+
+);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+filter:drop-shadow(0 4px 10px rgba(212,175,55,.25));
+
+}
+
+.subtitulo-italico{
+
+font-size:1.15rem;
+
+font-style:italic;
+
+color:var(--oro);
+
+text-align:center;
+
+margin-bottom:45px;
+
+opacity:.9;
+
+}
+
+.container p{
+
+font-size:1.1rem;
+
+text-align:justify;
+
+letter-spacing:.25px;
+
+margin-bottom:28px;
+
+color:#dddddd;
+
+}
+
+/* =====================================================
+   
+   
+   Tarjetas, Botones, Video y Animaciones
+===================================================== */
+
+
+/* ===========================
+   ETIQUETAS (BADGES)
+=========================== */
+
+.badge-etapa{
+
+display:inline-block;
+
+padding:8px 18px;
+
+margin-bottom:18px;
+
+border-radius:50px;
+
+background:
+
+linear-gradient(
+135deg,
+var(--oro),
+var(--oro-brillo)
+);
+
+color:#000;
+
+font-size:.78rem;
+
+font-weight:700;
+
+text-transform:uppercase;
+
+letter-spacing:1px;
+
+box-shadow:
+
+0 6px 18px rgba(212,175,55,.25);
+
+}
+
+
+/* ===========================
+   TARJETAS
+=========================== */
+
+.ritual-box{
+
+background:
+
+linear-gradient(
+180deg,
+rgba(20,20,20,.98),
+rgba(10,10,10,.98)
+);
+
+border:1px solid var(--borde);
+
+border-radius:var(--radio);
+
+padding:40px;
+
+margin:50px 0;
+
+position:relative;
+
+overflow:hidden;
+
+box-shadow:
+
+var(--sombra);
+
+transition:
+
+transform .45s ease,
+
+box-shadow .45s ease,
+
+border-color .45s ease;
+
+}
+
+
+/* Línea superior dorada */
+
+.ritual-box::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:2px;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+var(--oro),
+
+transparent
+
+);
+
+}
+
+
+/* Brillo lateral */
+
+.ritual-box::after{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:-120%;
+
+width:70%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.08),
+
+transparent
+
+);
+
+transform:skewX(-25deg);
+
+transition:1s;
+
+}
+
+
+/* Hover */
+
+.ritual-box:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--borde-hover);
+
+box-shadow:
+
+0 30px 60px rgba(0,0,0,.65),
+
+0 0 35px rgba(212,175,55,.08);
+
+}
+
+
+.ritual-box:hover::after{
+
+left:160%;
+
+}
+
+
+/* ===========================
+   TITULOS DENTRO DE TARJETAS
+=========================== */
+
+.ritual-box h2,
+.ritual-box h3{
+
+color:#ffffff;
+
+margin-bottom:18px;
+
+font-size:1.7rem;
+
+font-weight:700;
+
+}
+
+
+.ritual-box h4{
+
+color:var(--oro-brillo);
+
+margin-bottom:15px;
+
+font-size:1.2rem;
+
+}
+
+
+.ritual-box strong{
+
+color:var(--oro-brillo);
+
+}
+
+
+.ritual-box ul{
+
+padding-left:22px;
+
+margin:20px 0;
+
+}
+
+
+.ritual-box li{
+
+margin-bottom:12px;
+
+color:#dddddd;
+
+}
+
+
+/* ===========================
+   VIDEO RESPONSIVE
+=========================== */
+
+.contenedor-video{
+
+position:relative;
+
+padding-bottom:56.25%;
+
+height:0;
+
+overflow:hidden;
+
+border-radius:18px;
+
+margin:45px 0;
+
+border:1px solid var(--borde);
+
+box-shadow:
+
+0 20px 45px rgba(0,0,0,.60);
+
+transition:transform .45s ease;
+
+}
+
+
+.contenedor-video:hover{
+
+transform:scale(1.015);
+
+}
+
+
+.contenedor-video iframe{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+border:none;
+
+}
+
+
+/* ===========================
+   BOTÓN DORADO
+=========================== */
+
+.btn-oro{
+
+display:inline-block;
+
+padding:14px 32px;
+
+border-radius:50px;
+
+border:1px solid var(--oro);
+
+background:transparent;
+
+color:var(--oro-brillo);
+
+font-size:.95rem;
+
+font-weight:600;
+
+letter-spacing:1px;
+
+text-transform:uppercase;
+
+text-decoration:none;
+
+cursor:pointer;
+
+position:relative;
+
+overflow:hidden;
+
+transition:.45s;
+
+}
+
+
+/* Brillo */
+
+.btn-oro::before{
+
+content:"";
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.25),
+
+transparent
+
+);
+
+transition:.8s;
+
+}
+
+
+.btn-oro:hover{
+
+background:var(--oro);
+
+color:#000;
+
+box-shadow:
+
+0 15px 35px rgba(212,175,55,.30);
+
+transform:translateY(-3px);
+
+}
+
+
+.btn-oro:hover::before{
+
+left:130%;
+
+}
+
+
+/* ===========================
+   IMÁGENES
+=========================== */
+
+img{
+
+max-width:100%;
+
+display:block;
+
+border-radius:16px;
+
+}
+
+
+.ritual-box img{
+
+margin:30px auto;
+
+box-shadow:
+
+0 18px 40px rgba(0,0,0,.55);
+
+transition:.45s;
+
+}
+
+
+.ritual-box img:hover{
+
+transform:scale(1.03);
+
+}
+
+
+/* ===========================
+   ANIMACIONES
+=========================== */
+
+@keyframes aparecer{
+
+from{
+
+opacity:0;
+
+transform:translateY(35px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+@keyframes flotar{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+
+ .ritual-box {
+            animation:aparecer .9s ease both;
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid #d4af37;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        .aceite-item {
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 15px 0;
+        }
+        .img-placeholder {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+            border-radius: 10px;
+            display: block;
+        }
+
+
+.contenedor-video{
+
+animation:aparecer 1.1s ease both;
+
+}
+
+
+.badge-etapa{
+
+animation:flotar 4s ease-in-out infinite;
+
+}
+
+
+/* ===========================
+   SEPARADOR DORADO
+=========================== */
+
+.separador{
+
+width:120px;
+
+height:2px;
+
+margin:50px auto;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+var(--oro),
+
+transparent
+
+);
+
+opacity:.85;
+
 }
 
 .ritual-box {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid var(--borde-dorado);
-    padding: 25px;
+    animation: aparecer .9s ease both;
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid #d4af37;
+    padding: 30px;
     border-radius: 15px;
-    margin: 30px 0;
-    box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.05);
+    margin: 40px 0;
 }
 
-/* --- VIDEO --- */
-.contenedor-video {
-    position: relative;
-    padding-bottom: 56.25%; /* Ratio 16:9 */
-    height: 0;
-    overflow: hidden;
-    border-radius: 15px;
-    border: 2px solid var(--borde-dorado);
-    margin: 20px 0;
+
+/* =====================================================
+   FOOTER 
+===================================================== */
+
+.footer{
+
+    background: linear-gradient(
+        180deg,
+        #111111 0%,
+        #0c0c0c 50%,
+        #050505 100%
+    );
+
+    color:#ffffff;
+
+    border-top:2px solid rgba(212,175,55,.35);
+
 }
 
-.contenedor-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+/* CONTENEDOR GRID CON 3 COLUMNAS EXACTAS */
+.footer-container {
+    width: min(1200px, 92%); 
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 50px;
+    padding: 70px 0;
 }
 
-/* --- BOTONES --- */
-.btn-oro {
-    background: transparent;
-    color: var(--oro);
-    border: 2px solid var(--oro);
-    padding: 15px 30px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-radius: 5px;
+/* Estilos para los títulos de cada columna (Explorar, Información, Contacto) */
+.footer-col h3 {
+    color: #86efac; 
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    margin-top: 0;
 }
 
-.btn-oro:hover {
-    background: var(--oro);
-    color: black;
-    box-shadow: 0 0 20px var(--oro);
-    transform: translateY(-3px);
-}
-
-/* --- NAVEGACIÓN (OPCIONAL) --- */
-.navbar {
-    background: rgba(0, 0, 0, 0.9);
-    padding: 15px 0;
-    border-bottom: 1px solid var(--borde-dorado);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.nav-links {
+/* Listas de navegación */
+.footer-col ul {
     list-style: none;
-    display: flex;
-    gap: 20px;
+    padding: 0;
     margin: 0;
 }
 
-.nav-links a {
-    color: white;
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #cbd5e1; 
     text-decoration: none;
-    font-size: 0.9rem;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    display: inline-block;
 }
 
-.nav-links a:hover {
-    color: var(--oro);
+/* Efecto Hover al pasar el mouse por los enlaces */
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 6px; 
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 600px) {
-    .container {
-        padding: 15px;
+/* Bloque de texto e íconos en la columna de Contacto */
+.footer-col p {
+    color: #cbd5e1;
+    margin: 0 0 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+}
+
+.footer-col p i {
+    color: #86efac; 
+    font-size: 1.1rem;
+    width: 20px; 
+    text-align: center;
+}
+
+/* ==========================================
+   BARRA INFERIOR DE COPYRIGHT
+========================================== */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 50px auto 0 auto;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #94a3b8;
+    margin: 0 0 6px 0;
+    font-size: 0.95rem;
+}
+
+.footer-bottom small {
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+/* ==========================================
+   RESPONSIVO PROPIO DEL FOOTER (MÓVILES Y TABLETS)
+========================================== */
+@media (max-width: 850px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 30px;
     }
-    .oro-texto {
-        font-size: 1.5rem;
+}
+
+@media (max-width: 576px) {
+    .footer-container {
+        grid-template-columns: 1fr; 
+        text-align: center; 
+        gap: 35px;
+    }
+
+    .footer-col p {
+        justify-content: center; 
+    }
+
+    .footer-col ul li a:hover {
+        padding-left: 0; 
     }
 }

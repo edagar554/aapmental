@@ -1,577 +1,618 @@
-/* ==============================
-    🎨 VARIABLES (Corregidas)
-================================ */
-:root {
-    --verde-botanico: #4f7942;
-    --blanco: #ffffff;
-    --blanco-cristal: rgba(255, 255, 255, 0.9);
-    --texto-oscuro: #333333;
-    --tierra-suave: #fdfaf6;
-    --sombra-portada: rgba(0, 0, 0, 0.4);
-    --oro: #d4af37;
-    --color-principal: #4f7942; /* Ajustado al verde botánico */
-    --color-secundario: #d4af37; /* Ajustado a oro para coherencia */
-    --texto: #333333;
+/* ===========================================================
+   AAPMENTAL
+   
+===========================================================*/
+
+/*==============================
+RESET
+===============================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* ==============================
-    🧭 NAVBAR (Funcional)
-================================ */
-.navbar {
-    background: var(--blanco-cristal);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 2px solid var(--color-secundario);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+html{
+    scroll-behavior:smooth;
 }
 
-.nav-container {
+:root{
+
+    --oro:#d4af37;
+    --oro-claro:#f1d87a;
+    --verde:#65b85c;
+    --gris:#cfcfcf;
+    --gris-claro:#f4f4f4;
+
+    --fondo:#050505;
+    --fondo-card:#111111;
+    --fondo-card2:#181818;
+
+    --borde:rgba(212,175,55,.25);
+
+    --radio:18px;
+
+    --sombra:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+/*==============================
+BODY
+===============================*/
+
+body{
+
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+
+    background:
+    radial-gradient(circle at top,#151515,#050505 70%);
+
+    color:#ececec;
+
+    line-height:1.8;
+
+    overflow-x:hidden;
+
+}
+
+/*==============================
+LINKS
+===============================*/
+
+a{
+
+    text-decoration:none;
+
+    transition:.35s;
+
+}
+
+/*==============================
+CONTAINER
+===============================*/
+
+.container{
+
+    width:min(1200px,92%);
+
+    margin:auto;
+
+}
+
+/*==============================
+NAVBAR
+===============================*/
+
+.navbar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    backdrop-filter:blur(12px);
+
+    background:rgba(8,8,8,.90);
+
+    border-bottom:1px solid var(--borde);
+
+}
+
+.nav-container{
+
+    width:min(1200px,95%);
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:22px;
+
+}
+
+.nav-links a{
+
+    color:#efefef;
+
+    font-size:.92rem;
+
+    letter-spacing:.4px;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--oro);
+
+}
+
+/*==============================
+DROPDOWN
+===============================*/
+
+.dropdown{
+
+    position:relative;
+
+}
+
+.dropdown-content{
+
+    display:none;
+
+    position:absolute;
+
+    top:35px;
+
+    left:0;
+
+    background:#101010;
+
+    border:1px solid var(--borde);
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    min-width:220px;
+
+    box-shadow:var(--sombra);
+
+}
+
+.dropdown-content li{
+
+    list-style:none;
+
+}
+
+.dropdown-content a{
+
+    display:block;
+
+    padding:12px 18px;
+
+}
+
+.dropdown-content a:hover{
+
+    background:#191919;
+
+}
+
+.dropdown:hover .dropdown-content{
+
+    display:block;
+
+}
+
+/*==============================
+HERO
+===============================*/
+
+.portada-semillas{
+
+    position:relative;
+
+    min-height:100vh;
+
+}
+
+.portada-imagen{
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.portada-overlay{
+
+    width:100%;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+
+    linear-gradient(
+
+    rgba(0,0,0,.55),
+
+    rgba(0,0,0,.70)
+
+    );
+
+}
+
+.portada-contenido{
+
+    width:min(900px,92%);
+
+    text-align:center;
+
+    animation:fadeHero 1.3s ease;
+
+}
+
+/*==============================
+TITULOS
+===============================*/
+
+.portada-titulo{
+
+    font-size:4rem;
+
+    color:var(--oro);
+
+    letter-spacing:2px;
+
+    text-shadow:
+
+    0 0 25px rgba(212,175,55,.25);
+
+}
+
+.portada-frase{
+
+    margin-top:25px;
+
+    color:white;
+
+    font-size:1.45rem;
+
+    font-style:italic;
+
+}
+
+.portada-subtitulo{
+
+    display:block;
+
+    margin-top:18px;
+
+    color:#dddddd;
+
+    font-size:1.05rem;
+
+    max-width:700px;
+
+    margin-inline:auto;
+
+}
+
+/*==============================
+BOTON
+===============================*/
+
+.btn-scroll-down{
+
+    display:inline-block;
+
+    margin-top:45px;
+
+    padding:16px 40px;
+
+    border-radius:40px;
+
+    border:2px solid var(--oro);
+
+    color:var(--oro);
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    transition:.40s;
+
+}
+
+.btn-scroll-down:hover{
+
+    background:var(--oro);
+
+    color:#111;
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+    0 15px 35px rgba(212,175,55,.35);
+
+}
+
+/*==============================
+INTRODUCCION
+===============================*/
+
+.introduccion-semillas{
+
+    margin:90px auto;
+
+    background:#101010;
+
+    border-left:6px solid var(--oro);
+
+    border-radius:18px;
+
+    padding:45px;
+
+    box-shadow:var(--sombra);
+
+}
+
+.introduccion-semillas h2{
+
+    color:var(--oro);
+
+    font-size:2rem;
+
+    margin-bottom:25px;
+
+}
+
+.introduccion-semillas p{
+
+    font-size:1.05rem;
+
+    color:#d8d8d8;
+
+    margin-bottom:20px;
+
+    text-align:justify;
+
+}
+
+/*==============================
+ANIMACION
+===============================*/
+
+@keyframes fadeHero{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   FOOTER 
+   
+   ========================================== */
+
+
+.footer-semillas {
+
+    background:
+    linear-gradient(135deg, #071a2b, #163d32);
+
+}
+
+
+/* Línea energética verde */
+
+.footer-semillas::before {
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        #8ee000,
+        transparent
+    );
+
+    height:3px;
+
+}
+
+
+/* Marca AAPMental en versión naturaleza */
+
+.footer-semillas .footer-brand h3 {
+
+    color:#b8ff70;
+
+    text-shadow:
+    0 0 12px rgba(142,224,0,.45);
+
+}
+
+
+/* Frase de semillas */
+
+.footer-semillas .footer-frase {
+
+    color:#e7f7df !important;
+
+}
+
+
+/* Detalle dorado-verde en la frase */
+
+.footer-semillas .footer-frase::before {
+
+    background:
+    linear-gradient(
+        180deg,
+        #ffd369,
+        #8ee000
+    );
+
+}
+
+
+/* Títulos */
+
+.footer-semillas h4 {
+
+    color:#d9ff9a;
+
+}
+
+
+/* Enlaces */
+
+.footer-semillas a:hover {
+
+    color:#8ee000;
+
+}
+
+
+
+/* Botón especial */
+
+.footer-semillas .btn-oro {
+
+    border-color:#8ee000;
+
+    color:#8ee000;
+
+}
+
+
+.footer-semillas .btn-oro:hover {
+
+    background: linear-gradient(
+        180deg,
+        #111111 0%,
+        #0c0c0c 50%,
+        #050505 100%
+    );
+
+    color:#ffffff;
+
+    border-top:2px solid rgba(212,175,55,.35);
+
+}
+
+
+/* Pequeño efecto de profundidad */
+
+.footer-semillas {
+
+    box-shadow:
+    inset 0 15px 40px rgba(142,224,0,.05);
+
+}
+
+/* ==========================================
+   FOOTER SEMILLAS
+   ========================================== */
+
+footer.footer-semillas .footer-content {
+
+    display: grid !important;
+
+    grid-template-columns: repeat(4, 1fr) !important;
+
+    gap: 35px;
+
     max-width: 1200px;
+
     margin: auto;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
 }
 
-.nav-logo {
-    font-size: 1.4rem;
-    font-weight: bold;
+
+footer.footer-semillas .footer-content > div {
+
+    width: auto;
+
+}
+
+
+footer.footer-semillas a {
+
+    color: #d8e6ea;
+
     text-decoration: none;
-    color: var(--color-principal);
+
 }
 
-.nav-logo span { color: var(--color-secundario); }
 
-.nav-links {
+footer.footer-semillas ul {
+
     list-style: none;
-    display: flex;
-    gap: 25px;
-    align-items: center;
+
+    padding: 0;
+
 }
 
-.nav-links a {
-    color: var(--texto);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
+
+footer.footer-semillas h4 {
+
+    color: #d9ff9a;
+
 }
 
-.nav-links a:hover {
-    color: var(--color-principal);
+
+@media(max-width:900px){
+
+    footer.footer-semillas .footer-content {
+
+        grid-template-columns: repeat(2,1fr) !important;
+
+    }
+
 }
 
-/* --- DROPDOWN --- */
-.dropdown { position: relative; }
 
-.dropdown-content {
-    position: absolute;
-    top: 120%;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    background: white;
-    border-radius: 12px;
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    padding: 10px;
-    min-width: 220px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+@media(max-width:600px){
+
+    footer.footer-semillas .footer-content {
+
+        grid-template-columns:1fr !important;
+
+        text-align:center;
+
+    }
+
 }
 
-.dropdown:hover .dropdown-content {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
-}
 
-/* ==============================
-    🌍 SELECTOR DE IDIOMA
-================================ */
-.nav-lang select {
-    background: #000;
-    color: var(--oro);
-    border: 1px solid var(--oro);
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    cursor: pointer;
-}
 
-/* ==============================
-    🌿 PORTADA SEMILLAS
-================================ */
-.portada-semillas {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
 
-.portada-imagen {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-}
-
-.portada-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--sombra-portada);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.portada-contenido {
-    text-align: center;
-    color: var(--blanco);
-    padding: 20px;
-    max-width: 900px;
-}
-
-.portada-titulo {
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: -2px;
-    margin-bottom: 15px;
-}
-
-.portada-frase {
-    font-size: 1.6rem;
-    font-style: italic;
-    opacity: 0.9;
-    margin-bottom: 10px;
-}
-
-.portada-subtitulo {
-    display: block;
-    font-size: 1.1rem;
-    font-weight: 300;
-    opacity: 0.8;
-    margin-bottom: 40px;
-}
-
-.btn-scroll-down {
-    display: inline-block;
-    padding: 12px 30px;
-    background: var(--verde-botanico);
-    color: var(--blanco);
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.btn-scroll-down:hover {
-    background-color: var(--blanco);
-    color: var(--verde-botanico);
-}
-
-/* ==============================
-    📱 RESPONSIVE
-================================ */
-@media (max-width: 768px) {
-    .portada-titulo { font-size: 2.2rem; }
-    .portada-frase { font-size: 1.3rem; }
-    .nav-links { display: none; } /* Considerar menú hamburguesa aquí */
-    .portada-contenido { padding: 40px; }
-}/* ==============================
-    🎨 VARIABLES (Corregidas)
-================================ */
-:root {
-    --verde-botanico: #4f7942;
-    --blanco: #ffffff;
-    --blanco-cristal: rgba(255, 255, 255, 0.9);
-    --texto-oscuro: #333333;
-    --tierra-suave: #fdfaf6;
-    --sombra-portada: rgba(0, 0, 0, 0.4);
-    --oro: #d4af37;
-    --color-principal: #4f7942; /* Ajustado al verde botánico */
-    --color-secundario: #d4af37; /* Ajustado a oro para coherencia */
-    --texto: #333333;
-}
-
-/* ==============================
-    🧭 NAVBAR (Funcional)
-================================ */
-.navbar {
-    background: var(--blanco-cristal);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 2px solid var(--color-secundario);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.nav-logo {
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--color-principal);
-}
-
-.nav-logo span { color: var(--color-secundario); }
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    align-items: center;
-}
-
-.nav-links a {
-    color: var(--texto);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--color-principal);
-}
-
-/* --- DROPDOWN --- */
-.dropdown { position: relative; }
-
-.dropdown-content {
-    position: absolute;
-    top: 120%;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    background: white;
-    border-radius: 12px;
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    padding: 10px;
-    min-width: 220px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.dropdown:hover .dropdown-content {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
-}
-
-/* ==============================
-    🌍 SELECTOR DE IDIOMA
-================================ */
-.nav-lang select {
-    background: #000;
-    color: var(--oro);
-    border: 1px solid var(--oro);
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    cursor: pointer;
-}
-
-/* ==============================
-    🌿 PORTADA SEMILLAS
-================================ */
-.portada-semillas {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.portada-imagen {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-}
-
-.portada-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--sombra-portada);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.portada-contenido {
-    text-align: center;
-    color: var(--blanco);
-    padding: 20px;
-    max-width: 900px;
-}
-
-.portada-titulo {
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: -2px;
-    margin-bottom: 15px;
-}
-
-.portada-frase {
-    font-size: 1.6rem;
-    font-style: italic;
-    opacity: 0.9;
-    margin-bottom: 10px;
-}
-
-.portada-subtitulo {
-    display: block;
-    font-size: 1.1rem;
-    font-weight: 300;
-    opacity: 0.8;
-    margin-bottom: 40px;
-}
-
-.btn-scroll-down {
-    display: inline-block;
-    padding: 12px 30px;
-    background: var(--verde-botanico);
-    color: var(--blanco);
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.btn-scroll-down:hover {
-    background-color: var(--blanco);
-    color: var(--verde-botanico);
-}
-
-/* ==============================
-    📱 RESPONSIVE
-================================ */
-@media (max-width: 768px) {
-    .portada-titulo { font-size: 2.2rem; }
-    .portada-frase { font-size: 1.3rem; }
-    .nav-links { display: none; } /* Considerar menú hamburguesa aquí */
-    .portada-contenido { padding: 40px; }
-}/* ==============================
-    🎨 VARIABLES (Corregidas)
-================================ */
-:root {
-    --verde-botanico: #4f7942;
-    --blanco: #ffffff;
-    --blanco-cristal: rgba(255, 255, 255, 0.9);
-    --texto-oscuro: #333333;
-    --tierra-suave: #fdfaf6;
-    --sombra-portada: rgba(0, 0, 0, 0.4);
-    --oro: #d4af37;
-    --color-principal: #4f7942; /* Ajustado al verde botánico */
-    --color-secundario: #d4af37; /* Ajustado a oro para coherencia */
-    --texto: #333333;
-}
-
-/* ==============================
-    🧭 NAVBAR (Funcional)
-================================ */
-.navbar {
-    background: var(--blanco-cristal);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 2px solid var(--color-secundario);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.nav-logo {
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--color-principal);
-}
-
-.nav-logo span { color: var(--color-secundario); }
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    align-items: center;
-}
-
-.nav-links a {
-    color: var(--texto);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--color-principal);
-}
-
-/* --- DROPDOWN --- */
-.dropdown { position: relative; }
-
-.dropdown-content {
-    position: absolute;
-    top: 120%;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    background: white;
-    border-radius: 12px;
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    padding: 10px;
-    min-width: 220px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.dropdown:hover .dropdown-content {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
-}
-
-/* ==============================
-    🌍 SELECTOR DE IDIOMA
-================================ */
-.nav-lang select {
-    background: #000;
-    color: var(--oro);
-    border: 1px solid var(--oro);
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    cursor: pointer;
-}
-
-/* ==============================
-    🌿 PORTADA SEMILLAS
-================================ */
-.portada-semillas {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.portada-imagen {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-}
-
-.portada-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--sombra-portada);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.portada-contenido {
-    text-align: center;
-    color: var(--blanco);
-    padding: 20px;
-    max-width: 900px;
-}
-
-.portada-titulo {
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: -2px;
-    margin-bottom: 15px;
-}
-
-.portada-frase {
-    font-size: 1.6rem;
-    font-style: italic;
-    opacity: 0.9;
-    margin-bottom: 10px;
-}
-
-.portada-subtitulo {
-    display: block;
-    font-size: 1.1rem;
-    font-weight: 300;
-    opacity: 0.8;
-    margin-bottom: 40px;
-}
-
-.btn-scroll-down {
-    display: inline-block;
-    padding: 12px 30px;
-    background: var(--verde-botanico);
-    color: var(--blanco);
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.btn-scroll-down:hover {
-    background-color: var(--blanco);
-    color: var(--verde-botanico);
-}
-
-/* ==============================
-    📱 RESPONSIVE
-================================ */
-@media (max-width: 768px) {
-    .portada-titulo { font-size: 2.2rem; }
-    .portada-frase { font-size: 1.3rem; }
-    .nav-links { display: none; } /* Considerar menú hamburguesa aquí */
-    .portada-contenido { padding: 40px; }
-}

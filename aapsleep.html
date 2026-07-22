@@ -3,307 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AAPSleep | Frecuencias para Dormir</title>
-    <style>
-        /* Estilos Relajantes para AAPSleep */
-        :root {
-            --fondo-noche: #0a0e14;
-            --azul-relajante: #1e3a5f;
-            --dorado-suave: #d4af37;
-            --blanco-tenue: #e0e0e0;
-        }
+    <title>AAPSleep | sueño reparador y confortable</title>
 
-       body {
-            background-color: var(--fondo-noche);
-            color: var(--blanco-tenue);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start; /* Cambiado de center a flex-start para que el contenido fluya hacia abajo */
-            min-height: 100vh;           /* Cambiado de height a min-height para dar espacio al texto */
-            overflow-y: auto;            /* Habilita el scroll vertical cuando el contenido sea largo */
-            overflow-x: hidden;          /* Evita el molesto scroll horizontal */
-            text-align: center;
-            padding-bottom: 40px;        /* Un respiro al final de la página */
-        }
-
-        header h1 {
-            font-weight: 300;
-            letter-spacing: 2px;
-            margin-bottom: 0;
-        }
-
-        header span {
-            color: var(--dorado-suave);
-            font-weight: bold;
-        }
-
-        /* Animación del Círculo de Respiración */
-        .breath-circle {
-            width: 150px;
-            height: 150px;
-            background: radial-gradient(circle, var(--azul-relajante), transparent);
-            border-radius: 50%;
-            margin: 40px auto;
-            box-shadow: 0 0 20px var(--azul-relajante);
-            animation: breathe 8s infinite ease-in-out;
-        }
-
-        @keyframes breathe {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.4); opacity: 1; }
-        }
-
-        .controls {
-            width: 80%;
-            max-width: 400px;
-        }
-
-        .audio-options {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        button.audio-btn {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--azul-relajante);
-            color: white;
-            padding: 10px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        button.audio-btn:hover, button.audio-btn.active {
-            background: var(--azul-relajante);
-        }
-
-        .timer-section {
-            margin: 20px 0;
-        }
-
-        input[type=range] {
-            width: 100%;
-            cursor: pointer;
-        }
-
-        .play-footer {
-            margin-top: 20px;
-        }
-
-        #start-btn {
-            background-color: var(--dorado-suave);
-            color: black;
-            border: none;
-            padding: 15px 40px;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            cursor: pointer;
-        }
-        
-        /* ==============================
-           🧭 NAVBAR
-        ================================ */
-        .navbar {
-            background: rgba(0, 0, 0, 0.85);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.25);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 12px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            color: var(--texto);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--oro);
-        }
-
-        /* ==============================
-           📂 DROPDOWN
-        ================================ */
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            position: absolute;
-            top: 120%;
-            left: 0;
-            background: #0b0b0b;
-            border: 1px solid rgba(212, 175, 55, 0.25);
-            border-radius: 6px;
-            list-style: none;
-            padding: 10px 0;
-            min-width: 200px;
-            display: none;
-        }
-
-        .dropdown-content li a {
-            display: block;
-            padding: 8px 16px;
-            font-size: 0.85rem;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* =======================================================
-           📖 ESTILOS AGREGADOS: OPTIMIZACIÓN NATURAL DEL SUEÑO
-        ======================================================= */
-        .header-banner {
-            background-color: #1a2b4c;
-            color: #ffffff;
-            margin: 25px -20px;
-            padding: 30px 15mm;
-            text-align: center;
-            border-radius: 8px;
-        }
-        
-        .subtitle {
-            font-size: 12pt;
-            color: #cbd5e1;
-            margin: 0;
-        }
-        
-        h2 {
-            font-size: 14pt;
-            color: var(--dorado-suave);
-            border-left: 4px solid var(--azul-relajante);
-            padding-left: 10px;
-            margin-top: 35px;
-            margin-bottom: 12px;
-            text-align: left;
-        }
-        
-        h3 {
-            font-size: 11.5pt;
-            color: #cbd5e1;
-            margin-top: 22px;
-            margin-bottom: 8px;
-            text-align: left;
-        }
-        
-        p {
-            margin: 0 0 12px 0;
-            text-align: justify;
-        }
-        
-        ul, ol {
-            margin: 0 0 15px 0;
-            padding-left: 20px;
-            text-align: left;
-        }
-        
-        li {
-            margin-bottom: 6px;
-        }
-        
-        .strong-term {
-            color: var(--dorado-suave);
-            font-weight: bold;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0 20px 0;
-            font-size: 10pt;
-            color: var(--blanco-tenue);
-        }
-        
-        th {
-            background-color: var(--azul-relajante);
-            color: #ffffff;
-            font-weight: bold;
-            text-align: left;
-            padding: 10px 12px;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        td {
-            padding: 10px 12px;
-            border: 1px solid rgba(255,255,255,0.1);
-            background-color: rgba(255,255,255,0.02);
-            vertical-align: top;
-            text-align: left;
-        }
-        
-        tr:nth-child(even) td {
-            background-color: rgba(255,255,255,0.05);
-        }
-        
-        .callout-box {
-            background-color: rgba(30, 58, 95, 0.3);
-            border-left: 4px solid var(--azul-relajante);
-            padding: 12px 15px;
-            margin: 20px 0;
-            border-radius: 0 4px 4px 0;
-            text-align: left;
-        }
-        
-        .callout-box p {
-            margin: 0;
-            color: #cbd5e1;
-        }
-        
-        .food-grid {
-            margin-top: 10px;
-            text-align: left;
-        }
-        
-        .food-item {
-            background-color: rgba(255,255,255,0.02);
-            border: 1px solid rgba(212, 175, 55, 0.1);
-            padding: 14px;
-            margin-bottom: 12px;
-            border-radius: 6px;
-        }
-        
-        .food-title {
-            font-weight: bold;
-            color: var(--dorado-suave);
-            margin-bottom: 6px;
-        }
-        
-        .math {
-            font-family: 'Times New Roman', serif;
-            font-style: italic;
-            font-weight: bold;
-            color: var(--dorado-suave);
-        }
-        
-        .source-tag {
-            font-size: 8.5pt;
-            color: #6b7280;
-            font-style: italic;
-        }
-    </style>
+ <link rel="stylesheet" href="aapsleep.css">
+   
 
     <script type="application/ld+json">
     {
@@ -325,6 +28,10 @@
     }
     </script>
 </head>
+
+
+
+
 <body>
 
     <nav class="navbar">
@@ -398,7 +105,8 @@
         </div>
 
         <p>Las frecuencias de sonido terapéuticas actúan como un guía biológico, orientando las ondas cerebrales hacia estados de relajación profunda. Mediante el uso de herramientas como los pulsos binaurales, los tonos isocrónicos o los sonidos ambientales de la naturaleza, es posible disminuir de manera controlada la actividad mental acelerada y facilitar una transición armónica hacia el descanso.</p>
-
+        <p>si comprendemos el sueño como un proceso de regeneracion natural,el cual podemos activar en forma conciente y disciplinado </p>
+        <p>ahora toda esta  lineas son  informativas y didacticas,la cual podemos llevar a experimentacion en forma individual desde la comodidad de nuestra casa</p>
         <h2>1. Tipos de Frecuencias y Ondas Cerebrales</h2>
         <p>El cerebro humano opera en diferentes rangos de frecuencia según su nivel de actividad. La estimulación auditiva externa permite sintonizar estas ondas para propósitos terapéuticos específicos:</p>
         
@@ -446,6 +154,7 @@
 
         <h2>2. Estimulación de la Melatonina y Control Circadiano</h2>
         <p>La melatonina es la hormona fundamental encargada de regular el reloj biológico humano. Su segregación natural está intrínsecamente ligada a la ausencia de luz. Para optimizar su producción de forma orgánica, se recomienda estructurar los hábitos diarios en torno a tres pilares fundamentales:</p>
+        <p>todos nuestros procesos biologicos estan orquestados en forma magestuosa por esas pequeñas y colosales glandulas endocrinas,las cuales con su produccion  hormonal regula este importante proceso </p>
 
         <h3>A. Control estricto de la exposición a la luz</h3>
         <ul>
@@ -520,23 +229,25 @@
             document.getElementById('timer-val').innerText = val;
         }
 
-        function configurarModo(modo) {
-            modoActual = modo; // Guardamos el modo seleccionado
+        function configurarModo(modo, event) {
+    modoActual = modo; // Guardamos el modo seleccionado
+    
+    // Removemos la clase activa de todos los botones de audio
+    document.querySelectorAll('.audio-btn').forEach(btn => btn.classList.remove('active'));
+    
+    // Añadimos la clase activa al botón que recibió el clic de forma segura
+    if (event && event.currentTarget) {
+        event.currentTarget.classList.add('active');
+    }
+    
+    // Si ya está sonando, reinicia el flujo inmediatamente con la nueva acústica
+    if(estaSonando) {
+        detenerRio();
+        iniciarRio();
+    }
+}
             
-            document.querySelectorAll('.audio-btn').forEach(btn => btn.classList.remove('active'));
-            
-            // Corregido: Usamos event.currentTarget o buscamos el botón activo con seguridad
-            if (event && event.target) {
-                event.target.classList.add('active');
-            }
-            
-            // Si ya está sonando, reinicia el flujo inmediatamente con la nueva acústica
-            if(estaSonando) {
-                detenerRio();
-                iniciarRio();
-            }
-        }
-
+           
         function iniciarRio() {
             if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
@@ -673,16 +384,46 @@
         <div id="google_translate_element"></div>
     </div>
 
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'es',
-                includedLanguages: 'en,fr,it,pt,de', // Idiomas sugeridos para tu perfil
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+   <footer class="footer">
+    <div class="footer-container">
+        
+        <!-- Columna 1: Explorar -->
+        <div class="footer-col">
+            <h3>Explorar</h3>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="grounding.html">grounding</a></li>
+                <li><a href="nutricion.html">Nutrición</a></li>
+                <li><a href="solfeguio.html">frecuencias solfeguio</a></li>
+                
+            </ul>
+        </div> <!-- Cierre Columna 1 -->
+
+        <!-- Columna 2: Información -->
+        <div class="footer-col">
+            <h3>Información</h3>
+            <ul>
+                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="privacidad.html">Política de Privacidad</a></li>
+                <li><a href="terminos.html">Términos y Condiciones</a></li>
+            </ul>
+        </div> <!-- Cierre Columna 2 -->
+
+        <!-- Columna 3: Contacto -->
+        <div class="footer-col">
+            <h3>Contacto</h3>
+            <p><i class="fas fa-envelope"></i> info@aapmental.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Medellín, Antioquia</p>
+        </div> <!-- Cierre Columna 3 -->
+
+    </div> <!-- ¡Cierre correcto del footer-container! -->
+
+    <!-- Barra Inferior de Copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 AAPMental. Todos los derechos reservados.</p>
+        <small>Contenido elaborado por AAPMental – Bienestar Consciente.</small>
+    </div>
+</footer>
 </body>
 </html>

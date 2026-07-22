@@ -1,123 +1,1754 @@
-:root {
-    --color-principal: #8a0b1a; /* Bordó Beterraga Profundo */
-    --color-secundario: #d4af37; /* Dorado Metálico */
-    --oro-brillante: #f1c40f;
-    --fondo-suave: #fdfcfc;
-    --texto: #2c3e50;
-    --blanco-cristal: rgba(255, 255, 255, 0.95);
+/* =========================================
+   VARIABLES GLOBALES
+========================================= */
+
+:root{
+
+    --color-principal:#7a1022;
+
+    --color-secundario:#d4af37;
+
+    --oro-brillante:#f5d142;
+
+    --betarraga:#8b1538;
+
+    --hoja:#4d8c43;
+
+    --hoja-clara:#7cbf68;
+
+    --crema:#fcfaf8;
+
+    --texto:#2f3942;
+
+    --gris:#6d7782;
+
+    --blanco:rgba(255,255,255,.96);
+
 }
 
-body { 
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
-    background: var(--fondo-suave); 
-    color: var(--texto);
-    margin: 0;
-}
-.grid-beneficios {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.card {
-    background: white;
-    padding: 15px;
-    border-left: 5px solid var(--color-principal);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+html{
+    scroll-behavior:smooth;
 }
 
-.warning-box {
-    background: #fff3cd;
-    border: 1px solid #ffeeba;
-    padding: 20px;
-    border-radius: 8px;
+body{
+
+    background:linear-gradient(
+        180deg,
+        #fff,
+        #fcfaf8,
+        #f9f7f5);
+
+}
+
+/* =========================================
+   CONTENEDOR GENERAL
+========================================= */
+
+main{
+
+    width:min(1100px,92%);
+
+    margin:auto;
+
+    padding:50px 0;
+
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+header{
+
+    text-align:center;
+
+    padding:60px 20px 40px;
+
+    background:
+    linear-gradient(rgba(138,11,26,.75),
+    rgba(60,0,10,.75)),
+    url("imagenes/betarraga.jpg") center/cover;
+
+    color:white;
+
+}
+
+header h1{
+
+    font-size:clamp(2rem,4vw,3.2rem);
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+    text-shadow:2px 2px 10px rgba(0,0,0,.4);
+
+}
+
+.imagen-portada{
+
+    width:100%;
+
+    max-width:700px;
+
+    border-radius:20px;
+
+    box-shadow:var(--sombra);
+
+    border:5px solid rgba(255,255,255,.7);
+
+}
+
+/* =========================================
+   PÁRRAFOS
+========================================= */
+
+main p{
+
+    margin-bottom:22px;
+
+    color:var(--texto-claro);
+
+    font-size:1.08rem;
+
+}
+
+/* =========================================
+   TITULOS
+========================================= */
+
+section{
+
+    margin-top:70px;
+
+}
+
+section h2{
+
+    font-size:2rem;
+
+    color:var(--color-principal);
+
+    margin-bottom:25px;
+
+    position:relative;
+
+}
+
+section h2::after{
+
+    content:"";
+
+    width:90px;
+
+    height:4px;
+
+    display:block;
+
+    margin-top:10px;
+
+    border-radius:10px;
+
+    background:linear-gradient(to right,
+    var(--color-principal),
+    var(--color-secundario));
+
+}
+
+/* =========================================
+   GRID DE BENEFICIOS
+========================================= */
+
+.grid-beneficios{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:28px;
+
+    margin-top:35px;
+
+}
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.card-beneficio::before{
+
+    content:"🌿";
+
+    position:absolute;
+
+    right:18px;
+
+    top:15px;
+
+    font-size:1.5rem;
+
+    opacity:.15;
+
 }
 
 
-/* ==============================
-   🧭 NAVBAR
-================================ */
-.navbar {
-    background: var(--blanco-cristal);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 2px solid var(--color-secundario);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+
+.card-beneficio:hover::before{
+
+    left:100%;
+
 }
 
-.nav-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.card-beneficio:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+
 }
 
-/* El logo con el gradiente de "Oro Rojo" */
-.nav-logo {
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: var(--color-principal);
-}
-.nav-logo span { color: var(--color-secundario); }
+.card-beneficio h3{
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    align-items: center;
+    color:var(--color-principal);
+
+    margin-bottom:15px;
+
+    font-size:1.35rem;
+
 }
 
-.nav-links a {
-    color: var(--texto);
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
+.card-beneficio p{
+
+    color:var(--texto-claro);
+
+    margin:0;
+
 }
 
-.nav-links a:hover {
-    color: var(--color-principal);
+/* =========================================
+   INVESTIGACIONES
+========================================= */
+
+#investigaciones{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:22px;
+
+    box-shadow:var(--sombra);
+
+    border-left:8px solid var(--color-secundario);
+
 }
 
-/* --- DROPDOWN PRO --- */
-.dropdown-content {
-    position: absolute;
-    top: 120%;
-    left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    background: white;
-    border-radius: 12px;
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    padding: 10px;
-    min-width: 220px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    
-    /* Animación invisible a visible */
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+#investigaciones h3{
+
+    color:var(--color-principal);
+
+    margin-top:30px;
+
+    margin-bottom:15px;
+
+    font-size:1.4rem;
+
 }
 
-.dropdown:hover .dropdown-content {
-    opacity: 1;
-    visibility: visible;
-    transform: translateX(-50%) translateY(0);
+/* =========================================
+   PRECAUCIONES
+========================================= */
+
+.warning-box{
+
+    background:#fff8e8;
+
+    border-left:8px solid #f39c12;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:var(--sombra);
+
 }
 
-.dropdown-content li a {
-    display: block;
-    padding: 10px 15px;
-    border-radius: 8px;
-    transition: 0.2s;
+.warning-box h2{
+
+    color:#c0392b;
+
 }
 
-.dropdown-content li a:hover {
-    background: linear-gradient(90deg, var(--color-principal), #b31224);
-    color: white !important;
+.warning-box ul{
+
+    margin-top:20px;
+
+    padding-left:25px;
+
+}
+
+.warning-box li{
+
+    margin-bottom:18px;
+
+    line-height:1.8;
+
+}
+
+/* =========================================
+   FORMAS DE CONSUMO
+========================================= */
+
+#recetas{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:40px;
+
+    box-shadow:var(--sombra);
+
+    border-top:6px solid var(--color-secundario);
+
+}
+
+#recetas strong{
+
+    color:var(--color-principal);
+
+}
+
+/* =========================================
+   REFERENCIAS
+========================================= */
+
+#referencias{
+
+    background:white;
+
+    margin-top:70px;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:var(--sombra);
+
+}
+
+#referencias ol{
+
+    margin-top:20px;
+
+    padding-left:22px;
+
+}
+
+#referencias li{
+
+    margin-bottom:14px;
+
+    color:var(--texto-claro);
+
+}
+
+/* =========================================
+   GOOGLE TRANSLATE
+========================================= */
+
+#google_translate_element{
+
+    background:white;
+
+    padding:15px;
+
+    text-align:right;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+/* =========================================
+   EFECTOS SUAVES
+========================================= */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    transition:var(--transicion);
+
+}
+
+button{
+
+    transition:var(--transicion);
+
+}
+
+/* =========================================
+   ANIMACIÓN DE ENTRADA
+========================================= */
+
+header,
+section,
+.card-beneficio{
+
+    animation:aparecer .8s ease both;
+
+}
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* =========================================
+   FOOTER (Preparado para futuras páginas)
+========================================= */
+
+footer{
+
+    margin-top:80px;
+
+    padding:30px 20px;
+
+    background:linear-gradient(
+        90deg,
+        var(--color-principal),
+        #5c0813);
+
+    color:white;
+
+    text-align:center;
+
+}
+
+footer p{
+
+    color:white;
+
+    margin:0;
+
+}
+
+/* =========================================
+   SCROLL PERSONALIZADO
+========================================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ececec;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--color-principal);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#6d0715;
+
+}
+
+/* =====================================================
+   NAVBAR AAPMENTAL
+===================================================== */
+
+.navbar{
+
+    position:sticky;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:9999;
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    border-bottom:2px solid rgba(212,175,55,.35);
+
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+
+}
+
+.nav-container{
+
+    max-width:1280px;
+
+    margin:auto;
+
+    padding:14px 30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+/*==================================================
+                    LOGO
+==================================================*/
+
+.nav-logo{
+
+    font-size:1.8rem;
+
+    font-weight:700;
+
+    color:var(--color-principal);
+
+    text-decoration:none;
+
+    white-space:nowrap;
+
+    transition:.35s;
+
+}
+
+.nav-logo span{
+
+    color:var(--color-secundario);
+
+}
+
+.nav-logo:hover{
+
+    transform:scale(1.05);
+
+}
+
+/*==================================================
+                 MENÚ PRINCIPAL
+==================================================*/
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:32px;
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+    flex:1;
+
+}
+
+.nav-links li{
+
+    position:relative;
+
+}
+
+.nav-links a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    text-decoration:none;
+
+    color:var(--texto);
+
+    font-size:.98rem;
+
+    font-weight:600;
+
+    padding:10px 0;
+
+    transition:.35s;
+
+}
+
+/*==================================================
+           LÍNEA DORADA
+==================================================*/
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:3px;
+
+    border-radius:30px;
+
+    background:linear-gradient(
+        90deg,
+        var(--color-secundario),
+        var(--oro));
+
+    transform:translateX(-50%);
+
+    transition:.35s;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--color-principal);
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+/*==================================================
+              SELECTOR DE IDIOMA
+==================================================*/
+
+.nav-lang{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+#idioma-nav{
+
+    padding:10px 15px;
+
+    border-radius:12px;
+
+    border:1px solid rgba(212,175,55,.4);
+
+    background:white;
+
+    color:var(--texto);
+
+    font-size:.9rem;
+
+    cursor:pointer;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+#idioma-nav:hover{
+
+    border-color:var(--color-principal);
+
+    box-shadow:0 0 10px rgba(138,11,26,.15);
+
+}
+
+#idioma-nav:focus{
+
+    border-color:var(--color-principal);
+
+}
+
+/* =========================================
+   DROPDOWN PREMIUM
+========================================= */
+
+.dropdown{
+
+    position:relative;
+
+}
+
+/* Flecha */
+
+.dropdown > a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+}
+
+/* Contenedor */
+
+.dropdown-content{
+
+    position:absolute;
+
+    top:120%;
+
+    left:50%;
+
+    transform:translateX(-50%) translateY(15px);
+
+    min-width:250px;
+
+    background:rgba(255,255,255,.98);
+
+    backdrop-filter:blur(15px);
+
+    -webkit-backdrop-filter:blur(15px);
+
+    border:1px solid rgba(212,175,55,.30);
+
+    border-radius:18px;
+
+    padding:12px;
+
+    list-style:none;
+
+    box-shadow:
+
+        0 18px 45px rgba(0,0,0,.15);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s ease;
+
+}
+
+/* Triángulo superior */
+
+.dropdown-content::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-10px;
+
+    left:50%;
+
+    transform:translateX(-50%) rotate(45deg);
+
+    width:18px;
+
+    height:18px;
+
+    background:white;
+
+    border-left:1px solid rgba(212,175,55,.30);
+
+    border-top:1px solid rgba(212,175,55,.30);
+
+}
+
+/* Mostrar */
+
+.dropdown:hover .dropdown-content{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateX(-50%) translateY(0);
+
+}
+
+/* Items */
+
+.dropdown-content li{
+
+    margin:5px 0;
+
+}
+
+/* Links */
+
+.dropdown-content a{
+
+    display:block;
+
+    padding:13px 18px;
+
+    border-radius:12px;
+
+    color:var(--texto);
+
+    text-decoration:none;
+
+    font-size:.93rem;
+
+    transition:.30s;
+
+}
+
+/* Hover */
+
+.dropdown-content a:hover{
+
+    color:white;
+
+    background:linear-gradient(
+
+        90deg,
+
+        var(--color-principal),
+
+        #b31224);
+
+    transform:translateX(5px);
+
+}
+
+/* Separación */
+
+.dropdown-content li:not(:last-child){
+
+    border-bottom:1px solid rgba(0,0,0,.05);
+
+    padding-bottom:4px;
+
+}
+
+/* Animación */
+
+@keyframes menuFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.dropdown:hover .dropdown-content{
+
+    animation:menuFade .35s ease;
+
+}
+
+.flecha-menu{
+
+    font-size:.65rem;
+
+    transition:.35s;
+
+}
+
+.dropdown:hover .flecha-menu{
+
+    transform:rotate(180deg);
+
+}
+
+/* =========================================
+            HERO PREMIUM
+========================================= */
+
+header{
+
+    position:relative;
+
+    max-width:1250px;
+
+    margin:50px auto 70px;
+
+    padding:50px;
+
+    text-align:center;
+
+    background:linear-gradient(
+        135deg,
+        rgba(138,11,26,.05),
+        rgba(212,175,55,.08));
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    box-shadow:
+
+        0 20px 60px rgba(0,0,0,.10);
+
+}
+
+/* Círculo decorativo superior */
+
+header::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    background:rgba(212,175,55,.08);
+
+    border-radius:50%;
+
+    top:-120px;
+
+    right:-100px;
+
+}
+
+/* Círculo decorativo inferior */
+
+header::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    background:rgba(138,11,26,.08);
+
+    border-radius:50%;
+
+    bottom:-110px;
+
+    left:-80px;
+
+}
+
+/* ==========================
+      TÍTULO
+========================== */
+
+header h1{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:3rem;
+
+    color:var(--color-principal);
+
+    margin-bottom:35px;
+
+    line-height:1.2;
+
+    font-weight:700;
+
+}
+
+/* Línea dorada */
+
+header h1::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:5px;
+
+    margin:18px auto 0;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        90deg,
+        var(--color-secundario),
+        var(--oro-brillante));
+
+}
+
+/* ==========================
+        IMAGEN
+========================== */
+
+.imagen-portada{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    max-width:850px;
+
+    border-radius:25px;
+
+    display:block;
+
+    margin:auto;
+
+    box-shadow:
+
+        0 25px 60px rgba(0,0,0,.20);
+
+    transition:.5s;
+
+}
+
+.imagen-portada:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* ==========================
+      ANIMACIÓN
+========================== */
+
+header{
+
+    animation:heroEntrada 1.2s ease;
+
+}
+
+@keyframes heroEntrada{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* =========================================
+   FOOTER PREMIUM - AAPMENTAL
+========================================= */
+
+.footer{
+
+    margin-top:90px;
+
+    background:linear-gradient(
+        135deg,
+        #4b0812 0%,
+        #6d0816 45%,
+        #8a0b1a 100%);
+
+    color:#ffffff;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Línea dorada superior */
+
+.footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        var(--color-secundario),
+        var(--oro),
+        var(--color-secundario),
+        transparent);
+
+}
+
+/* ==========================
+      CONTENEDOR
+========================== */
+
+.footer-container{
+
+    max-width:1250px;
+
+    margin:auto;
+
+    padding:70px 30px 50px;
+
+    display:grid;
+
+    grid-template-columns:
+        2fr
+        1fr
+        1fr
+        1fr;
+
+    gap:45px;
+
+}
+
+/* ==========================
+      COLUMNAS
+========================== */
+
+.footer-col h3{
+
+    font-size:2rem;
+
+    margin-bottom:18px;
+
+    color:white;
+
+}
+
+.footer-col h3 span{
+
+    color:var(--color-secundario);
+
+}
+
+.footer-col h4{
+
+    color:var(--color-secundario);
+
+    font-size:1.15rem;
+
+    margin-bottom:18px;
+
+    position:relative;
+
+}
+
+.footer-col h4::after{
+
+    content:"";
+
+    display:block;
+
+    width:45px;
+
+    height:3px;
+
+    margin-top:8px;
+
+    border-radius:30px;
+
+    background:var(--color-secundario);
+
+}
+
+/* ==========================
+       PÁRRAFOS
+========================== */
+
+.footer-col p{
+
+    color:rgba(255,255,255,.82);
+
+    line-height:1.9;
+
+    font-size:.96rem;
+
+}
+
+/* ==========================
+         LISTAS
+========================== */
+
+.footer-col ul{
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+.footer-col li{
+
+    margin-bottom:14px;
+
+}
+
+/* ==========================
+        ENLACES
+========================== */
+
+.footer-col a{
+
+    color:rgba(255,255,255,.88);
+
+    text-decoration:none;
+
+    transition:.35s;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.footer-col a:hover{
+
+    color:white;
+
+    transform:translateX(8px);
+
+}
+
+/* ==========================
+      FOOTER INFERIOR
+========================== */
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.12);
+
+    text-align:center;
+
+    padding:28px 20px;
+
+    background:rgba(0,0,0,.12);
+
+}
+
+.footer-bottom p{
+
+    margin:6px 0;
+
+    color:rgba(255,255,255,.82);
+
+    font-size:.92rem;
+
+}
+
+.footer-bottom strong{
+
+    color:var(--color-secundario);
+
+}
+
+/* ==========================
+     EFECTO HOVER
+========================== */
+
+.footer-col{
+
+    transition:.35s;
+
+}
+
+.footer-col:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/* =========================================
+      ACABADOS PREMIUM AAPMENTAL
+========================================= */
+
+/* Selección de texto */
+
+::selection{
+
+    background:var(--color-principal);
+
+    color:#fff;
+
+}
+
+/* =========================================
+      SCROLL SUAVE
+========================================= */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/* =========================================
+      IMÁGENES
+========================================= */
+
+img{
+
+    transition:
+    transform .45s ease,
+    box-shadow .45s ease;
+
+}
+
+img:hover{
+
+    transform:scale(1.02);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.18);
+
+}
+
+/* =========================================
+      TARJETAS
+========================================= */
+
+.card-beneficio{
+
+    overflow:hidden;
+
+}
+
+.card-beneficio::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        var(--color-secundario),
+        transparent);
+
+    transform:scaleX(0);
+
+    transition:.45s;
+
+}
+
+.card-beneficio:hover::after{
+
+    transform:scaleX(1);
+
+}
+
+.card-beneficio h3{
+
+    transition:.35s;
+
+}
+
+.card-beneficio:hover h3{
+
+    color:#b31224;
+
+}
+
+/* =========================================
+      TITULOS
+========================================= */
+
+section h2{
+
+    transition:.35s;
+
+}
+
+section:hover h2{
+
+    letter-spacing:.5px;
+
+}
+
+/* =========================================
+      INVESTIGACIONES
+========================================= */
+
+#investigaciones{
+
+    position:relative;
+
+}
+
+#investigaciones::before{
+
+    content:"📚";
+
+    position:absolute;
+
+    top:-18px;
+
+    left:20px;
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:1.3rem;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+}
+
+/* =========================================
+      PRECAUCIONES
+========================================= */
+
+.warning-box{
+
+    position:relative;
+
+}
+
+.warning-box::before{
+
+    content:"⚠";
+
+    position:absolute;
+
+    top:-20px;
+
+    right:25px;
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:#f39c12;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:1.4rem;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+}
+
+/* =========================================
+      RECETAS
+========================================= */
+
+#recetas{
+
+    position:relative;
+
+}
+
+#recetas::before{
+
+    content:"🥤";
+
+    position:absolute;
+
+    top:-18px;
+
+    left:20px;
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+    font-size:1.3rem;
+
+}
+
+/* =========================================
+      LINKS
+========================================= */
+
+a{
+
+    transition:.35s;
+
+}
+
+/* =========================================
+      SOMBRA SUAVE
+========================================= */
+
+#investigaciones,
+#recetas,
+.warning-box,
+.card-beneficio{
+
+    transition:
+    transform .35s,
+    box-shadow .35s;
+
+}
+
+#investigaciones:hover,
+#recetas:hover,
+.warning-box:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+/* ==========================
+     RESPONSIVE BÁSICO
+========================== */
+
+@media(max-width:992px){
+
+    .footer-container{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:680px){
+
+    .footer-container{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .footer-col h4::after{
+
+        margin:10px auto 0;
+
+    }
+
+    .footer-col a{
+
+        justify-content:center;
+
+    }
+
+}
+
+/* =====================================================
+                RESPONSIVE AAPMENTAL
+===================================================== */
+
+/* =========================================
+        LAPTOPS PEQUEÑOS
+========================================= */
+
+@media (max-width:1200px){
+
+    .nav-container,
+    main,
+    .footer-container{
+
+        width:95%;
+        max-width:1100px;
+
+    }
+
+}
+
+/* =========================================
+              TABLETS
+========================================= */
+
+@media (max-width:992px){
+
+    /* ---------- NAVBAR ---------- */
+
+    .nav-container{
+
+        padding:14px 20px;
+
+        gap:20px;
+
+    }
+
+    .nav-links{
+
+        gap:18px;
+
+    }
+
+    .nav-links a{
+
+        font-size:.92rem;
+
+    }
+
+    #idioma-nav{
+
+        padding:8px 12px;
+
+        font-size:.85rem;
+
+    }
+
+    /* ---------- HEADER ---------- */
+
+    header{
+
+        padding:50px 20px;
+
+    }
+
+    header h1{
+
+        font-size:2.3rem;
+
+    }
+
+    /* ---------- CONTENIDO ---------- */
+
+    main{
+
+        width:94%;
+
+    }
+
+    .grid-beneficios{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    section{
+
+        margin-top:60px;
+
+    }
+
+    #investigaciones,
+    #recetas,
+    .warning-box{
+
+        padding:30px;
+
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    .footer-container{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:35px;
+
+    }
+
 }
