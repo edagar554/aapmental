@@ -23,10 +23,6 @@ body.lectura-body {
 }
 
 /* ==============================
-   🧭 NAVBAR
-================================ */
-
-/* ==============================
    🧭 NAVBAR ELEGANTE Y ORDENADO
 ================================ */
 
@@ -120,7 +116,10 @@ body.lectura-body {
     pointer-events: auto;
 }
 
-/* IDIOMA */
+/* ==============================
+   🌐 IDIOMA (NAVBAR)
+================================ */
+
 .nav-lang select {
     background: #000;
     color: var(--oro);
@@ -129,7 +128,13 @@ body.lectura-body {
     padding: 6px 10px;
     font-size: 0.75rem;
     cursor: pointer;
+    transition: border-color 0.25s ease;
 }
+
+.nav-lang select:hover {
+    border-color: var(--oro);
+}
+
 /* ==============================
    📦 CONTENEDOR
 ================================ */
@@ -213,22 +218,35 @@ body.lectura-body {
     min-height: 24px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ==============================
    🌱 HERO PORTADA GROUNDING
 ================================ */
 
 .hero-grounding {
     width: 100%;
-    height: auto; /* se ajusta a la altura de la imagen */
-    min-height: 500px; /* para que no quede demasiado pequeña en pantallas grandes */
+    height: auto;
+    min-height: 500px;
     background: url('imagenes/imagen2.jpg') center top / contain no-repeat;
     position: relative;
     display: flex;
-    align-items: flex-end; /* texto al fondo */
+    align-items: flex-end;
     justify-content: center;
-    padding-bottom: 50px; /* separa texto de borde */
+    padding-bottom: 50px;
 }
-/* capa suave para que el texto se lea bien */
+
 .hero-overlay {
     background: rgba(0, 0, 0, 0.45);
     padding: 40px 50px;
@@ -278,6 +296,10 @@ body.lectura-body {
     transform: translateY(-2px);
 }
 
+/* ==============================
+   📱 MEDIA QUERIES
+================================ */
+
 @media (max-width: 768px) {
     .hero-grounding {
         height: 70vh;
@@ -290,60 +312,6 @@ body.lectura-body {
     .hero-overlay p {
         font-size: 1rem;
     }
-}
-
-
-/* Estilos específicos para la experiencia de Grounding */
-.grounding-wrapper {
-    text-align: center;
-    padding: 40px 20px;
-    background: radial-gradient(circle, rgba(40,40,40,1) 0%, rgba(10,10,10,1) 100%);
-    border-radius: 30px;
-    border: 2px solid #d4af37;
-    margin-top: 30px;
-}
-
-.reloj-circular {
-    width: 200px;
-    height: 200px;
-    border: 8px solid #333;
-    border-top: 8px solid #d4af37;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 30px auto;
-    font-size: 3rem;
-    font-family: 'Courier New', monospace;
-    color: #d4af37;
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
-    transition: all 0.5s ease;
-}
-
-.pasos-lista {
-    text-align: left;
-    max-width: 500px;
-    margin: 30px auto;
-    color: #ccc;
-    line-height: 1.8;
-}
-
-.pasos-lista li {
-    margin-bottom: 15px;
-    border-bottom: 1px solid #222;
-    padding-bottom: 5px;
-}
-
-.estado-texto {
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #fff;
-    min-height: 24px;
-}
-
-.animar-pulso {
-    animation: pulso 2s infinite;
 }
 
 @keyframes pulso {
