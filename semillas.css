@@ -1,6 +1,6 @@
 /* ===========================================================
    AAPMENTAL
-   
+
 ===========================================================*/
 
 /*==============================
@@ -54,6 +54,10 @@ body{
 
     overflow-x:hidden;
 
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
 }
 
 /*==============================
@@ -64,7 +68,7 @@ a{
 
     text-decoration:none;
 
-    transition:.35s;
+    transition:all .35s ease;
 
 }
 
@@ -84,61 +88,187 @@ CONTAINER
 NAVBAR
 ===============================*/
 
+/*==============================
+NAVBAR
+===============================*/
+
 .navbar{
 
     position:sticky;
 
     top:0;
 
-    z-index:999;
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(8,8,8,.92);
 
     backdrop-filter:blur(12px);
 
-    background:rgba(8,8,8,.90);
+    -webkit-backdrop-filter:blur(12px);
 
     border-bottom:1px solid var(--borde);
 
+    box-shadow:0 6px 20px rgba(0,0,0,.25);
+
 }
+
 
 .nav-container{
 
-    width:min(1200px,95%);
+    width:min(1400px,96%);
 
     margin:auto;
 
     display:flex;
 
-    justify-content:space-between;
+    justify-content:center;
 
     align-items:center;
 
-    padding:18px;
+    gap:20px;
+
+    min-height:78px;
+
+    padding:0 15px;
 
 }
+
+
+/*==============================
+LOGO
+===============================*/
+
+.logo{
+
+    color:var(--oro);
+
+    font-size:1.35rem;
+
+    font-weight:700;
+
+    white-space:nowrap;
+
+    letter-spacing:1px;
+
+}
+
+
+/*==============================
+MENU PRINCIPAL
+===============================*/
 
 .nav-links{
 
     display:flex;
 
+    align-items:center;
+
+    justify-content:center;
+
     list-style:none;
 
-    gap:22px;
+    gap:18px;
+
+    margin:0;
+
+    padding:0;
+
+    flex-wrap:nowrap;
 
 }
+
+
+.nav-links li{
+
+    position:relative;
+
+    white-space:nowrap;
+
+}
+
 
 .nav-links a{
 
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
     color:#efefef;
 
-    font-size:.92rem;
+    font-size:.90rem;
 
-    letter-spacing:.4px;
+    font-weight:500;
+
+    letter-spacing:.3px;
+
+    padding:10px 4px;
+
+    transition:.35s ease;
 
 }
+
 
 .nav-links a:hover{
 
     color:var(--oro);
+
+}
+
+
+/*==============================
+IDIOMA
+===============================*/
+
+.nav-lang{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-left:auto;
+
+}
+
+
+#idioma-nav{
+
+    background:#111;
+
+    color:white;
+
+    border:1px solid var(--borde);
+
+    border-radius:20px;
+
+    padding:8px 14px;
+
+    cursor:pointer;
+
+    font-size:.85rem;
+
+    outline:none;
+
+}
+
+
+#idioma-nav:hover{
+
+    border-color:var(--oro);
+
+}
+
+
+#idioma-nav option{
+
+    background:#111;
+
+    color:white;
 
 }
 
@@ -152,13 +282,20 @@ DROPDOWN
 
 }
 
+
+/* CONTENIDO DESPLEGABLE */
+
 .dropdown-content{
 
-    display:none;
+    display:block;
+
+    visibility:hidden;
+
+    opacity:0;
 
     position:absolute;
 
-    top:35px;
+    top:calc(100% + 2px);
 
     left:0;
 
@@ -170,11 +307,26 @@ DROPDOWN
 
     overflow:hidden;
 
-    min-width:220px;
+    min-width:240px;
 
     box-shadow:var(--sombra);
 
+    z-index:2000;
+
+    transform:translateY(10px);
+
+    transition:
+
+    opacity .30s ease,
+
+    transform .30s ease,
+
+    visibility .30s ease;
+
 }
+
+
+/* ELEMENTOS */
 
 .dropdown-content li{
 
@@ -182,25 +334,78 @@ DROPDOWN
 
 }
 
+
+/* ENLACES */
+
 .dropdown-content a{
 
     display:block;
 
     padding:12px 18px;
 
+    color:#efefef;
+
+    white-space:nowrap;
+
+    font-size:.90rem;
+
 }
+
 
 .dropdown-content a:hover{
 
     background:#191919;
 
+    color:var(--oro);
+
 }
+
+
+/* ACTIVACIÓN */
 
 .dropdown:hover .dropdown-content{
 
-    display:block;
+    visibility:visible;
+
+    opacity:1;
+
+    transform:translateY(0);
 
 }
+
+
+/* EVITA QUE EL MENU SE CORTE */
+
+.nav-links{
+
+    overflow:visible;
+
+}
+
+
+/* ANIMACIÓN */
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-10px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
 
 /*==============================
 HERO
@@ -211,6 +416,8 @@ HERO
     position:relative;
 
     min-height:100vh;
+
+    overflow:hidden;
 
 }
 
@@ -244,6 +451,8 @@ HERO
 
     justify-content:center;
 
+    padding:120px 20px 60px;
+
     background:
 
     linear-gradient(
@@ -256,13 +465,43 @@ HERO
 
 }
 
+/*==============================
+ANIMACIÓN DROPDOWN
+===============================*/
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-8px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
 .portada-contenido{
 
     width:min(900px,92%);
 
+    margin:auto;
+
     text-align:center;
 
     animation:fadeHero 1.3s ease;
+
+    z-index:2;
 
 }
 
@@ -272,11 +511,13 @@ TITULOS
 
 .portada-titulo{
 
-    font-size:4rem;
+    font-size:clamp(2.8rem,6vw,4rem);
 
     color:var(--oro);
 
     letter-spacing:2px;
+
+    line-height:1.15;
 
     text-shadow:
 
@@ -288,11 +529,13 @@ TITULOS
 
     margin-top:25px;
 
-    color:white;
+    color:#ffffff;
 
-    font-size:1.45rem;
+    font-size:clamp(1.15rem,2.5vw,1.45rem);
 
     font-style:italic;
+
+    line-height:1.6;
 
 }
 
@@ -304,11 +547,13 @@ TITULOS
 
     color:#dddddd;
 
-    font-size:1.05rem;
+    font-size:clamp(.95rem,2vw,1.05rem);
 
     max-width:700px;
 
     margin-inline:auto;
+
+    line-height:1.8;
 
 }
 
@@ -328,13 +573,17 @@ BOTON
 
     border:2px solid var(--oro);
 
+    background:transparent;
+
     color:var(--oro);
 
     font-weight:600;
 
     letter-spacing:1px;
 
-    transition:.40s;
+    transition:all .40s ease;
+
+    cursor:pointer;
 
 }
 
@@ -352,6 +601,17 @@ BOTON
 
 }
 
+.btn-scroll-down:focus{
+
+    outline:none;
+
+    box-shadow:
+
+    0 0 0 3px rgba(212,175,55,.25),
+
+    0 15px 35px rgba(212,175,55,.35);
+
+}
 /*==============================
 INTRODUCCION
 ===============================*/
@@ -376,9 +636,11 @@ INTRODUCCION
 
     color:var(--oro);
 
-    font-size:2rem;
+    font-size:clamp(1.8rem,4vw,2rem);
 
     margin-bottom:25px;
+
+    line-height:1.3;
 
 }
 
@@ -391,6 +653,8 @@ INTRODUCCION
     margin-bottom:20px;
 
     text-align:justify;
+
+    line-height:1.9;
 
 }
 
@@ -419,22 +683,28 @@ ANIMACION
 }
 
 /* ==========================================
-   FOOTER 
-   
-   ========================================== */
+   FOOTER
 
+========================================== */
 
-.footer-semillas {
+.footer-semillas{
 
     background:
-    linear-gradient(135deg, #071a2b, #163d32);
+    linear-gradient(135deg,#071a2b,#163d32);
+
+    box-shadow:
+    inset 0 15px 40px rgba(142,224,0,.05);
 
 }
 
 
 /* Línea energética verde */
 
-.footer-semillas::before {
+.footer-semillas::before{
+
+    content:"";
+
+    display:block;
 
     background:
     linear-gradient(
@@ -451,7 +721,7 @@ ANIMACION
 
 /* Marca AAPMental en versión naturaleza */
 
-.footer-semillas .footer-brand h3 {
+.footer-semillas .footer-brand h3{
 
     color:#b8ff70;
 
@@ -463,7 +733,7 @@ ANIMACION
 
 /* Frase de semillas */
 
-.footer-semillas .footer-frase {
+.footer-semillas .footer-frase{
 
     color:#e7f7df !important;
 
@@ -472,7 +742,7 @@ ANIMACION
 
 /* Detalle dorado-verde en la frase */
 
-.footer-semillas .footer-frase::before {
+.footer-semillas .footer-frase::before{
 
     background:
     linear-gradient(
@@ -486,7 +756,7 @@ ANIMACION
 
 /* Títulos */
 
-.footer-semillas h4 {
+.footer-semillas h4{
 
     color:#d9ff9a;
 
@@ -495,28 +765,40 @@ ANIMACION
 
 /* Enlaces */
 
-.footer-semillas a:hover {
+.footer-semillas a{
+
+    color:#d8e6ea;
+
+    text-decoration:none;
+
+    transition:.35s ease;
+
+}
+
+.footer-semillas a:hover{
 
     color:#8ee000;
 
 }
 
 
-
 /* Botón especial */
 
-.footer-semillas .btn-oro {
+.footer-semillas .btn-oro{
 
     border-color:#8ee000;
 
     color:#8ee000;
 
+    transition:.35s ease;
+
 }
 
 
-.footer-semillas .btn-oro:hover {
+.footer-semillas .btn-oro:hover{
 
-    background: linear-gradient(
+    background:
+    linear-gradient(
         180deg,
         #111111 0%,
         #0c0c0c 50%,
@@ -530,71 +812,73 @@ ANIMACION
 }
 
 
-/* Pequeño efecto de profundidad */
-
-.footer-semillas {
-
-    box-shadow:
-    inset 0 15px 40px rgba(142,224,0,.05);
-
-}
-
 /* ==========================================
    FOOTER SEMILLAS
-   ========================================== */
+========================================== */
 
-footer.footer-semillas .footer-content {
+footer.footer-semillas .footer-content{
 
-    display: grid !important;
+    display:grid !important;
 
-    grid-template-columns: repeat(4, 1fr) !important;
+    grid-template-columns:repeat(4,1fr) !important;
 
-    gap: 35px;
+    gap:35px;
 
-    max-width: 1200px;
+    max-width:1200px;
 
-    margin: auto;
+    margin:auto;
 
-}
-
-
-footer.footer-semillas .footer-content > div {
-
-    width: auto;
+    width:100%;
 
 }
 
 
-footer.footer-semillas a {
+footer.footer-semillas .footer-content > div{
 
-    color: #d8e6ea;
-
-    text-decoration: none;
+    width:auto;
 
 }
 
 
-footer.footer-semillas ul {
+footer.footer-semillas ul{
 
-    list-style: none;
+    list-style:none;
 
-    padding: 0;
+    padding:0;
+
+    margin:0;
+
+}
+
+
+footer.footer-semillas h4{
+
+    color:#d9ff9a;
+
+    margin-bottom:18px;
 
 }
 
 
-footer.footer-semillas h4 {
-
-    color: #d9ff9a;
-
-}
-
+/*==============================
+RESPONSIVE
+===============================*/
 
 @media(max-width:900px){
 
-    footer.footer-semillas .footer-content {
+    .introduccion-semillas{
 
-        grid-template-columns: repeat(2,1fr) !important;
+        padding:35px;
+
+        margin:70px auto;
+
+    }
+
+    footer.footer-semillas .footer-content{
+
+        grid-template-columns:repeat(2,1fr) !important;
+
+        gap:30px;
 
     }
 
@@ -603,16 +887,34 @@ footer.footer-semillas h4 {
 
 @media(max-width:600px){
 
-    footer.footer-semillas .footer-content {
+    .introduccion-semillas{
 
-        grid-template-columns:1fr !important;
+        padding:25px;
+
+        border-left:4px solid var(--oro);
+
+    }
+
+    .introduccion-semillas h2{
 
         text-align:center;
 
     }
 
+    .introduccion-semillas p{
+
+        text-align:left;
+
+    }
+
+    footer.footer-semillas .footer-content{
+
+        grid-template-columns:1fr !important;
+
+        text-align:center;
+
+        gap:25px;
+
+    }
+
 }
-
-
-
-
