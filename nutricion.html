@@ -95,34 +95,23 @@
 
 <header class="header-nutricion">
 
-
-
-  <span id="templo" class="oro-texto">
-    EL TEMPLO DEL ESPÍRITU
+    <span id="templo" class="oro-texto" data-i18n="templo">
+        EL TEMPLO DEL ESPÍRITU
     </span>
 
-<h1 id="titulo">
-Alquimia Alimentaria
-</h1>
+    <h1 id="titulo" data-i18n="titulo">
+        Alquimia Alimentaria
+    </h1>
 
-<p id="subtitulo">
-Nutre tu cuerpo para sintonizar con tu conciencia superior.
-</p>
-
-
-
-
-
-
-
+    <p id="subtitulo" data-i18n="subtitulo">
+        Nutre tu cuerpo para sintonizar con tu conciencia superior.
+    </p>
 
 </header>
 
 <section class="hidratacion">
 
-
-
-<p id="hidratacionTexto1">
+<p id="hidratacionTexto1" data-i18n="hidratacionTexto1">
 
 El agua es uno de los componentes esenciales para la vida y representa aproximadamente entre el 50% y 70% del peso corporal humano, dependiendo de factores como la edad, la composición corporal y el estado fisiológico. Cada célula del organismo necesita un adecuado aporte de agua para desarrollar correctamente sus funciones metabólicas, producir energía, transportar nutrientes, eliminar sustancias de desecho y mantener el equilibrio interno del cuerpo.
 
@@ -131,7 +120,8 @@ Una hidratación adecuada permite el correcto funcionamiento del sistema circula
 Desde una perspectiva de nutrición consciente, el agua no solo representa un elemento vital para la supervivencia, sino también un medio indispensable para conservar la armonía de los procesos biológicos que sostienen nuestra salud.
 
 </p>
-<p id="hidratacionTexto2">
+
+<p id="hidratacionTexto2" data-i18n="hidratacionTexto2">
 
 Aunque la sed constituye un mecanismo natural mediante el cual el organismo comunica la necesidad de ingerir líquidos, la hidratación adecuada no debe depender únicamente de esta señal, ya que las necesidades pueden variar según cada persona y situación. Mantener un aporte equilibrado de agua durante el día puede favorecer el rendimiento físico, la concentración, la regulación de la temperatura corporal y el funcionamiento adecuado de diferentes procesos fisiológicos.
 
@@ -139,7 +129,7 @@ La cantidad de agua que necesita cada organismo depende de múltiples factores c
 
 </p>
 
-<p id="hidratacionTexto3">
+<p id="hidratacionTexto3" data-i18n="hidratacionTexto3">
 
 Como referencia general, algunos profesionales de la salud utilizan una estimación aproximada de <strong>35 mililitros de agua por kilogramo de peso corporal al día</strong> en adultos sanos como una guía orientativa para calcular las necesidades básicas de hidratación. Sin embargo, esta cantidad puede variar según factores individuales como la actividad física, la temperatura ambiental, la alimentación, la sudoración y el estado general de salud.
 
@@ -149,7 +139,7 @@ Esta fórmula no representa una regla universal ni sustituye la valoración pers
 
 <div class="hidratacion-calculadora">
 
-<label for="peso-agua" id="label-agua">
+<label for="peso-agua" id="label-agua" data-i18n="labelAgua">
 Peso corporal (kg)
 </label>
 
@@ -161,29 +151,26 @@ placeholder="Ej: 70">
 <button
 onclick="calcularAgua()"
 class="tab-btn"
-id="btn-agua">
+id="btn-agua"
+data-i18n="botonAgua">
 
 Calcular Hidratación
 
 </button>
-  <div id="vasos-container" class="vasos-container"></div>
-    
-    </div>
 
-<p id="resultado-agua"></p>
+<div id="vasos-container" class="vasos-container"></div>
 
 </div>
 
+<p id="resultado-agua" data-i18n="resultadoAgua"></p>
 
-
-<h3 id="hidratacionBeneficios">
+<h3 id="hidratacionBeneficios" data-i18n="hidratacionBeneficios">
 ¿Por qué es importante mantenerse bien hidratado?
 </h3>
 
 <br>
 
-
-<p id="beneficiosTexto">
+<p id="beneficiosTexto" data-i18n="beneficiosTexto">
 
 Mantener un adecuado consumo de agua ayuda a conservar el equilibrio de los líquidos corporales y permite que el organismo desarrolle correctamente numerosos procesos fisiológicos esenciales. Entre sus principales beneficios se encuentran el transporte de nutrientes y oxígeno hacia las células, la regulación de la temperatura corporal mediante la sudoración, la lubricación de las articulaciones, el mantenimiento del volumen sanguíneo y la eliminación de sustancias de desecho a través de los riñones y otros mecanismos naturales del cuerpo.
 
@@ -191,41 +178,46 @@ Además, una hidratación adecuada puede favorecer el rendimiento físico, la ca
 
 </p>
 
-<p id="hidratacionConsejos">
+<p id="hidratacionConsejos" data-i18n="hidratacionConsejos">
 
 Para mantener una hidratación adecuada es recomendable distribuir el consumo de agua de manera equilibrada a lo largo del día, evitando esperar únicamente a sentir sed para beber líquidos. Durante épocas de altas temperaturas, actividad física intensa o situaciones donde exista mayor pérdida de líquidos, las necesidades de hidratación pueden aumentar.
 
 Además del agua, algunos alimentos como frutas, verduras, sopas, infusiones y preparaciones con alto contenido de agua pueden contribuir al aporte diario de líquidos. Adoptar hábitos de hidratación consciente implica escuchar las señales del organismo y considerar factores individuales como la edad, el nivel de actividad física, el clima, el embarazo, la lactancia o determinadas condiciones de salud.
 
 </p>
-<p id="hidratacionAviso">
+<p id="hidratacionAviso" data-i18n="hidratacionAviso">
 
-<strong>Importante:</strong> La calculadora de hidratación incluida en esta página ofrece una estimación orientativa basada en recomendaciones generales para adultos sanos y tiene únicamente fines educativos. Las necesidades de líquidos pueden variar según factores individuales como la edad, el peso corporal, la actividad física, el clima y el estado general de salud.
+<strong data-i18n="hidratacionAvisoImportante">Importante:</strong> La calculadora de hidratación incluida en esta página ofrece una estimación orientativa basada en recomendaciones generales para adultos sanos y tiene únicamente fines educativos. Las necesidades de líquidos pueden variar según factores individuales como la edad, el peso corporal, la actividad física, el clima y el estado general de salud.
 
 <br><br>
 
+<span data-i18n="hidratacionAvisoTexto2">
 Si presentas enfermedades renales, cardíacas, hepáticas, alteraciones del equilibrio de líquidos o cualquier condición médica que requiera supervisión profesional, consulta siempre con un médico o especialista de la salud antes de modificar tu consumo diario de agua.
+</span>
 
 </p>
 
 <br>
-<h3>Referencias científicas</h3>
+
+<h3 data-i18n="referenciasTitulo">
+Referencias científicas
+</h3>
 
 <ol>
 
-<li>
+<li data-i18n="referencia1">
 European Food Safety Authority (EFSA). Scientific Opinion on Dietary Reference Values for Water. EFSA Journal.
 </li>
 
-<li>
+<li data-i18n="referencia2">
 National Academies of Sciences, Engineering, and Medicine. Dietary Reference Intakes for Water, Potassium, Sodium, Chloride, and Sulfate.
 </li>
 
-<li>
+<li data-i18n="referencia3">
 World Health Organization (WHO). Healthy diet and hydration guidance.
 </li>
 
-<li>
+<li data-i18n="referencia4">
 Centers for Disease Control and Prevention (CDC). Water and Healthier Drinks.
 </li>
 
@@ -233,11 +225,11 @@ Centers for Disease Control and Prevention (CDC). Water and Healthier Drinks.
 
 <section class="seitan-section">
 
-<h2 id="seitan">
+<h2 id="seitan" data-i18n="seitanTitulo">
 🌱 Seitán: Una Excelente Fuente de Proteína Vegetal
 </h2>
 
-<p id="seitan-intro">
+<p id="seitan-intro" data-i18n="seitanIntro">
 
 El seitán es un alimento elaborado principalmente a partir del gluten de trigo y constituye una de las fuentes de proteína vegetal más utilizadas en la alimentación vegana y vegetariana. Su origen se remonta a la cocina tradicional del este asiático, donde ha sido consumido durante siglos como alternativa a la carne gracias a su textura firme, su versatilidad culinaria y su elevado contenido proteico.
 
@@ -245,11 +237,11 @@ Actualmente, el seitán forma parte de numerosas preparaciones saludables y es a
 
 </p>
 
-<h3 id="seitan-historia">
+<h3 id="seitan-historia" data-i18n="seitanHistoria">
 Origen e Historia
 </h3>
 
-<p id="seitan-historia-txt">
+<p id="seitan-historia-txt" data-i18n="seitanHistoriaTxt">
 
 El seitán comenzó a utilizarse hace más de mil años por comunidades budistas de China y Japón, donde la alimentación basada en plantas tenía un importante papel cultural y espiritual. A partir del lavado de la harina de trigo se obtenía el gluten, que posteriormente era cocinado con diferentes especias y caldos vegetales para obtener una textura semejante a la carne.
 
@@ -257,11 +249,11 @@ Con el paso del tiempo su consumo se extendió a numerosos países y hoy constit
 
 </p>
 
-<h3 id="seitan-nutricion">
+<h3 id="seitan-nutricion" data-i18n="seitanNutricion">
 Valor Nutricional
 </h3>
 
-<p id="seitan-nutricion-txt">
+<p id="seitan-nutricion-txt" data-i18n="seitanNutricionTxt">
 
 El seitán destaca principalmente por su elevado contenido de proteínas. Dependiendo de la preparación, puede aportar entre 20 y 25 gramos de proteína por cada 100 gramos de producto, superando incluso a muchas carnes en proporción de proteína respecto a su contenido graso.
 
@@ -271,11 +263,11 @@ Aunque contiene pequeñas cantidades de minerales como hierro, fósforo y seleni
 
 </p>
 
-<h3 id="seitan-beneficios">
+<h3 id="seitan-beneficios" data-i18n="seitanBeneficios">
 Beneficios Nutricionales
 </h3>
 
-<p id="seitan-beneficios-txt">
+<p id="seitan-beneficios-txt" data-i18n="seitanBeneficiosTxt">
 
 Consumido dentro de una dieta equilibrada, el seitán puede aportar diversos beneficios nutricionales:
 
@@ -283,33 +275,33 @@ Consumido dentro de una dieta equilibrada, el seitán puede aportar diversos ben
 
 <ul>
 
-<li id="beneficio-seitan1">
+<li id="beneficio-seitan1" data-i18n="beneficioSeitan1">
 Contribuye al mantenimiento y desarrollo de la masa muscular gracias a su elevado contenido de proteínas.
 </li>
 
-<li id="beneficio-seitan2">
+<li id="beneficio-seitan2" data-i18n="beneficioSeitan2">
 Ayuda a la reparación y formación de tejidos después de la actividad física.
 </li>
 
-<li id="beneficio-seitan3">
+<li id="beneficio-seitan3" data-i18n="beneficioSeitan3">
 Su bajo contenido en grasas saturadas lo convierte en una alternativa interesante dentro de una alimentación saludable.
 </li>
 
-<li id="beneficio-seitan4">
+<li id="beneficio-seitan4" data-i18n="beneficioSeitan4">
 Su textura permite sustituir la carne en numerosas preparaciones culinarias.
 </li>
 
-<li id="beneficio-seitan5">
+<li id="beneficio-seitan5" data-i18n="beneficioSeitan5">
 Puede combinarse fácilmente con verduras, legumbres y cereales integrales para mejorar el perfil nutricional de las comidas.
 </li>
 
 </ul>
 
-<h3 id="seitan-consumo">
+<h3 id="seitan-consumo" data-i18n="seitanConsumo">
 ¿Cómo Incorporarlo en la Alimentación?
 </h3>
 
-<p id="seitan-consumo-txt">
+<p id="seitan-consumo-txt" data-i18n="seitanConsumoTxt">
 
 El seitán puede prepararse a la plancha, al horno, en guisos, salteados, brochetas, hamburguesas vegetales, tacos, estofados o acompañado de verduras frescas. Gracias a su capacidad para absorber sabores, resulta muy versátil en la cocina y permite elaborar platos equilibrados y ricos en proteínas.
 
@@ -317,11 +309,11 @@ Para obtener una alimentación completa es recomendable acompañarlo con aliment
 
 </p>
 
-<h3 id="seitan-precauciones">
+<h3 id="seitan-precauciones" data-i18n="seitanPrecauciones">
 Consideraciones Importantes
 </h3>
 
-<p id="seitan-precauciones-txt">
+<p id="seitan-precauciones-txt" data-i18n="seitanPrecaucionesTxt">
 
 El seitán está elaborado a partir del gluten de trigo, por lo que no debe ser consumido por personas con enfermedad celíaca, alergia al trigo o sensibilidad al gluten.
 
@@ -329,63 +321,59 @@ Asimismo, ninguna fuente de proteína debe considerarse suficiente por sí sola.
 
 </p>
 
-<h3 id="seitan-referencias">
+<h3 id="seitan-referencias" data-i18n="seitanReferencias">
 Referencias Científicas
 </h3>
 
 <ul>
 
-<li>
+<li data-i18n="seitanReferencia1">
 FAO. <em>Dietary Protein Quality Evaluation in Human Nutrition.</em> Food and Agriculture Organization of the United Nations.
 </li>
 
-<li>
+<li data-i18n="seitanReferencia2">
 Academy of Nutrition and Dietetics. <em>Position of the Academy of Nutrition and Dietetics: Vegetarian Diets.</em>
 </li>
 
-<li>
+<li data-i18n="seitanReferencia3">
 Craig WJ, Mangels AR. Position of the American Dietetic Association: Vegetarian Diets. <em>Journal of the Academy of Nutrition and Dietetics.</em>
 </li>
 
-<li>
+<li data-i18n="seitanReferencia4">
 Nutrients Journal. Plant-Based Diets and Human Health.
 </li>
 
 </ul>
 
 </section>
-    
-    
-    
-    
-   
 
 </section>
 
+<div class="recetario-container">
 
-    
-    <div class="recetario-container">
-    
-    <div id="vegetariano" class="categoria-content active">
-    
-    <div class="receta-card">
-    
-    <h3 id="quinoa">
-    Quinoa: Estabilidad Terrenal
-    </h3>
-    
-    <p id="quinoa-txt">
-    Proteína completa para tus neurotransmisores.
-    </p>
-    
-    </div>
-<div><div class="receta-card">
+<div id="vegetariano" class="categoria-content active">
 
-<h3 id="quinoa">
+<div class="receta-card">
+
+<h3 id="quinoa" data-i18n="quinoa">
+Quinoa: Estabilidad Terrenal
+</h3>
+
+<p id="quinoa-txt" data-i18n="quinoaTxt">
+Proteína completa para tus neurotransmisores.
+</p>
+
+</div>
+
+<div>
+
+<div class="receta-card">
+
+<h3 id="quinoa-info" data-i18n="quinoaTitulo">
 🌾 Quinoa: Un Alimento Completo para una Nutrición Equilibrada
 </h3>
 
-<p id="quinoa-txt">
+<p id="quinoa-info-txt" data-i18n="quinoaInfoTxt">
 
 La quinoa (<em>Chenopodium quinoa</em>) es un pseudocereal originario de la región andina de Sudamérica y ha sido cultivada durante miles de años por diversas culturas debido a su elevado valor nutricional. En la actualidad es reconocida por organismos internacionales como un alimento de gran interés para promover una alimentación saludable y equilibrada.
 
@@ -401,33 +389,39 @@ En AAPMental promovemos la quinoa como parte de una alimentación variada y equi
 
 </p>
 
-<p class="referencia-cientifica">
+<p class="referencia-cientifica" data-i18n="quinoaReferencia">
 
-<strong>Referencia científica:</strong> La <strong>Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO)</strong> ha destacado la quinoa por su elevado valor nutricional y su potencial para contribuir a la seguridad alimentaria mundial. Asimismo, diversos estudios publicados en revistas científicas como <em>Nutrients</em> respaldan su aporte de proteínas, fibra, vitaminas y minerales dentro de una alimentación saludable.
+<strong data-i18n="referenciaCientifica">Referencia científica:</strong>
+
+<span data-i18n="quinoaReferenciaTxt">
+La <strong>Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO)</strong> ha destacado la quinoa por su elevado valor nutricional y su potencial para contribuir a la seguridad alimentaria mundial. Asimismo, diversos estudios publicados en revistas científicas como <em>Nutrients</em> respaldan su aporte de proteínas, fibra, vitaminas y minerales dentro de una alimentación saludable.
+</span>
 
 </p>
 
 </div>
-    
-    <div class="receta-card">
-    
-    <h3 id="berenjena">
-    Berenjena: Nutrición Celular
-    </h3>
-    
-    <p id="berenjena-txt">
-    Reduce la inflamación para un flujo energético puro.
-    </p>
-    
-    </div>
-    
-    <div><div class="receta-card">
 
-<h3 id="berenjena">
+<div class="receta-card">
+
+<h3 id="berenjena" data-i18n="berenjena">
+Berenjena: Nutrición Celular
+</h3>
+
+<p id="berenjena-txt" data-i18n="berenjenaTxt">
+Reduce la inflamación para un flujo energético puro.
+</p>
+
+</div>
+
+<div>
+
+<div class="receta-card">
+
+<h3 id="berenjena-info" data-i18n="berenjenaTitulo">
 🍆 Berenjena: Un Alimento Rico en Antioxidantes y Fibra
 </h3>
 
-<p id="berenjena-txt">
+<p id="berenjena-info-txt" data-i18n="berenjenaInfoTxt">
 
 La berenjena (<em>Solanum melongena</em>) es una hortaliza ampliamente consumida en diferentes regiones del mundo y forma parte de numerosos patrones de alimentación saludables, como la dieta mediterránea. Destaca por su bajo aporte calórico y por ser una fuente de fibra dietética, vitaminas y compuestos antioxidantes que pueden contribuir al mantenimiento de una buena salud cuando se integra dentro de una alimentación equilibrada.
 
@@ -443,22 +437,29 @@ En AAPMental promovemos el consumo de alimentos frescos y mínimamente procesado
 
 </p>
 
-<p class="referencia-cientifica">
+<p class="referencia-cientifica" data-i18n="berenjenaReferencia">
 
-<strong>Referencias científicas:</strong>
+<strong data-i18n="berenjenaReferenciaTitulo">
+Referencias científicas:
+</strong>
+
+<span data-i18n="berenjenaReferenciaTxt">
 
 La evidencia publicada por la <strong>Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO)</strong> y diversos estudios científicos destacan el valor nutricional de las hortalizas dentro de una alimentación saludable. Investigaciones publicadas en revistas como <em>Nutrients</em> y <em>Antioxidants</em> han descrito el contenido de fibra y compuestos fenólicos presentes en la berenjena, especialmente la nasunina y otras antocianinas con actividad antioxidante.
+
+</span>
 
 </p>
 
 </div>
+
 <section class="seitan-section">
 
-<h2 id="seitan">
+<h2 id="seitan" data-i18n="seitanTitulo">
 🌱 Seitán: Una Excelente Fuente de Proteína Vegetal
 </h2>
 
-<p id="seitan-intro">
+<p id="seitan-intro" data-i18n="seitanIntro">
 
 El seitán es un alimento elaborado principalmente a partir del gluten de trigo y constituye una de las fuentes de proteína vegetal más utilizadas en la alimentación vegana y vegetariana. Su origen se remonta a la cocina tradicional del este asiático, donde ha sido consumido durante siglos como alternativa a la carne gracias a su textura firme, su versatilidad culinaria y su elevado contenido proteico.
 
@@ -466,11 +467,11 @@ Actualmente, el seitán forma parte de numerosas preparaciones saludables y es a
 
 </p>
 
-<h3 id="seitan-historia">
+<h3 id="seitan-historia" data-i18n="seitanHistoria">
 Origen e Historia
 </h3>
 
-<p id="seitan-historia-txt">
+<p id="seitan-historia-txt" data-i18n="seitanHistoriaTxt">
 
 El seitán comenzó a utilizarse hace más de mil años por comunidades budistas de China y Japón, donde la alimentación basada en plantas tenía un importante papel cultural y espiritual. A partir del lavado de la harina de trigo se obtenía el gluten, que posteriormente era cocinado con diferentes especias y caldos vegetales para obtener una textura semejante a la carne.
 
@@ -478,11 +479,11 @@ Con el paso del tiempo su consumo se extendió a numerosos países y hoy constit
 
 </p>
 
-<h3 id="seitan-nutricion">
+<h3 id="seitan-nutricion" data-i18n="seitanNutricion">
 Valor Nutricional
 </h3>
 
-<p id="seitan-nutricion-txt">
+<p id="seitan-nutricion-txt" data-i18n="seitanNutricionTxt">
 
 El seitán destaca principalmente por su elevado contenido de proteínas. Dependiendo de la preparación, puede aportar entre 20 y 25 gramos de proteína por cada 100 gramos de producto, superando incluso a muchas carnes en proporción de proteína respecto a su contenido graso.
 
@@ -492,11 +493,11 @@ Aunque contiene pequeñas cantidades de minerales como hierro, fósforo y seleni
 
 </p>
 
-<h3 id="seitan-beneficios">
+<h3 id="seitan-beneficios" data-i18n="seitanBeneficios">
 Beneficios Nutricionales
 </h3>
 
-<p id="seitan-beneficios-txt">
+<p id="seitan-beneficios-txt" data-i18n="seitanBeneficiosTxt">
 
 Consumido dentro de una dieta equilibrada, el seitán puede aportar diversos beneficios nutricionales:
 
@@ -504,33 +505,33 @@ Consumido dentro de una dieta equilibrada, el seitán puede aportar diversos ben
 
 <ul>
 
-<li id="beneficio-seitan1">
+<li id="beneficio-seitan1" data-i18n="beneficioSeitan1">
 Contribuye al mantenimiento y desarrollo de la masa muscular gracias a su elevado contenido de proteínas.
 </li>
 
-<li id="beneficio-seitan2">
+<li id="beneficio-seitan2" data-i18n="beneficioSeitan2">
 Ayuda a la reparación y formación de tejidos después de la actividad física.
 </li>
 
-<li id="beneficio-seitan3">
+<li id="beneficio-seitan3" data-i18n="beneficioSeitan3">
 Su bajo contenido en grasas saturadas lo convierte en una alternativa interesante dentro de una alimentación saludable.
 </li>
 
-<li id="beneficio-seitan4">
+<li id="beneficio-seitan4" data-i18n="beneficioSeitan4">
 Su textura permite sustituir la carne en numerosas preparaciones culinarias.
 </li>
 
-<li id="beneficio-seitan5">
+<li id="beneficio-seitan5" data-i18n="beneficioSeitan5">
 Puede combinarse fácilmente con verduras, legumbres y cereales integrales para mejorar el perfil nutricional de las comidas.
 </li>
 
 </ul>
 
-<h3 id="seitan-consumo">
+<h3 id="seitan-consumo" data-i18n="seitanConsumo">
 ¿Cómo Incorporarlo en la Alimentación?
 </h3>
 
-<p id="seitan-consumo-txt">
+<p id="seitan-consumo-txt" data-i18n="seitanConsumoTxt">
 
 El seitán puede prepararse a la plancha, al horno, en guisos, salteados, brochetas, hamburguesas vegetales, tacos, estofados o acompañado de verduras frescas. Gracias a su capacidad para absorber sabores, resulta muy versátil en la cocina y permite elaborar platos equilibrados y ricos en proteínas.
 
@@ -538,11 +539,11 @@ Para obtener una alimentación completa es recomendable acompañarlo con aliment
 
 </p>
 
-<h3 id="seitan-precauciones">
+<h3 id="seitan-precauciones" data-i18n="seitanPrecauciones">
 Consideraciones Importantes
 </h3>
 
-<p id="seitan-precauciones-txt">
+<p id="seitan-precauciones-txt" data-i18n="seitanPrecaucionesTxt">
 
 El seitán está elaborado a partir del gluten de trigo, por lo que no debe ser consumido por personas con enfermedad celíaca, alergia al trigo o sensibilidad al gluten.
 
@@ -550,39 +551,38 @@ Asimismo, ninguna fuente de proteína debe considerarse suficiente por sí sola.
 
 </p>
 
-<h3 id="seitan-referencias">
+<h3 id="seitan-referencias" data-i18n="seitanReferencias">
 Referencias Científicas
 </h3>
 
 <ul>
 
-<li>
+<li data-i18n="seitanReferencia1">
 FAO. <em>Dietary Protein Quality Evaluation in Human Nutrition.</em> Food and Agriculture Organization of the United Nations.
 </li>
 
-<li>
+<li data-i18n="seitanReferencia2">
 Academy of Nutrition and Dietetics. <em>Position of the Academy of Nutrition and Dietetics: Vegetarian Diets.</em>
 </li>
 
-<li>
+<li data-i18n="seitanReferencia3">
 Craig WJ, Mangels AR. Position of the American Dietetic Association: Vegetarian Diets. <em>Journal of the Academy of Nutrition and Dietetics.</em>
 </li>
 
-<li>
+<li data-i18n="seitanReferencia4">
 Nutrients Journal. Plant-Based Diets and Human Health.
 </li>
 
 </ul>
 
 </section>
-
 <section class="tofu-section">
 
-<h2 id="tofu">
+<h2 id="tofu" data-i18n="tofuTitulo">
 🧈 Tofu: Proteína Vegetal Versátil y Rica en Nutrientes
 </h2>
 
-<p id="tofu-intro">
+<p id="tofu-intro" data-i18n="tofuIntro">
 
 El tofu es un alimento elaborado a partir de la leche de soja coagulada y prensada, reconocido mundialmente por su alto valor nutricional y su versatilidad en la cocina. Durante más de dos mil años ha formado parte de la alimentación tradicional de diversos países asiáticos y, en la actualidad, constituye uno de los alimentos más representativos de las dietas vegetarianas y veganas.
 
@@ -590,11 +590,11 @@ Gracias a su sabor suave y a su capacidad para absorber especias, hierbas aromá
 
 </p>
 
-<h3 id="tofu-historia">
+<h3 id="tofu-historia" data-i18n="tofuHistoria">
 Origen e Historia
 </h3>
 
-<p id="tofu-historia-txt">
+<p id="tofu-historia-txt" data-i18n="tofuHistoriaTxt">
 
 Se cree que el tofu fue desarrollado en China hace más de dos mil años y posteriormente se extendió hacia Japón, Corea y otros países del continente asiático. Tradicionalmente ha sido considerado un alimento de gran importancia debido a su disponibilidad, facilidad de preparación y excelente perfil nutricional.
 
@@ -602,11 +602,11 @@ Con el crecimiento del interés por la alimentación basada en plantas, el tofu 
 
 </p>
 
-<h3 id="tofu-nutricion">
+<h3 id="tofu-nutricion" data-i18n="tofuNutricion">
 Valor Nutricional
 </h3>
 
-<p id="tofu-nutricion-txt">
+<p id="tofu-nutricion-txt" data-i18n="tofuNutricionTxt">
 
 El tofu aporta proteínas de alta calidad que contienen todos los aminoácidos esenciales necesarios para el organismo humano. Dependiendo del tipo de elaboración, una porción de 100 gramos puede aportar entre 8 y 15 gramos de proteína, además de minerales como calcio, hierro, magnesio, fósforo y manganeso.
 
@@ -614,68 +614,67 @@ También proporciona grasas mayoritariamente insaturadas y contiene una cantidad
 
 </p>
 
-<h3 id="tofu-beneficios">
+<h3 id="tofu-beneficios" data-i18n="tofuBeneficios">
 Beneficios Nutricionales
 </h3>
 
-<p id="tofu-beneficios-txt">
+<p id="tofu-beneficios-txt" data-i18n="tofuBeneficiosTxt">
 
 Consumido dentro de una alimentación equilibrada, el tofu puede aportar diversos beneficios nutricionales respaldados por la evidencia científica.
 
 </p>
-
 <ul>
 
-<li id="beneficio-tofu1">
+<li id="beneficio-tofu1" data-i18n="beneficioTofu1">
 Contribuye al mantenimiento y desarrollo de la masa muscular gracias a su aporte de proteínas completas.
 </li>
 
-<li id="beneficio-tofu2">
+<li id="beneficio-tofu2" data-i18n="beneficioTofu2">
 Aporta calcio cuando ha sido elaborado con sales de calcio, favoreciendo el mantenimiento normal de los huesos.
 </li>
 
-<li id="beneficio-tofu3">
+<li id="beneficio-tofu3" data-i18n="beneficioTofu3">
 Contiene hierro, mineral necesario para la formación normal de glóbulos rojos y el transporte de oxígeno.
 </li>
 
-<li id="beneficio-tofu4">
+<li id="beneficio-tofu4" data-i18n="beneficioTofu4">
 Su contenido de grasas insaturadas puede formar parte de una alimentación cardiosaludable cuando sustituye alimentos ricos en grasas saturadas.
 </li>
 
-<li id="beneficio-tofu5">
+<li id="beneficio-tofu5" data-i18n="beneficioTofu5">
 Es un alimento muy versátil que facilita la preparación de comidas equilibradas y variadas.
 </li>
 
 </ul>
 
-<h3 id="tofu-cocina">
+<h3 id="tofu-cocina" data-i18n="tofuCocina">
 ¿Cómo consumir el tofu?
 </h3>
 
-<p id="tofu-cocina-txt">
+<p id="tofu-cocina-txt" data-i18n="tofuCocinaTxt">
 
 Una de las principales ventajas del tofu es su enorme versatilidad culinaria. Puede cocinarse a la plancha, al horno, al vapor, en salteados, sopas, guisos, curris, hamburguesas vegetales o incluso incorporarse a batidos y postres dependiendo de su textura.
 
 Al marinarlo con hierbas aromáticas, especias, salsa de soja baja en sodio, ajo, limón o jengibre, adquiere sabores intensos que permiten preparar platos muy variados y nutritivos.
 
 </p>
-<h3 id="tofu-isoflavonas">
+
+<h3 id="tofu-isoflavonas" data-i18n="tofuIsoflavonas">
 Isoflavonas y Compuestos Bioactivos
 </h3>
 
-<p id="tofu-isoflavonas-txt">
+<p id="tofu-isoflavonas-txt" data-i18n="tofuIsoflavonasTxt">
 
 La soja contiene compuestos naturales conocidos como <strong>isoflavonas</strong>, pertenecientes al grupo de los fitoquímicos. Estas sustancias han sido ampliamente estudiadas por la comunidad científica debido a su posible participación en diferentes procesos fisiológicos. La evidencia disponible indica que el consumo moderado de alimentos tradicionales elaborados con soja, como el tofu, puede formar parte de una alimentación saludable para la mayoría de las personas.
 
 Es importante señalar que los efectos de las isoflavonas continúan siendo objeto de investigación y que ningún alimento, por sí solo, previene o cura enfermedades. Por ello, el tofu debe entenderse como un componente más dentro de un patrón alimentario variado y equilibrado.
 
 </p>
-
-<h3 id="tofu-recomendaciones">
+<h3 id="tofu-recomendaciones" data-i18n="tofuRecomendaciones">
 Recomendaciones de Consumo
 </h3>
 
-<p id="tofu-recomendaciones-txt">
+<p id="tofu-recomendaciones-txt" data-i18n="tofuRecomendacionesTxt">
 
 El tofu puede incorporarse varias veces por semana dentro de una alimentación basada en plantas. Puede acompañarse con verduras frescas, legumbres, arroz integral, quinoa, avena, frutos secos y semillas para obtener comidas equilibradas y nutricionalmente completas.
 
@@ -685,11 +684,11 @@ Asimismo, elegir preparaciones bajas en sodio y evitar frituras excesivas permit
 
 </p>
 
-<h3 id="tofu-precauciones">
+<h3 id="tofu-precauciones" data-i18n="tofuPrecauciones">
 Consideraciones Importantes
 </h3>
 
-<p id="tofu-precauciones-txt">
+<p id="tofu-precauciones-txt" data-i18n="tofuPrecaucionesTxt">
 
 El tofu constituye un alimento seguro para la mayoría de las personas. Sin embargo, quienes presentan alergia a la soja deben evitar completamente su consumo.
 
@@ -699,11 +698,11 @@ Como ocurre con cualquier alimento, el tofu ofrece mayores beneficios cuando for
 
 </p>
 
-<h3 id="tofu-conclusion">
+<h3 id="tofu-conclusion" data-i18n="tofuConclusion">
 Conclusión
 </h3>
 
-<p id="tofu-conclusion-txt">
+<p id="tofu-conclusion-txt" data-i18n="tofuConclusionTxt">
 
 Gracias a su excelente perfil nutricional, su elevado contenido de proteínas vegetales y su gran versatilidad culinaria, el tofu representa una alternativa saludable para enriquecer la alimentación diaria. Su consumo, acompañado de otros alimentos frescos y mínimamente procesados, puede contribuir a cubrir las necesidades nutricionales del organismo dentro de una dieta equilibrada.
 
@@ -711,29 +710,28 @@ En AAPMental promovemos una alimentación consciente basada en el conocimiento c
 
 </p>
 
-<h3 id="tofu-referencias">
+<h3 id="tofu-referencias" data-i18n="tofuReferencias">
 Referencias Científicas
 </h3>
-
 <ul>
 
-<li>
+<li data-i18n="tofuReferencia1">
 Food and Agriculture Organization of the United Nations (FAO). <em>Dietary Protein Quality Evaluation in Human Nutrition.</em>
 </li>
 
-<li>
+<li data-i18n="tofuReferencia2">
 Academy of Nutrition and Dietetics. <em>Position of the Academy of Nutrition and Dietetics: Vegetarian Diets.</em>
 </li>
 
-<li>
+<li data-i18n="tofuReferencia3">
 Messina M. <em>Insights Gained from 20 Years of Soy Research.</em> Nutrients.
 </li>
 
-<li>
+<li data-i18n="tofuReferencia4">
 Nutrients Journal. <em>Health Benefits of Soy and Soy Foods.</em>
 </li>
 
-<li>
+<li data-i18n="tofuReferencia5">
 Harvard T.H. Chan School of Public Health. <em>The Nutrition Source: Soy.</em>
 </li>
 
@@ -743,11 +741,11 @@ Harvard T.H. Chan School of Public Health. <em>The Nutrition Source: Soy.</em>
 
 <section class="jengibre-section">
 
-<h2 id="jengibre">
+<h2 id="jengibre" data-i18n="jengibreTitulo">
 🫚 Jengibre: Una Raíz con Tradición y Respaldo Científico
 </h2>
 
-<p id="jengibre-intro">
+<p id="jengibre-intro" data-i18n="jengibreIntro">
 
 El jengibre (<em>Zingiber officinale</em>) es una planta originaria del sudeste asiático cuya raíz ha sido utilizada durante miles de años tanto en la gastronomía como en diferentes tradiciones medicinales. En la actualidad, constituye uno de los alimentos naturales más investigados por la comunidad científica debido a la presencia de compuestos bioactivos que pueden contribuir al bienestar cuando forman parte de una alimentación equilibrada.
 
@@ -755,11 +753,11 @@ Su aroma intenso, sabor ligeramente picante y gran versatilidad culinaria permit
 
 </p>
 
-<h3 id="jengibre-historia">
+<h3 id="jengibre-historia" data-i18n="jengibreHistoria">
 Origen e Historia
 </h3>
 
-<p id="jengibre-historia-txt">
+<p id="jengibre-historia-txt" data-i18n="jengibreHistoriaTxt">
 
 El cultivo del jengibre se remonta a más de cinco mil años en Asia. Civilizaciones como la china y la india lo incorporaron tanto en la cocina como en diversas prácticas tradicionales relacionadas con el bienestar.
 
@@ -769,11 +767,11 @@ Actualmente el jengibre forma parte de numerosos patrones de alimentación salud
 
 </p>
 
-<h3 id="jengibre-nutricion">
+<h3 id="jengibre-nutricion" data-i18n="jengibreNutricion">
 Valor Nutricional
 </h3>
 
-<p id="jengibre-nutricion-txt">
+<p id="jengibre-nutricion-txt" data-i18n="jengibreNutricionTxt">
 
 Aunque normalmente se consume en pequeñas cantidades, el jengibre aporta diversos compuestos bioactivos, entre ellos los <strong>gingeroles</strong>, <strong>shogaoles</strong> y <strong>zingerona</strong>, responsables de gran parte de su aroma y sabor característicos.
 
@@ -783,11 +781,10 @@ Su principal interés nutricional no reside en el aporte de macronutrientes, sin
 
 </p>
 
-<h3 id="jengibre-propiedades">
+<h3 id="jengibre-propiedades" data-i18n="jengibrePropiedades">
 Propiedades Estudiadas
 </h3>
-
-<p id="jengibre-propiedades-txt">
+<p id="jengibre-propiedades-txt" data-i18n="jengibrePropiedadesTxt">
 
 Diversos estudios científicos han investigado el papel del jengibre dentro de una alimentación saludable. La evidencia disponible sugiere que sus compuestos naturales presentan actividad antioxidante y pueden participar en mecanismos relacionados con la respuesta inflamatoria normal del organismo.
 
@@ -795,11 +792,11 @@ Asimismo, diferentes investigaciones han evaluado el consumo de jengibre en situ
 
 </p>
 
-<h3 id="jengibre-beneficios">
+<h3 id="jengibre-beneficios" data-i18n="jengibreBeneficios">
 Beneficios Nutricionales
 </h3>
 
-<p id="jengibre-beneficios-txt">
+<p id="jengibre-beneficios-txt" data-i18n="jengibreBeneficiosTxt">
 
 Consumido como parte de una alimentación equilibrada, el jengibre puede aportar diversos beneficios:
 
@@ -807,33 +804,33 @@ Consumido como parte de una alimentación equilibrada, el jengibre puede aportar
 
 <ul>
 
-<li>
+<li data-i18n="beneficioJengibre1">
 Aporta compuestos antioxidantes naturales ampliamente estudiados por la investigación científica.
 </li>
 
-<li>
+<li data-i18n="beneficioJengibre2">
 Puede contribuir al bienestar digestivo cuando forma parte de una dieta saludable.
 </li>
 
-<li>
+<li data-i18n="beneficioJengibre3">
 Su intenso sabor permite reducir el uso de sal en diversas preparaciones culinarias.
 </li>
 
-<li>
+<li data-i18n="beneficioJengibre4">
 Es un ingrediente muy versátil para infusiones, batidos, sopas y platos principales.
 </li>
 
-<li>
+<li data-i18n="beneficioJengibre5">
 Puede combinarse con frutas, verduras y otras especias dentro de una alimentación variada.
 </li>
 
 </ul>
 
-<h3 id="jengibre-consumo">
+<h3 id="jengibre-consumo" data-i18n="jengibreConsumo">
 ¿Cómo Incorporar el Jengibre en la Alimentación?
 </h3>
 
-<p id="jengibre-consumo-txt">
+<p id="jengibre-consumo-txt" data-i18n="jengibreConsumoTxt">
 
 El jengibre puede consumirse de múltiples formas, lo que facilita su incorporación a una alimentación variada y equilibrada. Puede utilizarse fresco, rallado, en polvo, deshidratado o como ingrediente de infusiones, siempre respetando las cantidades recomendadas dentro de una dieta saludable.
 
@@ -842,12 +839,11 @@ Su sabor intenso combina muy bien con frutas como limón, naranja, piña y manza
 Consumido de forma moderada, el jengibre constituye una alternativa natural para enriquecer la alimentación diaria sin necesidad de recurrir a productos ultraprocesados con exceso de sodio o azúcares añadidos.
 
 </p>
-
-<h3 id="jengibre-alquimia">
+<h3 id="jengibre-alquimia" data-i18n="jengibreAlquimia">
 El Jengibre dentro de la Alimentación Consciente
 </h3>
 
-<p id="jengibre-alquimia-txt">
+<p id="jengibre-alquimia-txt" data-i18n="jengibreAlquimiaTxt">
 
 En AAPMental promovemos una alimentación basada en el equilibrio y en el conocimiento científico. El jengibre representa un ejemplo de cómo un alimento tradicional puede formar parte de hábitos saludables cuando se integra dentro de una dieta rica en frutas, verduras, cereales integrales, legumbres y fuentes de proteínas de calidad.
 
@@ -855,11 +851,11 @@ Aunque históricamente ha sido utilizado en diferentes culturas por sus propieda
 
 </p>
 
-<h3 id="jengibre-precauciones">
+<h3 id="jengibre-precauciones" data-i18n="jengibrePrecauciones">
 Consideraciones Importantes
 </h3>
 
-<p id="jengibre-precauciones-txt">
+<p id="jengibre-precauciones-txt" data-i18n="jengibrePrecaucionesTxt">
 
 El consumo habitual de jengibre en cantidades culinarias suele considerarse seguro para la mayoría de los adultos sanos. Sin embargo, las personas que reciben tratamiento con medicamentos anticoagulantes, presentan trastornos hemorrágicos, cálculos biliares o padecen enfermedades crónicas deben consultar previamente con su médico antes de consumir suplementos concentrados de jengibre.
 
@@ -869,11 +865,11 @@ Asimismo, es importante recordar que los suplementos de jengibre pueden contener
 
 </p>
 
-<h3 id="jengibre-conclusion">
+<h3 id="jengibre-conclusion" data-i18n="jengibreConclusion">
 Conclusión
 </h3>
 
-<p id="jengibre-conclusion-txt">
+<p id="jengibre-conclusion-txt" data-i18n="jengibreConclusionTxt">
 
 El jengibre es una raíz aromática con una larga tradición culinaria y un creciente respaldo científico. Su contenido de compuestos bioactivos, unido a su versatilidad gastronómica, lo convierte en un ingrediente interesante dentro de una alimentación variada y equilibrada.
 
@@ -883,31 +879,33 @@ En AAPMental fomentamos una nutrición consciente basada en evidencia científic
 
 </p>
 
-<h3 id="jengibre-referencias">
+<h3 id="jengibre-referencias" data-i18n="jengibreReferencias">
 Referencias Científicas
 </h3>
 
 <ul>
 
-<li>
+<li data-i18n="jengibreReferencia1">
 World Health Organization (WHO). <em>Traditional, Complementary and Integrative Medicine.</em>
 </li>
 
-<li>
+<li data-i18n="jengibreReferencia2">
 National Center for Complementary and Integrative Health (NCCIH). <em>Ginger.</em>
 </li>
 
-<li>
+<li data-i18n="jengibreReferencia3">
 National Institutes of Health (NIH). <em>Dietary Supplements and Botanical Products.</em>
 </li>
 
-<li>
+<li data-i18n="jengibreReferencia4">
 Mashhadi NS, et al. <em>Anti-Oxidative and Anti-Inflammatory Effects of Ginger in Health and Physical Activity.</em> International Journal of Preventive Medicine.
 </li>
 
-<li>
+<li data-i18n="jengibreReferencia5">
 Journal of Ethnopharmacology. <em>Pharmacological Properties of Zingiber officinale.</em>
 </li>
+
+</ul>
 
 <li>
 Nutrients. <em>Bioactive Compounds of Ginger and Their Potential Health Benefits.</em>
@@ -916,101 +914,15 @@ Nutrients. <em>Bioactive Compounds of Ginger and Their Potential Health Benefits
 </ul>
 
 </section>
-
-
-
-
-
-
-
-
-
-    
-    
-    <div id="vegano" class="categoria-content">
-    
-    <div class="receta-card">
-    
-    <h3 id="seitan">
-    Seitán: Fuerza y Vigor
-    </h3>
-    
-    <p id="seitan-txt">
-    Alta densidad proteica para la reparación de tejidos.
-    </p>
-    
-    </div>
-
-
-    
-    <div class="receta-card">
-    
-    <h3 id="tofu">
-    Tofu & Cúrcuma: Luz Líquida
-    </h3>
-    
-    <p id="tofu-txt">
-    Limpia el organismo y reduce el estrés oxidativo.
-    </p>
-    
-    </div>
-    
-    </div>
-    
-    
-    <div id="jugos" class="categoria-content">
-    
-    <div class="receta-card">
-    
-    <h3 id="elixir">
-    Elixir Renacimiento Verde
-    </h3>
-    
-    <p id="elixir-txt">
-    Alcaliniza tu pH para ser un receptor puro de frecuencias.
-    </p>
-    
-    </div>
-    
-    <div class="receta-card">
-    
-    <h3 id="jengibre">
-    Activador de Jengibre
-    </h3>
-    
-    <p id="jengibre-txt">
-    Aumenta el fuego interno y fortalece tu campo bioeléctrico.
-    </p>
-    
-    </div>
-    
-    </div>
-    
-    </div>
-
-    <footer class="footer-nutricion">
-
-        <p id="aviso">
-        
-        <strong>Aviso:</strong>
-        
-        Información educativa de medicina complementaria.
-        Consulta siempre a un profesional de la salud.
-        
-        </p>
+  
         
         <br>
         
-        <button
+      <button
 id="btn-regresar"
 onclick="window.location.href='index.html'"
-class="tab-btn">
-
-← Regresar
-
-</button>
-        
-        </footer>
+class="tab-btn"
+data-i18n="btnRegresar">
         
         </main>
         
@@ -1096,43 +1008,17 @@ menu_salud:"Massa Corporea"
 
     
 
- const textos = {
+const textos = {
 
 es:{
-titulo:"Alquimia Alimentaria",
-subtitulo:"Nutre tu cuerpo para sintonizar con tu conciencia superior.",
 templo:"EL TEMPLO DEL ESPÍRITU",
+
+titulo:"Alquimia Alimentaria",
+
+subtitulo:"Nutre tu cuerpo para sintonizar con tu conciencia superior.",
 
 hidratacionTitulo:"💧 Hidratación Cuántica",
 hidratacionTexto:"Calcula 35ml por kilo para asegurar la conductividad eléctrica de tus células.",
-
-tabs:{
-vegetariano:"Vegetariano",
-vegano:"Vegano",
-jugos:"Alquimia Líquida"
-},
-
-recetas:{
-
-quinoa:"Quinoa: Estabilidad Terrenal",
-quinoaTxt:"Proteína completa para tus neurotransmisores.",
-
-berenjena:"Berenjena: nutricion celular",
-berenjenaTxt:"Rica en antioxidantes que protegen tus células.",
-
-seitan:"Seitán: Fuerza Vegetal",
-seitanTxt:"Alta proteína vegetal que fortalece tu energía vital.",
-
-tofu:"Tofu: Equilibrio Interior",
-tofuTxt:"Fuente suave de proteína que armoniza el organismo.",
-
-elixir:"Elixir Verde",
-elixirTxt:"Mezcla de hojas verdes que revitaliza tu energía.",
-
-jengibre:"Jengibre: Fuego Digestivo",
-jengibreTxt:"Activa tu metabolismo y fortalece tu sistema digestivo."
-
-},
 
 aviso:"Esta información es educativa y no sustituye consejo médico.",
 btnRegresar:"← Regresar",
@@ -1145,45 +1031,281 @@ resultadoAgua:"Hidratación recomendada:",
 
 errorAgua:"Ingresa un peso válido.",
 
+hidratacionTexto1:`El agua es uno de los componentes esenciales para la vida y representa aproximadamente entre el 50% y 70% del peso corporal humano, dependiendo de factores como la edad, la composición corporal y el estado fisiológico. Cada célula del organismo necesita un adecuado aporte de agua para desarrollar correctamente sus funciones metabólicas, producir energía, transportar nutrientes, eliminar sustancias de desecho y mantener el equilibrio interno del cuerpo.
 
+Una hidratación adecuada permite el correcto funcionamiento del sistema circulatorio, digestivo, renal y nervioso, además de participar en procesos fundamentales como la regulación de la temperatura corporal, la lubricación de articulaciones y la comunicación entre las células. Mantener un equilibrio hídrico saludable contribuye al rendimiento físico, la claridad mental y al bienestar integral del organismo.
+
+Desde una perspectiva de nutrición consciente, el agua no solo representa un elemento vital para la supervivencia, sino también un medio indispensable para conservar la armonía de los procesos biológicos que sostienen nuestra salud.`,
+
+hidratacionTexto2:`Aunque la sed constituye un mecanismo natural mediante el cual el organismo comunica la necesidad de ingerir líquidos, la hidratación adecuada no debe depender únicamente de esta señal, ya que las necesidades pueden variar según cada persona y situación. Mantener un aporte equilibrado de agua durante el día puede favorecer el rendimiento físico, la concentración, la regulación de la temperatura corporal y el funcionamiento adecuado de diferentes procesos fisiológicos.
+
+La cantidad de agua que necesita cada organismo depende de múltiples factores como el peso corporal, el nivel de actividad física, las condiciones ambientales, la alimentación, la edad y determinados estados de salud. Por esta razón, una hidratación consciente debe adaptarse a las características individuales de cada persona, buscando mantener el equilibrio natural del cuerpo.`,
+
+hidratacionTexto3:`Como referencia general, algunos profesionales de la salud utilizan una estimación aproximada de <strong>35 mililitros de agua por kilogramo de peso corporal al día</strong> en adultos sanos como una guía orientativa para calcular las necesidades básicas de hidratación. Sin embargo, esta cantidad puede variar según factores individuales como la actividad física, la temperatura ambiental, la alimentación, la sudoración y el estado general de salud.
+
+Esta fórmula no representa una regla universal ni sustituye la valoración personalizada de un profesional sanitario. Su objetivo es ofrecer una referencia práctica que ayude a desarrollar una mayor conciencia sobre la importancia de mantener un equilibrio adecuado de líquidos en el organismo.`,
+
+hidratacionBeneficios:"¿Por qué es importante mantenerse bien hidratado?",
+beneficiosTexto:`Mantener un adecuado consumo de agua ayuda a conservar el equilibrio de los líquidos corporales y permite que el organismo desarrolle correctamente numerosos procesos fisiológicos esenciales. Entre sus principales beneficios se encuentran el transporte de nutrientes y oxígeno hacia las células, la regulación de la temperatura corporal mediante la sudoración, la lubricación de las articulaciones, el mantenimiento del volumen sanguíneo y la eliminación de sustancias de desecho a través de los riñones y otros mecanismos naturales del cuerpo.
+
+Además, una hidratación adecuada puede favorecer el rendimiento físico, la capacidad de concentración y el funcionamiento normal del sistema nervioso durante las actividades diarias. Mantener un equilibrio hídrico saludable forma parte de los hábitos fundamentales de autocuidado y contribuye al bienestar general del organismo.`,
+
+hidratacionConsejos:`Para mantener una hidratación adecuada es recomendable distribuir el consumo de agua de manera equilibrada a lo largo del día, evitando esperar únicamente a sentir sed para beber líquidos. Durante épocas de altas temperaturas, actividad física intensa o situaciones donde exista mayor pérdida de líquidos, las necesidades de hidratación pueden aumentar.
+
+Además del agua, algunos alimentos como frutas, verduras, sopas, infusiones y preparaciones con alto contenido de agua pueden contribuir al aporte diario de líquidos. Adoptar hábitos de hidratación consciente implica escuchar las señales del organismo y considerar factores individuales como la edad, el nivel de actividad física, el clima, el embarazo, la lactancia o determinadas condiciones de salud.`,
+
+hidratacionAviso:`<strong>Importante:</strong> La calculadora de hidratación incluida en esta página ofrece una estimación orientativa basada en recomendaciones generales para adultos sanos y tiene únicamente fines educativos. Las necesidades de líquidos pueden variar según factores individuales como la edad, el peso corporal, la actividad física, el clima y el estado general de salud.<br><br><span>Si presentas enfermedades renales, cardíacas, hepáticas, alteraciones del equilibrio de líquidos o cualquier condición médica que requiera supervisión profesional, consulta siempre con un médico o especialista de la salud antes de modificar tu consumo diario de agua.</span>`,
+
+hidratacionAvisoImportante:"Importante:",
+
+hidratacionAvisoTexto2:"Si presentas enfermedades renales, cardíacas, hepáticas, alteraciones del equilibrio de líquidos o cualquier condición médica que requiera supervisión profesional, consulta siempre con un médico o especialista de la salud antes de modificar tu consumo diario de agua.",
+seitanTitulo:"🌱 Seitán: Una Excelente Fuente de Proteína Vegetal",
+
+seitanIntro:`El seitán es un alimento elaborado principalmente a partir del gluten de trigo y constituye una de las fuentes de proteína vegetal más utilizadas en la alimentación vegana y vegetariana. Su origen se remonta a la cocina tradicional del este asiático, donde ha sido consumido durante siglos como alternativa a la carne gracias a su textura firme, su versatilidad culinaria y su elevado contenido proteico.
+
+Actualmente, el seitán forma parte de numerosas preparaciones saludables y es apreciado por personas que buscan reducir el consumo de productos de origen animal sin renunciar a un adecuado aporte de proteínas.`,
+
+seitanHistoria:"Origen e Historia",
+
+seitanHistoriaTxt:`El seitán comenzó a utilizarse hace más de mil años por comunidades budistas de China y Japón, donde la alimentación basada en plantas tenía un importante papel cultural y espiritual. A partir del lavado de la harina de trigo se obtenía el gluten, que posteriormente era cocinado con diferentes especias y caldos vegetales para obtener una textura semejante a la carne.
+
+Con el paso del tiempo su consumo se extendió a numerosos países y hoy constituye uno de los alimentos vegetales más populares dentro de las dietas vegetarianas y veganas.`,
+
+seitanNutricion:"Valor Nutricional",
+
+seitanNutricionTxt:`El seitán destaca principalmente por su elevado contenido de proteínas. Dependiendo de la preparación, puede aportar entre 20 y 25 gramos de proteína por cada 100 gramos de producto, superando incluso a muchas carnes en proporción de proteína respecto a su contenido graso.
+
+También posee un bajo contenido de grasas saturadas y, cuando forma parte de una alimentación variada, puede contribuir al mantenimiento de la masa muscular y a la reparación normal de los tejidos corporales.
+
+Aunque contiene pequeñas cantidades de minerales como hierro, fósforo y selenio, se recomienda combinarlo con verduras, legumbres y cereales integrales para obtener una alimentación más completa y equilibrada.`,
+seitanBeneficios:"Beneficios Nutricionales",
+
+seitanBeneficiosTxt:"Consumido dentro de una dieta equilibrada, el seitán puede aportar diversos beneficios nutricionales:",
+
+beneficioSeitan1:"Contribuye al mantenimiento y desarrollo de la masa muscular gracias a su elevado contenido de proteínas.",
+
+beneficioSeitan2:"Ayuda a la reparación y formación de tejidos después de la actividad física.",
+
+beneficioSeitan3:"Su bajo contenido en grasas saturadas lo convierte en una alternativa interesante dentro de una alimentación saludable.",
+
+beneficioSeitan4:"Su textura permite sustituir la carne en numerosas preparaciones culinarias.",
+
+beneficioSeitan5:"Puede combinarse fácilmente con verduras, legumbres y cereales integrales para mejorar el perfil nutricional de las comidas.",
+
+seitanConsumo:"¿Cómo Incorporarlo en la Alimentación?",
+
+seitanConsumoTxt:`El seitán puede prepararse a la plancha, al horno, en guisos, salteados, brochetas, hamburguesas vegetales, tacos, estofados o acompañado de verduras frescas. Gracias a su capacidad para absorber sabores, resulta muy versátil en la cocina y permite elaborar platos equilibrados y ricos en proteínas.
+
+Para obtener una alimentación completa es recomendable acompañarlo con alimentos ricos en fibra, vitaminas y minerales como verduras, frutas, legumbres y cereales integrales.`,
+
+seitanPrecauciones:"Consideraciones Importantes",
+
+seitanPrecaucionesTxt:`El seitán está elaborado a partir del gluten de trigo, por lo que no debe ser consumido por personas con enfermedad celíaca, alergia al trigo o sensibilidad al gluten.
+
+Asimismo, ninguna fuente de proteína debe considerarse suficiente por sí sola. Una alimentación saludable requiere variedad de alimentos que aporten vitaminas, minerales, grasas saludables, fibra y otros nutrientes esenciales para el correcto funcionamiento del organismo.`,
+quinoaTitulo:"🌾 Quinoa: Un Alimento Completo para una Nutrición Equilibrada",
+
+quinoaInfoTxt:`La quinoa (Chenopodium quinoa) es un pseudocereal originario de la región andina de Sudamérica y ha sido cultivada durante miles de años por diversas culturas debido a su elevado valor nutricional. En la actualidad es reconocida por organismos internacionales como un alimento de gran interés para promover una alimentación saludable y equilibrada.
+
+A diferencia de muchos cereales tradicionales, la quinoa contiene los nueve aminoácidos esenciales, por lo que se considera una proteína completa. Esta característica la convierte en una excelente alternativa para personas que siguen patrones de alimentación vegetariana o vegana, así como para quienes desean diversificar sus fuentes de proteína.
+
+Además de su contenido proteico, aporta fibra alimentaria, magnesio, fósforo, hierro, zinc, manganeso, folatos y vitaminas del complejo B. Estos nutrientes participan en procesos relacionados con el metabolismo energético, el funcionamiento normal del sistema nervioso, la formación de glóbulos rojos y el mantenimiento de músculos y huesos.
+
+Su contenido de fibra puede favorecer la sensación de saciedad y contribuir al adecuado funcionamiento del sistema digestivo. Asimismo, la quinoa presenta un índice glucémico moderado cuando se consume como parte de una alimentación equilibrada, lo que puede favorecer un mejor control de la respuesta glucémica en comparación con algunos alimentos refinados.
+
+Desde una perspectiva culinaria, la quinoa es un alimento muy versátil. Puede utilizarse en ensaladas, sopas, guisos, bowls, hamburguesas vegetales o como sustituto del arroz. Su sabor suave permite combinarla fácilmente con verduras, legumbres, frutos secos y semillas.
+
+En AAPMental promovemos la quinoa como parte de una alimentación variada y equilibrada. Ningún alimento por sí solo previene o cura enfermedades, pero incorporarla dentro de un patrón alimentario saludable puede contribuir a cubrir los requerimientos nutricionales diarios y favorecer el bienestar general.`,
+
+referenciaCientifica:"Referencia científica:",
+
+quinoaReferenciaTxt:`La <strong>Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO)</strong> ha destacado la quinoa por su elevado valor nutricional y su potencial para contribuir a la seguridad alimentaria mundial. Asimismo, diversos estudios publicados en revistas científicas como <em>Nutrients</em> respaldan su aporte de proteínas, fibra, vitaminas y minerales dentro de una alimentación saludable.`,
+berenjenaTitulo:"🍆 Berenjena: Un Alimento Rico en Antioxidantes y Fibra",
+
+berenjenaInfoTxt:`La berenjena (Solanum melongena) es una hortaliza ampliamente consumida en diferentes regiones del mundo y forma parte de numerosos patrones de alimentación saludables, como la dieta mediterránea. Destaca por su bajo aporte calórico y por ser una fuente de fibra dietética, vitaminas y compuestos antioxidantes que pueden contribuir al mantenimiento de una buena salud cuando se integra dentro de una alimentación equilibrada,
+
+Uno de los compuestos más estudiados de la berenjena es la <strong>nasunina</strong>, un antioxidante perteneciente al grupo de las antocianinas que se concentra principalmente en su piel de color morado. Los antioxidantes ayudan a proteger las células frente al estrés oxidativo, un proceso natural relacionado con el envejecimiento y con diversas enfermedades crónicas.
+
+La berenjena también aporta fibra alimentaria, la cual favorece el tránsito intestinal, contribuye a una mayor sensación de saciedad y ayuda a mantener un adecuado funcionamiento del sistema digestivo. Además, contiene minerales como el potasio y el manganeso, así como pequeñas cantidades de vitaminas del complejo B, nutrientes que participan en múltiples procesos metabólicos del organismo,
+
+Gracias a su reducido contenido energético, la berenjena suele incluirse en planes de alimentación orientados al control del peso corporal. Cuando se cocina al horno, al vapor o a la parrilla con poca cantidad de aceite, constituye una alternativa nutritiva y versátil que puede incorporarse en ensaladas, guisos, cremas, lasañas vegetales o como acompañamiento de numerosos platos,
+
+Desde el punto de vista culinario, su textura permite combinarla fácilmente con tomate, pimientos, cebolla, ajo, legumbres, cereales integrales y proteínas de origen vegetal o animal. Esta versatilidad facilita aumentar el consumo de verduras dentro de una alimentación variada y equilibrada,
+
+En AAPMental promovemos el consumo de alimentos frescos y mínimamente procesados como parte de un estilo de vida saludable. La berenjena no constituye un tratamiento médico ni previene por sí sola enfermedades, pero puede formar parte de un patrón alimentario rico en vegetales que contribuya al bienestar general y a una adecuada nutrición.`,
+
+berenjenaReferenciaTitulo:"Referencias científicas:",
+
+berenjenaReferenciaTxt:`La evidencia publicada por la <strong>Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO)</strong> y diversos estudios científicos destacan el valor nutricional de las hortalizas dentro de una alimentación saludable. Investigaciones publicadas en revistas como <em>Nutrients</em> y <em>Antioxidants</em> han descrito el contenido de fibra y compuestos fenólicos presentes en la berenjena, especialmente la nasunina y otras antocianinas con actividad antioxidante.`,
+  tofuIntro: `El tofu es un alimento elaborado a partir de la leche de soja coagulada y prensada, reconocido mundialmente por su alto valor nutricional y su versatilidad en la cocina. Durante más de dos mil años ha formado parte de la alimentación tradicional de diversos países asiáticos y, en la actualidad, constituye uno de los alimentos más representativos de las dietas vegetarianas y veganas,
+
+Gracias a su sabor suave y a su capacidad para absorber especias, hierbas aromáticas y diferentes salsas, el tofu puede incorporarse fácilmente en una gran variedad de preparaciones culinarias, desde ensaladas y sopas hasta guisos, salteados y platos principales`,
+
+tofuHistoria:"Origen e Historia",
+
+tofuHistoriaTxt:"Se cree que el tofu fue desarrollado en China hace más de dos mil años y posteriormente se extendió hacia Japón, Corea y otros países del continente asiático. Tradicionalmente ha sido considerado un alimento de gran importancia debido a su disponibilidad, facilidad de preparación y excelente perfil nutricional.\n\nCon el crecimiento del interés por la alimentación basada en plantas, el tofu ha ganado popularidad en todo el mundo como una alternativa saludable a las proteínas de origen animal.",
+
+tofuNutricion:"Valor Nutricional",
+
+tofuNutricionTxt:"El tofu aporta proteínas de alta calidad que contienen todos los aminoácidos esenciales necesarios para el organismo humano. Dependiendo del tipo de elaboración, una porción de 100 gramos puede aportar entre 8 y 15 gramos de proteína, además de minerales como calcio, hierro, magnesio, fósforo y manganeso.\n\nTambién proporciona grasas mayoritariamente insaturadas y contiene una cantidad reducida de grasas saturadas. Cuando el tofu se elabora utilizando sales de calcio como agente coagulante, puede constituir una fuente importante de este mineral, fundamental para el mantenimiento de huesos y dientes.",
+
+tofuBeneficios:"Beneficios Nutricionales",
+
+tofuBeneficiosTxt:"Consumido dentro de una alimentación equilibrada, el tofu puede aportar diversos beneficios nutricionales respaldados por la evidencia científica.",
+
+beneficioTofu1:"Contribuye al mantenimiento y desarrollo de la masa muscular gracias a su aporte de proteínas completas.",
+
+beneficioTofu2:"Aporta calcio cuando ha sido elaborado con sales de calcio, favoreciendo el mantenimiento normal de los huesos.",
+
+beneficioTofu3:"Contiene hierro, mineral necesario para la formación normal de glóbulos rojos y el transporte de oxígeno.",
+
+beneficioTofu4:"Su contenido de grasas insaturadas puede formar parte de una alimentación cardiosaludable cuando sustituye alimentos ricos en grasas saturadas.",
+
+beneficioTofu5:"Es un alimento muy versátil que facilita la preparación de comidas equilibradas y variadas.",
+
+tofuCocina:"¿Cómo consumir el tofu?",
+
+tofuCocinaTxt:"Una de las principales ventajas del tofu es su enorme versatilidad culinaria. Puede cocinarse a la plancha, al horno, al vapor, en salteados, sopas, guisos, curris, hamburguesas vegetales o incluso incorporarse a batidos y postres dependiendo de su textura.\n\nAl marinarlo con hierbas aromáticas, especias, salsa de soja baja en sodio, ajo, limón o jengibre, adquiere sabores intensos que permiten preparar platos muy variados y nutritivos.",
+tofuIsoflavonas:"Isoflavonas y Compuestos Bioactivos",
+
+tofuIsoflavonasTxt:"La soja contiene compuestos naturales conocidos como <strong>isoflavonas</strong>, pertenecientes al grupo de los fitoquímicos. Estas sustancias han sido ampliamente estudiadas por la comunidad científica debido a su posible participación en diferentes procesos fisiológicos. La evidencia disponible indica que el consumo moderado de alimentos tradicionales elaborados con soja, como el tofu, puede formar parte de una alimentación saludable para la mayoría de las personas.\n\nEs importante señalar que los efectos de las isoflavonas continúan siendo objeto de investigación y que ningún alimento, por sí solo, previene o cura enfermedades. Por ello, el tofu debe entenderse como un componente más dentro de un patrón alimentario variado y equilibrado.",
+
+tofuRecomendaciones:"Recomendaciones de Consumo",
+
+tofuRecomendacionesTxt:"El tofu puede incorporarse varias veces por semana dentro de una alimentación basada en plantas. Puede acompañarse con verduras frescas, legumbres, arroz integral, quinoa, avena, frutos secos y semillas para obtener comidas equilibradas y nutricionalmente completas.\n\nCuando se combina con alimentos ricos en vitamina C, como los cítricos, el tomate o el pimentón, se favorece la absorción del hierro presente en los alimentos vegetales.\n\nAsimismo, elegir preparaciones bajas en sodio y evitar frituras excesivas permite conservar mejor las propiedades nutricionales del tofu.",
+
+tofuPrecauciones:"Consideraciones Importantes",
+
+tofuPrecaucionesTxt:"El tofu constituye un alimento seguro para la mayoría de las personas. Sin embargo, quienes presentan alergia a la soja deben evitar completamente su consumo.\n\nLas personas con enfermedades específicas o que sigan tratamientos médicos relacionados con la función tiroidea u otras condiciones particulares deben consultar a su profesional de la salud para recibir recomendaciones individualizadas sobre su alimentación.\n\nComo ocurre con cualquier alimento, el tofu ofrece mayores beneficios cuando forma parte de un estilo de vida saludable que incluya actividad física regular, descanso adecuado y una alimentación rica en frutas, verduras, legumbres y cereales integrales.",
+
+tofuConclusion:"Conclusión",
+
+tofuConclusionTxt:"Gracias a su excelente perfil nutricional, su elevado contenido de proteínas vegetales y su gran versatilidad culinaria, el tofu representa una alternativa saludable para enriquecer la alimentación diaria. Su consumo, acompañado de otros alimentos frescos y mínimamente procesados, puede contribuir a cubrir las necesidades nutricionales del organismo dentro de una dieta equilibrada.\n\nEn AAPMental promovemos una alimentación consciente basada en el conocimiento científico, el equilibrio nutricional y la adopción de hábitos saludables que favorezcan el bienestar físico y mental a largo plazo.",
+tofuReferencias:"Referencias Científicas",
+
+tofuReferencia1:"Food and Agriculture Organization of the United Nations (FAO). <em>Dietary Protein Quality Evaluation in Human Nutrition.</em>",
+
+tofuReferencia2:"Academy of Nutrition and Dietetics. <em>Position of the Academy of Nutrition and Dietetics: Vegetarian Diets.</em>",
+
+tofuReferencia3:"Messina M. <em>Insights Gained from 20 Years of Soy Research.</em> Nutrients.",
+
+tofuReferencia4:"Nutrients Journal. <em>Health Benefits of Soy and Soy Foods.</em>",
+
+tofuReferencia5:"Harvard T.H. Chan School of Public Health. <em>The Nutrition Source: Soy.</em>",
+jengibreTitulo:"🫚 Jengibre: Una Raíz con Tradición y Respaldo Científico",
+
+jengibreIntro:`El jengibre (<em>Zingiber officinale</em>) es una planta originaria del sudeste asiático cuya raíz ha sido utilizada durante miles de años tanto en la gastronomía como en diferentes tradiciones medicinales. En la actualidad, constituye uno de los alimentos naturales más investigados por la comunidad científica debido a la presencia de compuestos bioactivos que pueden contribuir al bienestar cuando forman parte de una alimentación equilibrada.
+
+Su aroma intenso, sabor ligeramente picante y gran versatilidad culinaria permiten incorporarlo fácilmente en infusiones, sopas, batidos, jugos naturales, ensaladas, platos principales y diversas preparaciones saludables`,
+
+jengibreHistoria:"Origen e Historia",
+
+jengibreHistoriaTxt:`El cultivo del jengibre se remonta a más de cinco mil años en Asia. Civilizaciones como la china y la india lo incorporaron tanto en la cocina como en diversas prácticas tradicionales relacionadas con el bienestar.
+
+Posteriormente llegó a Europa gracias al comercio de especias y, con el paso de los siglos, su cultivo se extendió por África, América y Oceanía, convirtiéndose en una de las raíces aromáticas más apreciadas del mundo.
+
+Actualmente el jengibre forma parte de numerosos patrones de alimentación saludable debido a su perfil nutricional y a la presencia de sustancias naturales ampliamente estudiadas por la investigación científica`,
+
+jengibreNutricion:"Valor Nutricional",
+
+jengibreNutricionTxt:`Aunque normalmente se consume en pequeñas cantidades, el jengibre aporta diversos compuestos bioactivos, entre ellos los <strong>gingeroles</strong>, <strong>shogaoles</strong> y <strong>zingerona</strong>, responsables de gran parte de su aroma y sabor característicos.
+
+Además contiene pequeñas cantidades de vitamina C, vitaminas del complejo B, potasio, magnesio, fósforo y manganeso, minerales que participan en numerosos procesos fisiológicos del organismo.
+
+Su principal interés nutricional no reside en el aporte de macronutrientes, sino en la presencia de estos compuestos naturales ampliamente investigados por la ciencia`,
+jengibrePropiedades:"Propiedades Estudiadas",
+
+jengibrePropiedadesTxt:`Diversos estudios científicos han investigado el papel del jengibre dentro de una alimentación saludable. La evidencia disponible sugiere que sus compuestos naturales presentan actividad antioxidante y pueden participar en mecanismos relacionados con la respuesta inflamatoria normal del organismo.
+
+Asimismo, diferentes investigaciones han evaluado el consumo de jengibre en situaciones como las náuseas asociadas al embarazo, el mareo por movimiento y algunos procesos digestivos. Sin embargo, los resultados pueden variar entre las personas y no sustituyen el tratamiento médico cuando este sea necesario.`,
+
+jengibreBeneficios:"Beneficios Nutricionales",
+
+jengibreBeneficiosTxt:`Consumido como parte de una alimentación equilibrada, el jengibre puede aportar diversos beneficios:`,
+
+beneficioJengibre1:"Aporta compuestos antioxidantes naturales ampliamente estudiados por la investigación científica.",
+
+beneficioJengibre2:"Puede contribuir al bienestar digestivo cuando forma parte de una dieta saludable.",
+
+beneficioJengibre3:"Su intenso sabor permite reducir el uso de sal en diversas preparaciones culinarias.",
+
+beneficioJengibre4:"Es un ingrediente muy versátil para infusiones, batidos, sopas y platos principales.",
+
+beneficioJengibre5:"Puede combinarse con frutas, verduras y otras especias dentro de una alimentación variada.",
+jengibreConsumo:"¿Cómo Incorporar el Jengibre en la Alimentación?",
+
+jengibreConsumoTxt:`El jengibre puede consumirse de múltiples formas, lo que facilita su incorporación a una alimentación variada y equilibrada. Puede utilizarse fresco, rallado, en polvo, deshidratado o como ingrediente de infusiones, siempre respetando las cantidades recomendadas dentro de una dieta saludable.
+
+Su sabor intenso combina muy bien con frutas como limón, naranja, piña y manzana, así como con verduras, legumbres, pescados y diferentes preparaciones culinarias. También puede añadirse a batidos, sopas, cremas, arroces, salteados y jugos naturales, aportando un aroma característico y un toque ligeramente picante.
+
+Consumido de forma moderada, el jengibre constituye una alternativa natural para enriquecer la alimentación diaria sin necesidad de recurrir a productos ultraprocesados con exceso de sodio o azúcares añadidos.`,
+
+jengibreAlquimia:"El Jengibre dentro de la Alimentación Consciente",
+
+jengibreAlquimiaTxt:`En AAPMental promovemos una alimentación basada en el equilibrio y en el conocimiento científico. El jengibre representa un ejemplo de cómo un alimento tradicional puede formar parte de hábitos saludables cuando se integra dentro de una dieta rica en frutas, verduras, cereales integrales, legumbres y fuentes de proteínas de calidad.
+
+Aunque históricamente ha sido utilizado en diferentes culturas por sus propiedades tradicionales, actualmente la investigación científica continúa evaluando el alcance de sus posibles beneficios para la salud. Por ello, debe entenderse como un alimento que complementa un estilo de vida saludable y no como un tratamiento médico.`,
+jengibreConsumo:"¿Cómo Incorporar el Jengibre en la Alimentación?",
+
+jengibreConsumoTxt:`El jengibre puede consumirse de múltiples formas, lo que facilita su incorporación a una alimentación variada y equilibrada. Puede utilizarse fresco, rallado, en polvo, deshidratado o como ingrediente de infusiones, siempre respetando las cantidades recomendadas dentro de una dieta saludable.
+
+Su sabor intenso combina muy bien con frutas como limón, naranja, piña y manzana, así como con verduras, legumbres, pescados y diferentes preparaciones culinarias. También puede añadirse a batidos, sopas, cremas, arroces, salteados y jugos naturales, aportando un aroma característico y un toque ligeramente picante.
+
+Consumido de forma moderada, el jengibre constituye una alternativa natural para enriquecer la alimentación diaria sin necesidad de recurrir a productos ultraprocesados con exceso de sodio o azúcares añadidos.`,
+
+jengibreAlquimia:"El Jengibre dentro de la Alimentación Consciente",
+
+jengibreAlquimiaTxt:`En AAPMental promovemos una alimentación basada en el equilibrio y en el conocimiento científico. El jengibre representa un ejemplo de cómo un alimento tradicional puede formar parte de hábitos saludables cuando se integra dentro de una dieta rica en frutas, verduras, cereales integrales, legumbres y fuentes de proteínas de calidad.
+
+Aunque históricamente ha sido utilizado en diferentes culturas por sus propiedades tradicionales, actualmente la investigación científica continúa evaluando el alcance de sus posibles beneficios para la salud. Por ello, debe entenderse como un alimento que complementa un estilo de vida saludable y no como un tratamiento médico.`,
+jengibrePrecauciones:"Consideraciones Importantes",
+
+jengibrePrecaucionesTxt:`El consumo habitual de jengibre en cantidades culinarias suele considerarse seguro para la mayoría de los adultos sanos. Sin embargo, las personas que reciben tratamiento con medicamentos anticoagulantes, presentan trastornos hemorrágicos, cálculos biliares o padecen enfermedades crónicas deben consultar previamente con su médico antes de consumir suplementos concentrados de jengibre.
+
+Durante el embarazo, algunas investigaciones han estudiado el uso del jengibre para aliviar las náuseas. No obstante, cualquier suplementación debe realizarse únicamente bajo la orientación del profesional de la salud responsable del seguimiento del embarazo.
+
+Asimismo, es importante recordar que los suplementos de jengibre pueden contener concentraciones muy superiores a las utilizadas habitualmente en la alimentación y no deben sustituir una dieta equilibrada ni un tratamiento médico indicado por un profesional.`,
+
+jengibreConclusion:"Conclusión",
+
+jengibreConclusionTxt:`El jengibre es una raíz aromática con una larga tradición culinaria y un creciente respaldo científico. Su contenido de compuestos bioactivos, unido a su versatilidad gastronómica, lo convierte en un ingrediente interesante dentro de una alimentación variada y equilibrada.
+
+Incorporarlo regularmente en preparaciones saludables puede enriquecer la dieta, aportar nuevos sabores y favorecer hábitos alimentarios más naturales. Sin embargo, como cualquier alimento, sus beneficios dependen del conjunto de la alimentación y del estilo de vida, no de su consumo aislado.
+
+En AAPMental fomentamos una nutrición consciente basada en evidencia científica, donde cada alimento constituye una pieza más dentro de un estilo de vida saludable orientado al bienestar físico y mental.`,
+
+jengibreReferencias:"Referencias Científicas",
+footerExplorar:"Explorar",
+footerInicio:"Inicio",
+footerGrounding:"Grounding",
+footerPeso:"Control de peso",
+footerIsometricos:"Ejercicios isométricos",
+
+footerInformacion:"Información",
+footerQuienes:"Quiénes Somos",
+footerContacto:"Contacto",
+footerPrivacidad:"Política de Privacidad",
+footerTerminos:"Términos y Condiciones",
+
+footerContactoTitulo:"Contacto",
+footerUbicacion:"Medellín, Antioquia",
+
+footerCopyright:"© 2026 AAPMental. Todos los derechos reservados.",
+footerAutor:"Contenido elaborado por AAPMental – Bienestar Consciente.",
 
 },
 
+
+
 en:{
-titulo:"Food Alchemy",
-subtitulo:"Nourish your body to tune into your higher consciousness.",
 templo:"THE TEMPLE OF THE SPIRIT",
+
+titulo:"Food Alchemy",
+
+subtitulo:"Nourish your body to align with your higher consciousness.",
 
 hidratacionTitulo:"💧 Quantum Hydration",
 hidratacionTexto:"Calculate 35ml per kilo to ensure electrical conductivity of your cells.",
-
-tabs:{
-vegetariano:"Vegetarian",
-vegano:"Vegan",
-jugos:"Liquid Alchemy"
-},
-
-recetas:{
-
-quinoa:"Quinoa: Earth Stability",
-quinoaTxt:"Complete protein for your neurotransmitters.",
-
-berenjena:"Eggplant: Solar Transformation",
-berenjenaTxt:"Rich in antioxidants that protect your cells.",
-
-seitan:"Seitan: Plant Strength",
-seitanTxt:"High plant protein that strengthens your vital energy.",
-
-tofu:"Tofu: Inner Balance",
-tofuTxt:"A gentle protein source that harmonizes the body.",
-
-elixir:"Green Elixir",
-elixirTxt:"A mix of green leaves that revitalizes your energy.",
-
-jengibre:"Ginger: Digestive Fire",
-jengibreTxt:"Activates metabolism and strengthens digestion.",
-
-},
 
 labelAgua:"Body weight (kg)",
 
@@ -1192,48 +1314,281 @@ botonAgua:"Calculate Hydration",
 resultadoAgua:"Recommended hydration:",
 
 errorAgua:"Enter a valid weight.",
+hidratacionTexto1:`Water is one of the essential components of life and represents approximately 50% to 70% of human body weight, depending on factors such as age, body composition, and physiological condition. Every cell in the body requires an adequate supply of water to properly carry out its metabolic functions, produce energy, transport nutrients, eliminate waste products, and maintain the body's internal balance.
 
-aviso:"This information is educational and does not replace medical advice.",
-btnRegresar:"← Back",
+Adequate hydration supports the proper functioning of the circulatory, digestive, renal, and nervous systems. It also plays a fundamental role in regulating body temperature, lubricating joints, and facilitating communication between cells. Maintaining a healthy fluid balance contributes to physical performance, mental clarity, and overall well-being.
+
+From the perspective of conscious nutrition, water is not only essential for survival but also an indispensable element for preserving the harmony of the biological processes that sustain our health.`,
+hidratacionTexto2:`Although thirst is a natural mechanism through which the body signals the need to drink fluids, proper hydration should not depend solely on this sensation, as individual fluid requirements vary from person to person and according to different circumstances. Maintaining a balanced water intake throughout the day can support physical performance, concentration, body temperature regulation, and the proper functioning of many physiological processes.
+
+The amount of water each person needs depends on multiple factors, including body weight, physical activity level, environmental conditions, diet, age, and certain health conditions. For this reason, conscious hydration should be adapted to each individual's characteristics, helping to maintain the body's natural balance.`,
+
+hidratacionTexto3:`As a general reference, some health professionals use an estimated intake of <strong>35 milliliters of water per kilogram of body weight per day</strong> for healthy adults as a practical guideline for calculating basic hydration needs. However, this amount may vary depending on factors such as physical activity, environmental temperature, diet, perspiration, and overall health status,
+
+This formula is not a universal rule and does not replace the personalized assessment of a healthcare professional. Its purpose is to provide a practical reference that helps increase awareness of the importance of maintaining an adequate fluid balance in the body.`,
+hidratacionBeneficios:"Why is it important to stay well hydrated?",
+
+beneficiosTexto:`Maintaining adequate water intake helps preserve the body's fluid balance and allows essential physiological processes to function properly. Among its main benefits are transporting nutrients and oxygen to cells, regulating body temperature through perspiration, lubricating joints, maintaining blood volume, and eliminating waste through the kidneys and other natural body mechanisms.
+
+In addition, proper hydration can support physical performance, concentration, and the normal functioning of the nervous system during daily activities. Maintaining a healthy fluid balance is a fundamental self-care habit that contributes to overall well-being.`,
+
+hidratacionConsejos:`To maintain proper hydration, it is recommended to drink water regularly throughout the day rather than waiting until you feel thirsty. During periods of high temperatures, intense physical activity, or situations involving greater fluid loss, hydration needs may increase,
+
+In addition to water, foods such as fruits, vegetables, soups, herbal infusions, and other water-rich foods can contribute to daily fluid intake. Practicing conscious hydration means paying attention to your body's signals while considering individual factors such as age, physical activity level, climate, pregnancy, breastfeeding, and specific health conditions.`,
+
+hidratacionAviso:`<strong>Important:</strong> The hydration calculator on this page provides an estimated guideline based on general recommendations for healthy adults and is intended for educational purposes only. Fluid requirements vary according to age, body weight, physical activity, climate, and overall health.<br><br><span>If you have kidney, heart, or liver disease, fluid balance disorders, or any medical condition requiring professional supervision, always consult your physician or healthcare professional before changing your daily water intake.</span>`,
+
+hidratacionAvisoImportante:"Important:",
+
+hidratacionAvisoTexto2:"If you have kidney, heart, or liver disease, fluid balance disorders, or any medical condition requiring professional supervision, always consult your physician or healthcare professional before changing your daily water intake.",
+seitanTitulo:"🌱 Seitan: An Excellent Source of Plant Protein",
+
+seitanIntro:`Seitan is a food made primarily from wheat gluten and is one of the most widely used plant-based protein sources in vegetarian and vegan diets. Its origin dates back to the traditional cuisine of East Asia, where it has been consumed for centuries as a meat alternative thanks to its firm texture, culinary versatility, and high protein content,
+
+Today, seitan is included in many healthy recipes and is appreciated by people seeking to reduce their consumption of animal products while maintaining an adequate protein intake.`,
+
+seitanHistoria:"Origin and History",
+
+seitanHistoriaTxt:`Seitan began to be used more than a thousand years ago by Buddhist communities in China and Japan, where plant-based eating played an important cultural and spiritual role. It was produced by washing wheat flour to obtain gluten, which was then cooked with spices and vegetable broths to create a meat-like texture,
+
+Over time, its consumption spread to many countries and today it is one of the most popular plant-based foods in vegetarian and vegan diets.`,
+
+seitanNutricion:"Nutritional Value",
+
+seitanNutricionTxt:`Seitan stands out for its high protein content. Depending on its preparation, it can provide between 20 and 25 grams of protein per 100 grams, exceeding many meats in terms of protein relative to fat content.
+
+It is also low in saturated fat and, when included as part of a balanced diet, can contribute to maintaining muscle mass and supporting normal tissue repair,
+
+Although it contains small amounts of minerals such as iron, phosphorus, and selenium, it is recommended to combine it with vegetables, legumes, and whole grains to achieve a more complete and balanced diet.`,
+seitanBeneficios:"Nutritional Benefits",
+
+seitanBeneficiosTxt:"When consumed as part of a balanced diet, seitan may provide several nutritional benefits:",
+
+beneficioSeitan1:"Supports the maintenance and development of muscle mass thanks to its high protein content.",
+
+beneficioSeitan2:"Helps repair and build body tissues after physical activity.",
+
+beneficioSeitan3:"Its low saturated fat content makes it an attractive option within a healthy diet.",
+
+beneficioSeitan4:"Its texture makes it an excellent substitute for meat in many culinary preparations.",
+
+beneficioSeitan5:"It can easily be combined with vegetables, legumes, and whole grains to improve the nutritional profile of meals.",
+
+seitanConsumo:"How to Include It in Your Diet",
+
+seitanConsumoTxt:`Seitan can be grilled, baked, used in stews, stir-fries, skewers, veggie burgers, tacos, casseroles, or served with fresh vegetables. Thanks to its ability to absorb flavors, it is highly versatile in the kitchen and makes it easy to prepare balanced, protein-rich meals.
+
+For a complete diet, it is recommended to pair seitan with foods rich in fiber, vitamins, and minerals such as vegetables, fruits, legumes, and whole grains.`,
+
+seitanPrecauciones:"Important Considerations",
+
+seitanPrecaucionesTxt:`Seitan is made from wheat gluten and should not be consumed by people with celiac disease, wheat allergy, or gluten sensitivity.
+
+Likewise, no single protein source should be considered sufficient on its own. A healthy diet requires a variety of foods that provide vitamins, minerals, healthy fats, fiber, and other essential nutrients for the proper functioning of the body.`,
+quinoaTitulo:"🌾 Quinoa: A Complete Food for Balanced Nutrition",
+
+quinoaInfoTxt:`Quinoa (Chenopodium quinoa) is a pseudocereal native to the Andean region of South America and has been cultivated for thousands of years due to its exceptional nutritional value. Today, it is recognized by international organizations as an important food for promoting healthy and balanced diets,
+
+Unlike many traditional grains, quinoa contains all nine essential amino acids, making it a complete protein. This makes it an excellent option for people following vegetarian or vegan diets, as well as for those who wish to diversify their protein sources,
+
+In addition to protein, quinoa provides dietary fiber, magnesium, phosphorus, iron, zinc, manganese, folate, and B-complex vitamins. These nutrients contribute to energy metabolism, normal nervous system function, red blood cell formation, and the maintenance of muscles and bones,
+
+Its fiber content may help promote satiety and support healthy digestive function. Quinoa also has a moderate glycemic index when consumed as part of a balanced diet, which may help improve blood glucose control compared with some refined foods,
+
+From a culinary perspective, quinoa is highly versatile. It can be used in salads, soups, stews, bowls, veggie burgers, or as a substitute for rice. Its mild flavor pairs well with vegetables, legumes, nuts, and seeds,
+
+At AAPMental we promote quinoa as part of a varied and balanced diet. No single food prevents or cures disease, but including quinoa in a healthy eating pattern can help meet daily nutritional requirements and support overall well-being.`,
+
+referenciaCientifica:"Scientific reference:",
+
+quinoaReferenciaTxt:`The <strong>Food and Agriculture Organization of the United Nations (FAO)</strong> has highlighted quinoa for its outstanding nutritional value and its potential contribution to global food security. In addition, studies published in scientific journals such as <em>Nutrients</em> support its contribution of protein, fiber, vitamins, and minerals as part of a healthy diet.`,
+berenjenaTitulo:"🍆 Eggplant: A Vegetable Rich in Antioxidants and Fiber",
+
+berenjenaInfoTxt:`Eggplant (Solanum melongena) is a vegetable widely consumed around the world and is part of many healthy dietary patterns, including the Mediterranean diet. It is notable for its low calorie content and for being a source of dietary fiber, vitamins, and antioxidant compounds that may contribute to maintaining good health when included as part of a balanced diet,
+
+One of the most studied compounds in eggplant is <strong>nasunin</strong>, an antioxidant belonging to the anthocyanin family that is mainly concentrated in its purple skin. Antioxidants help protect cells from oxidative stress, a natural process associated with aging and several chronic diseases,
+
+Eggplant also provides dietary fiber, which promotes healthy intestinal function, contributes to satiety, and supports proper digestive health. In addition, it contains minerals such as potassium and manganese, along with small amounts of B-complex vitamins involved in numerous metabolic processes.
+
+Because of its low energy content, eggplant is often included in weight-management eating plans. When baked, steamed, or grilled with little oil, it becomes a nutritious and versatile food suitable for salads, stews, soups, vegetable lasagna, or side dishes,
+
+Its texture allows it to pair well with tomatoes, peppers, onions, garlic, legumes, whole grains, and both plant- and animal-based protein sources. This versatility helps increase vegetable consumption within a balanced diet,
+At AAPMental we encourage the consumption of fresh, minimally processed foods as part of a healthy lifestyle. Eggplant is not a medical treatment and does not prevent disease on its own, but it can be part of a vegetable-rich dietary pattern that supports overall well-being and proper nutrition.`,
+
+berenjenaReferenciaTitulo:"Scientific References:",
+
+berenjenaReferenciaTxt:`Evidence published by the <strong>Food and Agriculture Organization of the United Nations (FAO)</strong> and numerous scientific studies highlights the nutritional value of vegetables within a healthy diet. Research published in journals such as <em>Nutrients</em> and <em>Antioxidants</em> has described the fiber and phenolic compounds found in eggplant, particularly nasunin and other antioxidant anthocyanins.`,
+ 
+tofuHistoriaTxt:"Tofu is believed to have been developed in China more than two thousand years ago and later spread to Japan, Korea, and other Asian countries. Traditionally, it has been regarded as an important food because of its availability, ease of preparation, and excellent nutritional profile.\n\nWith the growing interest in plant-based diets, tofu has become popular worldwide as a healthy alternative to animal protein.",
+ tofuIntro: `Tofu is a food made from coagulated and pressed soy milk, recognized worldwide for its high nutritional value and culinary versatility. For more than two thousand years, it has been part of the traditional diet of many Asian countries and today is one of the most representative foods of vegetarian and vegan diets,
+
+Thanks to its mild flavor and its ability to absorb spices, aromatic herbs, and different sauces, tofu can easily be incorporated into a wide variety of culinary preparations, from salads and soups to stews, stir-fries, and main dishes`,
+
+tofuNutricion:"Nutritional Value",
+
+tofuNutricionTxt:"Tofu provides high-quality protein containing all the essential amino acids required by the human body. Depending on how it is prepared, a 100-gram serving can provide between 8 and 15 grams of protein, along with minerals such as calcium, iron, magnesium, phosphorus, and manganese.\n\nIt also contains mostly unsaturated fats and only small amounts of saturated fat. When tofu is produced using calcium salts as a coagulant, it can become an important source of calcium, a mineral essential for maintaining healthy bones and teeth.",
+
+tofuBeneficios:"Nutritional Benefits",
+
+tofuBeneficiosTxt:"When consumed as part of a balanced diet, tofu may provide several nutritional benefits supported by scientific evidence.",
+
+beneficioTofu1:"Helps maintain and develop muscle mass thanks to its complete protein content.",
+
+beneficioTofu2:"Provides calcium when made with calcium salts, supporting normal bone health.",
+
+beneficioTofu3:"Contains iron, a mineral essential for normal red blood cell formation and oxygen transport.",
+
+beneficioTofu4:"Its unsaturated fat content can contribute to a heart-healthy diet when replacing foods high in saturated fat.",
+
+beneficioTofu5:"It is a highly versatile food that makes it easy to prepare balanced and varied meals.",
+
+tofuCocina:"How to Eat Tofu?",
+
+tofuCocinaTxt:"One of tofu's greatest advantages is its remarkable culinary versatility. It can be grilled, baked, steamed, stir-fried, added to soups, stews, curries, veggie burgers, or even incorporated into smoothies and desserts depending on its texture.\n\nWhen marinated with herbs, spices, low-sodium soy sauce, garlic, lemon, or ginger, it absorbs rich flavors that make it suitable for a wide variety of nutritious dishes.",
+tofuIsoflavonas:"Isoflavones and Bioactive Compounds",
+
+tofuIsoflavonasTxt:"Soy contains natural compounds known as <strong>isoflavones</strong>, which belong to the group of phytochemicals. These substances have been widely studied by the scientific community because of their possible role in various physiological processes. Current evidence indicates that moderate consumption of traditional soy-based foods, such as tofu, can be part of a healthy diet for most people.\n\nIt is important to note that the effects of isoflavones continue to be investigated and that no single food can prevent or cure diseases. Therefore, tofu should be considered one component of a varied and balanced dietary pattern.",
+
+tofuRecomendaciones:"Consumption Recommendations",
+
+tofuRecomendacionesTxt:"Tofu can be included several times a week as part of a plant-based diet. It pairs well with fresh vegetables, legumes, brown rice, quinoa, oats, nuts, and seeds to create balanced and nutritionally complete meals.\n\nWhen combined with foods rich in vitamin C, such as citrus fruits, tomatoes, or bell peppers, the absorption of iron from plant-based foods is enhanced.\n\nChoosing low-sodium preparations and avoiding excessive frying also helps preserve tofu's nutritional properties.",
+
+tofuPrecauciones:"Important Considerations",
+
+tofuPrecaucionesTxt:"Tofu is considered a safe food for most people. However, individuals with soy allergies should avoid consuming it completely.\n\nPeople with specific medical conditions or those undergoing treatment related to thyroid function or other health issues should consult their healthcare professional for personalized dietary advice.\n\nLike any food, tofu provides the greatest benefits when it is part of a healthy lifestyle that includes regular physical activity, adequate rest, and a diet rich in fruits, vegetables, legumes, and whole grains.",
+
+tofuConclusion:"Conclusion",
+
+tofuConclusionTxt:"Thanks to its excellent nutritional profile, high plant-protein content, and outstanding culinary versatility, tofu is a healthy option for enriching the daily diet. When consumed alongside fresh and minimally processed foods, it can help meet the body's nutritional needs as part of a balanced diet.\n\nAt AAPMental, we promote mindful nutrition based on scientific knowledge, nutritional balance, and healthy lifestyle habits that support long-term physical and mental well-being.",
+// English
+
+tofuReferencias:"Scientific References",
+
+tofuReferencia1:"Food and Agriculture Organization of the United Nations (FAO). <em>Dietary Protein Quality Evaluation in Human Nutrition.</em>",
+
+tofuReferencia2:"Academy of Nutrition and Dietetics. <em>Position of the Academy of Nutrition and Dietetics: Vegetarian Diets.</em>",
+
+tofuReferencia3:"Messina M. <em>Insights Gained from 20 Years of Soy Research.</em> Nutrients.",
+
+tofuReferencia4:"Nutrients Journal. <em>Health Benefits of Soy and Soy Foods.</em>",
+
+tofuReferencia5:"Harvard T.H. Chan School of Public Health. <em>The Nutrition Source: Soy.</em>",
+jengibreTitulo:"🫚 Ginger: A Root with Tradition and Scientific Support",
+
+jengibreIntro:`Ginger (<em>Zingiber officinale</em>) is a plant native to Southeast Asia whose root has been used for thousands of years in both gastronomy and traditional medicinal practices. Today, it is one of the natural foods most extensively studied by the scientific community due to the presence of bioactive compounds that may contribute to well-being when included as part of a balanced diet.
+
+Its intense aroma, mildly spicy flavor, and remarkable culinary versatility make it easy to incorporate into herbal infusions, soups, smoothies, natural juices, salads, main dishes, and a wide variety of healthy preparations`,
+
+jengibreHistoria:"Origin and History",
+
+jengibreHistoriaTxt:`Ginger cultivation dates back more than five thousand years in Asia. Civilizations such as the Chinese and Indian incorporated it into both their cuisine and various traditional wellness practices.
+
+It later reached Europe through the spice trade and, over the centuries, spread throughout Africa, the Americas, and Oceania, becoming one of the world's most highly valued aromatic roots.
+
+Today, ginger is part of many healthy eating patterns thanks to its nutritional profile and the presence of natural compounds that have been extensively studied by scientific research`,
+
+jengibreNutricion:"Nutritional Value",
+
+jengibreNutricionTxt:`Although it is generally consumed in small quantities, ginger provides various bioactive compounds, including <strong>gingerols</strong>, <strong>shogaols</strong>, and <strong>zingerone</strong>, which are responsible for much of its characteristic aroma and flavor.
+
+It also contains small amounts of vitamin C, B-complex vitamins, potassium, magnesium, phosphorus, and manganese, minerals involved in numerous physiological processes within the body.
+
+Its primary nutritional value lies not in its macronutrient content, but in the presence of these natural compounds, which have been extensively studied by science`,
+jengibrePropiedades:"Studied Properties",
+
+jengibrePropiedadesTxt:`Numerous scientific studies have investigated the role of ginger as part of a healthy diet. Available evidence suggests that its natural compounds exhibit antioxidant activity and may participate in mechanisms related to the body's normal inflammatory response.
+
+In addition, various studies have evaluated ginger consumption in situations such as pregnancy-related nausea, motion sickness, and certain digestive conditions. However, results may vary from person to person and should not replace medical treatment when necessary.`,
+
+jengibreBeneficios:"Nutritional Benefits",
+
+jengibreBeneficiosTxt:`When consumed as part of a balanced diet, ginger may provide several nutritional benefits:`,
+
+beneficioJengibre1:"Provides natural antioxidant compounds that have been widely studied by scientific research.",
+
+beneficioJengibre2:"May contribute to digestive well-being when included as part of a healthy diet.",
+
+beneficioJengibre3:"Its intense flavor can help reduce the use of salt in various culinary preparations.",
+
+beneficioJengibre4:"It is a highly versatile ingredient for herbal infusions, smoothies, soups, and main dishes.",
+
+beneficioJengibre5:"It can be combined with fruits, vegetables, and other spices as part of a varied diet.",
+jengibreConsumo:"How to Incorporate Ginger into Your Diet?",
+
+jengibreConsumoTxt:`Ginger can be consumed in many different ways, making it easy to include in a varied and balanced diet. It can be used fresh, grated, powdered, dried, or as an ingredient in herbal infusions, always respecting the recommended amounts within a healthy diet.
+
+Its intense flavor pairs well with fruits such as lemon, orange, pineapple, and apple, as well as vegetables, legumes, fish, and a wide variety of culinary preparations. It can also be added to smoothies, soups, creamy dishes, rice, stir-fries, and natural juices, providing a distinctive aroma and a mildly spicy touch.
+
+When consumed in moderation, ginger is a natural way to enrich the daily diet without relying on ultra-processed foods high in sodium or added sugars.`,
+
+jengibreAlquimia:"Ginger in Mindful Nutrition",
+
+jengibreAlquimiaTxt:`At AAPMental, we promote nutrition based on balance and scientific knowledge. Ginger is an example of how a traditional food can become part of healthy habits when included in a diet rich in fruits, vegetables, whole grains, legumes, and high-quality protein sources.
+
+Although it has historically been used in different cultures for its traditional properties, scientific research continues to evaluate the extent of its potential health benefits. Therefore, it should be understood as a food that complements a healthy lifestyle rather than a medical treatment.`,
+jengibreConsumo:"How to Incorporate Ginger into Your Diet?",
+
+jengibreConsumoTxt:`Ginger can be consumed in many different ways, making it easy to include in a varied and balanced diet. It can be used fresh, grated, powdered, dried, or as an ingredient in herbal infusions, always respecting the recommended amounts within a healthy diet.
+
+Its intense flavor pairs well with fruits such as lemon, orange, pineapple, and apple, as well as vegetables, legumes, fish, and a wide variety of culinary preparations. It can also be added to smoothies, soups, creamy dishes, rice, stir-fries, and natural juices, providing a distinctive aroma and a mildly spicy touch.
+
+When consumed in moderation, ginger is a natural way to enrich the daily diet without relying on ultra-processed foods high in sodium or added sugars.`,
+
+jengibreAlquimia:"Ginger in Mindful Nutrition",
+
+jengibreAlquimiaTxt:`At AAPMental, we promote nutrition based on balance and scientific knowledge. Ginger is an example of how a traditional food can become part of healthy habits when included in a diet rich in fruits, vegetables, whole grains, legumes, and high-quality protein sources.
+
+Although it has historically been used in different cultures for its traditional properties, scientific research continues to evaluate the extent of its potential health benefits. Therefore, it should be understood as a food that complements a healthy lifestyle rather than a medical treatment.`,
+jengibrePrecauciones:"Important Considerations",
+
+jengibrePrecaucionesTxt:`Regular consumption of ginger in culinary amounts is generally considered safe for most healthy adults. However, people taking anticoagulant medications, those with bleeding disorders, gallstones, or chronic diseases should consult their physician before using concentrated ginger supplements.
+
+During pregnancy, some studies have investigated the use of ginger to relieve nausea. Nevertheless, any supplementation should only be undertaken under the guidance of the healthcare professional responsible for prenatal care.
+
+It is also important to remember that ginger supplements may contain much higher concentrations than those normally consumed in food and should never replace a balanced diet or medical treatment prescribed by a healthcare professional.`,
+
+jengibreConclusion:"Conclusion",
+
+jengibreConclusionTxt:`Ginger is an aromatic root with a long culinary tradition and growing scientific support. Its content of bioactive compounds, together with its culinary versatility, makes it an interesting ingredient as part of a varied and balanced diet.
+
+Regularly incorporating it into healthy meals can enrich the diet, introduce new flavors, and encourage more natural eating habits. However, like any food, its benefits depend on the overall quality of the diet and lifestyle rather than on consuming it in isolation.
+
+At AAPMental, we promote mindful nutrition based on scientific evidence, where every food is part of a healthy lifestyle that supports long-term physical and mental well-being.`,
+
+jengibreReferencias:"Scientific References",
+footerExplorar:"Explore",
+footerInicio:"Home",
+footerGrounding:"Grounding",
+footerPeso:"Weight Management",
+footerIsometricos:"Isometric Exercises",
+
+footerInformacion:"Information",
+footerQuienes:"About Us",
+footerContacto:"Contact",
+footerPrivacidad:"Privacy Policy",
+footerTerminos:"Terms and Conditions",
+
+footerContactoTitulo:"Contact",
+footerUbicacion:"Medellín, Antioquia",
+
+footerCopyright:"© 2026 AAPMental. All rights reserved.",
+footerAutor:"Content developed by AAPMental – Conscious Well-being.",
+
+
 
 },
 
+
+
 fr:{
+templo:"LE TEMPLE DE L'ESPRIT",
+
 titulo:"Alchimie Alimentaire",
-subtitulo:"Nourrissez votre corps pour vous connecter à votre conscience supérieure.",
-templo:"LE TEMPLE DE L’ESPRIT",
+
+subtitulo:"Nourrissez votre corps pour vous harmoniser avec votre conscience supérieure.",
 
 hidratacionTitulo:"💧 Hydratation Quantique",
 hidratacionTexto:"Calculez 35 ml par kilo pour assurer la conductivité électrique de vos cellules.",
-
-tabs:{
-vegetariano:"Végétarien",
-vegano:"Végétalien",
-jugos:"Alchimie Liquide"
-},
-
-recetas:{
-
-quinoa:"Quinoa : Stabilité Terrestre",
-quinoaTxt:"Protéine complète pour vos neurotransmetteurs.",
-
-berenjena:"Aubergine : Transformation Solaire",
-berenjenaTxt:"Riche en antioxydants qui protègent vos cellules.",
-
-seitan:"Seitan : Force Végétale",
-seitanTxt:"Protéine végétale qui renforce votre énergie vitale.",
-
-tofu:"Tofu : Équilibre Intérieur",
-tofuTxt:"Source douce de protéines qui harmonise le corps.",
-
-elixir:"Élixir Vert",
-elixirTxt:"Mélange de feuilles vertes qui revitalise votre énergie.",
-
-jengibre:"Gingembre : Feu Digestif",
-jengibreTxt:"Active le métabolisme et renforce la digestion."
-
-},
-
 labelAgua:"Poids corporel (kg)",
 
 botonAgua:"Calculer l'hydratation",
@@ -1241,47 +1596,277 @@ botonAgua:"Calculer l'hydratation",
 resultadoAgua:"Hydratation recommandée:",
 
 errorAgua:"Entrez un poids valide.",
+hidratacionTexto1:`L'eau est l'un des composants essentiels de la vie et représente environ 50 % à 70 % du poids corporel humain, selon des facteurs tels que l'âge, la composition corporelle et l'état physiologique. Chaque cellule de l'organisme a besoin d'un apport suffisant en eau pour assurer correctement ses fonctions métaboliques, produire de l'énergie, transporter les nutriments, éliminer les déchets et maintenir l'équilibre interne du corps,
 
-aviso:"Ces informations sont éducatives et ne remplacent pas un avis médical.",
-btnRegresar:"← Retour",
+Une hydratation adéquate permet le bon fonctionnement des systèmes circulatoire, digestif, rénal et nerveux. Elle participe également à des processus essentiels tels que la régulation de la température corporelle, la lubrification des articulations et la communication entre les cellules. Maintenir un bon équilibre hydrique favorise les performances physiques, la clarté mentale et le bien-être général,
+
+Dans une approche de nutrition consciente, l'eau ne constitue pas seulement un élément vital pour la survie, mais aussi un moyen indispensable de préserver l'harmonie des processus biologiques qui soutiennent notre santé.`,
+hidratacionTexto2:`Bien que la soif soit un mécanisme naturel par lequel l'organisme signale le besoin de boire, une bonne hydratation ne doit pas dépendre uniquement de cette sensation, car les besoins en liquides varient selon chaque personne et chaque situation. Maintenir un apport équilibré en eau tout au long de la journée peut favoriser les performances physiques, la concentration, la régulation de la température corporelle et le bon fonctionnement de nombreux processus physiologiques,
+
+La quantité d'eau nécessaire dépend de multiples facteurs tels que le poids corporel, le niveau d'activité physique, les conditions environnementales, l'alimentation, l'âge et certains états de santé. Pour cette raison, une hydratation consciente doit être adaptée aux caractéristiques individuelles afin de préserver l'équilibre naturel de l'organisme.`,
+
+hidratacionTexto3:`À titre de référence générale, certains professionnels de la santé utilisent une estimation d'environ <strong>35 millilitres d'eau par kilogramme de poids corporel et par jour</strong> chez les adultes en bonne santé comme guide indicatif pour calculer les besoins hydriques de base. Toutefois, cette quantité peut varier selon l'activité physique, la température ambiante, l'alimentation, la transpiration et l'état de santé général.
+
+Cette formule ne constitue pas une règle universelle et ne remplace pas l'évaluation personnalisée d'un professionnel de santé. Son objectif est de fournir un repère pratique permettant de mieux comprendre l'importance de maintenir un équilibre hydrique adéquat.`,
+hidratacionBeneficios:"Pourquoi est-il important de rester bien hydraté ?",
+
+beneficiosTexto:`Maintenir une consommation d'eau adéquate aide à préserver l'équilibre des liquides corporels et permet à l'organisme d'assurer correctement de nombreux processus physiologiques essentiels. Parmi ses principaux bienfaits figurent le transport des nutriments et de l'oxygène vers les cellules, la régulation de la température corporelle par la transpiration, la lubrification des articulations, le maintien du volume sanguin et l'élimination des déchets par les reins et d'autres mécanismes naturels,
+
+Une bonne hydratation favorise également les performances physiques, la concentration et le fonctionnement normal du système nerveux. Le maintien d'un bon équilibre hydrique constitue une habitude essentielle de santé et contribue au bien-être général.`,
+
+hidratacionConsejos:`Pour maintenir une bonne hydratation, il est recommandé de répartir la consommation d'eau tout au long de la journée plutôt que d'attendre d'avoir soif. En période de fortes chaleurs, d'activité physique intense ou de pertes hydriques importantes, les besoins en eau peuvent augmenter,
+
+Outre l'eau, certains aliments comme les fruits, les légumes, les soupes, les infusions et les préparations riches en eau contribuent également à l'apport quotidien en liquides. Une hydratation consciente consiste à écouter les besoins de son organisme tout en tenant compte de l'âge, du niveau d'activité physique, du climat, de la grossesse, de l'allaitement et de certaines conditions de santé.`,
+
+hidratacionAviso:`<strong>Important :</strong> Le calculateur d'hydratation présenté sur cette page fournit une estimation basée sur des recommandations générales pour les adultes en bonne santé et est destiné uniquement à des fins éducatives. Les besoins en liquides peuvent varier selon l'âge, le poids corporel, l'activité physique, le climat et l'état de santé général.<br><br><span>En cas de maladie rénale, cardiaque ou hépatique, de troubles de l'équilibre hydrique ou de toute autre affection nécessitant un suivi médical, consultez toujours un professionnel de santé avant de modifier votre consommation quotidienne d'eau.</span>`,
+
+hidratacionAvisoImportante:"Important :",
+
+hidratacionAvisoTexto2:"En cas de maladie rénale, cardiaque ou hépatique, de troubles de l'équilibre hydrique ou de toute autre affection nécessitant un suivi médical, consultez toujours un professionnel de santé avant de modifier votre consommation quotidienne d'eau.",
+seitanTitulo:"🌱 Seitan : Une Excellente Source de Protéines Végétales",
+
+seitanIntro:`Le seitan est un aliment élaboré principalement à partir du gluten de blé et constitue l'une des principales sources de protéines végétales utilisées dans les alimentations végétariennes et végétaliennes. Son origine remonte à la cuisine traditionnelle d'Asie de l'Est, où il est consommé depuis des siècles comme alternative à la viande grâce à sa texture ferme, sa polyvalence culinaire et sa richesse en protéines,
+
+Aujourd'hui, le seitan fait partie de nombreuses préparations saines et est apprécié par les personnes souhaitant réduire leur consommation de produits d'origine animale sans diminuer leur apport en protéines.`,
+
+seitanHistoria:"Origine et Histoire",
+
+seitanHistoriaTxt:`Le seitan est utilisé depuis plus de mille ans par les communautés bouddhistes de Chine et du Japon, où l'alimentation végétale occupait une place importante sur le plan culturel et spirituel. Le gluten était obtenu en lavant la farine de blé, puis cuisiné avec différentes épices et bouillons de légumes afin d'obtenir une texture proche de celle de la viande,
+
+Au fil du temps, sa consommation s'est étendue à de nombreux pays et il est aujourd'hui l'un des aliments végétaux les plus populaires dans les régimes végétariens et végétaliens.`,
+
+seitanNutricion:"Valeur Nutritionnelle",
+
+seitanNutricionTxt:`Le seitan se distingue principalement par sa forte teneur en protéines. Selon sa préparation, il peut fournir entre 20 et 25 grammes de protéines pour 100 grammes de produit, dépassant même de nombreuses viandes en proportion de protéines par rapport à leur teneur en matières grasses.
+
+Il est également pauvre en graisses saturées et, dans le cadre d'une alimentation variée, peut contribuer au maintien de la masse musculaire et à la réparation normale des tissus,
+
+Bien qu'il contienne de petites quantités de minéraux tels que le fer, le phosphore et le sélénium, il est recommandé de l'associer à des légumes, des légumineuses et des céréales complètes afin d'obtenir une alimentation plus complète et équilibrée.`,
+seitanBeneficios:"Bienfaits Nutritionnels",
+
+seitanBeneficiosTxt:"Consommé dans le cadre d'une alimentation équilibrée, le seitan peut apporter plusieurs avantages nutritionnels :",
+
+beneficioSeitan1:"Contribue au maintien et au développement de la masse musculaire grâce à sa teneur élevée en protéines.",
+
+beneficioSeitan2:"Favorise la réparation et la formation des tissus après une activité physique.",
+
+beneficioSeitan3:"Sa faible teneur en graisses saturées en fait une alternative intéressante dans une alimentation saine.",
+
+beneficioSeitan4:"Sa texture permet de remplacer la viande dans de nombreuses préparations culinaires.",
+
+beneficioSeitan5:"Il peut facilement être associé à des légumes, des légumineuses et des céréales complètes afin d'améliorer la qualité nutritionnelle des repas.",
+
+seitanConsumo:"Comment l'Intégrer dans l'Alimentation ?",
+
+seitanConsumoTxt:`Le seitan peut être préparé grillé, au four, en ragoûts, sautés, brochettes, burgers végétaux, tacos ou accompagné de légumes frais. Grâce à sa capacité à absorber les saveurs, il est très polyvalent en cuisine et permet de préparer des plats équilibrés et riches en protéines,
+
+Pour une alimentation complète, il est recommandé de l'associer à des aliments riches en fibres, vitamines et minéraux tels que les légumes, les fruits, les légumineuses et les céréales complètes.`,
+
+seitanPrecauciones:"Considérations Importantes",
+
+seitanPrecaucionesTxt:`Le seitan est fabriqué à partir de gluten de blé et ne doit donc pas être consommé par les personnes atteintes de la maladie cœliaque, allergiques au blé ou sensibles au gluten,
+
+Par ailleurs, aucune source de protéines ne doit être considérée comme suffisante à elle seule. Une alimentation saine nécessite une grande variété d'aliments apportant vitamines, minéraux, bonnes graisses, fibres et autres nutriments essentiels au bon fonctionnement de l'organisme.`,
+quinoaTitulo:"🌾 Quinoa : Un Aliment Complet pour une Nutrition Équilibrée",
+
+quinoaInfoTxt:`Le quinoa (Chenopodium quinoa) est un pseudo-céréale originaire de la région andine d'Amérique du Sud. Il est cultivé depuis des milliers d'années en raison de sa grande valeur nutritionnelle. Aujourd'hui, il est reconnu par des organisations internationales comme un aliment important pour promouvoir une alimentation saine et équilibrée,
+
+Contrairement à de nombreuses céréales traditionnelles, le quinoa contient les neuf acides aminés essentiels, ce qui en fait une protéine complète. Il constitue donc une excellente alternative pour les personnes suivant un régime végétarien ou végétalien, ainsi que pour celles souhaitant diversifier leurs sources de protéines,
+
+Outre ses protéines, il apporte des fibres alimentaires, du magnésium, du phosphore, du fer, du zinc, du manganèse, des folates et des vitamines du groupe B. Ces nutriments participent au métabolisme énergétique, au fonctionnement normal du système nerveux, à la formation des globules rouges ainsi qu'au maintien des muscles et des os,
+
+Sa teneur en fibres peut favoriser la satiété et contribuer au bon fonctionnement du système digestif. Le quinoa possède également un indice glycémique modéré lorsqu'il est consommé dans le cadre d'une alimentation équilibrée,
+
+Très polyvalent en cuisine, il peut être utilisé dans les salades, les soupes, les ragoûts, les bowls, les burgers végétaux ou comme substitut du riz. Sa saveur douce s'associe facilement aux légumes, légumineuses, fruits à coque et graines,
+
+Chez AAPMental, nous encourageons la consommation de quinoa dans le cadre d'une alimentation variée et équilibrée. Aucun aliment ne prévient ou ne guérit à lui seul les maladies, mais son intégration dans une alimentation saine peut contribuer à couvrir les besoins nutritionnels quotidiens et favoriser le bien-être général.`,
+
+referenciaCientifica:"Référence scientifique :",
+
+quinoaReferenciaTxt:`L'<strong>Organisation des Nations Unies pour l'alimentation et l'agriculture (FAO)</strong> a souligné la grande valeur nutritionnelle du quinoa ainsi que son potentiel pour contribuer à la sécurité alimentaire mondiale. De plus, plusieurs études publiées dans des revues scientifiques telles que <em>Nutrients</em> confirment son apport en protéines, fibres, vitamines et minéraux dans le cadre d'une alimentation saine.`,
+berenjenaTitulo:"🍆 Aubergine : Un Aliment Riche en Antioxydants et en Fibres",
+
+berenjenaInfoTxt:`L'aubergine (Solanum melongena) est un légume largement consommé dans le monde et fait partie de nombreux modèles alimentaires sains, notamment du régime méditerranéen. Elle se distingue par sa faible teneur en calories ainsi que par sa richesse en fibres alimentaires, vitamines et composés antioxydants qui peuvent contribuer au maintien d'une bonne santé lorsqu'elle est intégrée à une alimentation équilibrée,
+
+L'un des composés les plus étudiés de l'aubergine est la <strong>nasunine</strong>, un antioxydant appartenant à la famille des anthocyanes, principalement concentré dans sa peau violette. Les antioxydants aident à protéger les cellules contre le stress oxydatif, un processus naturel associé au vieillissement et à plusieurs maladies chroniques,
+
+L'aubergine apporte également des fibres alimentaires qui favorisent le transit intestinal, augmentent la sensation de satiété et contribuent au bon fonctionnement du système digestif. Elle contient aussi du potassium, du manganèse ainsi que de petites quantités de vitamines du groupe B,
+
+Grâce à sa faible valeur énergétique, elle est souvent intégrée aux programmes de contrôle du poids. Cuite au four, à la vapeur ou grillée avec peu d'huile, elle constitue un aliment nutritif et polyvalent pouvant être utilisé dans les salades, ragoûts, soupes, lasagnes végétales ou en accompagnement,
+
+Sa texture lui permet de s'associer facilement aux tomates, poivrons, oignons, ail, légumineuses, céréales complètes ainsi qu'aux protéines végétales ou animales,
+
+Chez AAPMental, nous encourageons la consommation d'aliments frais et peu transformés dans le cadre d'un mode de vie sain. L'aubergine ne constitue pas un traitement médical et ne prévient pas à elle seule les maladies, mais elle peut faire partie d'une alimentation riche en légumes favorable au bien-être général.`,
+
+berenjenaReferenciaTitulo:"Références scientifiques :",
+
+berenjenaReferenciaTxt:`Les données publiées par la <strong>Organisation des Nations Unies pour l'alimentation et l'agriculture (FAO)</strong> ainsi que de nombreuses études scientifiques soulignent la valeur nutritionnelle des légumes dans une alimentation saine. Des recherches publiées dans des revues telles que <em>Nutrients</em> et <em>Antioxidants</em> décrivent la teneur en fibres et en composés phénoliques de l'aubergine, notamment la nasunine et d'autres anthocyanes à activité antioxydante.`,
+
+tofuHistoriaTxt:"On pense que le tofu a été développé en Chine il y a plus de deux mille ans avant de se répandre au Japon, en Corée et dans d'autres pays d'Asie. Traditionnellement, il est considéré comme un aliment important grâce à sa disponibilité, sa facilité de préparation et son excellent profil nutritionnel.\n\nAvec l'intérêt croissant pour l'alimentation végétale, le tofu est devenu populaire dans le monde entier comme une alternative saine aux protéines animales.",
+
+tofuNutricion:"Valeur Nutritionnelle",
+
+tofuNutricionTxt:"Le tofu fournit des protéines de haute qualité contenant tous les acides aminés essentiels nécessaires à l'organisme humain. Selon sa préparation, une portion de 100 grammes peut apporter entre 8 et 15 grammes de protéines, ainsi que du calcium, du fer, du magnésium, du phosphore et du manganèse.\n\nIl contient également principalement des graisses insaturées et peu de graisses saturées. Lorsqu'il est fabriqué avec des sels de calcium comme agent coagulant, il peut constituer une source importante de calcium, essentiel au maintien d'os et de dents solides.",
+
+tofuBeneficios:"Bienfaits Nutritionnels",
+
+tofuBeneficiosTxt:"Consommé dans le cadre d'une alimentation équilibrée, le tofu peut apporter plusieurs bienfaits nutritionnels soutenus par les données scientifiques.",
+
+beneficioTofu1:"Contribue au maintien et au développement de la masse musculaire grâce à ses protéines complètes.",
+
+beneficioTofu2:"Apporte du calcium lorsqu'il est préparé avec des sels de calcium, favorisant la santé normale des os.",
+
+beneficioTofu3:"Contient du fer, un minéral essentiel à la formation normale des globules rouges et au transport de l'oxygène.",
+
+beneficioTofu4:"Sa teneur en graisses insaturées peut contribuer à une alimentation favorable à la santé cardiovasculaire lorsqu'il remplace des aliments riches en graisses saturées.",
+
+beneficioTofu5:"C'est un aliment très polyvalent qui facilite la préparation de repas équilibrés et variés.",
+
+tofuCocina:"Comment Consommer le Tofu ?",
+
+tofuCocinaTxt:"L'un des principaux avantages du tofu est sa grande polyvalence culinaire. Il peut être grillé, cuit au four, à la vapeur, sauté, ajouté aux soupes, ragoûts, currys, burgers végétaux ou même aux smoothies et desserts selon sa texture.\n\nMariné avec des herbes aromatiques, des épices, de la sauce soja pauvre en sodium, de l'ail, du citron ou du gingembre, il absorbe des saveurs intenses permettant de réaliser une grande variété de plats nutritifs.",
+tofuIsoflavonas:"Isoflavones et Composés Bioactifs",
+
+tofuIsoflavonasTxt:"Le soja contient des composés naturels appelés <strong>isoflavones</strong>, appartenant au groupe des composés phytochimiques. Ces substances ont été largement étudiées par la communauté scientifique en raison de leur participation possible à différents processus physiologiques. Les données actuelles indiquent qu'une consommation modérée d'aliments traditionnels à base de soja, comme le tofu, peut faire partie d'une alimentation saine pour la majorité des personnes.\n\nIl est important de souligner que les effets des isoflavones font toujours l'objet de recherches et qu'aucun aliment, à lui seul, ne prévient ni ne guérit les maladies. Le tofu doit donc être considéré comme un élément d'une alimentation variée et équilibrée.",
+
+tofuRecomendaciones:"Recommandations de Consommation",
+
+tofuRecomendacionesTxt:"Le tofu peut être consommé plusieurs fois par semaine dans le cadre d'une alimentation végétale. Il peut être accompagné de légumes frais, de légumineuses, de riz complet, de quinoa, d'avoine, de fruits à coque et de graines afin d'obtenir des repas équilibrés et complets sur le plan nutritionnel.\n\nAssocié à des aliments riches en vitamine C, tels que les agrumes, les tomates ou les poivrons, il favorise l'absorption du fer présent dans les aliments d'origine végétale.\n\nDe plus, privilégier des préparations pauvres en sodium et éviter les fritures excessives permet de mieux préserver les qualités nutritionnelles du tofu.",
+
+tofuPrecauciones:"Considérations Importantes",
+
+tofuPrecaucionesTxt:"Le tofu est un aliment sûr pour la plupart des personnes. Cependant, les personnes allergiques au soja doivent éviter totalement sa consommation.\n\nLes personnes atteintes de certaines maladies ou suivant un traitement lié à la fonction thyroïdienne ou à d'autres affections particulières doivent consulter leur professionnel de santé afin d'obtenir des recommandations personnalisées.\n\nComme tout aliment, le tofu offre davantage de bénéfices lorsqu'il s'intègre dans un mode de vie sain comprenant une activité physique régulière, un repos suffisant et une alimentation riche en fruits, légumes, légumineuses et céréales complètes.",
+
+tofuConclusion:"Conclusion",
+
+tofuConclusionTxt:"Grâce à son excellent profil nutritionnel, à sa richesse en protéines végétales et à sa grande polyvalence culinaire, le tofu constitue une alternative saine pour enrichir l'alimentation quotidienne. Consommé avec des aliments frais et peu transformés, il peut contribuer à couvrir les besoins nutritionnels de l'organisme dans le cadre d'une alimentation équilibrée.\n\nChez AAPMental, nous encourageons une alimentation consciente fondée sur les connaissances scientifiques, l'équilibre nutritionnel et l'adoption d'habitudes de vie favorisant le bien-être physique et mental à long terme.",
+// Français
+
+tofuReferencias:"Références Scientifiques",
+
+tofuReferencia1:"Food and Agriculture Organization of the United Nations (FAO). <em>Dietary Protein Quality Evaluation in Human Nutrition.</em>",
+
+tofuReferencia2:"Academy of Nutrition and Dietetics. <em>Position of the Academy of Nutrition and Dietetics: Vegetarian Diets.</em>",
+
+tofuReferencia3:"Messina M. <em>Insights Gained from 20 Years of Soy Research.</em> Nutrients.",
+
+tofuReferencia4:"Nutrients Journal. <em>Health Benefits of Soy and Soy Foods.</em>",
+
+tofuReferencia5:"Harvard T.H. Chan School of Public Health. <em>The Nutrition Source: Soy.</em>",
+jengibreTitulo:"🫚 Gingembre : Une Racine entre Tradition et Science",
+
+jengibreIntro:`Le gingembre (<em>Zingiber officinale</em>) est une plante originaire d'Asie du Sud-Est dont la racine est utilisée depuis des milliers d'années aussi bien en cuisine que dans différentes traditions médicinales. Aujourd'hui, il fait partie des aliments naturels les plus étudiés par la communauté scientifique en raison de la présence de composés bioactifs pouvant contribuer au bien-être lorsqu'ils s'intègrent dans une alimentation équilibrée.
+
+Son arôme intense, sa saveur légèrement piquante et sa grande polyvalence culinaire permettent de l'intégrer facilement dans les infusions, les soupes, les smoothies, les jus naturels, les salades, les plats principaux et de nombreuses préparations saines`,
+
+jengibreHistoria:"Origine et Histoire",
+
+jengibreHistoriaTxt:`La culture du gingembre remonte à plus de cinq mille ans en Asie. Les civilisations chinoise et indienne l'ont intégré aussi bien dans leur cuisine que dans diverses pratiques traditionnelles liées au bien-être.
+
+Il est ensuite arrivé en Europe grâce au commerce des épices et, au fil des siècles, sa culture s'est étendue à l'Afrique, aux Amériques et à l'Océanie, devenant l'une des racines aromatiques les plus appréciées au monde.
+
+Aujourd'hui, le gingembre fait partie de nombreux modèles d'alimentation saine grâce à son profil nutritionnel et à la présence de substances naturelles largement étudiées par la recherche scientifique`,
+
+jengibreNutricion:"Valeur Nutritionnelle",
+
+jengibreNutricionTxt:`Bien qu'il soit généralement consommé en petites quantités, le gingembre apporte différents composés bioactifs, notamment les <strong>gingérols</strong>, les <strong>shogaols</strong> et la <strong>zingérone</strong>, responsables d'une grande partie de son arôme et de sa saveur caractéristiques.
+
+Il contient également de petites quantités de vitamine C, de vitamines du groupe B, de potassium, de magnésium, de phosphore et de manganèse, des minéraux qui participent à de nombreux processus physiologiques de l'organisme.
+
+Son principal intérêt nutritionnel ne réside pas dans son apport en macronutriments, mais dans la présence de ces composés naturels largement étudiés par la science`,
+jengibrePropiedades:"Propriétés Étudiées",
+
+jengibrePropiedadesTxt:`De nombreuses études scientifiques ont examiné le rôle du gingembre dans le cadre d'une alimentation saine. Les données disponibles suggèrent que ses composés naturels présentent une activité antioxydante et peuvent participer aux mécanismes liés à la réponse inflammatoire normale de l'organisme.
+
+Par ailleurs, différentes recherches ont évalué la consommation de gingembre dans des situations telles que les nausées liées à la grossesse, le mal des transports et certains troubles digestifs. Toutefois, les résultats peuvent varier d'une personne à l'autre et ne remplacent pas un traitement médical lorsque celui-ci est nécessaire.`,
+
+jengibreBeneficios:"Bienfaits Nutritionnels",
+
+jengibreBeneficiosTxt:`Consommé dans le cadre d'une alimentation équilibrée, le gingembre peut offrir plusieurs bienfaits nutritionnels :`,
+
+beneficioJengibre1:"Apporte des composés antioxydants naturels largement étudiés par la recherche scientifique.",
+
+beneficioJengibre2:"Peut contribuer au bien-être digestif lorsqu'il est intégré à une alimentation saine.",
+
+beneficioJengibre3:"Sa saveur intense permet de réduire l'utilisation du sel dans de nombreuses préparations culinaires.",
+
+beneficioJengibre4:"C'est un ingrédient très polyvalent pour les infusions, les smoothies, les soupes et les plats principaux.",
+
+beneficioJengibre5:"Il peut être associé à des fruits, des légumes et d'autres épices dans le cadre d'une alimentation variée.",
+jengibreConsumo:"Comment Intégrer le Gingembre dans l'Alimentation ?",
+
+jengibreConsumoTxt:`Le gingembre peut être consommé de nombreuses façons, ce qui facilite son intégration dans une alimentation variée et équilibrée. Il peut être utilisé frais, râpé, en poudre, déshydraté ou comme ingrédient dans des infusions, tout en respectant les quantités recommandées dans le cadre d'une alimentation saine.
+
+Sa saveur intense s'associe parfaitement avec des fruits tels que le citron, l'orange, l'ananas et la pomme, ainsi qu'avec des légumes, des légumineuses, du poisson et de nombreuses préparations culinaires. Il peut également être ajouté aux smoothies, soupes, veloutés, riz, plats sautés et jus naturels, en apportant un arôme caractéristique et une légère touche épicée.
+
+Consommé avec modération, le gingembre constitue une alternative naturelle pour enrichir l'alimentation quotidienne sans avoir recours à des produits ultra-transformés riches en sodium ou en sucres ajoutés.`,
+
+jengibreAlquimia:"Le Gingembre dans une Alimentation Consciente",
+
+jengibreAlquimiaTxt:`Chez AAPMental, nous encourageons une alimentation fondée sur l'équilibre et les connaissances scientifiques. Le gingembre est un exemple de la manière dont un aliment traditionnel peut faire partie d'habitudes de vie saines lorsqu'il est intégré dans une alimentation riche en fruits, légumes, céréales complètes, légumineuses et sources de protéines de qualité.
+
+Bien qu'il soit utilisé depuis longtemps dans différentes cultures pour ses propriétés traditionnelles, la recherche scientifique continue aujourd'hui d'évaluer l'étendue de ses éventuels bienfaits pour la santé. Il doit donc être considéré comme un aliment qui complète un mode de vie sain et non comme un traitement médical.`,
+jengibreConsumo:"Comment Intégrer le Gingembre dans l'Alimentation ?",
+
+jengibreConsumoTxt:`Le gingembre peut être consommé de nombreuses façons, ce qui facilite son intégration dans une alimentation variée et équilibrée. Il peut être utilisé frais, râpé, en poudre, déshydraté ou comme ingrédient dans des infusions, tout en respectant les quantités recommandées dans le cadre d'une alimentation saine.
+
+Sa saveur intense s'associe parfaitement avec des fruits tels que le citron, l'orange, l'ananas et la pomme, ainsi qu'avec des légumes, des légumineuses, du poisson et de nombreuses préparations culinaires. Il peut également être ajouté aux smoothies, soupes, veloutés, riz, plats sautés et jus naturels, en apportant un arôme caractéristique et une légère touche épicée.
+
+Consommé avec modération, le gingembre constitue une alternative naturelle pour enrichir l'alimentation quotidienne sans avoir recours à des produits ultra-transformés riches en sodium ou en sucres ajoutés.`,
+
+jengibreAlquimia:"Le Gingembre dans une Alimentation Consciente",
+
+jengibreAlquimiaTxt:`Chez AAPMental, nous encourageons une alimentation fondée sur l'équilibre et les connaissances scientifiques. Le gingembre est un exemple de la manière dont un aliment traditionnel peut faire partie d'habitudes de vie saines lorsqu'il est intégré dans une alimentation riche en fruits, légumes, céréales complètes, légumineuses et sources de protéines de qualité.
+
+Bien qu'il soit utilisé depuis longtemps dans différentes cultures pour ses propriétés traditionnelles, la recherche scientifique continue aujourd'hui d'évaluer l'étendue de ses éventuels bienfaits pour la santé. Il doit donc être considéré comme un aliment qui complète un mode de vie sain et non comme un traitement médical.`,
+jengibrePrecauciones:"Considérations Importantes",
+
+jengibrePrecaucionesTxt:`La consommation régulière de gingembre en quantités culinaires est généralement considérée comme sûre pour la plupart des adultes en bonne santé. Toutefois, les personnes suivant un traitement anticoagulant, souffrant de troubles de la coagulation, de calculs biliaires ou de maladies chroniques doivent consulter leur médecin avant de consommer des compléments concentrés de gingembre.
+
+Pendant la grossesse, certaines études ont évalué l'utilisation du gingembre pour soulager les nausées. Néanmoins, toute supplémentation doit être réalisée uniquement sous la supervision du professionnel de santé chargé du suivi de la grossesse.
+
+Il est également important de rappeler que les compléments de gingembre peuvent contenir des concentrations bien supérieures à celles habituellement consommées dans l'alimentation et ne doivent jamais remplacer une alimentation équilibrée ni un traitement médical prescrit par un professionnel.`,
+
+jengibreConclusion:"Conclusion",
+
+jengibreConclusionTxt:`Le gingembre est une racine aromatique dotée d'une longue tradition culinaire et d'un soutien scientifique croissant. Sa richesse en composés bioactifs, associée à sa grande polyvalence culinaire, en fait un ingrédient intéressant dans le cadre d'une alimentation variée et équilibrée.
+
+L'intégrer régulièrement dans des préparations saines peut enrichir l'alimentation, apporter de nouvelles saveurs et favoriser des habitudes alimentaires plus naturelles. Toutefois, comme tout aliment, ses bienfaits dépendent de l'ensemble de l'alimentation et du mode de vie, et non de sa consommation isolée.
+
+Chez AAPMental, nous encourageons une alimentation consciente fondée sur les preuves scientifiques, où chaque aliment constitue un élément d'un mode de vie sain orienté vers le bien-être physique et mental.`,
+
+jengibreReferencias:"Références Scientifiques",
+footerExplorar:"Explorer",
+footerInicio:"Accueil",
+footerGrounding:"Grounding",
+footerPeso:"Contrôle du poids",
+footerIsometricos:"Exercices isométriques",
+
+footerInformacion:"Informations",
+footerQuienes:"À propos de nous",
+footerContacto:"Contact",
+footerPrivacidad:"Politique de confidentialité",
+footerTerminos:"Conditions générales",
+
+footerContactoTitulo:"Contact",
+footerUbicacion:"Medellín, Antioquia",
+
+footerCopyright:"© 2026 AAPMental. Tous droits réservés.",
+footerAutor:"Contenu élaboré par AAPMental – Bien-être conscient.",
+
+
 
 },
 
 it:{
-titulo:"Alchimia Alimentare",
-subtitulo:"Nutri il tuo corpo per connetterti con la tua coscienza superiore.",
 templo:"IL TEMPIO DELLO SPIRITO",
+
+titulo:"Alchimia Alimentare",
+
+subtitulo:"Nutri il tuo corpo per entrare in sintonia con la tua coscienza superiore.",
 
 hidratacionTitulo:"💧 Idratazione Quantica",
 hidratacionTexto:"Calcola 35 ml per chilo per garantire la conducibilità elettrica delle cellule.",
-
-tabs:{
-vegetariano:"Vegetariano",
-vegano:"Vegano",
-jugos:"Alchimia Liquida"
-},
-
-recetas:{
-
-quinoa:"Quinoa: Stabilità Terrestre",
-quinoaTxt:"Proteina completa per i tuoi neurotrasmettitori.",
-
-berenjena:"Melanzana: Trasformazione Solare",
-berenjenaTxt:"Ricca di antiossidanti che proteggono le cellule.",
-
-seitan:"Seitan: Forza Vegetale",
-seitanTxt:"Proteina vegetale che rafforza l'energia vitale.",
-
-tofu:"Tofu: Equilibrio Interiore",
-tofuTxt:"Fonte delicata di proteine che armonizza il corpo.",
-
-elixir:"Elisir Verde",
-elixirTxt:"Miscela di foglie verdi che rivitalizza l'energia.",
-
-jengibre:"Zenzero: Fuoco Digestivo",
-jengibreTxt:"Attiva il metabolismo e rafforza la digestione."
-
-},
 labelAgua:"Peso corporeo (kg)",
 
 botonAgua:"Calcola idratazione",
@@ -1289,9 +1874,264 @@ botonAgua:"Calcola idratazione",
 resultadoAgua:"Idratazione raccomandata:",
 
 errorAgua:"Inserisci un peso valido.",
+hidratacionTexto1:`L'acqua è uno dei componenti essenziali della vita e rappresenta circa il 50%–70% del peso corporeo umano, a seconda di fattori quali l'età, la composizione corporea e lo stato fisiologico. Ogni cellula dell'organismo necessita di un adeguato apporto di acqua per svolgere correttamente le proprie funzioni metaboliche, produrre energia, trasportare nutrienti, eliminare le sostanze di scarto e mantenere l'equilibrio interno del corpo,
 
-aviso:"Queste informazioni sono educative e non sostituiscono il parere medico.",
-btnRegresar:"← Indietro",
+Un'adeguata idratazione favorisce il corretto funzionamento dei sistemi circolatorio, digestivo, renale e nervoso. Inoltre partecipa a processi fondamentali come la regolazione della temperatura corporea, la lubrificazione delle articolazioni e la comunicazione tra le cellule. Mantenere un corretto equilibrio idrico contribuisce alle prestazioni fisiche, alla lucidità mentale e al benessere generale dell'organismo,
+
+Dal punto di vista della nutrizione consapevole, l'acqua non rappresenta soltanto un elemento vitale per la sopravvivenza, ma anche un mezzo indispensabile per preservare l'armonia dei processi biologici che sostengono la nostra salute.`,
+hidratacionTexto2:`Sebbene la sete sia un meccanismo naturale con cui l'organismo segnala la necessità di assumere liquidi, una corretta idratazione non dovrebbe dipendere esclusivamente da questo segnale, poiché il fabbisogno di acqua varia da persona a persona e in base alle diverse situazioni. Mantenere un apporto equilibrato di acqua durante la giornata può favorire le prestazioni fisiche, la concentrazione, la regolazione della temperatura corporea e il corretto svolgimento di numerosi processi fisiologici,
+
+La quantità di acqua necessaria dipende da molteplici fattori, tra cui il peso corporeo, il livello di attività fisica, le condizioni ambientali, l'alimentazione, l'età e particolari condizioni di salute. Per questo motivo, un'idratazione consapevole dovrebbe essere adattata alle caratteristiche individuali, contribuendo a mantenere il naturale equilibrio dell'organismo.`,
+
+hidratacionTexto3:`Come riferimento generale, alcuni professionisti della salute utilizzano una stima di circa <strong>35 millilitri di acqua per chilogrammo di peso corporeo al giorno</strong> negli adulti sani come guida orientativa per calcolare il fabbisogno idrico di base. Tuttavia, questa quantità può variare in base a fattori individuali quali l'attività fisica, la temperatura ambientale, l'alimentazione, la sudorazione e lo stato generale di salute,
+Questa formula non rappresenta una regola universale e non sostituisce la valutazione personalizzata di un professionista sanitario. Il suo obiettivo è offrire un riferimento pratico per aumentare la consapevolezza dell'importanza di mantenere un adeguato equilibrio dei liquidi nell'organismo.`,
+hidratacionBeneficios:"Perché è importante mantenere una buona idratazione?",
+
+beneficiosTexto:`Mantenere un adeguato consumo di acqua aiuta a preservare l'equilibrio dei liquidi corporei e consente all'organismo di svolgere correttamente numerosi processi fisiologici essenziali. Tra i principali benefici vi sono il trasporto di nutrienti e ossigeno alle cellule, la regolazione della temperatura corporea attraverso la sudorazione, la lubrificazione delle articolazioni, il mantenimento del volume sanguigno e l'eliminazione delle sostanze di scarto tramite i reni e altri meccanismi naturali,
+
+Un'adeguata idratazione favorisce inoltre le prestazioni fisiche, la concentrazione e il normale funzionamento del sistema nervoso durante le attività quotidiane. Mantenere un corretto equilibrio idrico rappresenta un'importante abitudine di benessere e contribuisce alla salute generale dell'organismo.`,
+
+hidratacionConsejos:`Per mantenere una corretta idratazione è consigliabile distribuire il consumo di acqua nell'arco della giornata, evitando di aspettare la comparsa della sete prima di bere. Durante periodi di alte temperature, intensa attività fisica o situazioni che comportano una maggiore perdita di liquidi, il fabbisogno idrico può aumentare,
+
+Oltre all'acqua, alimenti come frutta, verdura, zuppe, tisane e altre preparazioni ricche di acqua contribuiscono all'apporto quotidiano di liquidi. Un'idratazione consapevole significa ascoltare i segnali del proprio organismo considerando fattori quali età, attività fisica, clima, gravidanza, allattamento e particolari condizioni di salute.`,
+
+hidratacionAviso:`<strong>Importante:</strong> Il calcolatore di idratazione presente in questa pagina fornisce una stima orientativa basata su raccomandazioni generali per adulti sani ed è destinato esclusivamente a scopi educativi. Il fabbisogno di liquidi può variare in base all'età, al peso corporeo, all'attività fisica, al clima e allo stato generale di salute.<br><br><span>In presenza di malattie renali, cardiache, epatiche, alterazioni dell'equilibrio dei liquidi o qualsiasi altra condizione medica che richieda supervisione professionale, consultare sempre il proprio medico o uno specialista prima di modificare il consumo quotidiano di acqua.</span>`,
+
+hidratacionAvisoImportante:"Importante:",
+
+hidratacionAvisoTexto2:"In presenza di malattie renali, cardiache, epatiche, alterazioni dell'equilibrio dei liquidi o qualsiasi altra condizione medica che richieda supervisione professionale, consultare sempre il proprio medico o uno specialista prima di modificare il consumo quotidiano di acqua.",
+
+seitanIntro:`Il seitan è un alimento ottenuto principalmente dal glutine di frumento ed è una delle fonti di proteine vegetali più utilizzate nelle diete vegetariane e vegane. Le sue origini risalgono alla tradizione culinaria dell'Asia orientale, dove viene consumato da secoli come alternativa alla carne grazie alla sua consistenza compatta, alla sua versatilità in cucina e all'elevato contenuto proteico,
+
+Oggi il seitan è presente in numerose preparazioni salutari ed è apprezzato da chi desidera ridurre il consumo di prodotti di origine animale mantenendo un adeguato apporto di proteine.`,
+
+seitanHistoria:"Origine e Storia",
+
+seitanHistoriaTxt:`Il seitan iniziò a essere utilizzato oltre mille anni fa dalle comunità buddiste della Cina e del Giappone, dove l'alimentazione vegetale rivestiva un importante ruolo culturale e spirituale. Lavando la farina di frumento si otteneva il glutine, che veniva poi cotto con spezie e brodi vegetali fino a ottenere una consistenza simile alla carne,
+
+Con il passare del tempo il suo consumo si è diffuso in numerosi Paesi e oggi rappresenta uno degli alimenti vegetali più popolari nelle diete vegetariane e vegane.`,
+
+seitanNutricion:"Valore Nutrizionale",
+
+seitanNutricionTxt:`Il seitan si distingue soprattutto per il suo elevato contenuto di proteine. A seconda della preparazione può fornire tra 20 e 25 grammi di proteine per ogni 100 grammi di prodotto, superando molte carni in rapporto tra proteine e grassi,
+
+È inoltre povero di grassi saturi e, se inserito in un'alimentazione equilibrata, può contribuire al mantenimento della massa muscolare e alla normale riparazione dei tessuti,
+
+Pur contenendo piccole quantità di minerali come ferro, fosforo e selenio, è consigliabile abbinarlo a verdure, legumi e cereali integrali per ottenere un'alimentazione più completa ed equilibrata.`,
+seitanBeneficios:"Benefici Nutrizionali",
+
+seitanBeneficiosTxt:"Consumato nell'ambito di un'alimentazione equilibrata, il seitan può offrire diversi benefici nutrizionali:",
+
+beneficioSeitan1:"Contribuisce al mantenimento e allo sviluppo della massa muscolare grazie all'elevato contenuto di proteine.",
+
+beneficioSeitan2:"Aiuta la riparazione e la formazione dei tessuti dopo l'attività fisica.",
+
+beneficioSeitan3:"Il suo basso contenuto di grassi saturi lo rende un'interessante alternativa all'interno di una dieta sana.",
+
+beneficioSeitan4:"La sua consistenza permette di sostituire la carne in numerose preparazioni culinarie.",
+
+beneficioSeitan5:"Può essere facilmente abbinato a verdure, legumi e cereali integrali per migliorare il profilo nutrizionale dei pasti.",
+
+seitanConsumo:"Come Integrarlo nell'Alimentazione?",
+
+seitanConsumoTxt:`Il seitan può essere preparato alla griglia, al forno, in stufati, saltato in padella, in spiedini, hamburger vegetali, tacos oppure accompagnato da verdure fresche. Grazie alla sua capacità di assorbire i sapori, è estremamente versatile in cucina e consente di preparare piatti equilibrati e ricchi di proteine,
+
+Per un'alimentazione completa è consigliabile abbinarlo ad alimenti ricchi di fibre, vitamine e minerali come verdure, frutta, legumi e cereali integrali.`,
+
+seitanPrecauciones:"Considerazioni Importanti",
+
+seitanPrecaucionesTxt:`Il seitan è prodotto a partire dal glutine di frumento e pertanto non deve essere consumato da persone affette da celiachia, allergia al frumento o sensibilità al glutine,
+
+Inoltre, nessuna fonte proteica dovrebbe essere considerata sufficiente da sola. Una dieta sana richiede una varietà di alimenti che apportino vitamine, minerali, grassi sani, fibre e altri nutrienti essenziali per il corretto funzionamento dell'organismo.`,
+quinoaTitulo:"🌾 Quinoa: Un Alimento Completo per un'Alimentazione Equilibrata",
+
+quinoaInfoTxt:`La quinoa (Chenopodium quinoa) è uno pseudocereale originario della regione andina del Sud America ed è coltivata da migliaia di anni grazie al suo elevato valore nutrizionale. Oggi è riconosciuta da organizzazioni internazionali come un alimento di grande interesse per promuovere un'alimentazione sana ed equilibrata,
+
+A differenza di molti cereali tradizionali, la quinoa contiene tutti e nove gli aminoacidi essenziali, motivo per cui è considerata una proteina completa. Questa caratteristica la rende un'ottima alternativa per chi segue una dieta vegetariana o vegana e per chi desidera diversificare le proprie fonti proteiche,
+
+Oltre alle proteine, apporta fibre alimentari, magnesio, fosforo, ferro, zinco, manganese, folati e vitamine del gruppo B. Questi nutrienti partecipano al metabolismo energetico, al normale funzionamento del sistema nervoso, alla formazione dei globuli rossi e al mantenimento di muscoli e ossa,
+
+Il suo contenuto di fibre può favorire il senso di sazietà e contribuire al corretto funzionamento dell'apparato digerente. Inoltre, la quinoa presenta un indice glicemico moderato quando viene consumata nell'ambito di una dieta equilibrata,
+
+Dal punto di vista culinario è un alimento estremamente versatile. Può essere utilizzata in insalate, zuppe, stufati, bowl, hamburger vegetali oppure come sostituto del riso. Il suo sapore delicato si abbina facilmente a verdure, legumi, frutta secca e semi,
+
+In AAPMental promuoviamo la quinoa come parte di un'alimentazione varia ed equilibrata. Nessun alimento, da solo, previene o cura le malattie, ma inserirla in un modello alimentare sano può contribuire a soddisfare il fabbisogno nutrizionale quotidiano e favorire il benessere generale.`,
+
+referenciaCientifica:"Riferimento scientifico:",
+
+quinoaReferenciaTxt:`La <strong>Food and Agriculture Organization delle Nazioni Unite (FAO)</strong> ha evidenziato l'elevato valore nutrizionale della quinoa e il suo potenziale contributo alla sicurezza alimentare mondiale. Inoltre, numerosi studi pubblicati su riviste scientifiche come <em>Nutrients</em> confermano il suo apporto di proteine, fibre, vitamine e minerali nell'ambito di una dieta sana.`,
+berenjenaTitulo:"🍆 Melanzana: Un Alimento Ricco di Antiossidanti e Fibre",
+
+berenjenaInfoTxt:`La melanzana (Solanum melongena) è un ortaggio ampiamente consumato in tutto il mondo e fa parte di numerosi modelli alimentari salutari, come la dieta mediterranea. Si distingue per il basso contenuto calorico e per essere una fonte di fibre alimentari, vitamine e composti antiossidanti che possono contribuire al mantenimento della salute quando inserita in una dieta equilibrata,
+
+Uno dei composti più studiati della melanzana è la <strong>nasunina</strong>, un antiossidante appartenente al gruppo delle antocianine, concentrato principalmente nella buccia viola. Gli antiossidanti aiutano a proteggere le cellule dallo stress ossidativo, un processo naturale associato all'invecchiamento e a numerose malattie croniche,
+
+La melanzana apporta inoltre fibre alimentari che favoriscono il transito intestinale, aumentano il senso di sazietà e contribuiscono al corretto funzionamento dell'apparato digerente. Contiene anche potassio, manganese e piccole quantità di vitamine del gruppo B,
+
+Grazie al suo ridotto contenuto energetico, la melanzana viene spesso inserita nei programmi alimentari orientati al controllo del peso. Cotta al forno, al vapore o alla griglia con poco olio rappresenta un alimento nutriente e versatile da utilizzare in insalate, zuppe, stufati, lasagne vegetali o come contorno,
+
+La sua consistenza permette di abbinarla facilmente a pomodori, peperoni, cipolle, aglio, legumi, cereali integrali e fonti proteiche sia vegetali che animali,
+
+In AAPMental promuoviamo il consumo di alimenti freschi e minimamente lavorati come parte di uno stile di vita sano. La melanzana non costituisce un trattamento medico né previene da sola le malattie, ma può far parte di un modello alimentare ricco di verdure che favorisca il benessere generale e una corretta nutrizione.`,
+
+berenjenaReferenciaTitulo:"Riferimenti scientifici:",
+
+berenjenaReferenciaTxt:`Le evidenze pubblicate dalla <strong>Food and Agriculture Organization delle Nazioni Unite (FAO)</strong> e da numerosi studi scientifici evidenziano il valore nutrizionale degli ortaggi nell'ambito di una dieta sana. Ricerche pubblicate su riviste come <em>Nutrients</em> e <em>Antioxidants</em> hanno descritto il contenuto di fibre e composti fenolici della melanzana, in particolare la nasunina e altre antocianine ad attività antiossidante.`,
+ 
+
+tofuHistoriaTxt:"Si ritiene che il tofu sia stato sviluppato in Cina oltre duemila anni fa e successivamente si sia diffuso in Giappone, Corea e in altri paesi asiatici. Tradizionalmente è stato considerato un alimento importante grazie alla sua disponibilità, facilità di preparazione ed eccellente profilo nutrizionale.\n\nCon la crescente diffusione dell'alimentazione a base vegetale, il tofu è diventato popolare in tutto il mondo come valida alternativa alle proteine di origine animale.",
+
+tofuNutricion:"Valore Nutrizionale",
+
+tofuNutricionTxt:"Il tofu fornisce proteine di alta qualità contenenti tutti gli amminoacidi essenziali necessari all'organismo umano. A seconda della preparazione, una porzione di 100 grammi può apportare tra 8 e 15 grammi di proteine, oltre a minerali come calcio, ferro, magnesio, fosforo e manganese.\n\nContiene inoltre prevalentemente grassi insaturi e una ridotta quantità di grassi saturi. Quando viene prodotto con sali di calcio come coagulante, può rappresentare un'importante fonte di calcio, fondamentale per il mantenimento di ossa e denti sani.",
+
+tofuBeneficios:"Benefici Nutrizionali",
+
+tofuBeneficiosTxt:"Consumato nell'ambito di un'alimentazione equilibrata, il tofu può offrire diversi benefici nutrizionali supportati dalle evidenze scientifiche.",
+
+beneficioTofu1:"Contribuisce al mantenimento e allo sviluppo della massa muscolare grazie al suo contenuto di proteine complete.",
+
+beneficioTofu2:"Apporta calcio quando è preparato con sali di calcio, favorendo il normale mantenimento delle ossa.",
+
+beneficioTofu3:"Contiene ferro, minerale essenziale per la normale formazione dei globuli rossi e il trasporto dell'ossigeno.",
+
+beneficioTofu4:"Il suo contenuto di grassi insaturi può contribuire a una dieta salutare per il cuore quando sostituisce alimenti ricchi di grassi saturi.",
+
+beneficioTofu5:"È un alimento estremamente versatile che facilita la preparazione di pasti equilibrati e vari.",
+
+tofuCocina:"Come Consumare il Tofu?",
+
+tofuCocinaTxt:"Uno dei principali vantaggi del tofu è la sua straordinaria versatilità in cucina. Può essere cotto alla piastra, al forno, al vapore, saltato in padella, aggiunto a zuppe, stufati, curry, hamburger vegetali o persino a frullati e dessert a seconda della consistenza.\n\nMarinandolo con erbe aromatiche, spezie, salsa di soia a basso contenuto di sodio, aglio, limone o zenzero, assorbe sapori intensi che permettono di preparare piatti molto vari e nutrienti.",
+
+
+tofuIsoflavonas:"Isoflavoni e Composti Bioattivi",
+
+tofuIsoflavonasTxt:"La soia contiene composti naturali chiamati <strong>isoflavoni</strong>, appartenenti al gruppo dei fitocomposti. Queste sostanze sono state ampiamente studiate dalla comunità scientifica per il loro possibile ruolo in diversi processi fisiologici. Le prove disponibili indicano che il consumo moderato di alimenti tradizionali a base di soia, come il tofu, può far parte di un'alimentazione sana per la maggior parte delle persone.\n\nÈ importante sottolineare che gli effetti degli isoflavoni sono ancora oggetto di ricerca e che nessun alimento, da solo, previene o cura le malattie. Per questo motivo il tofu deve essere considerato come un elemento di un'alimentazione varia ed equilibrata.",
+
+tofuRecomendaciones:"Raccomandazioni di Consumo",
+
+tofuRecomendacionesTxt:"Il tofu può essere consumato più volte alla settimana nell'ambito di un'alimentazione a base vegetale. Può essere accompagnato da verdure fresche, legumi, riso integrale, quinoa, avena, frutta secca e semi per ottenere pasti equilibrati e completi dal punto di vista nutrizionale.\n\nQuando viene abbinato ad alimenti ricchi di vitamina C, come agrumi, pomodori o peperoni, favorisce l'assorbimento del ferro presente negli alimenti vegetali.\n\nInoltre, scegliere preparazioni a basso contenuto di sodio ed evitare fritture eccessive aiuta a preservare meglio le proprietà nutrizionali del tofu.",
+
+tofuPrecauciones:"Considerazioni Importanti",
+
+tofuPrecaucionesTxt:"Il tofu è considerato un alimento sicuro per la maggior parte delle persone. Tuttavia, chi è allergico alla soia deve evitarne completamente il consumo.\n\nLe persone affette da particolari patologie o che seguono trattamenti medici relativi alla funzione tiroidea o ad altre condizioni specifiche dovrebbero consultare il proprio professionista sanitario per ricevere indicazioni personalizzate.\n\nCome qualsiasi altro alimento, il tofu offre i maggiori benefici quando fa parte di uno stile di vita sano che includa attività fisica regolare, riposo adeguato e un'alimentazione ricca di frutta, verdura, legumi e cereali integrali.",
+
+tofuConclusion:"Conclusione",
+
+tofuConclusionTxt:"Grazie al suo eccellente profilo nutrizionale, all'elevato contenuto di proteine vegetali e alla sua straordinaria versatilità culinaria, il tofu rappresenta un'alternativa salutare per arricchire l'alimentazione quotidiana. Consumato insieme ad alimenti freschi e poco trasformati, può contribuire a soddisfare il fabbisogno nutrizionale dell'organismo nell'ambito di una dieta equilibrata.\n\nIn AAPMental promuoviamo un'alimentazione consapevole basata sulle evidenze scientifiche, sull'equilibrio nutrizionale e sull'adozione di sane abitudini di vita che favoriscano il benessere fisico e mentale nel lungo periodo.",
+// Italiano
+
+tofuReferencias:"Riferimenti Scientifici",
+
+tofuReferencia1:"Food and Agriculture Organization of the United Nations (FAO). <em>Dietary Protein Quality Evaluation in Human Nutrition.</em>",
+
+tofuReferencia2:"Academy of Nutrition and Dietetics. <em>Position of the Academy of Nutrition and Dietetics: Vegetarian Diets.</em>",
+
+tofuReferencia3:"Messina M. <em>Insights Gained from 20 Years of Soy Research.</em> Nutrients.",
+
+tofuReferencia4:"Nutrients Journal. <em>Health Benefits of Soy and Soy Foods.</em>",
+
+tofuReferencia5:"Harvard T.H. Chan School of Public Health. <em>The Nutrition Source: Soy.</em>",
+jengibreTitulo:"🫚 Zenzero: Una Radice tra Tradizione e Ricerca Scientifica",
+
+jengibreIntro:`Lo zenzero (<em>Zingiber officinale</em>) è una pianta originaria del Sud-est asiatico la cui radice viene utilizzata da migliaia di anni sia in cucina sia nelle diverse tradizioni medicinali. Oggi rappresenta uno degli alimenti naturali più studiati dalla comunità scientifica grazie alla presenza di composti bioattivi che possono contribuire al benessere quando fanno parte di un'alimentazione equilibrata.
+
+Il suo aroma intenso, il sapore leggermente piccante e la sua grande versatilità culinaria permettono di utilizzarlo facilmente in infusi, zuppe, frullati, succhi naturali, insalate, piatti principali e numerose preparazioni salutari`,
+
+jengibreHistoria:"Origine e Storia",
+
+jengibreHistoriaTxt:`La coltivazione dello zenzero risale a oltre cinquemila anni fa in Asia. Civiltà come quella cinese e quella indiana lo utilizzavano sia in cucina sia in diverse pratiche tradizionali legate al benessere.
+
+Successivamente arrivò in Europa grazie al commercio delle spezie e, con il passare dei secoli, la sua coltivazione si diffuse in Africa, nelle Americhe e in Oceania, diventando una delle radici aromatiche più apprezzate al mondo.
+
+Oggi lo zenzero fa parte di numerosi modelli di alimentazione sana grazie al suo profilo nutrizionale e alla presenza di sostanze naturali ampiamente studiate dalla ricerca scientifica`,
+
+jengibreNutricion:"Valore Nutrizionale",
+
+jengibreNutricionTxt:`Sebbene venga normalmente consumato in piccole quantità, lo zenzero apporta diversi composti bioattivi, tra cui i <strong>gingeroli</strong>, gli <strong>shogaoli</strong> e lo <strong>zingerone</strong>, responsabili di gran parte del suo aroma e del suo sapore caratteristici.
+
+Contiene inoltre piccole quantità di vitamina C, vitamine del gruppo B, potassio, magnesio, fosforo e manganese, minerali che partecipano a numerosi processi fisiologici dell'organismo.
+
+Il suo principale interesse nutrizionale non risiede nell'apporto di macronutrienti, ma nella presenza di questi composti naturali ampiamente studiati dalla scienza`,
+jengibrePropiedades:"Proprietà Studiate",
+
+jengibrePropiedadesTxt:`Numerosi studi scientifici hanno analizzato il ruolo dello zenzero nell'ambito di un'alimentazione sana. Le prove disponibili suggeriscono che i suoi composti naturali presentano attività antiossidante e possono partecipare ai meccanismi legati alla normale risposta infiammatoria dell'organismo.
+
+Inoltre, diverse ricerche hanno valutato il consumo di zenzero in situazioni come la nausea associata alla gravidanza, il mal d'auto e alcuni disturbi digestivi. Tuttavia, i risultati possono variare da persona a persona e non sostituiscono il trattamento medico quando necessario.`,
+
+jengibreBeneficios:"Benefici Nutrizionali",
+
+jengibreBeneficiosTxt:`Consumato nell'ambito di una dieta equilibrata, lo zenzero può offrire diversi benefici nutrizionali:`,
+
+beneficioJengibre1:"Apporta composti antiossidanti naturali ampiamente studiati dalla ricerca scientifica.",
+
+beneficioJengibre2:"Può contribuire al benessere digestivo quando fa parte di un'alimentazione sana.",
+
+beneficioJengibre3:"Il suo sapore intenso consente di ridurre l'uso del sale in numerose preparazioni culinarie.",
+
+beneficioJengibre4:"È un ingrediente molto versatile per infusi, frullati, zuppe e piatti principali.",
+
+beneficioJengibre5:"Può essere abbinato a frutta, verdura e altre spezie nell'ambito di un'alimentazione varia.",
+jengibreConsumo:"Come Integrare lo Zenzero nell'Alimentazione?",
+
+jengibreConsumoTxt:`Lo zenzero può essere consumato in molti modi, facilitandone l'inserimento in un'alimentazione varia ed equilibrata. Può essere utilizzato fresco, grattugiato, in polvere, essiccato oppure come ingrediente di tisane e infusi, sempre nel rispetto delle quantità raccomandate nell'ambito di una dieta sana.
+
+Il suo sapore intenso si abbina perfettamente a frutti come limone, arancia, ananas e mela, oltre che a verdure, legumi, pesce e numerose preparazioni culinarie. Può inoltre essere aggiunto a frullati, zuppe, creme, riso, piatti saltati e succhi naturali, conferendo un aroma caratteristico e una leggera nota piccante.
+
+Consumato con moderazione, lo zenzero rappresenta un'alternativa naturale per arricchire l'alimentazione quotidiana senza ricorrere a prodotti ultra-processati ricchi di sodio o zuccheri aggiunti.`,
+
+jengibreAlquimia:"Lo Zenzero nell'Alimentazione Consapevole",
+
+jengibreAlquimiaTxt:`In AAPMental promuoviamo un'alimentazione basata sull'equilibrio e sulle conoscenze scientifiche. Lo zenzero rappresenta un esempio di come un alimento tradizionale possa far parte di sane abitudini alimentari quando viene inserito in una dieta ricca di frutta, verdura, cereali integrali, legumi e fonti proteiche di qualità.
+
+Sebbene sia stato utilizzato storicamente in diverse culture per le sue proprietà tradizionali, la ricerca scientifica continua ancora oggi a valutare l'entità dei suoi potenziali benefici per la salute. Per questo motivo, deve essere considerato un alimento che integra uno stile di vita sano e non un trattamento medico.`,
+jengibreConsumo:"Come Integrare lo Zenzero nell'Alimentazione?",
+
+jengibreConsumoTxt:`Lo zenzero può essere consumato in molti modi, facilitandone l'inserimento in un'alimentazione varia ed equilibrata. Può essere utilizzato fresco, grattugiato, in polvere, essiccato oppure come ingrediente di tisane e infusi, sempre nel rispetto delle quantità raccomandate nell'ambito di una dieta sana.
+
+Il suo sapore intenso si abbina perfettamente a frutti come limone, arancia, ananas e mela, oltre che a verdure, legumi, pesce e numerose preparazioni culinarie. Può inoltre essere aggiunto a frullati, zuppe, creme, riso, piatti saltati e succhi naturali, conferendo un aroma caratteristico e una leggera nota piccante.
+
+Consumato con moderazione, lo zenzero rappresenta un'alternativa naturale per arricchire l'alimentazione quotidiana senza ricorrere a prodotti ultra-processati ricchi di sodio o zuccheri aggiunti.`,
+
+jengibreAlquimia:"Lo Zenzero nell'Alimentazione Consapevole",
+
+jengibreAlquimiaTxt:`In AAPMental promuoviamo un'alimentazione basata sull'equilibrio e sulle conoscenze scientifiche. Lo zenzero rappresenta un esempio di come un alimento tradizionale possa far parte di sane abitudini alimentari quando viene inserito in una dieta ricca di frutta, verdura, cereali integrali, legumi e fonti proteiche di qualità.
+
+Sebbene sia stato utilizzato storicamente in diverse culture per le sue proprietà tradizionali, la ricerca scientifica continua ancora oggi a valutare l'entità dei suoi potenziali benefici per la salute. Per questo motivo, deve essere considerato un alimento che integra uno stile di vita sano e non un trattamento medico.`,
+jengibrePrecauciones:"Considerazioni Importanti",
+
+jengibrePrecaucionesTxt:`Il consumo regolare di zenzero nelle normali quantità alimentari è generalmente considerato sicuro per la maggior parte degli adulti sani. Tuttavia, le persone che assumono farmaci anticoagulanti, soffrono di disturbi della coagulazione, calcoli biliari o malattie croniche dovrebbero consultare il proprio medico prima di assumere integratori concentrati di zenzero.
+
+Durante la gravidanza, alcuni studi hanno valutato l'uso dello zenzero per alleviare la nausea. Tuttavia, qualsiasi integrazione dovrebbe essere effettuata esclusivamente sotto la supervisione del professionista sanitario responsabile del monitoraggio della gravidanza.
+
+È inoltre importante ricordare che gli integratori di zenzero possono contenere concentrazioni molto superiori a quelle normalmente assunte con l'alimentazione e non devono sostituire una dieta equilibrata né un trattamento medico prescritto da un professionista.`,
+
+jengibreConclusion:"Conclusione",
+
+jengibreConclusionTxt:`Lo zenzero è una radice aromatica con una lunga tradizione culinaria e un crescente sostegno scientifico. Il suo contenuto di composti bioattivi, unito alla sua versatilità gastronomica, lo rende un ingrediente interessante nell'ambito di un'alimentazione varia ed equilibrata.
+
+Integrarlo regolarmente in preparazioni salutari può arricchire la dieta, offrire nuovi sapori e favorire abitudini alimentari più naturali. Tuttavia, come qualsiasi alimento, i suoi benefici dipendono dall'insieme dell'alimentazione e dello stile di vita, e non dal suo consumo isolato.
+
+In AAPMental promuoviamo un'alimentazione consapevole basata sulle evidenze scientifiche, nella quale ogni alimento rappresenta un elemento di uno stile di vita sano orientato al benessere fisico e mentale.`,
+
+jengibreReferencias:"Riferimenti Scientifici",
+footerExplorar:"Esplora",
+footerInicio:"Home",
+footerGrounding:"Grounding",
+footerPeso:"Controllo del peso",
+footerIsometricos:"Esercizi isometrici",
+
+footerInformacion:"Informazioni",
+footerQuienes:"Chi Siamo",
+footerContacto:"Contatto",
+footerPrivacidad:"Informativa sulla Privacy",
+footerTerminos:"Termini e Condizioni",
+
+footerContactoTitulo:"Contatto",
+footerUbicacion:"Medellín, Antioquia",
+
+footerCopyright:"© 2026 AAPMental. Tutti i diritti riservati.",
+footerAutor:"Contenuto realizzato da AAPMental – Benessere Consapevole.",
 
 }
 
@@ -1322,46 +2162,26 @@ document.querySelectorAll("[data-i18n]").forEach(el=>{
 
 const clave = el.dataset.i18n;
 
-if(textosGlobales[idioma][clave]){
-el.textContent = textosGlobales[idioma][clave];
+if(textosGlobales[idioma] && textosGlobales[idioma][clave]){
+
+el.innerHTML = textosGlobales[idioma][clave];
+
+}
+
+else if(i18n && i18n[clave]){
+
+el.innerHTML = i18n[clave];
+
 }
 
 });
 
+
 /* HIDRATACIÓN Y TITULOS */
 
-set("templo", i18n.templo);
-set("titulo", i18n.titulo);
-set("subtitulo", i18n.subtitulo);
-set("hidratacionTitulo", i18n.hidratacionTitulo);
-set("hidratacionTexto", i18n.hidratacionTexto);
-set("label-agua", i18n.labelAgua);
-set("btn-agua", i18n.botonAgua);
-/* TABS */
 
-set("tab-vegetariano", i18n.tabs.vegetariano);
-set("tab-vegano", i18n.tabs.vegano);
-set("tab-jugos", i18n.tabs.jugos);
 
-/* RECETAS */
 
-set("quinoa", i18n.recetas.quinoa);
-set("quinoa-txt", i18n.recetas.quinoaTxt);
-
-set("berenjena", i18n.recetas.berenjena);
-set("berenjena-txt", i18n.recetas.berenjenaTxt);
-
-set("seitan", i18n.recetas.seitan);
-set("seitan-txt", i18n.recetas.seitanTxt);
-
-set("tofu", i18n.recetas.tofu);
-set("tofu-txt", i18n.recetas.tofuTxt);
-
-set("elixir", i18n.recetas.elixir);
-set("elixir-txt", i18n.recetas.elixirTxt);
-
-set("jengibre", i18n.recetas.jengibre);
-set("jengibre-txt", i18n.recetas.jengibreTxt);
 
 /* FOOTER */
 
@@ -1453,42 +2273,46 @@ vasosContainer.innerHTML = "";
 
 <footer class="footer">
     <div class="footer-container">
-        
+
         <!-- Columna 1: Explorar -->
         <div class="footer-col">
-            <h3>Explorar</h3>
+            <h3 data-i18n="footerExplorar">Explorar</h3>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="grounding.html">Grounding</a></li>
-                <li><a href="masa-corporal.html">Control de peso</a></li>
-                <li><a href="isometricos.html">Ejercicios isométricos</a></li>
+                <li><a href="index.html" data-i18n="footerInicio">Inicio</a></li>
+                <li><a href="grounding.html" data-i18n="footerGrounding">Grounding</a></li>
+                <li><a href="masa-corporal.html" data-i18n="footerPeso">Control de peso</a></li>
+                <li><a href="isometricos.html" data-i18n="footerIsometricos">Ejercicios isométricos</a></li>
             </ul>
-        </div> <!-- Cierre Columna 1 -->
+        </div>
 
         <!-- Columna 2: Información -->
         <div class="footer-col">
-            <h3>Información</h3>
+            <h3 data-i18n="footerInformacion">Información</h3>
             <ul>
-                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="privacidad.html">Política de Privacidad</a></li>
-                <li><a href="terminos.html">Términos y Condiciones</a></li>
+                <li><a href="quienes-somos.html" data-i18n="footerQuienes">Quiénes Somos</a></li>
+                <li><a href="contacto.html" data-i18n="footerContacto">Contacto</a></li>
+                <li><a href="privacidad.html" data-i18n="footerPrivacidad">Política de Privacidad</a></li>
+                <li><a href="terminos.html" data-i18n="footerTerminos">Términos y Condiciones</a></li>
             </ul>
-        </div> <!-- Cierre Columna 2 -->
+        </div>
 
         <!-- Columna 3: Contacto -->
         <div class="footer-col">
-            <h3>Contacto</h3>
+            <h3 data-i18n="footerContactoTitulo">Contacto</h3>
             <p><i class="fas fa-envelope"></i> info@aapmental.com</p>
-            <p><i class="fas fa-map-marker-alt"></i> Medellín, Antioquia</p>
-        </div> <!-- Cierre Columna 3 -->
+            <p><i class="fas fa-map-marker-alt"></i> <span data-i18n="footerUbicacion">Medellín, Antioquia</span></p>
+        </div>
 
-    </div> <!-- ¡Cierre correcto del footer-container! -->
+    </div>
 
-    <!-- Barra Inferior de Copyright -->
     <div class="footer-bottom">
-        <p>&copy; 2026 AAPMental. Todos los derechos reservados.</p>
-        <small>Contenido elaborado por AAPMental – Bienestar Consciente.</small>
+        <p data-i18n="footerCopyright">
+            &copy; 2026 AAPMental. Todos los derechos reservados.
+        </p>
+
+        <small data-i18n="footerAutor">
+            Contenido elaborado por AAPMental – Bienestar Consciente.
+        </small>
     </div>
 </footer>
         
