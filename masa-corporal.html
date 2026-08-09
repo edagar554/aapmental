@@ -35,267 +35,231 @@ bienestar integral">
 
 <body class="lectura-body">
 
-  
-
-    <nav class="navbar">
-
-        <div class="nav-container">
+  <nav class="navbar">
+    <div class="nav-container">
+      
+      <ul class="nav-links">
         
-        <ul class="nav-links">
-        
+        <!-- Inicio -->
         <li>
-        <a href="index.html" data-i18n="menu_inicio">Inicio</a>
+          <a href="index.html" data-i18n="menu_inicio">Inicio</a>
         </li>
         
+        <!-- Menú Terapias -->
         <li class="dropdown">
-        
-        <a href="#" data-i18n="menu_terapias">Terapias ▾</a>
-        
-        <ul class="dropdown-content">
-        
-        <li><a href="grounding.html" data-i18n="menu_grounding">Grounding</a></li>
-        
-        <li><a href="solfeguio.html" data-i18n="menu_solfeggio">Solfeggio</a></li>
-        
-        <li><a href="equilibrio-cuantico.html" data-i18n="menu_equilibrio">Equilibrio</a></li>
-        
-        <li><a href="isometricos.html" data-i18n="menu_isometricos">Isométricos</a></li>
-        
-        <li><a href="nutricion.html" data-i18n="menu_nutricion">Nutrición</a></li>
-        
-        </ul>
-        
+          <a href="#" data-i18n="menu_terapias">Terapias ▾</a>
+          <ul class="dropdown-content">
+            <li>
+              <a href="grounding.html" data-i18n="menu_grounding">Grounding</a>
+            </li>
+            <li>
+              <a href="solfeguio.html" data-i18n="menu_solfeggio">Solfeggio</a>
+            </li>
+            <li>
+              <a href="equilibrio-cuantico.html" data-i18n="menu_equilibrio">Equilibrio Cuántico</a>
+            </li>
+            <li>
+              <a href="mecanica-cuantica.html" data-i18n="menu_mecanica">Mecánica Cuántica</a>
+            </li>
+          </ul>
         </li>
         
+        <!-- Menú Mente & Ciencia -->
         <li class="dropdown">
-        
-        <a href="#" data-i18n="menu_mente">Mente & Ciencia ▾</a>
-        
-        <ul class="dropdown-content">
-        
-        <li><a href="reprogramacion-neuronal.html" data-i18n="menu_reprogramacion">Reprogramación</a></li>
-        
-        <li><a href="mecanica-cuantica.html" data-i18n="menu_mecanica">Mecánica Cuántica</a></li>
-        
-        <li><a href="lectura-kybalion.html" data-i18n="menu_kybalion">Kybalión</a></li>
-        
-        </ul>
-        
+          <a href="#" data-i18n="menu_mente_ciencia">Mente & Ciencia ▾</a>
+          <ul class="dropdown-content">
+            <li>
+              <a href="reprogramacion-neuronal.html" data-i18n="menu_reprogramacion">Reprogramación</a>
+            </li>
+            <li>
+              <a href="mecanica-cuantica.html" data-i18n="menu_mecanica">Mecánica Cuántica</a>
+            </li>
+            <li>
+              <a href="kybalion.html" data-i18n="menu_kybalion">El Kybalión</a>
+            </li>
+          </ul>
         </li>
         
+        <!-- Enlace individual de Equilibrio -->
         <li>
-        <a href="masa-corporal.html" data-i18n="menu_salud">Salud</a>
+          <a href="equilibrio-cuantico.html" data-i18n="menu_equilibrio">Equilibrio</a>
         </li>
         
-        </ul>
-        
-        <div class="nav-lang">
-        
-        <select id="idioma-nav" onchange="cambiarIdioma(this.value)">
-        
-        <option value="es">ESPAÑOL</option>
-        
-        <option value="en">ENGLISH</option>
-        
-        <option value="fr">FRANÇAIS</option>
-        
-        <option value="it">ITALIANO</option>
-        
+      </ul>
+
+      <!-- Selector de Idioma -->
+      <div class="nav-lang">
+        <select id="idioma-nav">
+          <option value="es">ESPAÑOL</option>
+          <option value="en">ENGLISH</option>
+          <option value="fr">FRANÇAIS</option>
+          <option value="it">ITALIANO</option>
         </select>
-        
-        </div>
-        
-        </div>
-        
-        </nav>
+      </div>
+
+    </div>
+  </nav>
+
+
             
         
 
         
 
-    <main class="container">
-        <header style="text-align: center; margin-top: 50px;">
-            <span class="oro-texto" id="titulo">TEMPLO DEL CUERPO</span>
+   <main class="container">
+<header class="imc-header">
 
-<h1 id="subtitulo" style="font-size: 2.5rem;">
-Índice de Masa Corporal
-</h1>
+   <span data-idn18="idn0">
+       TEMPLO DEL CUERPO
+   </span>
 
-<p id="descripcion" style="color: #888;">
-  Monitorea tu estado físico para una vida plena.
-  </p>
-        </header>
+   <h1 data-idn18="idn1">
+       Índice de Masa Corporal
+   </h1>
 
-        <section class="imc-card">
+   <p data-idn18="idn2">
+       Monitorea tu estado físico para una vida plena.
+   </p>
 
-          <div class="input-group">
-            <label for="peso" id="label-peso">Peso actual (kg):</label>
-            <input type="number" id="peso" placeholder="Ej: 75" step="0.1">
-          </div>
+</header>
+
+       <section class="imc-card">
+
+    <div class="input-group">
+        <!-- Seguimos: idn3, idn4 -->
+        <label for="peso" data-idn18="idn3">Peso actual (kg):</label>
+        <input type="number" id="peso" placeholder="Ej: 75" step="0.1">
+    </div>
+
+    <div class="input-group">
+        <label for="estatura" data-idn18="idn4">Estatura (metros):</label>
+        <input type="number" id="estatura" placeholder="Ej: 1.75" step="0.01">
+    </div>
+
+    <button id="btn-calcular" onclick="calcularIMC()" class="btn" data-idn18="idn5">
+        CALCULAR ESTADO FÍSICO
+    </button>
+
+    <div id="resultado-caja">
+        <span id="imc-numero" class="valor-imc">0.0</span>
+        <p id="imc-mensaje" class="mensaje-imc"></p>
+    </div>
+
+    <div class="medidor-imc">
+        <div class="barra-imc">
+            <div class="zona bajo"></div>
+            <div class="zona normal"></div>
+            <div class="zona sobrepeso"></div>
+            <div class="zona obesidad"></div>
+        </div>
+
+        <div class="labels-imc">
+            <!-- Seguimos: idn6, idn7, idn8, idn9 -->
+            <span id="imc-bajo" data-idn18="idn6">Bajo</span>
+            <span id="imc-normal" data-idn18="idn7">Normal</span>
+            <span id="imc-sobrepeso" data-idn18="idn8">Sobrepeso</span>
+            <span id="imc-obesidad" data-idn18="idn9">Obesidad</span>
+        </div>
+    </div>
+
+</section>
         
-          <div class="input-group">
-            <label for="estatura" id="label-estatura">Estatura (metros):</label>
-            <input type="number" id="estatura" placeholder="Ej: 1.75" step="0.01">
-          </div>
+      
+<section class="promo-jugos">
+    <div class="imc-card promo-card">
+
+        <p data-i18n="promoTexto" class="promo-titulo"></p>
+
         
-          <button id="btn-calcular" onclick="calcularIMC()" class="btn">
-            CALCULAR ESTADO FÍSICO
-          </button>
-        
-          <div id="resultado-caja">
-            <span id="imc-numero" class="valor-imc">0.0</span>
-            <p id="imc-mensaje" class="mensaje-imc"></p>
-          </div>
-        
-        
-          <!-- MEDIDOR HORIZONTAL -->
-        
-          <div class="medidor-imc">
-        
-            <div class="barra-imc">
-        
-              <div class="zona bajo"></div>
-              <div class="zona normal"></div>
-              <div class="zona sobrepeso"></div>
-              <div class="zona obesidad"></div>
-        
-              
-        
-            </div>
-        
-            <div class="labels-imc">
-              <span id="imc-bajo" data-i18n="bajo">Bajo</span>
-              <span id="imc-normal" data-i18n="normal">Normal</span>
-              <span id="imc-sobrepeso" data-i18n="sobrepeso">Sobrepeso</span>
-              <span id="imc-obesidad" data-i18n="obesidad">Obesidad</span>
-            </div>
-        
-          </div>
-        
-        
-        
-        
-        </section>
 
-        <section style="text-align: center; margin-top: 30px;">
-          <div class="imc-card" style="background-color: #e8f5e9; border: 1px dashed #2e7d32;">
-              <p style="color: #2e7d32; font-weight: bold;">🍏 ¿Quieres equilibrar tu peso de forma natural?</p>
-              <button onclick="window.location.href='jugos-verdes.html'" class="btn" style="background-color: #2e7d32; margin-top: 10px;">
-                  VER RECETAS DE JUGOS VERDES
-              </button>
-          </div>
-      </section>
+        <button
+    onclick="window.location.href='jugos-verdes.html'"
+    class="btn promo-boton"
+    data-i18n="promoBoton">
+</button>
 
-      <section class="estudio-masa-colombia" style="margin-top:50px; padding:20px; background:#0e0e0e; border:1px solid rgba(212,175,55,0.25); border-radius:12px;">
+    </div>
+</section>
 
-    <h2 class="oro-texto" style="text-align:center; margin-bottom:15px;">Estudio Clínico: Perímetro de Cintura y Grasa Visceral</h2>
+
+
+   <h2 data-idn18="idn10" class="oro-texto estudio-titulo">
+    Estudio Clínico: Perímetro de Cintura y Grasa Visceral
+</h2>
+
+<h3 data-idn18="idn11" class="oro-texto estudio-subtitulo">
+    Contexto del Estudio en Población Colombiana
+</h3>
+
+<p data-idn18="idn12" class="estudio-texto">
+    El síndrome metabólico se define como un conjunto de factores de riesgo cardiovascular donde el componente principal es la obesidad abdominal. 
+    Para identificar esta condición de manera precisa en Colombia, se han realizado investigaciones clínicas que establecen medidas de referencia locales. 
+    El uso del perímetro de cintura es fundamental, ya que esta medida varía significativamente dependiendo de la etnia y el sexo de la población estudiada.
+</p>
     <br>
 
-    <h3 class="oro-texto">Contexto del Estudio en Población Colombiana</h3>
+  <h3 data-idn18="idn13" class="oro-texto estudio-subtitulo">
+    Metodología de Medición y Criterios Técnicos
+</h3>
+
+<p data-idn18="idn14" class="estudio-texto">
+    Para definir la obesidad abdominal, el estudio estableció un porcentaje mayor al 9% de grasa visceral mediante el uso de tecnología tetrapolar.
+    El dispositivo utilizado, un impedanciómetro de alta precisión, realiza una medición de cuerpo entero desde los brazos hasta los pies.
+    Esta tecnología permite diferenciar claramente entre la grasa subcutánea y la grasa visceral, que es la más peligrosa para la salud cardiovascular.
+</p>
+
+<br>
+
+<p data-idn18="idn15" class="estudio-texto">
+    La circunferencia de la cintura se midió siguiendo estrictamente los criterios internacionales de la Federación Internacional de Diabetes (IDF).
+    La medida se toma en el punto medio entre la última costilla y la cresta iliaca, siempre al final de una espiración normal del paciente.
+    Este procedimiento estandarizado es vital para evitar errores de medición que podrían llevar a un diagnóstico equivocado de síndrome metabólico.
+</p>
     <br>
 
-    <p style="color:#ccc; text-align:justify;">
-        El síndrome metabólico se define como un conjunto de factores de riesgo cardiovascular donde el componente principal es la obesidad abdominal. 
-        Para identificar esta condición de manera precisa en Colombia, se han realizado investigaciones clínicas que establecen medidas de referencia locales. 
-        El uso del perímetro de cintura es fundamental, ya que esta medida varía significativamente dependiendo de la etnia y el sexo de la población estudiada.
-    </p>
+  <h3 data-idn18="idn16" class="oro-texto estudio-subtitulo">
+    Resultados y Puntos de Corte para Colombia
+</h3>
+
+<p data-idn18="idn17" class="estudio-texto">
+    Tras el análisis estadístico mediante curvas ROC, se determinaron los valores exactos para diagnosticar obesidad abdominal en hombres y mujeres colombianos.
+    Para las mujeres, el estudio propone un punto de corte de 89 centímetros, con una sensibilidad del 82,35% y una alta especificidad diagnóstica.
+    Este hallazgo es crucial para ajustar las guías de práctica clínica nacional, que a veces utilizan estándares extranjeros no aptos para nuestra fisionomía.
+</p>
+
+<br>
+
+<p data-idn18="idn18" class="estudio-texto">
+    La correlación encontrada entre la circunferencia de la cintura y la grasa visceral medida por bioimpedancia fue estadísticamente muy significativa.
+    Esto valida que una cinta métrica común, bien utilizada, es una herramienta poderosa para predecir enfermedades como la diabetes tipo dos.
+    Los resultados invitan a los profesionales de la salud a adoptar estos puntos de corte de 89 cm y 91 cm como el estándar de oro en Colombia.
+</p>
     <br>
 
-    <p style="color:#ccc; text-align:justify;">
-        En este estudio de correlación diagnóstica, se utilizó la bioimpedanciometría como el estándar de referencia para medir la grasa visceral de forma segura. 
-        A diferencia de otros métodos como la tomografía de abdomen, la bioimpedancia no expone al paciente a radiación y resulta mucho más económica. 
-        Este método tiene una sensibilidad reportada del 95%, lo que garantiza resultados confiables para determinar la composición corporal de los pacientes.
-    </p>
-    <br>
+   <p data-idn18="idn19" class="estudio-texto">
+    El síndrome metabólico aumenta drásticamente el riesgo de infartos y accidentes cerebrovasculares si no se detecta y trata a tiempo en la población.
+    La obesidad abdominal es el motor que impulsa otros factores de riesgo como la hipertensión arterial y los niveles elevados de triglicéridos.
+    Por ello, contar con una medida conveniente y económica como el perímetro de cintura facilita el tamizaje masivo de personas en riesgo.
+</p>
 
-    <p style="color:#ccc; text-align:justify;">
-        La investigación contó con una muestra de 501 pacientes adultos que acudieron a consulta de endocrinología en la ciudad de Bogotá, Colombia. 
-        Se incluyeron personas de diversas regiones del país para asegurar que los resultados fueran representativos de la diversidad genética colombiana. 
-        A cada participante se le realizó una evaluación antropométrica completa que incluyó peso, talla, índice de masa corporal y porcentaje de grasa corporal.
-    </p>
-    <br>
+<p data-idn18="idn20" class="estudio-texto">
+    En la plataforma AAPMental, utilizamos estos datos científicos para fundamentar nuestras recomendaciones sobre nutrición y pérdida de grasa corporal.
+    Entender que la meta para una mujer colombiana es estar por debajo de los 89 cm ayuda a establecer objetivos de salud claros y realistas.
+    La ciencia nos demuestra que reducir aunque sea unos pocos centímetros de cintura tiene un impacto positivo inmediato en la química del cuerpo.
+    Te aconsejamos remitirte a nuestro archivo isometricos.html, y llevar a la práctica la plancha, isométrico recomendado.
+</p>
 
-    <h3 class="oro-texto">Metodología de Medición y Criterios Técnicos</h3>
-    <br>
+<br>
 
-    <p style="color:#ccc; text-align:justify;">
-        Para definir la obesidad abdominal, el estudio estableció un porcentaje mayor al 9% de grasa visceral mediante el uso de tecnología tetrapolar. 
-        El dispositivo utilizado, un impedanciómetro de alta precisión, realiza una medición de cuerpo entero desde los brazos hasta los pies. 
-        Esta tecnología permite diferenciar claramente entre la grasa subcutánea y la grasa visceral, que es la más peligrosa para la salud cardiovascular.
-    </p>
-    <br>
+<h3 data-idn18="idn21" class="oro-texto estudio-subtitulo">
+    Conclusiones de la Investigación Clínica
+</h3>
 
-    <p style="color:#ccc; text-align:justify;">
-        La circunferencia de la cintura se midió siguiendo estrictamente los criterios internacionales de la Federación Internacional de Diabetes (IDF). 
-        La medida se toma en el punto medio entre la última costilla y la cresta iliaca, siempre al final de una espiración normal del paciente. 
-        Este procedimiento estandarizado es vital para evitar errores de medición que podrían llevar a un diagnóstico equivocado de síndrome metabólico.
-    </p>
-    <br>
-
-    <p style="color:#ccc; text-align:justify;">
-        Se aplicaron rigurosos criterios de inclusión y exclusión para asegurar que patologías externas no alteraran los resultados del perímetro de cintura. 
-        Se excluyeron pacientes con embarazo, ascitis, fallas cardíacas severas o cirugías abdominales recientes que pudieran causar distensión de las asas intestinales. 
-        De esta manera, los puntos de corte obtenidos reflejan puramente la acumulación de tejido adiposo visceral en la población sana o con sobrepeso.
-    </p>
-    <br>
-
-    <h3 class="oro-texto">Resultados y Puntos de Corte para Colombia</h3>
-    <br>
-
-    <p style="color:#ccc; text-align:justify;">
-        Tras el análisis estadístico mediante curvas ROC, se determinaron los valores exactos para diagnosticar obesidad abdominal en hombres y mujeres colombianos. 
-        Para las mujeres, el estudio propone un punto de corte de 89 centímetros, con una sensibilidad del 82,35% y una alta especificidad diagnóstica. 
-        Este hallazgo es crucial para ajustar las guías de práctica clínica nacional, que a veces utilizan estándares extranjeros no aptos para nuestra fisionomía.
-    </p>
-    <br>
-
-    <p style="color:#ccc; text-align:justify;">
-        En el caso de los hombres colombianos, el punto de corte ideal se estableció en 91 centímetros de perímetro de cintura abdominal. 
-        Este valor presentó una especificidad sobresaliente del 94,83%, lo que minimiza los falsos positivos en el diagnóstico de riesgo cardiovascular. 
-        Identificar a un paciente con una medida igual o superior a esta permite al médico intervenir de forma temprana con dietas y ejercicio.
-    </p>
-    <br>
-
-    <p style="color:#ccc; text-align:justify;">
-        La correlación encontrada entre la circunferencia de la cintura y la grasa visceral medida por bioimpedancia fue estadísticamente muy significativa. 
-        Esto valida que una cinta métrica común, bien utilizada, es una herramienta poderosa para predecir enfermedades como la diabetes tipo dos. 
-        Los resultados invitan a los profesionales de la salud a adoptar estos puntos de corte de 89 cm y 91 cm como el estándar de oro en Colombia.
-    </p>
-    <br>
-
-    <h3 class="oro-texto">Importancia para el Síndrome Metabólico</h3>
-    <br>
-
-    <p style="color:#ccc; text-align:justify;">
-        El síndrome metabólico aumenta drásticamente el riesgo de infartos y accidentes cerebrovasculares si no se detecta y trata a tiempo en la población. 
-        La obesidad abdominal es el motor que impulsa otros factores de riesgo como la hipertensión arterial y los niveles elevados de triglicéridos. 
-        Por ello, contar con una medida conveniente y económica como el perímetro de cintura facilita el tamizaje masivo de personas en riesgo.
-    </p>
-    <br>
-
-    <p style="color:#ccc; text-align:justify;">
-        En la plataforma AAPMental, utilizamos estos datos científicos para fundamentar nuestras recomendaciones sobre nutrición y pérdida de grasa corporal. 
-        Entender que la meta para una mujer colombiana es estar por debajo de los 89 cm ayuda a establecer objetivos de salud claros y realistas. 
-        La ciencia nos demuestra que reducir aunque sea unos pocos centímetros de cintura tiene un impacto positivo inmediato en la química del cuerpo.
-      te aconsejamos remitirte a nuestro archivo isometricos.html,y llevar  a la practica la plancha,isometrico recomendado.
-      </p>
-    <br>
-
-    <p style="color:#ccc; text-align:justify;">
-        Finalmente, la integración de la bioimpedanciometría como método de referencia destaca la necesidad de utilizar tecnología precisa en el cuidado de la salud. 
-        Aunque la cinta métrica es la herramienta de campo, conocer los porcentajes de grasa visceral nos permite un enfoque mucho más profundo. 
-        Este estudio colombiano es una pieza clave para empoderar al paciente en el control de su propia biología y bienestar a largo plazo.
-    </p>
-    <br>
-
-    <h3 class="oro-texto">Conclusiones de la Investigación Clínica</h3>
-    <br>
-
-    <p style="color:#ccc; text-align:justify;">
-        A partir de estos hallazgos, se concluye que los puntos de corte de 91 cm para hombres y 89 cm para mujeres son los más adecuados para el país. 
-        Estas medidas permiten clasificar adecuadamente a los pacientes que sufren de obesidad abdominal, facilitando una atención médica mucho más personalizada. 
-        La adopción de estos valores específicos para la etnia colombiana es un paso adelante en la prevención de enfermedades crónicas no transmisibles.
-    </p>
+<p data-idn18="idn22" class="estudio-texto">
+    A partir de estos hallazgos, se concluye que los puntos de corte de 91 cm para hombres y 89 cm para mujeres son los más adecuados para el país.
+    Estas medidas permiten clasificar adecuadamente a los pacientes que sufren de obesidad abdominal, facilitando una atención médica mucho más personalizada.
+    La adopción de estos valores específicos para la etnia colombiana es un paso adelante en la prevención de enfermedades crónicas no transmisibles.
+</p>
     <br>
 
   
@@ -304,57 +268,51 @@ bienestar integral">
 
 
 
-<section class="isometricos-relacionados" style="margin-top:50px; padding:20px; background:#0e0e0e; border:1px solid rgba(212,175,55,0.25); border-radius:12px;">
+<section class="isometricos-relacionados">
 
-<h2 class="oro-texto" style="text-align:center; margin-bottom:20px;">
-Complementa tu Bienestar con Ejercicios Isométricos
+   <h2 data-idn18="idn23" class="oro-texto isometricos-titulo">
+    Complementa tu Bienestar con Ejercicios Isométricos
 </h2>
 
-<p style="color:#ccc; text-align:justify;">
-Mantener un peso saludable no depende únicamente de la alimentación. La evidencia científica demuestra que la combinación de una nutrición equilibrada, actividad física regular, descanso adecuado y entrenamiento de fuerza contribuye a mejorar la composición corporal y a disminuir el riesgo de desarrollar enfermedades metabólicas.
+<p data-idn18="idn24" class="isometricos-texto">
+    Mantener un peso saludable no depende únicamente de la alimentación. La evidencia científica demuestra que la combinación de una nutrición equilibrada, actividad física regular, descanso adecuado y entrenamiento de fuerza contribuye a mejorar la composición corporal y a disminuir el riesgo de desarrollar enfermedades metabólicas.
+</p>
+
+<p data-idn18="idn25" class="isometricos-texto">
+    Entre las diferentes modalidades de entrenamiento, los <strong>ejercicios isométricos</strong> destacan por fortalecer la musculatura mediante contracciones sostenidas, sin necesidad de realizar movimientos repetitivos. Uno de los ejercicios más conocidos es la <strong>plancha abdominal</strong>, que ayuda a fortalecer el abdomen, la espalda, la pelvis y los músculos estabilizadores del tronco, favoreciendo una mejor postura, equilibrio y estabilidad corporal.
 </p>
 
 <br>
 
-<p style="color:#ccc; text-align:justify;">
-Entre las diferentes modalidades de entrenamiento, los <strong>ejercicios isométricos</strong> destacan por fortalecer la musculatura mediante contracciones sostenidas, sin necesidad de realizar movimientos repetitivos. Uno de los ejercicios más conocidos es la <strong>plancha abdominal</strong>, que ayuda a fortalecer el abdomen, la espalda, la pelvis y los músculos estabilizadores del tronco, favoreciendo una mejor postura, equilibrio y estabilidad corporal.
+<p data-idn18="idn26" class="isometricos-texto">
+    Es importante recordar que ningún ejercicio por sí solo elimina la grasa localizada. Sin embargo, cuando los ejercicios isométricos forman parte de un programa integral que incluye alimentación saludable, hidratación adecuada y actividad física constante, pueden contribuir al mantenimiento de la masa muscular, mejorar la capacidad funcional y apoyar los objetivos de control del peso corporal.
+</p>
+<p data-idn18="idn27" class="isometricos-texto">
+    Si deseas aprender cómo realizar correctamente la plancha abdominal y conocer otros ejercicios isométricos recomendados, te invitamos a visitar nuestra sección especializada.
 </p>
 
-<br>
+<div class="isometricos-accion">
 
-<p style="color:#ccc; text-align:justify;">
-Es importante recordar que ningún ejercicio por sí solo elimina la grasa localizada. Sin embargo, cuando los ejercicios isométricos forman parte de un programa integral que incluye alimentación saludable, hidratación adecuada y actividad física constante, pueden contribuir al mantenimiento de la masa muscular, mejorar la capacidad funcional y apoyar los objetivos de control del peso corporal.
-</p>
-
-<br>
-
-<p style="color:#ccc; text-align:justify;">
-Si deseas aprender cómo realizar correctamente la plancha abdominal y conocer otros ejercicios isométricos recomendados, te invitamos a visitar nuestra sección especializada.
-</p>
-
-<div style="text-align:center; margin-top:25px;">
-
-<a href="isometricos.html"
-style="display:inline-block;
-background:#d4af37;
-color:#000;
-padding:12px 28px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;">
-Conocer los Ejercicios Isométricos
-</a>
+    <a data-idn18="idn28" href="isometricos.html" class="isometricos-boton">
+        Conocer los Ejercicios Isométricos
+    </a>
 
 </div>
 
 </section>
-        <footer style="text-align: center; margin-top: 40px; padding-bottom: 50px;">
-            <button id="btn-volver" onclick="window.location.href='index.html'" class="btn">
-                ← Volver al Inicio
-                </button>
-        </footer>
-    </main>
+       <footer class="imc-footer">
+
+   <button
+    id="btn-volver"
+    data-idn18="idn29"
+    onclick="window.location.href='index.html'"
+    class="btn imc-boton-volver">
+    ← Volver al Inicio
+</button>
+
+
+
+</main>
 
     
 
@@ -363,370 +321,418 @@ Conocer los Ejercicios Isométricos
 <script>
 
 const textosGlobales = {
-
-es:{
-
-menu_inicio:"Inicio",
-
-menu_terapias:"Terapias ▾",
-menu_grounding:"Grounding",
-menu_isometricos:"Isométricos",
-menu_solfeggio:"Solfeggio",
-
-menu_mente:"Mente & Ciencia ▾",
-menu_reprogramacion:"Reprogramación",
-menu_mecanica:"Mecánica Cuántica",
-menu_kybalion:"El Kybalión",
-
-menu_salud:"Salud"
-
-},
-
-en:{
-
-menu_inicio:"Home",
-
-menu_terapias:"Therapies ▾",
-menu_grounding:"Grounding",
-menu_isometricos:"Isometrics",
-menu_solfeggio:"Solfeggio",
-
-menu_mente:"Mind & Science ▾",
-menu_reprogramacion:"Reprogramming",
-menu_mecanica:"Quantum Mechanics",
-menu_kybalion:"The Kybalion",
-
-menu_salud:"Health"
-
-},
-
-fr:{
-
-menu_inicio:"Accueil",
-
-menu_terapias:"Thérapies ▾",
-menu_grounding:"Grounding",
-menu_isometricos:"Isométriques",
-menu_solfeggio:"Solfeggio",
-
-menu_mente:"Esprit & Science ▾",
-menu_reprogramacion:"Reprogrammation",
-menu_mecanica:"Mécanique Quantique",
-menu_kybalion:"Le Kybalion",
-
-menu_salud:"Santé"
-
-},
-
-it:{
-
-menu_inicio:"Home",
-
-menu_terapias:"Terapie ▾",
-menu_grounding:"Grounding",
-menu_isometricos:"Isometrici",
-menu_solfeggio:"Solfeggio",
-
-menu_mente:"Mente & Scienza ▾",
-menu_reprogramacion:"Riprogrammazione",
-menu_mecanica:"Meccanica Quantistica",
-menu_kybalion:"Il Kybalion",
-
-menu_salud:"Salute"
-
-}
-
-};
-
-const textos = {
   es: {
-    titulo: "TEMPLO DEL CUERPO",
-    subtitulo: "Índice de Masa Corporal",
-    descripcion: "Monitorea tu estado físico para una vida plena.",
-    labelPeso: "Peso actual (kg):",
-    labelEstatura: "Estatura (metros):",
-    botonCalcular: "CALCULAR ESTADO FÍSICO",
-    botonVolver: "← Volver al Inicio",
-    imcLabels: {
-      bajo: "Bajo",
-      normal: "Normal",
-      sobrepeso: "Sobrepeso",
-      obesidad: "Obesidad"
-    },
-    resultados: {
-      bajo: "Tu peso es bajo. ¡Nutre tu cuerpo con consciencia!",
-      normal: "¡FELICITACIONES! Estás en un peso saludable. Mantén ese equilibrio.",
-      sobrepeso: "Tienes sobrepeso ligero. Un poco de movimiento y disciplina te vendrán bien.",
-      obesidad: "Atención: Obesidad detectada. Tu cuerpo es tu templo, es momento de cuidarlo."
-    },
-    recomendaciones: {
-      titulo: "Recomendaciones",
-      descripcion: "Reduce azúcares y ultraprocesados, aumenta actividad física y mantén una rutina constante. Tu cuerpo puede transformarse."
-    },
-    error: "Por favor ingresa valores válidos para peso y estatura."
+    menu_inicio: "Inicio",
+    menu_terapias: "Terapias ▾",
+    menu_grounding: "Grounding",
+    menu_solfeggio: "Solfeggio",
+    menu_equilibrio: "Equilibrio Cuántico",
+    menu_mecanica: "Mecánica Cuántica",
+    menu_mente_ciencia: "Mente & Ciencia ▾",
+    menu_reprogramacion: "Reprogramación",
+    menu_kybalion: "El Kybalión"
   },
-
   en: {
-    titulo: "BODY TEMPLE",
-    subtitulo: "Body Mass Index",
-    descripcion: "Monitor your physical condition for a fulfilling life.",
-    labelPeso: "Current Weight (kg):",
-    labelEstatura: "Height (meters):",
-    botonCalcular: "CALCULATE PHYSICAL STATE",
-    botonVolver: "← Back to Home",
-    imcLabels: {
-      bajo: "Underweight",
-      normal: "Normal",
-      sobrepeso: "Overweight",
-      obesidad: "Obesity"
-    },
-    resultados: {
-      bajo: "Your weight is low. Nourish your body with awareness!",
-      normal: "CONGRATULATIONS! You are at a healthy weight. Keep that balance.",
-      sobrepeso: "You are slightly overweight. A bit more movement and discipline will help.",
-      obesidad: "Attention: Obesity detected. Your body is your temple, it's time to take care of it."
-    },
-    recomendaciones: {
-      titulo: "Recommendations",
-      descripcion: "Reduce sugars and ultra-processed foods, increase physical activity, and maintain a consistent routine. Your body can transform."
-    },
-    error: "Please enter valid values for weight and height."
+    menu_inicio: "Home",
+    menu_terapias: "Therapies ▾",
+    menu_grounding: "Grounding",
+    menu_solfeggio: "Solfeggio",
+    menu_equilibrio: "Quantum Balance",
+    menu_mecanica: "Quantum Mechanics",
+    menu_mente_ciencia: "Mind & Science ▾",
+    menu_reprogramacion: "Reprogramming",
+    menu_kybalion: "The Kybalion"
   },
-
   fr: {
-    titulo: "TEMPLE DU CORPS",
-    subtitulo: "Indice de Masse Corporelle",
-    descripcion: "Surveillez votre état physique pour une vie épanouie.",
-    labelPeso: "Poids actuel (kg):",
-    labelTaille: "Taille (mètres):",
-    botonCalcular: "CALCULER L'ÉTAT PHYSIQUE",
-    botonVolver: "← Retour à l'accueil",
-    imcLabels: {
-      bajo: "Insuffisance pondérale",
-      normal: "Normal",
-      sobrepeso: "Surpoids",
-      obesidad: "Obésité"
-    },
-    resultados: {
-      bajo: "Votre poids est faible. Nourrissez votre corps avec conscience !",
-      normal: "FÉLICITATIONS ! Vous avez un poids santé. Maintenez cet équilibre.",
-      sobrepeso: "Vous avez un léger surpoids. Un peu plus de mouvement et de discipline vous feront du bien.",
-      obesidad: "Attention : Obésité détectée. Votre corps est votre temple, il est temps d'en prendre soin."
-    },
-    recomendaciones: {
-      titulo: "Recommandations",
-      descripcion: "Réduisez les sucres et les aliments ultra-transformés, augmentez l’activité physique et maintenez une routine constante. Votre corps peut se transformer."
-    },
-    error: "Veuillez entrer des valeurs valides pour le poids et la taille."
+    menu_inicio: "Accueil",
+    menu_terapias: "Thérapies ▾",
+    menu_grounding: "Grounding",
+    menu_solfeggio: "Solfège",
+    menu_equilibrio: "Équilibre Quantique",
+    menu_mecanica: "Mécanique Quantique",
+    menu_mente_ciencia: "Esprit & Science ▾",
+    menu_reprogramacion: "Reprogrammation",
+    menu_kybalion: "Le Kybalion"
   },
-
   it: {
-    titulo: "TEMPIO DEL CORPO",
-    subtitulo: "Indice di Massa Corporea",
-    descripcion: "Monitora la tua condizione fisica per una vita piena.",
-    labelPeso: "Peso attuale (kg):",
-    labelEstatura: "Altezza (metri):",
-    botonCalcular: "CALCOLA STATO FISICO",
-    botonVolver: "← Torna alla Home",
-    imcLabels: {
-      bajo: "Sottopeso",
-      normal: "Normale",
-      sobrepeso: "Sovrappeso",
-      obesidad: "Obesità"
-    },
-    resultados: {
-      bajo: "Il tuo peso è basso. Nutri il tuo corpo con consapevolezza!",
-      normal: "CONGRATULAZIONI! Hai un peso sano. Mantieni questo equilibrio.",
-      sobrepeso: "Sei leggermente in sovrappeso. Un po' più di movimento e disciplina ti aiuteranno.",
-      obesidad: "Attenzione: Obesità rilevata. Il tuo corpo è il tuo tempio, è tempo di prendertene cura."
-    },
-    recomendaciones: {
-      titulo: "Raccomandazioni",
-      descripcion: "Riduci zuccheri e alimenti ultra-processati, aumenta l’attività fisica e mantieni una routine costante. Il tuo corpo può trasformarsi."
-    },
-    error: "Inserisci valori validi per peso e altezza."
+    menu_inicio: "Home",
+    menu_terapias: "Terapie ▾",
+    menu_grounding: "Grounding",
+    menu_solfeggio: "Solfeggio",
+    menu_equilibrio: "Equilibrio Quantistico",
+    menu_mecanica: "Meccanica Quantistica",
+    menu_mente_ciencia: "Mente & Scienza ▾",
+    menu_reprogramacion: "Riprogrammazione",
+    menu_kybalion: "Il Kybalion"
   }
 };
-
-  /* =========================================================
-  🌐 APLICAR IDIOMA
-  ========================================================= */
-  
-  document.addEventListener("DOMContentLoaded", () => {
-
-const idioma = localStorage.getItem("idioma") || "es";
-const global = textosGlobales[idioma];
-const i18n = textos[idioma];
-
-const set = (id, txt) => {
-  const el = document.getElementById(id);
-  if(el) el.textContent = txt;
-};
-
-
-
-
-
-
-document.querySelectorAll("[data-i18n]").forEach(el => {
-  const clave = el.dataset.i18n;
-
-  if(textosGlobales[idioma][clave]){
-    el.textContent = textosGlobales[idioma][clave];
-  } 
-  else if(textos[idioma].imcLabels && textos[idioma].imcLabels[clave]){
-    el.textContent = textos[idioma].imcLabels[clave];
-  }
-});
-
-// Textos específicos de la página
-set("titulo", i18n.titulo);
-set("subtitulo", i18n.subtitulo);
-set("btn-calcular", i18n.botonCalcular);
-set("btn-volver", i18n.botonVolver);
-set("label-peso", i18n.labelPeso);
-set("label-estatura", i18n.labelEstatura);
-set("descripcion", i18n.descripcion);
-
-const selector = document.getElementById("idioma-nav");
-if(selector) selector.value = idioma;
-
-});
-function calcularIMC() {
-  const idioma = localStorage.getItem("idioma") || "es";
-  const i18n = textos[idioma];
-
-  const peso = parseFloat(document.getElementById("peso").value);
-  const estatura = parseFloat(document.getElementById("estatura").value);
-
-  const caja = document.getElementById("resultado-caja");
-  const nDisplay = document.getElementById("imc-numero");
-  const mDisplay = document.getElementById("imc-mensaje");
-
-  if (peso > 0 && estatura > 0) {
-    const imc = (peso / (estatura * estatura)).toFixed(1);
-
-    caja.style.display = "block";
-    nDisplay.textContent = imc;
-
-    let color = "";
-    let mensaje = "";
-
-    if (imc < 18.5) {
-      color = "#ffcc00";
-      mensaje = i18n.resultados.bajo;
-    } else if (imc <= 24.9) {
-      color = "#2ecc71";
-      mensaje = i18n.resultados.normal;
-    } else if (imc <= 29.9) {
-      color = "#e67e22";
-      mensaje = i18n.resultados.sobrepeso;
-    } else {
-      color = "#e74c3c";
-      mensaje = i18n.resultados.obesidad;
-    }
-
-    caja.style.backgroundColor = color + "22";
-    caja.style.border = "1px solid " + color;
-    nDisplay.style.color = color;
-    mDisplay.style.color = color;
-    mDisplay.textContent = mensaje;
-
-    // Lógica de Modales
-    if (imc < 18.5) {
-      setTimeout(() => {
-        mostrarModal(i18n.recomendaciones.titulo, i18n.recomendacionesBajoPeso);
-      }, 800);
-    } else if (imc >= 30) {
-      setTimeout(() => {
-        mostrarModal(i18n.recomendaciones.titulo, i18n.recomendaciones.descripcion);
-      }, 800);
-    }
+const textos = {
+    es: {
+        idn0: "TEMPLO DEL CUERPO",
+        idn1: "Índice de Masa Corporal",
+        idn2: "Monitorea tu estado físico para una vida plena.",
+        idn3: "Peso actual (kg):",
+        idn4: "Estatura (metros):",
+        idn5: "CALCULAR ESTADO FÍSICO",
+        idn6: "Bajo",
+        idn7: "Normal",
+        idn8: "Sobrepeso",
+        idn9: "Obesidad",
+        idn10: "Estudio Clínico: Perímetro de Cintura y Grasa Visceral",
+        idn11: "Contexto del Estudio en Población Colombiana",
+        idn12: "El síndrome metabólico se define como un conjunto de factores de riesgo cardiovascular donde el componente principal es la obesidad abdominal. Para identificar esta condición de manera precisa en Colombia, se han realizado investigaciones clínicas que establecen medidas de referencia locales. El uso del perímetro de cintura es fundamental, ya que esta medida varía significativamente dependiendo de la etnia y el sexo de la población estudiada.",
+ idn13: "Metodología de Medición y Criterios Técnicos",
+        idn14: "Para definir la obesidad abdominal, el estudio estableció un porcentaje mayor al 9% de grasa visceral mediante el uso de tecnología tetrapolar. El dispositivo utilizado, un impedanciómetro de alta precisión, realiza una medición de cuerpo entero desde los brazos hasta los pies. Esta tecnología permite diferenciar claramente entre la grasa subcutánea y la grasa visceral, que es la más peligrosa para la salud cardiovascular.",
+        idn15: "La circunferencia de la cintura se midió siguiendo estrictamente los criterios internacionales de la Federación Internacional de Diabetes (IDF). La medida se toma en el punto medio entre la última costilla y la cresta iliaca, siempre al final de una espiración normal del paciente. Este procedimiento estandarizado es vital para evitar errores de medición que podrían llevar a un diagnóstico equivocado de síndrome metabólico.",
+idn16: "Resultados y Puntos de Corte para Colombia",
+        idn17: "Tras el análisis estadístico mediante curvas ROC, se determinaron los valores exactos para diagnosticar obesidad abdominal en hombres y mujeres colombianos. Para las mujeres, el estudio propone un punto de corte de 89 centímetros, con una sensibilidad del 82,35% y una alta especificidad diagnóstica. Este hallazgo es crucial para ajustar las guías de práctica clínica nacional, que a veces utilizan estándares extranjeros no aptos para nuestra fisionomía.",
+        idn18: "La correlación encontrada entre la circunferencia de la cintura y la grasa visceral medida por bioimpedancia fue estadísticamente muy significativa. Esto valida que una cinta métrica común, bien utilizada, es una herramienta poderosa para predecir enfermedades como la diabetes tipo dos. Los resultados invitan a los profesionales de la salud a adoptar estos puntos de corte de 89 cm y 91 cm como el estándar de oro en Colombia.",
+idn19: "El síndrome metabólico aumenta drásticamente el riesgo de infartos y accidentes cerebrovasculares si no se detecta y trata a tiempo en la población. La obesidad abdominal es el motor que impulsa otros factores de riesgo como la hipertensión arterial y los niveles elevados de triglicéridos. Por ello, contar con una medida conveniente y económica como el perímetro de cintura facilita el tamizaje masivo de personas en riesgo.",
+        idn20: "En la plataforma AAPMental, utilizamos estos datos científicos para fundamentar nuestras recomendaciones sobre nutrición y pérdida de grasa corporal. Entender que la meta para una mujer colombiana es estar por debajo de los 89 cm ayuda a establecer objetivos de salud claros y realistas. La ciencia nos demuestra que reducir aunque sea unos pocos centímetros de cintura tiene un impacto positivo inmediato en la química del cuerpo. Te aconsejamos remitirte a nuestro archivo isometricos.html, y llevar a la práctica la plancha, isométrico recomendado.",
+        idn21: "Conclusiones de la Investigación Clínica",
+        idn22: "A partir de estos hallazgos, se concluye que los puntos de corte de 91 cm para hombres y 89 cm para mujeres son los más adecuados para el país. Estas medidas permiten clasificar adecuadamente a los pacientes que sufren de obesidad abdominal, facilitando una atención médica mucho más personalizada. La adopción de estos valores específicos para la etnia colombiana es un paso adelante en la prevención de enfermedades crónicas no transmisibles.",
+ idn23: "Complementa tu Bienestar con Ejercicios Isométricos",
+        idn24: "Mantener un peso saludable no depende únicamente de la alimentación. La evidencia científica demuestra que la combinación de una nutrición equilibrada, actividad física regular, descanso adecuado y entrenamiento de fuerza contribuye a mejorar la composición corporal y a disminuir el riesgo de desarrollar enfermedades metabólicas.",
+        idn25: "Entre las diferentes modalidades de entrenamiento, los ejercicios isométricos destacan por fortalecer la musculatura mediante contracciones sostenidas, sin necesidad de realizar movimientos repetitivos. Uno de los ejercicios más conocidos es la plancha abdominal, que ayuda a fortalecer el abdomen, la espalda, la pelvis y los músculos estabilizadores del tronco, favoreciendo una mejor postura, equilibrio y estabilidad corporal.",
+        idn26: "Es importante recordar que ningún ejercicio por sí solo elimina la grasa localizada. Sin embargo, cuando los ejercicios isométricos forman parte de un programa integral que incluye alimentación saludable, hidratación adecuada y actividad física constante, pueden contribuir al mantenimiento de la masa muscular, mejorar la capacidad funcional y apoyar los objetivos de control del peso corporal.",
+ idn27: "Si deseas aprender cómo realizar correctamente la plancha abdominal y conocer otros ejercicios isométricos recomendados, te invitamos a visitar nuestra sección especializada.",
+        idn28: "Conocer los Ejercicios Isométricos",
+idn29: "← Volver al Inicio",
+idn30: "Explorar",
+        idn31: "Inicio",
+        idn32: "grounding",
+        idn33: "Nutrición",
+        idn34: "Ejercicios isométricos",
+        idn35: "Información",
+        idn36: "Quiénes Somos",
+        idn37: "Contacto",
+        idn38: "Política de Privacidad",
+        idn39: "Términos y Condiciones",
+        idn40: "Contacto",
+        idn41: "Medellín, Antioquia",
+        idn42: "© 2026 AAPMental. Todos los derechos reservados.",
+        idn43: "Contenido elaborado por AAPMental – Bienestar Consciente."
     
-  } 
-  else {
-    alert(i18n.error);
-  }
-} 
-
-function cambiarIdioma(lang){
-
-const rutas = {
-  es:"masa-corporal.html",
-  en:"masa-corporal.html",
-  fr:"masa-corporal.html",
-  it:"masa-corporal.html"
+    },
+    en: {
+        idn0: "BODY TEMPLE",
+        idn1: "Body Mass Index",
+        idn2: "Monitor your physical state for a full life.",
+        idn3: "Current weight (kg):",
+        idn4: "Height (meters):",
+        idn5: "CALCULATE PHYSICAL STATE",
+        idn6: "Underweight",
+        idn7: "Normal",
+        idn8: "Overweight",
+        idn9: "Obesity",
+        idn10: "Clinical Study: Waist Circumference and Visceral Fat",
+        idn11: "Study Context in the Colombian Population",
+        idn12: "Metabolic syndrome is defined as a cluster of cardiovascular risk factors where the main component is abdominal obesity. To identify this condition accurately in Colombia, clinical research has been conducted to establish local reference measurements. The use of waist circumference is essential, as this measurement varies significantly depending on the ethnicity and sex of the population studied.",
+ idn13: "Measurement Methodology and Technical Criteria",
+        idn14: "To define abdominal obesity, the study established a percentage greater than 9% of visceral fat using tetrapolar technology. The device used, a high-precision impedance meter, performs a full-body measurement from arms to feet. This technology allows for a clear differentiation between subcutaneous fat and visceral fat, which is the most dangerous for cardiovascular health.",
+        idn15: "Waist circumference was measured strictly following the international criteria of the International Diabetes Federation (IDF). The measurement is taken at the midpoint between the last rib and the iliac crest, always at the end of a normal expiration of the patient. This standardized procedure is vital to avoid measurement errors that could lead to a misdiagnosis of metabolic syndrome.",
+  idn16: "Results and Cut-off Points for Colombia",
+        idn17: "Following statistical analysis using ROC curves, exact values were determined to diagnose abdominal obesity in Colombian men and women. For women, the study proposes a cut-off point of 89 centimeters, with a sensitivity of 82.35% and high diagnostic specificity. This finding is crucial to adjust national clinical practice guidelines, which sometimes use foreign standards unsuitable for our physique.",
+        idn18: "The correlation found between waist circumference and visceral fat measured by bioimpedance was statistically very significant. This validates that a common measuring tape, properly used, is a powerful tool to predict diseases such as type two diabetes. The results invite health professionals to adopt these cut-off points of 89 cm and 91 cm as the gold standard in Colombia.",
+idn19: "Metabolic syndrome drastically increases the risk of heart attacks and strokes if not detected and treated in time in the population. Abdominal obesity is the engine driving other risk factors such as high blood pressure and elevated triglyceride levels. Therefore, having a convenient and economical measure like waist circumference facilitates mass screening of people at risk.",
+        idn20: "On the AAPMental platform, we use this scientific data to support our recommendations on nutrition and body fat loss. Understanding that the goal for a Colombian woman is to stay below 89 cm helps establish clear and realistic health goals. Science shows us that reducing even a few centimeters of waistline has an immediate positive impact on body chemistry. We advise you to refer to our isometricos.html file and practice the plank, recommended isometric exercise.",
+        idn21: "Conclusions of Clinical Research",
+        idn22: "Based on these findings, it is concluded that the cut-off points of 91 cm for men and 89 cm for women are the most appropriate for the country. These measures allow for the proper classification of patients suffering from abdominal obesity, facilitating much more personalized medical care. The adoption of these specific values for the Colombian ethnicity is a step forward in the prevention of chronic non-communicable diseases.",
+idn23: "Complement Your Well-being with Isometric Exercises",
+        idn24: "Maintaining a healthy weight does not depend solely on diet. Scientific evidence shows that combining balanced nutrition, regular physical activity, adequate rest, and strength training helps improve body composition and reduce the risk of developing metabolic diseases.",
+        idn25: "Among different training modalities, isometric exercises stand out for strengthening muscles through sustained contractions without the need for repetitive movements. One of the best-known exercises is the abdominal plank, which helps strengthen the abdomen, back, pelvis, and core stabilizing muscles, promoting better posture, balance, and body stability.",
+        idn26: "It is important to remember that no single exercise eliminates localized fat on its own. However, when isometric exercises are part of a comprehensive program that includes healthy eating, proper hydration, and constant physical activity, they can help maintain muscle mass, improve functional capacity, and support body weight control goals.",
+idn27: "If you want to learn how to properly perform the abdominal plank and discover other recommended isometric exercises, we invite you to visit our specialized section.",
+        idn28: "Learn About Isometric Exercises",
+ idn29: "← Back to Home",
+idn30: "Explore",
+        idn31: "Home",
+        idn32: "grounding",
+        idn33: "Nutrition",
+        idn34: "Isometric exercises",
+        idn35: "Information",
+        idn36: "About Us",
+        idn37: "Contact",
+        idn38: "Privacy Policy",
+        idn39: "Terms and Conditions",
+        idn40: "Contact",
+        idn41: "Medellín, Antioquia",
+        idn42: "© 2026 AAPMental. All rights reserved.",
+        idn43: "Content developed by AAPMental – Conscious Well-being."
+   
+    
+    },
+    fr: {
+        idn0: "TEMPLE DU CORPS",
+        idn1: "Indice de Masse Corporelle",
+        idn2: "Surveillez votre forme physique pour une vie épanouie.",
+        idn3: "Poids actuel (kg) :",
+        idn4: "Taille (mètres) :",
+        idn5: "CALCULER L'ÉTAT PHYSIQUE",
+        idn6: "Maigreur",
+        idn7: "Normal",
+        idn8: "Surpoids",
+        idn9: "Obésité",
+        idn10: "Étude Clinique : Périmètre de la Taille et Graisse Viscérale",
+        idn11: "Contexte de l'étude dans la population colombienne",
+        idn12: "Le syndrome métabolique est défini comme un ensemble de facteurs de risque cardiovasculaire dont le principal composant est l'obésité abdominale. Pour identifier cette condition avec précision en Colombie, des recherches cliniques ont été menées pour établir des mesures de référence locales. L'utilisation du périmètre de la taille est fondamentale, car cette mesure varie considérablement selon l'ethnie et le sexe de la population étudiée.",
+idn13: "Méthodologie de Mesure et Critères Techniques",
+        idn14: "Pour définir l'obésité abdominale, l'étude a établi un pourcentage supérieur à 9% de graisse viscérale grâce à l'utilisation de la technologie tétrapolaire. L'appareil utilisé, un impédancemètre de haute précision, effectue une mesure du corps entier, des bras jusqu'aux pieds. Cette technologie permet de distinguer clairement la graisse sous-cutanée de la graisse viscérale, qui est la plus dangereuse pour la santé cardiovasculaire.",
+        idn15: "La circonférence de la taille a été mesurée en suivant strictement les critères internationaux de la Fédération Internationale du Diabète (IDF). La mesure est prise au point médian entre la dernière côte et la crête iliaque, toujours à la fin d'une expiration normale du patient. Cette procédure standardisée est vitale pour éviter des erreurs de mesure qui pourraient mener à un diagnostic erroné de syndrome métabolique.",
+  idn16: "Résultats et Seuils pour la Colombie",
+        idn17: "Après une analyse statistique par courbes ROC, les valeurs exactes pour diagnostiquer l'obésité abdominale chez les hommes et les femmes colombiens ont été déterminées. Pour les femmes, l'étude propose un seuil de 89 centimètres, avec une sensibilité de 82,35 % et une spécificité diagnostique élevée. Cette découverte est cruciale pour ajuster les guides de pratique clinique nationale, qui utilisent parfois des normes étrangères inadaptées à notre morphologie.",
+        idn18: "La corrélation trouvée entre la circonférence de la taille et la graisse viscérale mesurée par bioimpédance était statistiquement très significative. Cela valide qu'un ruban à mesurer ordinaire, bien utilisé, est un outil puissant pour prédire des maladies telles que le diabète de type deux. Les résultats invitent les professionnels de la santé à adopter ces seuils de 89 cm et 91 cm comme étalon-or en Colombie.",
+ idn19: "Le syndrome métabolique augmente considérablement le risque d'infarctus et d'accidents vasculaires cérébraux s'il n'est pas détecté et traité à temps dans la population. L'obésité abdominale est le moteur qui alimente d'autres facteurs de risque tels que l'hypertension artérielle et les niveaux élevés de triglycérides. Par conséquent, disposer d'une mesure pratique et économique comme le périmètre de la taille facilite le dépistage de masse des personnes à risque.",
+        idn20: "Sur la plateforme AAPMental, nous utilisons ces données scientifiques pour étayer nos recommandations en matière de nutrition et de perte de graisse corporelle. Comprendre que l'objectif pour une femme colombienne est de rester en dessous de 89 cm aide à fixer des objectifs de santé clairs et réalistes. La science nous montre que réduire ne serait-ce que de quelques centimètres le tour de taille a un impact positif immédiat sur la chimie du corps. Nous vous conseillons de vous reporter à notre fichier isometricos.html et de mettre en pratique la planche, exercice isométrique recommandé.",
+        idn21: "Conclusions de la Recherche Clinique",
+        idn22: "À partir de ces résultats, il est conclu que les seuils de 91 cm pour les hommes et de 89 cm pour les femmes sont les plus adaptés au pays. Ces mesures permettent de classer adéquatement les patients souffrant d'obésité abdominale, facilitant ainsi des soins médicaux beaucoup plus personnalisés. L'adoption de ces valeurs spécifiques à l'ethnie colombienne est un pas en avant dans la prévention des maladies chroniques non transmissibles.",
+idn23: "Complétez votre bien-être avec des exercices isométriques",
+        idn24: "Maintenir un poids santé ne dépend pas uniquement de l'alimentation. Les preuves scientifiques montrent qu'une alimentation équilibrée, une activité physique régulière, un repos adéquat et un entraînement en force contribuent à améliorer la composition corporelle et à réduire le risque de maladies métaboliques.",
+        idn25: "Parmi les différentes modalités d'entraînement, les exercices isométriques se distinguent par le renforcement des muscles grâce à des contractions soutenues, sans nécessiter de mouvements répétitifs. L'un des exercices les plus connus est la planche abdominale, qui aide à renforcer l'abdomen, le dos, le bassin et les muscles stabilisateurs du tronc, favorisant une meilleure posture, un meilleur équilibre et une plus grande stabilité corporelle.",
+        idn26: "Il est important de se rappeler qu'aucun exercice à lui seul n'élimine la graisse localisée. Cependant, lorsque les exercices isométriques font partie d'un programme complet comprenant une alimentation saine, une hydratation adéquate et une activité physique constante, ils peuvent contribuer au maintien de la masse musculaire, à améliorer la capacité fonctionnelle et à soutenir les objectifs de contrôle du poids corporel.",
+idn27: "Si vous souhaitez apprendre à réaliser correctement la planche abdominale et découvrir d'autres exercices isométriques recommandés, nous vous invitons à visiter notre section spécialisée.",
+        idn28: "Découvrir les Exercices Isométriques",
+idn29: "← Retour à l'Accueil",
+ idn30: "Explorer",
+        idn31: "Accueil",
+        idn32: "grounding",
+        idn33: "Nutrition",
+        idn34: "Exercices isométriques",
+        idn35: "Information",
+        idn36: "Qui sommes-nous",
+        idn37: "Contact",
+        idn38: "Politique de confidentialité",
+        idn39: "Termes et conditions",
+        idn40: "Contact",
+        idn41: "Medellín, Antioquia",
+        idn42: "© 2026 AAPMental. Tous droits réservés.",
+        idn43: "Contenu élaboré par AAPMental – Bien-être Conscient."
+   
+    },
+    it: {
+        idn0: "TEMPIO DEL CORPO",
+        idn1: "Indice di Massa Corporea",
+        idn2: "Monitora la tua forma fisica per una vita piena.",
+         idn3: "Peso attuale (kg):",
+        idn4: "Altezza (metri):",
+        idn5: "CALCOLA STATO FISICO",
+        idn6: "Sottopeso",
+        idn7: "Normale",
+        idn8: "Sovrappeso",
+        idn9: "Obesità",
+        idn10: "Studio Clinico: Circonferenza Vita e Grasso Viscerale",
+        idn11: "Contesto dello studio nella popolazione colombiana",
+        idn12: "La sindrome metabolica è definita come un insieme di fattori di rischio cardiovascolare in cui la componente principale è l'obesità addominale. Per identificare questa condizione in modo preciso in Colombia, sono state condotte ricerche cliniche che stabiliscono misure di riferimento locali. L'uso della circonferenza vita è fondamentale, poiché questa misura varia significativamente a seconda dell'etnia e del sesso della popolazione studiata.",
+ idn13: "Metodologia di Misurazione e Criteri Tecnici",
+        idn14: "Per definire l'obesità addominale, lo studio ha stabilito una percentuale superiore al 9% di grasso viscerale attraverso l'uso della tecnologia tetrapolare. Il dispositivo utilizzato, un impedenziometro ad alta precisione, esegue una misurazione di tutto il corpo, dalle braccia ai piedi. Questa tecnologia consente di differenziare chiaramente tra grasso sottocutaneo e grasso viscerale, che è il più pericoloso per la salute cardiovascolare.",
+        idn15: "La circonferenza della vita è stata misurata seguendo rigorosamente i criteri internazionali della Federazione Internazionale del Diabete (IDF). La misura viene presa nel punto medio tra l'ultima costola e la cresta iliaca, sempre al termine di una normale espirazione del paziente. Questa procedura standardizzata è vitale per evitare errori di misurazione che potrebbero portare a una diagnosi errata di sindrome metabolica.",
+idn16: "Risultati e Punti di Taglio per la Colombia",
+        idn17: "A seguito dell'analisi statistica tramite curve ROC, sono stati determinati i valori esatti per diagnosticare l'obesità addominale in uomini e donne colombiani. Per le donne, lo studio propone un punto di taglio di 89 centimetri, con una sensibilità dell'82,35% e un'alta specificità diagnostica. Questa scoperta è cruciale per adeguare le linee guida di pratica clinica nazionale, che a volte utilizzano standard stranieri non idonei alla nostra fisionomia.",
+        idn18: "La correlazione trovata tra la circonferenza della vita e il grasso viscerale misurato tramite bioimpedenza è stata statisticamente molto significativa. Ciò convalida che un comune metro a nastro, ben utilizzato, è uno strumento potente per prevedere malattie come il diabete di tipo due. I risultati invitano i professionisti della salute ad adottare questi punti di taglio di 89 cm e 91 cm come gold standard in Colombia.",
+idn19: "La sindrome metabolica aumenta drasticamente il rischio di infarti e ictus se non viene rilevata e trattata in tempo nella popolazione. L'obesità addominale è il motore che spinge altri fattori di rischio come l'ipertensione arteriosa e i livelli elevati di trigliceridi. Pertanto, disporre di una misura comoda ed economica come la circonferenza della vita facilita lo screening di massa delle persone a rischio.",
+        idn20: "Sulla piattaforma AAPMental, utilizziamo questi dati scientifici per supportare le nostre raccomandazioni su nutrizione e perdita di grasso corporeo. Comprendere che l'obiettivo per una donna colombiana è rimanere al di sotto degli 89 cm aiuta a stabilire obiettivi di salute chiari e realistici. La scienza ci dimostra che ridurre anche solo di pochi centimetri il girovita ha un impatto positivo immediato sulla chimica del corpo. Ti consigliamo di fare riferimento al nostro file isometricos.html e di mettere in pratica il plank, esercizio isometrico consigliato.",
+        idn21: "Conclusioni della Ricerca Clinica",
+        idn22: "Sulla base di questi risultati, si conclude che i punti di taglio di 91 cm per gli uomini e 89 cm per le donne sono i più appropriati per il paese. Queste misure consentono di classificare adeguatamente i pazienti affetti da obesità addominale, facilitando un'assistenza medica molto più personalizzata. L'adozione di questi valori specifici per l'etnia colombiana rappresenta un passo avanti nella prevenzione delle malattie croniche non trasmissibili.",
+ idn23: "Completa il tuo benessere con gli esercizi isometrici",
+        idn24: "Mantenere un peso sano non dipende unicamente dall'alimentazione. Le prove scientifiche dimostrano che la combinazione di una nutrizione equilibrata, attività fisica regolare, riposo adeguato e allenamento di forza contribuisce a migliorare la composizione corporea e a ridurre il rischio di sviluppare malattie metaboliche.",
+        idn25: "Tra le diverse modalità di allenamento, gli esercizi isometrici si distinguono per il rafforzamento della muscolatura mediante contrazioni sostenute, senza la necessità di eseguire movimenti ripetitivi. Uno degli esercizi più conosciuti è il plank addominale, che aiuta a rafforzare l'addome, la schiena, il bacino e i muscoli stabilizzatori del tronco, favorendo una migliore postura, equilibrio e stabilità corporea.",
+        idn26: "È importante ricordare che nessun esercizio da solo elimina il grasso localizzato. Tuttavia, quando gli esercizi isometrici fanno parte di un programma globale che include un'alimentazione sana, un'adeguata idratazione e una costante attività fisica, possono contribuire al mantenimento della massa muscolare, migliorare la capacità funzionale e supportare gli obiettivi di controllo del peso corporeo.",
+ idn27: "Se desideri imparare a eseguire correttamente il plank addominale e scoprire altri esercizi isometrici consigliati, ti invitiamo a visitare la nostra sezione specializzata.",
+        idn28: "Scopri gli Esercizi Isometrici",
+ idn29: "← Torna alla Home",
+ idn30: "Esplora",
+        idn31: "Home",
+        idn32: "grounding",
+        idn33: "Nutrizione",
+        idn34: "Esercizi isometrici",
+        idn35: "Informazioni",
+        idn36: "Chi siamo",
+        idn37: "Contatto",
+        idn38: "Politica sulla riservatezza",
+        idn39: "Termini e condizioni",
+        idn40: "Contatto",
+        idn41: "Medellín, Antioquia",
+        idn42: "© 2026 AAPMental. Tutti i diritti riservati.",
+        idn43: "Contenuto elaborato da AAPMental – Benessere Consapevole."
+    }
 };
+// // ===============================
+// FUNCIÓN PARA APLICAR LAS TRADUCCIONES
+// ===============================
+function aplicarTraducciones(idioma) {
+    document.querySelectorAll("[data-idn18]").forEach(el => {
+        const clave = el.dataset.idn18;
 
-if(rutas[lang]){
-  localStorage.setItem("idioma", lang);
-  window.location.href = rutas[lang];
+        if (textosGlobales?.[idioma]?.[clave]) {
+            el.textContent = textosGlobales[idioma][clave];
+        } else if (textos?.[idioma]?.[clave]) {
+            el.textContent = textos[idioma][clave];
+        }
+    });
 }
 
+// ===============================
+// CARGAR IDIOMA AL ABRIR LA PÁGINA
+// ===============================
+document.addEventListener("DOMContentLoaded", () => {
+    const idiomaNavegador = navigator.language.slice(0, 2);
+    const idiomasPermitidos = ["es", "en", "fr", "it"];
+
+    const idioma =
+        localStorage.getItem("idioma") ||
+        (idiomasPermitidos.includes(idiomaNavegador) ? idiomaNavegador : "es");
+
+    localStorage.setItem("idioma", idioma);
+
+    // Cambiar el selector al idioma actual si existe en el DOM
+    const selector = document.getElementById("idioma-nav");
+    if (selector) {
+        selector.value = idioma;
+    }
+
+    // Traducir toda la página al cargar
+    aplicarTraducciones(idioma);
+});
+
+// ===============================
+// CAMBIAR IDIOMA DESDE EL SELECT (SIN RECARGAR)
+// ===============================
+function cambiarIdioma(idioma) {
+    localStorage.setItem("idioma", idioma);
+    
+    // Aplica los cambios de forma instantánea
+    aplicarTraducciones(idioma);
 }
 
-function mostrarModal(titulo, texto){
-  document.getElementById("modal-titulo").textContent = titulo;
-  document.getElementById("modal-texto").textContent = texto;
-  document.getElementById("modal-salud").style.display = "block";
-}
 
-function cerrarModal(){
-  document.getElementById("modal-salud").style.display = "none";
+/* =========================================================
+🧮 LÓGICA DE LA CALCULADORA IMC (Sincronizada)
+========================================================= */
+
+function calcularIMC() {
+    const idioma = localStorage.getItem("idioma") || "es";
+
+    /* =====================================================
+        📦 TRADUCCIONES DE ESTA PÁGINA (Conectado a tus diccionarios)
+       ===================================================== */
+    const diccionarioActual = textos?.[idioma] || textosGlobales?.[idioma] || {};
+    const i18n = diccionarioActual.idn18 || {};
+
+    /* =====================================================
+        📥 CAMPOS DE ENTRADA
+       ===================================================== */
+    const pesoInput = document.getElementById("peso");
+    const estaturaInput = document.getElementById("estatura");
+
+    if (!pesoInput || !estaturaInput) return;
+
+    const peso = parseFloat(pesoInput.value);
+    const estatura = parseFloat(estaturaInput.value);
+
+    /* =====================================================
+        📊 ELEMENTOS DEL RESULTADO
+       ===================================================== */
+    const caja = document.getElementById("resultado-caja");
+    const nDisplay = document.getElementById("imc-numero");
+    const mDisplay = document.getElementById("imc-mensaje");
+
+    /* =====================================================
+        🧮 CALCULAR IMC
+       ===================================================== */
+    if (peso > 0 && estatura > 0 && i18n.resultados) {
+        const imc = (peso / (estatura * estatura)).toFixed(1);
+
+        if (caja) {
+            caja.style.display = "block";
+        }
+
+        if (nDisplay) {
+            nDisplay.textContent = imc;
+        }
+
+        let color = "";
+        let mensaje = "";
+
+        /* =================================================
+            📊 CLASIFICACIÓN
+        ================================================= */
+        if (imc < 18.5) {
+            color = "#ffcc00";
+            mensaje = i18n.resultados.bajo;
+        } else if (imc <= 24.9) {
+            color = "#2ecc71";
+            mensaje = i18n.resultados.normal;
+        } else if (imc <= 29.9) {
+            color = "#e67e22";
+            mensaje = i18n.resultados.sobrepeso;
+        } else {
+            color = "#e74c3c";
+            mensaje = i18n.resultados.obesidad;
+        }
+
+        /* =================================================
+            🎨 RESULTADO VISUAL
+        ================================================= */
+        if (caja) {
+            caja.style.backgroundColor = color + "22";
+            caja.style.border = "1px solid " + color;
+        }
+
+        if (nDisplay) {
+            nDisplay.style.color = color;
+        }
+
+        if (mDisplay) {
+            mDisplay.style.color = color;
+            mDisplay.textContent = mensaje;
+        }
+
+    } else {
+        alert(i18n.error || "Por favor ingresa valores válidos.");
+    }
 }
 
 </script>
 
+   
 
-
-    <script src="main.js"></script>
-
-    <div id="modal-salud" class="modal">
-      <div class="modal-contenido">
-        <span class="cerrar" onclick="cerrarModal()">×</span>
-        <h2 id="modal-titulo">Recomendaciones</h2>
-        <p id="modal-texto"></p>
-      </div>
-    </div>
-
-   <footer class="footer">
+ <footer class="footer">
     <div class="footer-container">
         
         <!-- Columna 1: Explorar -->
         <div class="footer-col">
-            <h3>Explorar</h3>
+            <h3 data-idn18="idn30">Explorar</h3>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="grounding.html">grounding</a></li>
-                <li><a href="nutricion.html">Nutrición</a></li>
-                <li><a href="isometricos.html">Ejercicios isométricos</a></li>
+                <li><a href="index.html" data-idn18="idn31">Inicio</a></li>
+                <li><a href="grounding.html" data-idn18="idn32">grounding</a></li>
+                <li><a href="nutricion.html" data-idn18="idn33">Nutrición</a></li>
+                <li><a href="isometricos.html" data-idn18="idn34">Ejercicios isométricos</a></li>
             </ul>
-        </div> <!-- Cierre Columna 1 -->
+        </div>
 
         <!-- Columna 2: Información -->
         <div class="footer-col">
-            <h3>Información</h3>
+            <h3 data-idn18="idn35">Información</h3>
             <ul>
-                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="privacidad.html">Política de Privacidad</a></li>
-                <li><a href="terminos.html">Términos y Condiciones</a></li>
+                <li><a href="quienes-somos.html" data-idn18="idn36">Quiénes Somos</a></li>
+                <li><a href="contacto.html" data-idn18="idn37">Contacto</a></li>
+                <li><a href="privacidad.html" data-idn18="idn38">Política de Privacidad</a></li>
+                <li><a href="terminos.html" data-idn18="idn39">Términos y Condiciones</a></li>
             </ul>
-        </div> <!-- Cierre Columna 2 -->
+        </div>
 
         <!-- Columna 3: Contacto -->
         <div class="footer-col">
-            <h3>Contacto</h3>
+            <h3 data-idn18="idn40">Contacto</h3>
             <p><i class="fas fa-envelope"></i> info@aapmental.com</p>
-            <p><i class="fas fa-map-marker-alt"></i> Medellín, Antioquia</p>
-        </div> <!-- Cierre Columna 3 -->
-
-    </div> <!-- ¡Cierre correcto del footer-container! -->
+            <p data-idn18="idn41"><i class="fas fa-map-marker-alt"></i> Medellín, Antioquia</p>
+        </div>
+    </div>
 
     <!-- Barra Inferior de Copyright -->
     <div class="footer-bottom">
-        <p>&copy; 2026 AAPMental. Todos los derechos reservados.</p>
-        <small>Contenido elaborado por AAPMental – Bienestar Consciente.</small>
+        <p data-idn18="idn42">&copy; 2026 AAPMental. Todos los derechos reservados.</p>
+        <small data-idn18="idn43">Contenido elaborado por AAPMental – Bienestar Consciente.</small>
     </div>
 </footer>
 </body>

@@ -1,307 +1,877 @@
+
 /* ==============================
    VARIABLES
 ================================ */
+
 :root {
     --oro: #d4af37;
-    --oscuro: #0b0b0b;
-    --negro: #000;
-    --texto: #eaeaea;
-    --gris: #999;
+
+    /* Fondos */
+    --oscuro: #111714;
+    --negro: #080b09;
+    --fondo-card: rgba(255, 255, 255, 0.055);
+
+    /* Texto */
+    --texto: #eeeeee;
+    --gris: #a8aaa8;
+
+    /* Verde bienestar */
+    --verde: #2e7d32;
+    --verde-oscuro: #1b5e20;
+    --verde-suave: #e8f5e9;
+
+    /* Efectos */
+    --sombra-suave: 0 5px 18px rgba(0, 0, 0, 0.28);
+    --transicion: all 0.3s ease;
 }
+```
+
+
 
 /* ==============================
    RESET
 ================================ */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body.lectura-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background: radial-gradient(circle at top, #111, #000 70%);
-    color:var(--texto);
-    min-height:100vh;
+
+/* ==============================
+   BODY
+================================ */
+
+
+
+body.lectura-body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 50% -10%,
+            rgba(212, 175, 55, 0.16),
+            transparent 38%
+        ),
+        radial-gradient(
+            circle at 0% 45%,
+            rgba(46, 125, 50, 0.08),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 100% 70%,
+            rgba(212, 175, 55, 0.06),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #181818 0%,
+            #101010 45%,
+            #080808 100%
+        );
+
+    background-attachment: fixed;
+
+    color: var(--texto);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+
+
+/* ==============================
+   NAVBAR & CONTENEDOR GENERAL
+================================ */
+
+.navbar {
+    width: 100%;
+    background: rgba(11, 11, 11, 0.95);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.20);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* ==============================
-   NAVBAR
+   ENLACES PRINCIPALES
 ================================ */
 
-.navbar{
-    background:rgba(0,0,0,0.9);
-    border-bottom:1px solid rgba(212,175,55,0.25);
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-.nav-container{
-    max-width:1100px;
-    margin:auto;
-    padding:12px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+/* Enlaces limpios (sin color morado de visitados) */
+.nav-links a:link,
+.nav-links a:visited,
+.dropdown-content li a:link,
+.dropdown-content li a:visited {
+    color: var(--texto, #fff);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transicion);
 }
 
-.logo{
-    color:var(--oro);
-    text-decoration:none;
-    letter-spacing:2px;
-    font-size:0.9rem;
-}
-
-.nav-links{
-    list-style:none;
-    display:flex;
-    gap:18px;
-}
-
-.nav-links a{
-    color:var(--texto);
-    text-decoration:none;
-    font-size:0.85rem;
-}
-
-.nav-links a:hover{
-    color:var(--oro);
+.nav-links > li > a:hover {
+    color: var(--oro, #d4af37);
 }
 
 /* ==============================
-   DROPDOWN
+   MENÚ DESPLEGABLE (DROPDOWN)
 ================================ */
 
-.dropdown{
-    position:relative;
+.dropdown {
+    position: relative;
 }
 
-.dropdown-content{
-    display:none;
-    position:absolute;
-    background:#0b0b0b;
-    border:1px solid rgba(212,175,55,0.25);
-    border-radius:6px;
-    min-width:200px;
-    padding:8px 0;
-    z-index:100;
+/* Puente invisible para que el cursor no pierda el contacto al bajar */
+.dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 15px;
 }
 
-.dropdown:hover .dropdown-content{
-    display:block;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    min-width: 210px;
+    padding: 8px 0;
+    margin: 0;
+
+    background: rgba(11, 11, 11, 0.98);
+    border: 1px solid rgba(212, 175, 55, 0.30);
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+    z-index: 1000;
+    list-style: none;
 }
 
-.dropdown-content li a{
-    display:block;
-    padding:8px 16px;
-    font-size:0.8rem;
+/* Flechita superior */
+.dropdown-content::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+
+    width: 10px;
+    height: 10px;
+
+    background: #0b0b0b;
+    border-left: 1px solid rgba(212, 175, 55, 0.30);
+    border-top: 1px solid rgba(212, 175, 55, 0.30);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 9px 16px;
+    font-size: 0.8rem;
+}
+
+.dropdown-content li a:hover {
+    color: var(--oro, #d4af37);
+    background: rgba(212, 175, 55, 0.08);
+    padding-left: 20px;
+}
+
+/* ==============================
+   SELECTOR DE IDIOMA (A LA DERECHA)
+================================ */
+
+.nav-lang {
+    margin-left: auto;
+}
+
+.nav-lang select {
+    background: rgba(11, 11, 11, 0.98);
+    color: var(--texto, #fff);
+    border: 1px solid rgba(212, 175, 55, 0.30);
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.nav-lang select:hover {
+    border-color: var(--oro, #d4af37);
 }
 
 /* ==============================
    CONTENEDOR
 ================================ */
 
-.container{
-    max-width:700px;
-    margin:auto;
-    padding:40px 20px 60px;
+.container {
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto;
+    padding: 40px 20px 60px;
 }
+
 
 /* ==============================
    CABECERA
 ================================ */
 
-.oro-texto{
-    color:var(--oro);
-    letter-spacing:3px;
-    font-size:0.7rem;
-    text-transform:uppercase;
+.oro-texto {
+    color: var(--oro);
+
+    letter-spacing: 3px;
+    font-size: 0.7rem;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    margin-bottom: 8px;
 }
+```
+
 
 /* ==============================
    TARJETA IMC
 ================================ */
 
-.imc-card{
-    margin-top:40px;
-    background:rgba(255,255,255,0.04);
-    padding:30px;
-    border-radius:12px;
-    border-left:4px solid var(--oro);
+.imc-card {
+    width: 100%;
+    margin-top: 40px;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-left: 4px solid var(--oro);
+    border-radius: 12px;
+
+    box-shadow: var(--sombra-suave);
+
+    transition: var(--transicion);
 }
+
+.imc-card:hover {
+    border-left-color: #f0d875;
+    background: rgba(255, 255, 255, 0.055);
+}
+
 
 /* ==============================
    INPUTS
 ================================ */
 
-.input-group{
-    display:flex;
-    flex-direction:column;
-    margin-bottom:18px;
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
 }
 
-.input-group label{
-    font-size:0.85rem;
-    margin-bottom:6px;
-    color:var(--gris);
+.input-group label {
+    margin-bottom: 6px;
+
+    color: var(--gris);
+
+    font-size: 0.85rem;
+    font-weight: 500;
 }
 
-.input-group input{
-    padding:10px;
-    border-radius:6px;
-    border:1px solid #333;
-    background:#000;
-    color:#fff;
-    font-size:0.9rem;
+
+/* ==============================
+   CAMPOS DE ENTRADA
+================================ */
+
+.input-group input {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    border: 1px solid #333;
+    border-radius: 6px;
+
+    background: #000;
+    color: #fff;
+
+    font-family: inherit;
+    font-size: 0.9rem;
+
+    transition: var(--transicion);
 }
 
-.input-group input:focus{
-    outline:none;
-    border-color:var(--oro);
+.input-group input::placeholder {
+    color: #666;
 }
+
+.input-group input:hover {
+    border-color: #555;
+}
+
+.input-group input:focus {
+    outline: none;
+
+    border-color: var(--oro);
+
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.12);
+}
+
+
+/* ==============================
+   CAMPOS NUMÉRICOS
+================================ */
+
+.input-group input[type="number"] {
+    appearance: textfield;
+}
+
+.input-group input[type="number"]::-webkit-inner-spin-button,
+.input-group input[type="number"]::-webkit-outer-spin-button {
+    opacity: 0.7;
+}
+```
+
+
 
 /* ==============================
    BOTONES
 ================================ */
 
-.btn{
-    padding:10px 18px;
-    border-radius:6px;
-    border:none;
-    cursor:pointer;
-    font-size:0.85rem;
-    transition:all 0.3s ease;
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+    padding: 10px 20px;
+
+    border: 1px solid transparent;
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        opacity 0.3s ease;
 }
 
-.btn:hover{
-    opacity:0.85;
+.btn:hover {
+    transform: translateY(-1px);
 }
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.20);
+}
+
+
+/* ==============================
+   BOTÓN VERDE
+   JUGOS VERDES
+================================ */
+
+.promo-boton {
+    margin-top: 10px;
+
+    background: linear-gradient(
+        135deg,
+        var(--verde),
+        var(--verde-oscuro)
+    );
+
+    color: #ffffff;
+
+    border-color: rgba(255, 255, 255, 0.10);
+
+    box-shadow:
+        0 4px 12px rgba(46, 125, 50, 0.25);
+}
+
+.promo-boton:hover {
+    background: linear-gradient(
+        135deg,
+        var(--verde-oscuro),
+        #145a18
+    );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 7px 18px rgba(46, 125, 50, 0.35);
+
+    transform: translateY(-2px);
+}
+
+.promo-boton:active {
+    transform: translateY(0);
+
+    box-shadow:
+        0 3px 8px rgba(46, 125, 50, 0.25);
+}
+
 
 /* ==============================
    RESULTADO IMC
 ================================ */
 
-#resultado-caja{
-    display:none;
-    margin-top:25px;
-    padding:20px;
-    border-radius:10px;
-    text-align:center;
-    transition: all 0.4s ease;
-        
+#resultado-caja {
+    display: none;
+
+    width: 100%;
+
+    margin-top: 25px;
+    padding: 20px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    transition:
+        background-color 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
 }
-
-.valor-imc{
-    font-size:2.8rem;
-    font-weight:bold;
-}
-
-.mensaje-imc{
-    margin-top:10px;
-    font-size:0.9rem;
-}
-
-/* ==============================
-   MEDIDOR IMC (BARRA)
-================================ */
-
-.medidor-imc{
-    margin-top:30px;
-    width:100%;
-}
-
-.barra-imc{
-    position:relative;
-    display:flex;
-    height:25px;
-    width:100%;
-    border-radius:12px;
-    overflow:hidden;
-    background:#333;
-}
-
-.zona{
-    flex:1;
-}
-
-.bajo{
-    background:#f1c40f;
-}
-
-.normal{
-    background:#2ecc71;
-}
-
-.sobrepeso{
-    background:#e67e22;
-}
-
-.obesidad{
-    background:#e74c3c;
-}
-
-.labels-imc{
-    display:flex;
-    justify-content:space-between;
-    margin-top:8px;
-    font-size:12px;
-    color:#aaa;
-}
-
-
-
-
-
 
 
 /* ==============================
-   RESPONSIVE
+   VALOR DEL IMC
 ================================ */
 
-@media (max-width:600px){
+.valor-imc {
+    font-size: 2.8rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
 
-    h1{
-        font-size:1.8rem !important;
+
+/* ==============================
+   MENSAJE DEL IMC
+================================ */
+
+.mensaje-imc {
+    margin-top: 10px;
+
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+```
+
+```css
+/* ==============================
+   MEDIDOR IMC — BARRA
+================================ */
+
+.medidor-imc {
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+/* ==============================
+   BARRA PRINCIPAL
+================================ */
+
+.barra-imc {
+    position: relative;
+
+    display: flex;
+
+    width: 100%;
+    height: 26px;
+
+    overflow: hidden;
+
+    background: #333;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 13px;
+
+    box-shadow:
+        inset 0 1px 3px rgba(0, 0, 0, 0.45),
+        0 3px 10px rgba(0, 0, 0, 0.20);
+}
+
+
+/* ==============================
+   ZONAS
+================================ */
+
+.zona {
+    flex: 1;
+    height: 100%;
+
+    transition:
+        opacity 0.3s ease,
+        filter 0.3s ease;
+}
+
+
+/* ==============================
+   BAJO PESO
+================================ */
+
+.bajo {
+    background: #f1c40f;
+}
+
+
+/* ==============================
+   PESO NORMAL
+================================ */
+
+.normal {
+    background: #2ecc71;
+}
+
+
+/* ==============================
+   SOBREPESO
+================================ */
+
+.sobrepeso {
+    background: #e67e22;
+}
+
+
+/* ==============================
+   OBESIDAD
+================================ */
+
+.obesidad {
+    background: #e74c3c;
+}
+
+
+/* ==============================
+   ETIQUETAS
+================================ */
+
+.labels-imc {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    margin-top: 8px;
+
+    color: #aaa;
+
+    font-size: 12px;
+    line-height: 1.4;
+
+    text-align: center;
+}
+
+
+```css
+/* ==============================
+   RESPONSIVE — MÓVILES
+================================ */
+
+@media (max-width: 600px) {
+
+    /* ==========================
+       TIPOGRAFÍA
+    ========================== */
+
+    h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.2;
     }
 
-    .imc-card{
-        padding:22px;
+
+    /* ==========================
+       TARJETA IMC
+    ========================== */
+
+    .imc-card {
+        padding: 22px 18px;
+        border-radius: 10px;
     }
+
+
+    /* ==========================
+       MEDIDOR IMC
+    ========================== */
+
+    .medidor-imc {
+        margin-top: 25px;
+    }
+
+    .barra-imc {
+        height: 22px;
+        border-radius: 11px;
+    }
+
+    .labels-imc {
+        font-size: 10px;
+    }
+
+
+    /* ==========================
+       BOTONES
+    ========================== */
+
+    .btn {
+        min-height: 42px;
+        padding: 10px 18px;
+        font-size: 0.82rem;
+    }
+
+
+    /* ==========================
+       CAMPOS
+    ========================== */
+
+    .input-group {
+        margin-bottom: 16px;
+    }
+
+    .input-group input {
+        padding: 11px;
+        font-size: 0.9rem;
+    }
+
+
+    /* ==========================
+       RESULTADO IMC
+    ========================== */
+
+    #resultado-caja {
+        padding: 18px 15px;
+    }
+
+    .valor-imc {
+        font-size: 2.3rem;
+    }
+
+    .mensaje-imc {
+        font-size: 0.85rem;
+    }
+
+
+    /* ==========================
+       CONTENEDOR
+    ========================== */
+
+    .container {
+        padding: 30px 15px 45px;
+    }
+}
+```
 
 }
+
+```css id="m4k2qx"
+/* ==============================
+   MODAL
+================================ */
 
 .modal {
     display: none;
+
     position: fixed;
-    z-index: 999;
-    left: 0;
-    top: 0;
+    inset: 0;
+
+    z-index: 9999;
+
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.7);
-  }
-  
-  .modal-contenido {
-    background: #111;
-    color: #fff;
-    margin: 10% auto;
+
     padding: 20px;
-    border-radius: 12px;
+
+    background: rgba(0, 0, 0, 0.78);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    animation: aparecerModal 0.3s ease;
+}
+
+
+/* ==============================
+   CONTENIDO DEL MODAL
+================================ */
+
+.modal-contenido {
+    position: relative;
+
     width: 90%;
-    max-width: 400px;
+    max-width: 420px;
+
+    margin: 10vh auto 0;
+    padding: 28px 25px;
+
+    background: linear-gradient(
+        145deg,
+        #111111,
+        #080808
+    );
+
+    color: #ffffff;
+
+    border: 1px solid rgba(212, 175, 55, 0.30);
+    border-top: 3px solid var(--oro);
+    border-radius: 14px;
+
     text-align: center;
-  }
-  
-  .cerrar {
-    float: right;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.65),
+        0 0 25px rgba(212, 175, 55, 0.08);
+
+    animation: subirModal 0.35s ease;
+}
+
+
+/* ==============================
+   BOTÓN CERRAR
+================================ */
+
+.cerrar {
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--gris);
+
     font-size: 24px;
+    font-weight: bold;
+
+    line-height: 1;
+
     cursor: pointer;
-  }
+
+    border-radius: 50%;
+
+    transition: var(--transicion);
+}
+
+.cerrar:hover {
+    color: var(--oro);
+
+    background: rgba(212, 175, 55, 0.10);
+
+    transform: rotate(90deg);
+}
+
+
+/* ==============================
+   ANIMACIONES
+================================ */
+
+@keyframes aparecerModal {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes subirModal {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* ==============================
+   MODAL — MÓVILES
+================================ */
+
+@media (max-width: 600px) {
+
+    .modal {
+        padding: 15px;
+    }
+
+    .modal-contenido {
+        width: 100%;
+        max-width: 380px;
+
+        margin-top: 8vh;
+
+        padding: 25px 18px;
+
+        border-radius: 12px;
+    }
+
+    .cerrar {
+        top: 8px;
+        right: 10px;
+    }
+}
+```
+
 
 /* =====================================================
    FOOTER 
 ===================================================== */
 
-.footer{
+```css
+/* ==============================
+   FOOTER
+================================ */
 
+.footer {
     background: linear-gradient(
         180deg,
         #111111 0%,
@@ -309,34 +879,58 @@ body.lectura-body{
         #050505 100%
     );
 
-    color:#ffffff;
+    color: #ffffff;
 
-    border-top:2px solid rgba(212,175,55,.35);
+    border-top: 2px solid rgba(212, 175, 55, 0.35);
 
+    margin-top: 50px;
 }
 
-/* CONTENEDOR GRID CON 3 COLUMNAS EXACTAS */
+
+/* ==============================
+   CONTENEDOR GRID
+   3 COLUMNAS
+================================ */
+
 .footer-container {
-    width: min(1200px, 92%); 
-    margin: auto;
+    width: min(1200px, 92%);
+
+    margin: 0 auto;
+
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+
+    grid-template-columns: repeat(3, 1fr);
+
     gap: 50px;
-    padding: 70px 0;
+
+    padding: 65px 0;
 }
 
-/* Estilos para los títulos de cada columna (Explorar, Información, Contacto) */
+
+/* ==============================
+   TÍTULOS DE COLUMNAS
+================================ */
+
 .footer-col h3 {
-    color: #86efac; 
-    font-size: 1.25rem;
-    margin-bottom: 20px;
-    font-weight: 600;
     margin-top: 0;
+    margin-bottom: 20px;
+
+    color: #86efac;
+
+    font-size: 1.25rem;
+    font-weight: 600;
+
+    line-height: 1.3;
 }
 
-/* Listas de navegación */
+
+/* ==============================
+   LISTAS
+================================ */
+
 .footer-col ul {
     list-style: none;
+
     padding: 0;
     margin: 0;
 }
@@ -345,80 +939,203 @@ body.lectura-body{
     margin-bottom: 12px;
 }
 
+
+/* ==============================
+   ENLACES
+================================ */
+
 .footer-col ul li a {
-    color: #cbd5e1; 
-    text-decoration: none;
-    transition: color 0.3s ease, padding-left 0.3s ease;
     display: inline-block;
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        padding-left 0.3s ease;
 }
 
-/* Efecto Hover al pasar el mouse por los enlaces */
 .footer-col ul li a:hover {
     color: #ffffff;
-    padding-left: 6px; 
+
+    padding-left: 6px;
 }
 
-/* Bloque de texto e íconos en la columna de Contacto */
+
+/* ==============================
+   CONTACTO
+================================ */
+
 .footer-col p {
-    color: #cbd5e1;
-    margin: 0 0 15px 0;
     display: flex;
+
     align-items: center;
+
     gap: 10px;
+
+    margin: 0 0 15px;
+
+    color: #cbd5e1;
+
     font-size: 0.95rem;
+
+    line-height: 1.5;
 }
+
+
+/* ==============================
+   ICONOS
+================================ */
 
 .footer-col p i {
-    color: #86efac; 
+    flex-shrink: 0;
+
+    width: 20px;
+
+    color: #86efac;
+
     font-size: 1.1rem;
-    width: 20px; 
+
     text-align: center;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
 }
+
+.footer-col p:hover i {
+    color: #bbf7d0;
+
+    transform: scale(1.08);
+}
+
+
+/* ==============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 45px 0;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+
+    .footer-col p {
+        justify-content: center;
+    }
+
+    .footer-col ul li a:hover {
+        padding-left: 0;
+    }
+}
+```
+
 
 /* ==========================================
    BARRA INFERIOR DE COPYRIGHT
 ========================================== */
+```css id="y2z8q1"
+/* ==============================
+   PARTE INFERIOR DEL FOOTER
+================================ */
+
 .footer-bottom {
-    max-width: 1200px;
-    margin: 50px auto 0 auto;
-    padding-top: 25px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    width: min(1200px, 92%);
+
+    margin: 50px auto 0;
+
+    padding: 25px 0 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
     text-align: center;
 }
 
+
+/* ==============================
+   TEXTO PRINCIPAL
+================================ */
+
 .footer-bottom p {
+    margin: 0 0 6px;
+
     color: #94a3b8;
-    margin: 0 0 6px 0;
+
     font-size: 0.95rem;
+    line-height: 1.5;
 }
+
+
+/* ==============================
+   TEXTO SECUNDARIO
+================================ */
 
 .footer-bottom small {
     color: #64748b;
+
     font-size: 0.85rem;
+
+    line-height: 1.5;
 }
 
-/* ==========================================
-   RESPONSIVO PROPIO DEL FOOTER (MÓVILES Y TABLETS)
-========================================== */
+
+/* ==============================
+   RESPONSIVE — TABLETS
+================================ */
+
 @media (max-width: 850px) {
+
     .footer-container {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
+
         gap: 30px;
     }
 }
 
+
+/* ==============================
+   RESPONSIVE — MÓVILES
+================================ */
+
 @media (max-width: 576px) {
+
     .footer-container {
-        grid-template-columns: 1fr; 
-        text-align: center; 
+        grid-template-columns: 1fr;
+
         gap: 35px;
+
+        text-align: center;
     }
 
     .footer-col p {
-        justify-content: center; 
+        justify-content: center;
     }
 
     .footer-col ul li a:hover {
-        padding-left: 0; 
+        padding-left: 0;
+    }
+
+    .footer-bottom {
+        margin-top: 35px;
+
+        padding-top: 20px;
+    }
+
+    .footer-bottom p {
+        font-size: 0.88rem;
+    }
+
+    .footer-bottom small {
+        font-size: 0.78rem;
     }
 }
+```
