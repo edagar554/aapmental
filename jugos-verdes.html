@@ -11,42 +11,61 @@ Jugos Verdes Saludables: Recetas, Beneficios y Evidencia Científica | AAPMental
 
     <link rel="stylesheet" href="jugos.css">
 </head>
-<body>
-   <!-- NAVBAR - EDICIÓN BIENESTAR -->
-<nav class="navbar">
-    <div class="nav-container">
-        
-        <a href="index.html" class="nav-logo">
-            AAP<span>Mental</span>
-        </a>
+<body class="lectura-body bg-dark">
 
-        <ul class="nav-links">
-            <li><a href="index.html">Inicio</a></li>
-            
-            <!-- Dropdown de Terapias y Salud -->
+    <nav class="navbar">
+        <div class="nav-container">
+          
+    
+          <ul class="nav-links">
+            <li><a href="index.html" data-i18n="menu_inicio">Inicio</a></li>
+    
             <li class="dropdown">
-                <a href="#" class="dropdown-trigger">Explorar ▾</a>
-                <ul class="dropdown-content">
-                    <li><a href="nutricion.html">Nutrición</a></li>
-                    <li><a href="grounding.html">Grounding</a></li>
-                </ul>
+              <a href="#" data-i18n="menu_terapias">Terapias ▾</a>
+              <ul class="dropdown-content">
+                <li><a href="grounding.html" data-i18n="menu_grounding">Grounding</a></li>
+                <li><a href="solfeguio.html" data-i18n="menu_solfeggio">Solfeggio</a></li>
+                <li><a href="equilibrio-cuantico.html" data-i18n="menu_equilibrio">Equilibrio</a></li>
+                <li><a href="isometricos.html" data-i18n="menu_isometricos">isometricos</a></li>
+                <li><a href="nutricion.html" data-i18n="menu_nutricion">nutricion</a></li>
+              </ul>
             </li>
-
-           
-    </div>
-</nav>
     
-   <header class="hero-jugos">
+            <li class="dropdown">
+              <a href="#" data-i18n="menu_mente_ciencia">Mente & Ciencia ▾</a>
+              <ul class="dropdown-content">
+                <li><a href="reprogramacion-neuronal.html" data-i18n="menu_reprogramacion">Reprogramación</a></li>
+                <li><a href="mecanica-cuantica.html" data-i18n="menu_mecanica">Mecánica Cuántica</a></li>
+                <li><a href="lectura-kybalion.html" data-i18n="menu_kybalion">Kybalión</a></li>
+                
+              </ul>
+            </li>
     
-          <div class="hero-imagen">
-            <img src="imagenes/imagenJugos.png" 
-                 alt="Jugo verde saludable preparado con vegetales frescos y frutas naturales"
-                 
-              
+            <li><a href="masa-corporal.html" data-i18n="menu_salud">masa-corporal</a></li>
+          </ul>
+    
+          
+          <div class="nav-lang">
+            <select id="idioma-nav" onchange="cambiarIdioma(this.value)">
+                <option value="es">ESPAÑOL</option>
+                <option value="en">ENGLISH</option>
+                <option value="fr">FRANÇAIS</option>
+                <option value="it">ITALIANO</option>
+                </select>
+          </div>
         </div>
+    </nav>
+    
+  <header class="hero-jugos">
+    <div class="hero-imagen">
+        <img src="imagenes/imagenJugos.png" 
+             alt="Jugo verde saludable preparado con vegetales frescos y frutas naturales" 
+             data-i18n-alt="alt_jugo_verde">
+    </div>
+
     
          
-</header>
+
         <script type="application/ld+json">
 {
   "@context": "https://schema.org/",
@@ -99,117 +118,528 @@ Jugos Verdes Saludables: Recetas, Beneficios y Evidencia Científica | AAPMental
 
 <section class="introduccion-jugos">
 
-<h2>
-Los jugos verdes son una forma práctica de incrementar el consumo diario de frutas y verduras.
-</h2>
+    <h2 data-idn="idn18:titulo"
+        data-i18n="intro_jugos_titulo">
+        🌿 Explora el mundo de los Jugos Verdes
+    </h2>
 
-<p>
-Aunque no sustituyen una alimentación equilibrada, pueden aportar vitaminas, minerales, antioxidantes y numerosos compuestos bioactivos cuando forman parte de un estilo de vida saludable.
-</p>
+    <p data-idn="idn18:descripcion"
+       data-i18n="intro_jugos_parrafo">
+        Los jugos y preparaciones a base de frutas y verduras pueden ser una forma práctica
+        de incorporar alimentos vegetales a la alimentación cotidiana. Sin embargo, no sustituyen
+        una alimentación equilibrada ni constituyen tratamientos para enfermedades.
+    </p>
+
+    <div class="reflexion-jugos">
+
+        <h3 data-idn="idn18:reflexion_titulo"
+            data-i18n="intro_jugos_reflexion_titulo">
+            💭 Antes de comenzar, hazte una pregunta
+        </h3>
+
+        <p data-idn="idn18:reflexion_texto"
+           data-i18n="intro_jugos_reflexion_texto">
+            Cuando eliges un jugo verde, ¿qué buscas realmente: sabor, variedad,
+            hidratación, incorporar más vegetales o simplemente disfrutar de una bebida diferente?
+        </p>
+
+        <p class="frase-consciente"
+           data-idn="idn18:frase"
+           data-i18n="intro_jugos_frase">
+            🌱 No se trata de buscar una bebida milagrosa, sino de aprender a relacionarnos
+            conscientemente con los alimentos que elegimos.
+        </p>
+
+    </div>
 
 </section>
-        
         
 
     
     </header>
 
-    <main id="contenedor-jugos">
-    </main>
+   <main id="contenedor-jugos">
 
     <section class="jugos-verdes-beneficios">
-    <h2>Jugos Verdes Saludables para una Alimentación Equilibrada</h2>
-    <h2>Beneficios de los Jugos Verdes y Evidencia Científica</h2>
+        <h2 data-i18n="beneficios_titulo_1">Jugos Verdes Saludables para una Alimentación Equilibrada</h2>
+        <h3 data-i18n="beneficios_titulo_2">Beneficios de los Jugos Verdes y Evidencia Científica</h3>
     
-    <p class="introduccion">
-        Los jugos verdes aportan altas concentraciones de antioxidantes, vitaminas, minerales y clorofila. 
-        La ciencia respalda su consumo como un buen complemento nutritional (en especial si se ingieren sin colar para aprovechar la fibra); 
-        sin embargo, no existen evidencias científicas que los validen como dietas desintoxicantes milagrosas. 
-        <span class="referencias">[1, 2, 3, 4, 5]</span>
+        <p class="introduccion" data-i18n="beneficios_introduccion">
+            Los jugos verdes aportan altas concentraciones de antioxidantes, vitaminas, minerales y clorofila. 
+            La ciencia respalda su consumo como un buen complemento nutricional (en especial si se ingieren sin colar para aprovechar la fibra); 
+            sin embargo, no existen evidencias científicas que los validen como dietas desintoxicantes milagrosas. 
+        </p>
+
+       <div class="exploracion-jugos">
+
+    <h3 data-idn="idn19:titulo"
+        data-i18n="exploracion_titulo">
+        🔎 Detente y observa
+    </h3>
+
+    <p data-idn="idn19:descripcion"
+       data-i18n="exploracion_texto">
+        Antes de continuar, piensa en la preparación que consumes habitualmente.
+        ¿Conserva la pulpa? ¿Qué frutas y verduras contiene? ¿La utilizas como parte
+        de una alimentación variada o esperas que produzca un efecto extraordinario?
     </p>
 
-    <h3>Evidencia Científica y Hallazgos Destacados</h3>
-    <h2>Referencias
-Harvard T.H. Chan School of Public Health. Vegetables and Fruits.
-National Institutes of Health (NIH). Office of Dietary Supplements.
-Organización Mundial de la Salud. Healthy Diet.
-MDPI Nutrients.
-SciELO.</h2>
+    <p class="reflexion-jugos"
+       data-idn="idn19:reflexion"
+       data-i18n="exploracion_reflexion">
+        💭 Una alimentación consciente comienza cuando conocemos lo que elegimos,
+        sin convertir un alimento en una promesa milagrosa.
+    </p>
 
-    <div class="contenido-evidencia">
-        <article class="item-beneficio">
-            <h4>Salud Cardiovascular</h4>
-            <p>
-                Un estudio clínico (publicado en MDPI) analizó el consumo de jugos de vegetales orgánicos en adultos, 
-                concluyendo que ayudan a mejorar indicadores de circulación sanguínea y el perfil de lípidos. 
-                Otra investigación respalda que las mezclas de jugos de frutas y verduras tienen efectos positivos 
-                en la reducción de la presión arterial, gracias a sus polifenoles y nitratos.
-            </p>
-        </article>
+</div>
+        <span class="referencias" data-i18n="beneficios_referencias_num">[1, 2, 3, 4, 5]</span>
 
-        <article class="item-beneficio">
-            <h4>Actividad Digestiva</h4>
-            <p>
-                Las revisiones científicas indican que los jugos verdes mejoran el microbioma intestinal y el tránsito, 
-                gracias al aporte de fibra vegetal. <span class="referencias">[1, 2]</span>
-            </p>
-        </article>
+        <h3 data-i18n="beneficios_subtitulo">Evidencia Científica y Hallazgos Destacados</h3>
+        <h2 data-i18n="beneficios_referencias_titulo">Referencias</h2>
+        <ul class="referencias-lista">
+            <li data-i18n="ref_1">Harvard T.H. Chan School of Public Health. Vegetables and Fruits.</li>
+            <li data-i18n="ref_2">National Institutes of Health (NIH). Office of Dietary Supplements.</li>
+            <li data-i18n="ref_3">Organización Mundial de la Salud. Healthy Diet.</li>
+            <li data-i18n="ref_4">MDPI Nutrients.</li>
+            <li data-i18n="ref_5">SciELO.</li>
+        </ul>
+    
 
-        <article class="item-beneficio">
-            <h4>Capacidad Antioxidante</h4>
-            <p>
-                Diversos estudios en modelos preclínicos (como el publicado en SciELO) han demostrado el papel 
-                protector del zumo verde contra las especies reactivas (estrés oxidativo) en comparación con otras 
-                bebidas ricas en vitamina C. <span class="referencias">[1]</span>
-            </p>
-        </article>
+<div class="contenido-evidencia">
+    <article class="item-beneficio">
+        <h4 data-i18n="cardio_titulo">Salud Cardiovascular</h4>
+        <p data-i18n="cardio_texto">
+            Un estudio clínico (publicado en MDPI) analizó el consumo de jugos de vegetales orgánicos en adultos, 
+            concluyendo que ayudan a mejorar indicadores de circulación sanguínea y el perfil de lípidos. 
+            Otra investigación respalda que las mezclas de jugos de frutas y verduras tienen efectos positivos 
+            en la reducción de la presión arterial, gracias a sus polifenoles y nitratos.
+        </p>
+    </article>
 
-        <article class="item-beneficio contraindicaciones">
-            <h4>Posibles Contraindicaciones</h4>
-            <p>
-                La literatura médica advierte que mezclar demasiados vegetales (como espinacas o remolachas) eleva la 
-                ingesta de oxalatos, lo cual puede aumentar el riesgo de cálculos renales. Además, el exceso de líquidos 
-                y minerales puede estar contraindicado para personas con insuficiencias cardíacas o renales.
-            </p>
+    <article class="item-beneficio">
+        <h4 data-i18n="digestiva_titulo">Actividad Digestiva</h4>
+        <p>
+            <span data-i18n="digestiva_texto">Las revisiones científicas indican que los jugos verdes mejoran el microbioma intestinal y el tránsito, gracias al aporte de fibra vegetal.</span> 
+            <span class="referencias">[1, 2]</span>
+        </p>
+    </article>
 
-</article>
+    <article class="item-beneficio">
+        <h4 data-i18n="antioxidante_titulo">Capacidad Antioxidante</h4>
+        <p>
+            <span data-i18n="antioxidante_texto">Diversos estudios en modelos preclínicos (como el publicado en SciELO) han demostrado el papel protector del zumo verde contra las especies reactivas (estrés oxidativo) en comparación con otras bebidas ricas en vitamina C.</span> 
+            <span class="referencias">[1]</span>
+        </p>
+    </article>
+
+    <article class="item-beneficio contraindicaciones">
+        <h4 data-i18n="contraindicaciones_titulo">Posibles Contraindicaciones</h4>
+        <p data-i18n="contraindicaciones_texto">
+            La literatura médica advierte que mezclar demasiados vegetales (como espinacas o remolachas) eleva la 
+            ingesta de oxalatos, lo cual puede aumentar el riesgo de cálculos renales. Además, el exceso de líquidos 
+            y minerales puede estar contraindicado para personas con insuficiencias cardíacas o renales.
+        </p>
+    </article>
+</div>
     </div>
-</section>
 
-    <section class="instrucciones-generales">
+
+   <section class="instrucciones-generales">
        
-<p>La información presentada tiene fines educativos y no sustituye la valoración individual de un profesional de la salud. Ante enfermedades crónicas, embarazo o tratamientos médicos, consulta con un profesional antes de realizar cambios importantes en tu alimentación.</p>
- 
+    <p data-i18n="instrucciones_aviso_principal">
+        La información presentada tiene fines educativos y no sustituye la valoración individual de un profesional de la salud. Ante enfermedades crónicas, embarazo o tratamientos médicos, consulta con un profesional antes de realizar cambios importantes en tu alimentación.
+    </p>
 
-    <h2>Pasos para la preparación perfecta</h2>
+    <h2 data-i18n="pasos_titulo">Pasos para la preparación perfecta</h2>
 
     <ol>
-        <li>Lava bien todas las frutas y verduras.</li>
-        <li>Trocea e introduce en la licuadora con el agua.</li>
-        <li>Bebe de inmediato para aprovechar los nutrientes.</li>
+        <li data-i18n="paso_1">Lava bien todas las frutas y verduras.</li>
+        <li data-i18n="paso_2">Trocea e introduce en la licuadora con el agua.</li>
+        <li data-i18n="paso_3">Bebe de inmediato para aprovechar los nutrientes.</li>
     </ol>
 
-    <p>
+    <p data-i18n="info_fibra">
         Los jugos preparados sin colar conservan una mayor cantidad de fibra dietética,
         favoreciendo la saciedad y el adecuado funcionamiento intestinal.
     </p>
 
-    <p>
-        La información presentada tiene fines educativos y no sustituye la valoración
-        individual de un profesional de la salud.
-    </p>
-
+<div class="tarjeta-jugo">
+    <h2 data-i18n="jugo_berros_titulo">Jugo de Berros y Pepino</h2>
+    <p data-i18n="jugo_berros_desc">Favorece la depuración de la sangre y acelera la eliminación de desechos.</p>
     
+    <ul class="lista-ingredientes">
+        <li data-i18n="ing_berros">🍏 1 manojo de berros</li>
+        <li data-i18n="ing_berros_pepino">🍏 1 pepino</li>
+        <li data-i18n="ing_berros_manzana">🍏 1 manzana verde</li>
+        <li data-i18n="ing_berros_limon">🍏 1 limón</li>
+    </ul>
 
-    <p>
-        <strong>Contenido elaborado por AAPMental – Bienestar Consciente.</strong><br>
-        Proyecto de educación en bienestar, nutrición preventiva y hábitos saludables
-        basado en literatura científica y organismos internacionales.
+    <div class="aviso-jugo">
+        <p>
+            <span data-i18n="aviso_complemento">🥗 Este jugo es un complemento de tu alimentación.</span> 
+            <span data-i18n="aviso_consulta">⚠️ Consulta a tu médico o nutricionista.</span>
+        </p>
+
+<div class="reflexion-beneficios">
+
+    <h3 data-idn="idn20:titulo"
+        data-i18n="reflexion_beneficios_titulo">
+        💭 Ahora observa tu elección
+    </h3>
+
+    <p data-idn="idn20:descripcion"
+       data-i18n="reflexion_beneficios_texto">
+        ¿Tu preparación conserva la pulpa o ha sido filtrada? ¿Contiene principalmente
+        verduras, frutas o una combinación de ambas? Comprender estas diferencias
+        permite valorar cada preparación dentro del conjunto de nuestra alimentación.
     </p>
 
+<section class="cuestionario-jugos">
 
- </section>
+    <h2 data-idn="idn21:titulo"
+        data-i18n="cuestionario_titulo">
+        🌿 Tu momento de exploración
+    </h2>
 
+    <p data-idn="idn21:intro"
+       data-i18n="cuestionario_intro">
+        Antes de continuar, responde mentalmente estas preguntas y descubre
+        algunos aspectos interesantes sobre los jugos verdes.
+    </p>
+
+    <details>
+
+        <summary data-idn="idn21:pregunta_1"
+                  data-i18n="pregunta_1">
+            🥬 ¿Qué ocurre con la fibra cuando un jugo conserva la pulpa?
+        </summary>
+
+        <p data-idn="idn21:respuesta_1"
+           data-i18n="respuesta_1">
+            Cuando se conserva la pulpa, generalmente se mantiene una mayor
+            cantidad de fibra dietética que en un jugo filtrado. La fibra
+            contribuye a la saciedad y forma parte de una alimentación
+            favorable para la salud intestinal.
+        </p>
+
+    </details>
+
+    <details>
+
+        <summary data-idn="idn21:pregunta_2"
+                  data-i18n="pregunta_2">
+            🍎 ¿Un jugo verde necesita contener solamente verduras?
+        </summary>
+
+        <p data-idn="idn21:respuesta_2"
+           data-i18n="respuesta_2">
+            No. Puede combinar frutas y verduras. La elección dependerá del
+            sabor, los ingredientes disponibles y del conjunto de la alimentación.
+        </p>
+
+    </details>
+
+    <details>
+
+        <summary data-idn="idn21:pregunta_3"
+                  data-i18n="pregunta_3">
+            🔬 ¿Los jugos verdes desintoxican el organismo?
+        </summary>
+
+        <p data-idn="idn21:respuesta_3"
+           data-i18n="respuesta_3">
+            No existe evidencia científica sólida que demuestre que los jugos
+            verdes produzcan una desintoxicación especial. El organismo cuenta
+            con sistemas fisiológicos propios para procesar y eliminar sustancias.
+        </p>
+
+    </details>
+
+    <details>
+
+        <summary data-idn="idn21:pregunta_4"
+                  data-i18n="pregunta_4">
+            💧 ¿Un jugo verde puede sustituir una alimentación equilibrada?
+        </summary>
+
+        <p data-idn="idn21:respuesta_4"
+           data-i18n="respuesta_4">
+            No. Puede formar parte de una alimentación variada, pero no sustituye
+            la diversidad de alimentos y nutrientes que aporta una alimentación equilibrada.
+        </p>
+
+    </details>
+
+    <div class="reflexion-cuestionario">
+
+        <h3 data-idn="idn21:reflexion_titulo"
+            data-i18n="cuestionario_reflexion_titulo">
+            💭 ¿Qué descubriste?
+        </h3>
+
+        <p data-idn="idn21:reflexion_texto"
+           data-i18n="cuestionario_reflexion_texto">
+            La próxima vez que prepares un jugo verde, observa sus ingredientes,
+            la cantidad de pulpa que conserva y el lugar que ocupa dentro de tu
+            alimentación. Conocer nuestras elecciones también es una forma de
+            alimentarnos conscientemente.
+        </p>
+
+    </div>
+
+</section>
+
+</div>
+    </div>
+</div>
+
+<div class="tarjeta-jugo">
+    <h2 data-i18n="jugo_depurativo_titulo">Jugo Depurativo de Pepino</h2>
+    <p data-i18n="jugo_depurativo_desc">Mejora funciones hepáticas y renales. Ayuda a eliminar piedras en el riñón.</p>
+    
+    <ul class="lista-ingredientes">
+        <li data-i18n="ing_depurativo_pepinos">🍏 2 pepinos</li>
+        <li data-i18n="ing_esparragos">🍏 1 manojo de espárragos</li>
+        <li data-i18n="ing_depurativo_agua">🍏 1 vaso de agua</li>
+    </ul>
+
+    <div class="aviso-jugo">
+        <p>
+            <span data-i18n="aviso_complemento">🥗 Este jugo es un complemento de tu alimentación.</span> 
+            <span data-i18n="aviso_consulta">⚠️ Consulta a tu médico o nutricionista.</span>
+        </p>
+    </div>
+</div>
+
+<div class="tarjeta-jugo">
+    <h2 data-i18n="jugo_apio_pina_titulo">Jugo Detox de Apio y Piña</h2>
+    <p data-i18n="jugo_apio_pina_desc">Muy demandado por sus cualidades diuréticas. Muy pocas calorías.</p>
+    
+    <ul class="lista-ingredientes">
+        <li data-i18n="ing_tallo_apio">🍏 1 tallo de apio</li>
+        <li data-i18n="ing_pina">🍏 50g de piña</li>
+        <li data-i18n="ing_apio_pina_agua">🍏 1 vaso de agua</li>
+    </ul>
+
+    <div class="aviso-jugo">
+        <p>
+            <span data-i18n="aviso_complemento">🥗 Este jugo es un complemento de tu alimentación.</span> 
+            <span data-i18n="aviso_consulta">⚠️ Consulta a tu médico o nutricionista.</span>
+        </p>
+    </div>
+</div>
+
+<div class="tarjeta-jugo">
+    <h2 data-i18n="jugo_apio_pepino_pro_titulo">Jugo de Apio y Pepino (Sabor Pro)</h2>
+    <p data-i18n="jugo_apio_pepino_pro_desc">Elimina la distensión abdominal y la molesta barriga. Sabor gratificante.</p>
+    
+    <ul class="lista-ingredientes">
+        <li data-i18n="ing_medio_pepino">🍏 medio pepino</li>
+        <li data-i18n="ing_rama_apio">🍏 1 rama de apio</li>
+        <li data-i18n="ing_una_pina">🍏 1 piña</li>
+        <li data-i18n="ing_miel_opcional">🍏 miel (opcional)</li>
+    </ul>
+
+    <div class="aviso-jugo">
+        <p>
+            <span data-i18n="aviso_complemento">🥗 Este jugo es un complemento de tu alimentación.</span> 
+            <span data-i18n="aviso_consulta">⚠️ Consulta a tu médico o nutricionista.</span>
+        </p>
+    </div>
+</div>
+
+
+
+
+<div class="tarjeta-jugo">
+    <h2 data-i18n="jugo_pina_perejil_titulo">Jugo de Piña y Perejil</h2>
+    <p data-i18n="jugo_pina_perejil_desc">Regula el equilibrio hormonal y produce saciedad. Ideal para cenar.</p>
+    
+    <ul class="lista-ingredientes">
+        <li data-i18n="ing_dos_zanahorias">🍏 2 zanahorias</li>
+        <li data-i18n="ing_pina_perejil_pepino">🍏 1 pepino</li>
+        <li data-i18n="ing_ramas_perejil">🍏 5 ramas de perejil</li>
+        <li data-i18n="ing_manzana_verde">🍏 1 manzana verde</li>
+        <li data-i18n="ing_rodajas_pina">🍏 2 rodajas de piña</li>
+        <li data-i18n="ing_litro_agua">🍏 1 litro de agua</li>
+    </ul>
+
+    <div class="aviso-jugo">
+        <p>
+            <span data-i18n="aviso_complemento">🥗 Este jugo es un complemento de tu alimentación.</span> 
+            <span data-i18n="aviso_consulta">⚠️ Consulta a tu médico o nutricionista.</span>
+        </p>
+    </div>
+</div>
+
+<div class="tarjeta-jugo">
+    <h2 data-i18n="jugo_perejil_limon_titulo">Jugo Tradicional de Perejil y Limón</h2>
+    <p data-i18n="jugo_perejil_limon_desc">Combate la retención de líquidos y depura los riñones profundamente.</p>
+    
+    <ul class="lista-ingredientes">
+        <li data-i18n="ing_medio_pepino">🍏 medio pepino</li>
+        <li data-i18n="ing_cilantro">🍏 cilantro</li>
+        <li data-i18n="ing_cuatro_ramas_perejil">🍏 4 ramas de perejil</li>
+        <li data-i18n="ing_un_limon">🍏 1 limón</li>
+        <li data-i18n="ing_jengibre">🍏 jengibre</li>
+        <li data-i18n="ing_quinientos_ml_agua">🍏 500 ml de agua</li>
+    </ul>
+
+    <div class="aviso-jugo">
+        <p>
+            <span data-i18n="aviso_complemento">🥗 Este jugo es un complemento de tu alimentación.</span> 
+            <span data-i18n="aviso_consulta">⚠️ Consulta a tu médico o nutricionista.</span>
+        </p>
+    </div>
+</div>
+
+<div class="tarjeta-jugo">
+    <h2 data-i18n="jugo_pepino_titulo">Jugo de Pepino, Apio y Manzana</h2>
+    <p data-i18n="jugo_pepino_desc">Ideal para adelgazar, gracias a sus propiedades diuréticas y depurativas. ¡Un quemador de grasa natural!</p>
+    
+    <ul>
+        <li><span data-i18n="ing_pepino">1 pepino</span></li>
+        <li><span data-i18n="ing_manzana">1 manzana verde</span></li>
+        <li><span data-i18n="ing_pera">1 pera</span></li>
+        <li><span data-i18n="ing_apio">media rama de apio</span></li>
+        <li><span data-i18n="ing_datiles">4 dátiles</span></li>
+        <li><span data-i18n="ing_jengibre">1 jengibre fresco</span></li>
+        <li><span data-i18n="ing_agua">1 vaso de agua</span></li>
+    </ul>
+
+    <div class="aviso-jugo">
+        <p>
+            <span data-i18n="aviso_complemento">Este jugo es un complemento de tu alimentación.</span> 
+            <span data-i18n="aviso_consulta">Consulta a tu médico o nutricionista.</span>
+        </p>
+    </div>
+</div>
+
+<div class="tarjeta-jugo">
+    <!-- Contenedor para el texto superior educativo -->
+    <div class="aviso-educativo">
+        <p data-i18n="aviso_educativo_general">La información presentada tiene fines educativos y no sustituye la valoración individual de un profesional de la salud.</p>
+    </div>
+
+   
+
+<div class="tarjeta-jugo">
+    <h2 data-i18n="jugo_espinacas_titulo">Jugo de Espinacas, Apio y Manzana</h2>
+    <p data-i18n="jugo_espinacas_desc">Multivitamínico: mejora el sistema inmune, reduce inflamación y controla azúcar.</p>
+    
+    <ul class="lista-ingredientes">
+        <li data-i18n="ing_naranjas">🍏 4 naranjas</li>
+        <li data-i18n="ing_rama_apio">🍏 1 rama de apio</li>
+        <li data-i18n="ing_platano">🍏 1 plátano</li>
+        <li data-i18n="ing_espinacas">🍏 1 manojo de espinacas</li>
+        <li data-i18n="ing_manzanas_verdes">🍏 2 manzanas verdes</li>
+        <li data-i18n="ing_jengibre_curcuma">🍏 jengibre y cúrcuma</li>
+    </ul>
+
+    <div class="aviso-jugo">
+        <p>
+            <span data-i18n="aviso_complemento">🥗 Este jugo es un complemento de tu alimentación.</span> 
+            <span data-i18n="aviso_consulta">⚠️ Consulta a tu médico o nutricionista.</span>
+        </p>
+    </div>
+</div>
+
+<div class="tarjeta-jugo">
+    <h2 data-i18n="jugo_brocoli_titulo">Jugo de Brócoli y Pepino</h2>
+    <p data-i18n="jugo_brocoli_desc">Purifica el cuerpo sin descompensarlo. Mejora el tránsito intestinal e hidrata.</p>
+    
+    <ul class="lista-ingredientes">
+        <li data-i18n="ing_brocoli">🍏 100g de brócoli</li>
+        <li data-i18n="ing_zanahoria">🍏 1 zanahoria</li>
+        <li data-i18n="ing_brocoli_pepino">🍏 1 pepino</li>
+        <li data-i18n="ing_brocoli_limon">🍏 1 limón</li>
+        <li data-i18n="ing_agua_brocoli">🍏 500 ml de agua</li>
+    </ul>
+
+    <div class="aviso-jugo">
+        <p>
+            <span data-i18n="aviso_complemento">🥗 Este jugo es un complemento de tu alimentación.</span> 
+            <span data-i18n="aviso_consulta">⚠️ Consulta a tu médico o nutricionista.</span>
+        </p>
+    </div>
+</div>
+
+<div class="tarjeta-jugo">
+    <h2 data-i18n="jugo_detox_titulo">Jugo Detox de Espinacas</h2>
+    <p data-i18n="jugo_detox_desc">Libera al hígado de toxinas y protege la piel. Funciona como diurético natural.</p>
+    
+    <ul class="lista-ingredientes">
+        <li data-i18n="ing_detox_espinacas">🍏 2 tazas de espinacas</li>
+        <li data-i18n="ing_detox_pepino">🍏 medio pepino</li>
+        <li data-i18n="ing_detox_manzana">🍏 media manzana verde</li>
+        <li data-i18n="ing_detox_limon">🍏 1 limón</li>
+        <li data-i18n="ing_detox_agua">🍏 150 ml de agua</li>
+    </ul>
+
+    <div class="aviso-jugo">
+        <p>
+            <span data-i18n="aviso_complemento">🥗 Este jugo es un complemento de tu alimentación.</span> 
+            <span data-i18n="aviso_consulta">⚠️ Consulta a tu médico o nutricionista.</span>
+        </p>
+    </div>
+</div>
+
+<div class="tarjeta-jugo">
+    <h2 data-i18n="jugo_lechuga_titulo">Jugo de Lechuga y Chayote (Cidra)</h2>
+    <p data-i18n="jugo_lechuga_desc">Especial para adelgazar la zona del abdomen y reducir colesterol.</p>
+    
+    <ul class="lista-ingredientes">
+        <li data-i18n="ing_chayote">🍏 1 chayote</li>
+        <li data-i18n="ing_lechuga_pepino">🍏 1 pepino</li>
+        <li data-i18n="ing_lechuga_espinacas">🍏 1 taza de espinacas</li>
+        <li data-i18n="ing_zumo_limon">🍏 1/4 taza zumo de limón</li>
+        <li data-i18n="ing_lechuga_romana">🍏 1 lechuga romana pequeña</li>
+    </ul>
+
+    <div class="aviso-jugo">
+        <p>
+            <span data-i18n="aviso_complemento">🥗 Este jugo es un complemento de tu alimentación.</span> 
+            <span data-i18n="aviso_consulta">⚠️ Consulta a tu médico o nutricionista.</span>
+        </p>
+    </div>
+</div>
+
+<section class="conclusion-jugos">
+
+    <h2 data-idn="idn22:titulo"
+        data-i18n="conclusion_jugos_titulo">
+        🌿 Más allá del jugo
+    </h2>
+
+    <p data-idn="idn22:descripcion"
+       data-i18n="conclusion_jugos_texto">
+        Los jugos verdes pueden ser una manera agradable de incorporar frutas
+        y verduras a nuestra alimentación, pero su verdadero valor depende del
+        contexto en el que los consumimos. No necesitan ser milagrosos para
+        formar parte de una alimentación saludable.
+    </p>
+
+    <div class="reflexion-conclusion">
+
+        <h3 data-idn="idn22:reflexion_titulo"
+            data-i18n="conclusion_jugos_reflexion_titulo">
+            💭 Una elección consciente
+        </h3>
+
+        <p data-idn="idn22:reflexion_texto"
+           data-i18n="conclusion_jugos_reflexion_texto">
+            Conocer los ingredientes, comprender cómo se prepara una bebida
+            y reconocer sus beneficios y límites nos permite tomar decisiones
+            más informadas. El bienestar no depende de un solo alimento,
+            sino de la relación que construimos con nuestra alimentación
+            y nuestros hábitos cotidianos.
+        </p>
+
+    </div>
+
+</section>
+
+</section>
 
   
 
@@ -217,61 +647,875 @@ SciELO.</h2>
         <div class="modal-contenido">
             <span class="cerrar-modal" onclick="cerrarModalJugos()">&times;</span>
             
-            <div class="pasos-detalle">
-                <ol>
-                    <li><strong>Lavar:</strong> Desinfecta bien todas las frutas y verduras.</li>
-                    <li><strong>Trocear:</strong> Corta los ingredientes en trozos pequeños para no forzar la licuadora.</li>
-                    <li><strong>Licuar:</strong> Procesa con el agua indicada hasta que sea una mezcla homogénea.</li>
-                    <li><strong>Consumir:</strong> ¡Bebe de inmediato! Así aprovechas el 100% de las vitaminas.</li>
-                    
-                </ol>
-            </div>
+           <div class="pasos-detalle">
+    <ol>
+        <li>
+            <strong data-i18n="paso_detalle_1_titulo">Lavar:</strong> 
+            <span data-i18n="paso_detalle_1_texto">Desinfecta bien todas las frutas y verduras.</span>
+        </li>
+        <li>
+            <strong data-i18n="paso_detalle_2_titulo">Trocear:</strong> 
+            <span data-i18n="paso_detalle_2_texto">Corta los ingredientes en trozos pequeños para no forzar la licuadora.</span>
+        </li>
+        <li>
+            <strong data-i18n="paso_detalle_3_titulo">Licuar:</strong> 
+            <span data-i18n="paso_detalle_3_texto">Procesa con el agua indicada hasta que sea una mezcla homogénea.</span>
+        </li>
+        <li>
+            <strong data-i18n="paso_detalle_4_titulo">Consumir:</strong> 
+            <span data-i18n="paso_detalle_4_texto">¡Bebe de inmediato! Así aprovechas el 100% de las vitaminas.</span>
+        </li>
+    </ol>
+</div>
             
         </div>
     </div>
 
+ </main>
+
+
+<script>
+const textosGlobales = {
+    es: {
+        menu_terapias: "Terapias ▾",
+        menu_grounding: "Grounding",
+        menu_solfeggio: "Solfeggio",
+        menu_equilibrio: "Equilibrio",
+        menu_isometricos: "Isometricos",
+        menu_nutricion: "Nutrición",
+        menu_mente_ciencia: "Mente & Ciencia ▾",
+        menu_reprogramacion: "Reprogramación",
+        menu_mecanica: "Mecánica Cuántica",
+        menu_kybalion: "Kybalión",
+        menu_salud: "Masa Corporal"
+    },
+    en: {
+        menu_terapias: "Therapies ▾",
+        menu_grounding: "Grounding",
+        menu_solfeggio: "Solfeggio",
+        menu_equilibrio: "Balance",
+        menu_isometricos: "Isometrics",
+        menu_nutricion: "Nutrition",
+        menu_mente_ciencia: "Mind & Science ▾",
+        menu_reprogramacion: "Reprogramming",
+        menu_mecanica: "Quantum Mechanics",
+        menu_kybalion: "The Kybalion",
+        menu_salud: "Body Mass"
+    },
+    fr: {
+        menu_terapias: "Thérapies ▾",
+        menu_grounding: "Grounding",
+        menu_solfeggio: "Solfeggio",
+        menu_equilibrio: "Équilibre",
+        menu_isometricos: "Isométriques",
+        menu_nutricion: "Nutrition",
+        menu_mente_ciencia: "Esprit & Science ▾",
+        menu_reprogramacion: "Reprogrammation",
+        menu_mecanica: "Mécanique Quantique",
+        menu_kybalion: "Le Kybalion",
+        menu_salud: "Masse Corporelle"
+    },
+    it: {
+        menu_terapias: "Terapie ▾",
+        menu_grounding: "Grounding",
+        menu_solfeggio: "Solfeggio",
+        menu_equilibrio: "Equilibrio",
+        menu_isometricos: "Isometrici",
+        menu_nutricion: "Nutrizione",
+        menu_mente_ciencia: "Mente & Scienza ▾",
+        menu_reprogramacion: "Riprogrammazione",
+        menu_mecanica: "Meccanica Quantistica",
+        menu_kybalion: "Il Kybalion",
+        menu_salud: "Massa Corporea"
+    }
+};
+
+const traducciones = {
+    es: {
+        intro_jugos_titulo: "🌿 Explora el mundo de los Jugos Verdes",
+intro_jugos_parrafo: "Los jugos y preparaciones a base de frutas y verduras pueden ser una forma práctica de incorporar alimentos vegetales a la alimentación cotidiana. Sin embargo, no sustituyen una alimentación equilibrada ni constituyen tratamientos para enfermedades.",
+intro_jugos_reflexion_titulo: "💭 Antes de comenzar, hazte una pregunta",
+intro_jugos_reflexion_texto: "Cuando eliges un jugo verde, ¿qué buscas realmente: sabor, variedad, hidratación, incorporar más vegetales o simplemente disfrutar de una bebida diferente?",
+intro_jugos_frase: "🌱 No se trata de buscar una bebida milagrosa, sino de aprender a relacionarnos conscientemente con los alimentos que elegimos.",
+ beneficios_titulo_1: "Jugos Verdes Saludables para una Alimentación Equilibrada",
+        beneficios_titulo_2: "Beneficios de los Jugos Verdes y Evidencia Científica",
+        beneficios_introduccion: "Los jugos verdes aportan altas concentraciones de antioxidantes, vitaminas, minerales y clorofila. La ciencia respalda su consumo como un buen complemento nutricional (en especial si se ingieren sin colar para aprovechar la fibra); sin embargo, no existen evidencias científicas que los validen como dietas desintoxicantes milagrosas.",
+
+exploracion_texto: "Antes de continuar, piensa en la preparación que consumes habitualmente. ¿Conserva la pulpa? ¿Qué frutas y verduras contiene? ¿La utilizas como parte de una alimentación variada o esperas que produzca un efecto extraordinario?",
+exploracion_reflexion: "💭 Una alimentación consciente comienza cuando conocemos lo que elegimos, sin convertir un alimento en una promesa milagrosa.",
+        beneficios_referencias_num: "[1, 2, 3, 4, 5]",
+        beneficios_subtitulo: "Evidencia Científica y Hallazgos Destacados",
+        beneficios_referencias_titulo: "Referencias",
+        ref_1: "Harvard T.H. Chan School of Public Health. Vegetables and Fruits.",
+        ref_2: "National Institutes of Health (NIH). Office of Dietary Supplements.",
+        ref_3: "Organización Mundial de la Salud. Healthy Diet.",
+        ref_4: "MDPI Nutrients.",
+        ref_5: "SciELO.",
+ cardio_titulo: "Salud Cardiovascular",
+        cardio_texto: "Un estudio clínico (publicado en MDPI) analizó el consumo de jugos de vegetales orgánicos en adultos, concluyendo que ayudan a mejorar indicadores de circulación sanguínea y el perfil de lípidos. Otra investigación respalda que las mezclas de jugos de frutas y verduras tienen efectos positivos en la reducción de la presión arterial, gracias a sus polifenoles y nitratos.",
+        digestiva_titulo: "Actividad Digestiva",
+        digestiva_texto: "Las revisiones científicas indican que los jugos verdes mejoran el microbioma intestinal y el tránsito, gracias al aporte de fibra vegetal.",
+        antioxidante_titulo: "Capacidad Antioxidante",
+        antioxidante_texto: "Diversos estudios en modelos preclínicos (como el publicado en SciELO) han demostrado el papel protector del zumo verde contra las especies reactivas (estrés oxidativo) en comparación con otras bebidas ricas en vitamina C.",
+ contraindicaciones_titulo: "Posibles Contraindicaciones",
+        contraindicaciones_texto: "La literatura médica advierte que mezclar demasiados vegetales (como espinacas o remolachas) eleva la ingesta de oxalatos, lo cual puede aumentar el riesgo de cálculos renales. Además, el exceso de líquidos y minerales puede estar contraindicado para personas con insuficiencias cardíacas o renales.",
+        instrucciones_aviso_principal: "La información presentada tiene fines educativos y no sustituye la valoración individual de un profesional de la salud. Ante enfermedades crónicas, embarazo o tratamientos médicos, consulta con un profesional antes de realizar cambios importantes en tu alimentación.",
+        pasos_titulo: "Pasos para la preparación perfecta",
+        paso_1: "Lava bien todas las frutas y verduras.",
+        paso_2: "Trocea e introduce en la licuadora con el agua.",
+        paso_3: "Bebe de inmediato para aprovechar los nutrientes.",
+        info_fibra: "Los jugos preparados sin colar conservan una mayor cantidad de fibra dietética, favoreciendo la saciedad y el adecuado funcionamiento intestinal.",
+        instrucciones_aviso_secundario: "La información presentada tiene fines educativos y no sustituye la valoración individual de un profesional de la salud.",
+
+jugo_berros_titulo: "Jugo de Berros y Pepino",
+        jugo_berros_desc: "Favorece la depuración de la sangre y acelera la eliminación de desechos.",
+        ing_berros: "🍏 1 manojo de berros",
+        ing_berros_pepino: "🍏 1 pepino",
+        ing_berros_manzana: "🍏 1 manzana verde",
+        ing_berros_limon: "🍏 1 limón",
+
+reflexion_beneficios_titulo: "💭 Ahora observa tu elección",
+reflexion_beneficios_texto: "¿Tu preparación conserva la pulpa o ha sido filtrada? ¿Contiene principalmente verduras, frutas o una combinación de ambas? Comprender estas diferencias permite valorar cada preparación dentro del conjunto de nuestra alimentación.",
+
+cuestionario_titulo: "🌿 Tu momento de exploración",
+cuestionario_intro: "Antes de continuar, responde mentalmente estas preguntas y descubre algunos aspectos interesantes sobre los jugos verdes.",
+pregunta_1: "🥬 ¿Qué ocurre con la fibra cuando un jugo conserva la pulpa?",
+respuesta_1: "Cuando se conserva la pulpa, generalmente se mantiene una mayor cantidad de fibra dietética que en un jugo filtrado. La fibra contribuye a la saciedad y forma parte de una alimentación favorable para la salud intestinal.",
+pregunta_2: "🍎 ¿Un jugo verde necesita contener solamente verduras?",
+respuesta_2: "No. Puede combinar frutas y verduras. La elección dependerá del sabor, los ingredientes disponibles y del conjunto de la alimentación.",
+pregunta_3: "🔬 ¿Los jugos verdes desintoxican el organismo?",
+respuesta_3: "No existe evidencia científica sólida que demuestre que los jugos verdes produzcan una desintoxicación especial. El organismo cuenta con sistemas fisiológicos propios para procesar y eliminar sustancias.",
+pregunta_4: "💧 ¿Un jugo verde puede sustituir una alimentación equilibrada?",
+respuesta_4: "No. Puede formar parte de una alimentación variada, pero no sustituye la diversidad de alimentos y nutrientes que aporta una alimentación equilibrada.",
+cuestionario_reflexion_titulo: "💭 ¿Qué descubriste?",
+cuestionario_reflexion_texto: "La próxima vez que prepares un jugo verde, observa sus ingredientes, la cantidad de pulpa que conserva y el lugar que ocupa dentro de tu alimentación. Conocer nuestras elecciones también es una forma de alimentarnos conscientemente.",
+
+        jugo_depurativo_titulo: "Jugo Depurativo de Pepino",
+        jugo_depurativo_desc: "Mejora funciones hepáticas y renales. Ayuda a eliminar piedras en el riñón.",
+        ing_depurativo_pepinos: "🍏 2 pepinos",
+        ing_esparragos: "🍏 1 manojo de espárragos",
+        ing_depurativo_agua: "🍏 1 vaso de agua",
+        aviso_complemento: "🥗 Este jugo es un complemento de tu alimentación.",
+        aviso_consulta: "⚠️ Consulta a tu médico o nutricionista.",
+
+ jugo_apio_pina_titulo: "Jugo Detox de Apio y Piña",
+        jugo_apio_pina_desc: "Muy demandado por sus cualidades diuréticas. Muy pocas calorías.",
+        ing_tallo_apio: "🍏 1 tallo de apio",
+        ing_pina: "🍏 50g de piña",
+        ing_apio_pina_agua: "🍏 1 vaso de agua",
+
+jugo_apio_pepino_pro_titulo: "Jugo de Apio y Pepino (Sabor Pro)",
+        jugo_apio_pepino_pro_desc: "Elimina la distensión abdominal y la molesta barriga. Sabor gratificante.",
+        ing_medio_pepino: "🍏 medio pepino",
+        ing_rama_apio: "🍏 1 rama de apio",
+        ing_una_pina: "🍏 1 piña",
+        ing_miel_opcional: "🍏 miel (opcional)",
+        aviso_complemento: "🥗 Este jugo es un complemento de tu alimentación.",
+        aviso_consulta: "⚠️ Consulta a tu médico o nutricionista.",
+
+        jugo_pina_perejil_titulo: "Jugo de Piña y Perejil",
+        jugo_pina_perejil_desc: "Regula el equilibrio hormonal y produce saciedad. Ideal para cenar.",
+        ing_dos_zanahorias: "🍏 2 zanahorias",
+        ing_pina_perejil_pepino: "🍏 1 pepino",
+        ing_ramas_perejil: "🍏 5 ramas de perejil",
+        ing_manzana_verde: "🍏 1 manzana verde",
+        ing_rodajas_pina: "🍏 2 rodajas de piña",
+        ing_litro_agua: "🍏 1 litro de agua",
+        
+        jugo_perejil_limon_titulo: "Jugo Tradicional de Perejil y Limón",
+        jugo_perejil_limon_desc: "Combate la retención de líquidos y depura los riñones profundamente.",
+        ing_medio_pepino: "🍏 medio pepino",
+        ing_cilantro: "🍏 cilantro",
+        ing_cuatro_ramas_perejil: "🍏 4 ramas de perejil",
+        ing_un_limon: "🍏 1 limón",
+        ing_jengibre: "🍏 jengibre",
+        ing_quinientos_ml_agua: "🍏 500 ml de agua",
+        
+        aviso_complemento: "🥗 Este jugo es un complemento de tu alimentación.",
+        aviso_consulta: "⚠️ Consulta a tu médico o nutricionista.",
+
+jugo_pepino_titulo: "Jugo de Pepino, Apio y Manzana",
+        jugo_pepino_desc: "Ideal para adelgazar, gracias a sus propiedades diuréticas y depurativas. ¡Un quemador de grasa natural!",
+        ing_pepino: "🍏 1 pepino",
+        ing_manzana: "🍏 1 manzana verde",
+        ing_pera: "🍏 1 pera",
+        ing_apio: "🍏 media rama de apio",
+        ing_datiles: "🍏 4 dátiles",
+        ing_jengibre: "🍏 1 jengibre fresco",
+        ing_agua: "🍏 1 vaso de agua",
+
+jugo_espinacas_titulo: "Jugo de Espinacas, Apio y Manzana",
+        jugo_espinacas_desc: "Multivitamínico: mejora el sistema inmune, reduce inflamación y controla azúcar.",
+        ing_naranjas: "🍏 4 naranjas",
+        ing_rama_apio: "🍏 1 rama de apio",
+        ing_platano: "🍏 1 plátano",
+        ing_espinacas: "🍏 1 manojo de espinacas",
+        ing_manzanas_verdes: "🍏 2 manzanas verdes",
+        ing_jengibre_curcuma: "🍏 jengibre y cúrcuma",
+        aviso_complemento: "🥗 Este jugo es un complemento de tu alimentación.",
+        aviso_consulta: "⚠️ Consulta a tu médico o nutricionista.",
+
+jugo_brocoli_titulo: "Jugo de Brócoli y Pepino",
+        jugo_brocoli_desc: "Purifica el cuerpo sin descompensarlo. Mejora el tránsito intestinal e hidrata.",
+        ing_brocoli: "🍏 100g de brócoli",
+        ing_zanahoria: "🍏 1 zanahoria",
+        ing_brocoli_pepino: "🍏 1 pepino",
+        ing_brocoli_limon: "🍏 1 limón",
+        ing_agua_brocoli: "🍏 500 ml de agua",
+        aviso_complemento: "🥗 Este jugo es un complemento de tu alimentación.",
+        aviso_consulta: "⚠️ Consulta a tu médico o nutricionista.",
+
+jugo_detox_titulo: "Jugo Detox de Espinacas",
+        jugo_detox_desc: "Libera al hígado de toxinas y protege la piel. Funciona como diurético natural.",
+        ing_detox_espinacas: "🍏 2 tazas de espinacas",
+        ing_detox_pepino: "🍏 medio pepino",
+        ing_detox_manzana: "🍏 media manzana verde",
+        ing_detox_limon: "🍏 1 limón",
+        ing_detox_agua: "🍏 150 ml de agua",
+
+        jugo_lechuga_titulo: "Jugo de Lechuga y Chayote (Cidra)",
+        jugo_lechuga_desc: "Especial para adelgazar la zona del abdomen y reducir colesterol.",
+        ing_chayote: "🍏 1 chayote",
+        ing_lechuga_pepino: "🍏 1 pepino",
+        ing_lechuga_espinacas: "🍏 1 taza de espinacas",
+        ing_zumo_limon: "🍏 1/4 taza zumo de limón",
+        ing_lechuga_romana: "🍏 1 lechuga romana pequeña",
+        aviso_complemento: "🥗 Este jugo es un complemento de tu alimentación.",
+        aviso_consulta: "⚠️ Consulta a tu médico o nutricionista.",
+
+conclusion_jugos_titulo: "🌿 Más allá del jugo",
+conclusion_jugos_texto: "Los jugos verdes pueden ser una manera agradable de incorporar frutas y verduras a nuestra alimentación, pero su verdadero valor depende del contexto en el que los consumimos. No necesitan ser milagrosos para formar parte de una alimentación saludable.",
+conclusion_jugos_reflexion_titulo: "💭 Una elección consciente",
+conclusion_jugos_reflexion_texto: "Conocer los ingredientes, comprender cómo se prepara una bebida y reconocer sus beneficios y límites nos permite tomar decisiones más informadas. El bienestar no depende de un solo alimento, sino de la relación que construimos con nuestra alimentación y nuestros hábitos cotidianos.",
+ footer_col1_titulo: "Explorar",
+    footer_menu_inicio: "Inicio",
+    footer_menu_betarraga: "Betarraga",
+    footer_menu_nutricion: "Nutrición",
+    footer_menu_peso: "Control de peso",
+    footer_menu_isometricos: "Ejercicios isométricos",
     
-    <script src="jugos.js"></script>
+    footer_col2_titulo: "Información",
+    footer_menu_quienes: "Quiénes Somos",
+    footer_menu_contacto: "Contacto",
+    footer_menu_privacidad: "Política de Privacidad",
+    footer_menu_terminos: "Términos y Condiciones",
+    
+    footer_col3_titulo: "Contacto",
+    footer_ubicacion: "Medellín, Antioquia",
+    
+    footer_copyright: "&copy; 2026 AAPMental. Todos los derechos reservados.",
+    footer_small: "Contenido elaborado por AAPMental – Bienestar Consciente."
+       
+  },
+       
+
+    en: {
+       intro_jugos_titulo: "🌿 Explore the World of Green Juices",
+intro_jugos_parrafo: "Juices and preparations made from fruits and vegetables can be a practical way to incorporate plant foods into your daily diet. However, they do not replace a balanced diet or constitute treatments for diseases.",
+intro_jugos_reflexion_titulo: "💭 Before You Begin, Ask Yourself a Question",
+intro_jugos_reflexion_texto: "When you choose a green juice, what are you really looking for: flavor, variety, hydration, more vegetables, or simply enjoying a different kind of drink?",
+
+cuestionario_titulo: "🌿 Your Moment of Exploration",
+cuestionario_intro: "Before continuing, reflect on these questions and discover some interesting aspects of green juices.",
+pregunta_1: "🥬 What happens to the fiber when a juice retains the pulp?",
+respuesta_1: "When the pulp is retained, a greater amount of dietary fiber is generally preserved than in a filtered juice. Fiber contributes to satiety and is part of a diet that supports intestinal health.",
+pregunta_2: "🍎 Does a green juice need to contain only vegetables?",
+respuesta_2: "No. It can combine fruits and vegetables. The choice may depend on taste, available ingredients, and the overall dietary pattern.",
+pregunta_3: "🔬 Do green juices detoxify the body?",
+respuesta_3: "There is no strong scientific evidence showing that green juices produce a special detoxification effect. The human body has its own physiological systems for processing and eliminating substances.",
+pregunta_4: "💧 Can a green juice replace a balanced diet?",
+respuesta_4: "No. It can be part of a varied diet, but it cannot replace the diversity of foods and nutrients provided by a balanced diet.",
+cuestionario_reflexion_titulo: "💭 What Did You Discover?",
+cuestionario_reflexion_texto: "The next time you prepare a green juice, observe its ingredients, how much pulp it retains, and the role it plays within your diet. Understanding our choices is also a way of eating consciously.",
+
+intro_jugos_frase: "🌱 It is not about seeking a miraculous drink, but about learning to relate consciously to the foods we choose.",
+ beneficios_titulo_1: "Healthy Green Juices for a Balanced Diet",
+        beneficios_titulo_2: "Benefits of Green Juices and Scientific Evidence",
+        beneficios_introduccion: "Green juices provide high concentrations of antioxidants, vitamins, minerals, and chlorophyll. Science supports their consumption as a good nutritional supplement (especially when consumed unfiltered to make the most of the fiber); however, there is no scientific evidence validating them as miraculous detox diets.",
+
+exploracion_titulo: "🔎 Pause and Observe",
+exploracion_texto: "Before continuing, think about the preparation you usually consume. Does it retain the pulp? What fruits and vegetables does it contain? Do you use it as part of a varied diet, or do you expect it to produce an extraordinary effect?",
+exploracion_reflexion: "💭 Conscious eating begins when we understand what we choose, without turning a food into a miraculous promise.",
+        beneficios_referencias_num: "[1, 2, 3, 4, 5]",
+        beneficios_subtitulo: "Scientific Evidence and Key Findings",
+        beneficios_referencias_titulo: "References",
+        ref_1: "Harvard T.H. Chan School of Public Health. Vegetables and Fruits.",
+        ref_2: "National Institutes of Health (NIH). Office of Dietary Supplements.",
+        ref_3: "World Health Organization. Healthy Diet.",
+        ref_4: "MDPI Nutrients.",
+        ref_5: "SciELO.",
+ cardio_titulo: "Cardiovascular Health",
+        cardio_texto: "A clinical study (published in MDPI) analyzed the consumption of organic vegetable juices in adults, concluding that they help improve blood circulation indicators and lipid profiles. Another research supports that fruit and vegetable juice blends have positive effects in reducing blood pressure, thanks to their polyphenols and nitrates.",
+        digestiva_titulo: "Digestive Activity",
+        digestiva_texto: "Scientific reviews indicate that green juices improve the gut microbiome and intestinal transit, thanks to their contribution of plant fiber.",
+        antioxidante_titulo: "Antioxidant Capacity",
+        antioxidante_texto: "Various studies in preclinical models (such as the one published in SciELO) have demonstrated the protective role of green juice against reactive species (oxidative stress) compared to other vitamin C-rich beverages.",
+
+ contraindicaciones_titulo: "Possible Contraindications",
+        contraindicaciones_texto: "Medical literature warns that mixing too many vegetables (such as spinach or beets) increases oxalate intake, which can raise the risk of kidney stones. In addition, excess fluids and minerals may be contraindicated for people with heart or kidney failure.",
+        instrucciones_aviso_principal: "The information presented is for educational purposes and does not replace the individual assessment of a healthcare professional. In case of chronic illnesses, pregnancy, or medical treatments, consult a professional before making major changes to your diet.",
+        pasos_titulo: "Steps for Perfect Preparation",
+        paso_1: "Wash all fruits and vegetables thoroughly.",
+        paso_2: "Chop and place them into the blender with water.",
+        paso_3: "Drink immediately to make the most of the nutrients.",
+        info_fibra: "Juices prepared without straining retain a greater amount of dietary fiber, promoting satiety and proper bowel function.",
+        instrucciones_aviso_secundario: "The information presented is for educational purposes and does not replace the individual assessment of a healthcare professional.",
+
+
+jugo_berros_titulo: "Watercress and Cucumber Juice",
+    jugo_berros_desc: "Supports blood purification and accelerates waste elimination.",
+    ing_berros: "🍏 1 bunch of watercress",
+    ing_berros_pepino: "🍏 1 cucumber",
+    ing_berros_manzana: "🍏 1 green apple",
+    ing_berros_limon: "🍏 1 lemon",
+
+reflexion_beneficios_titulo: "💭 Now Observe Your Choice",
+reflexion_beneficios_texto: "Does your preparation retain the pulp or has it been filtered? Does it mainly contain vegetables, fruits, or a combination of both? Understanding these differences helps us appreciate each preparation as part of our overall diet.",
+
+    jugo_depurativo_titulo: "Cucumber Cleansing Juice",
+    jugo_depurativo_desc: "Improves liver and kidney functions. Helps eliminate kidney stones.",
+    ing_depurativo_pepinos: "🍏 2 cucumbers",
+    ing_esparragos: "🍏 1 bunch of asparagus",
+    ing_depurativo_agua: "🍏 1 glass of water",
+    aviso_complemento: "🥗 This juice is a supplement to your diet.",
+    aviso_consulta: "⚠️ Consult your doctor or nutritionist.",
+
+    jugo_apio_pina_titulo: "Celery and Pineapple Detox Juice",
+    jugo_apio_pina_desc: "Highly demanded for its diuretic qualities. Very low in calories.",
+    ing_tallo_apio: "🍏 1 celery stalk",
+    ing_pina: "🍏 50g of pineapple",
+    ing_apio_pina_agua: "🍏 1 glass of water",
+
+    jugo_apio_pepino_pro_titulo: "Celery and Cucumber Juice (Pro Flavor)",
+    jugo_apio_pepino_pro_desc: "Eliminates abdominal bloating and annoying belly fat. Gratifying taste.",
+    ing_medio_pepino: "🍏 half cucumber",
+    ing_rama_apio: "🍏 1 celery stalk",
+    ing_una_pina: "🍏 1 pineapple",
+    ing_miel_opcional: "🍏 honey (optional)",
+
+    jugo_pina_perejil_titulo: "Pineapple and Parsley Juice",
+    jugo_pina_perejil_desc: "Regulates hormonal balance and provides satiety. Ideal for dinner.",
+    ing_dos_zanahorias: "🍏 2 carrots",
+    ing_pina_perejil_pepino: "🍏 1 cucumber",
+    ing_ramas_perejil: "🍏 5 sprigs of parsley",
+    ing_manzana_verde: "🍏 1 green apple",
+    ing_rodajas_pina: "🍏 2 pineapple slices",
+    ing_litro_agua: "🍏 1 liter of water",
+
+    jugo_perejil_limon_titulo: "Traditional Parsley and Lemon Juice",
+    jugo_perejil_limon_desc: "Fights fluid retention and deeply purifies the kidneys.",
+    ing_cilantro: "🍏 cilantro",
+    ing_cuatro_ramas_perejil: "🍏 4 sprigs of parsley",
+    ing_un_limon: "🍏 1 lemon",
+    ing_jengibre: "🍏 ginger",
+    ing_quinientos_ml_agua: "🍏 500 ml of water",
+
+    jugo_pepino_titulo: "Cucumber, Celery and Apple Juice",
+    jugo_pepino_desc: "Ideal for weight loss, thanks to its diuretic and purifying properties. A natural fat burner!",
+    ing_pepino: "🍏 1 cucumber",
+    ing_manzana: "🍏 1 green apple",
+    ing_pera: "🍏 1 pear",
+    ing_apio: "🍏 half a celery stalk",
+    ing_datiles: "🍏 4 dates",
+    ing_jengibre: "🍏 1 fresh ginger",
+    ing_agua: "🍏 1 glass of water",
+
+    jugo_espinacas_titulo: "Spinach, Celery and Apple Juice",
+    jugo_espinacas_desc: "Multivitamin: boosts the immune system, reduces inflammation and controls blood sugar.",
+    ing_naranjas: "🍏 4 oranges",
+    ing_platano: "🍏 1 banana",
+    ing_espinacas: "🍏 1 bunch of spinach",
+    ing_manzanas_verdes: "🍏 2 green apples",
+    ing_jengibre_curcuma: "🍏 ginger and turmeric",
+
+    jugo_brocoli_titulo: "Broccoli and Cucumber Juice",
+    jugo_brocoli_desc: "Purifies the body without unbalancing it. Improves intestinal transit and hydrates.",
+    ing_brocoli: "🍏 100g of broccoli",
+    ing_zanahoria: "🍏 1 carrot",
+    ing_brocoli_pepino: "🍏 1 cucumber",
+    ing_brocoli_limon: "🍏 1 lemon",
+    ing_agua_brocoli: "🍏 500 ml of water",
+
+    jugo_detox_titulo: "Spinach Detox Juice",
+    jugo_detox_desc: "Frees the liver from toxins and protects the skin. Acts as a natural diuretic.",
+    ing_detox_espinacas: "🍏 2 cups of spinach",
+    ing_detox_pepino: "🍏 half cucumber",
+    ing_detox_manzana: "🍏 half green apple",
+    ing_detox_limon: "🍏 1 lemon",
+    ing_detox_agua: "🍏 150 ml of water",
+
+    jugo_lechuga_titulo: "Lettuce and Chayote (Cidra) Juice",
+    jugo_lechuga_desc: "Special for slimming the abdomen area and reducing cholesterol.",
+    ing_chayote: "🍏 1 chayote",
+    ing_lechuga_pepino: "🍏 1 cucumber",
+    ing_lechuga_espinacas: "🍏 1 cup of spinach",
+    ing_zumo_limon: "🍏 1/4 cup lemon juice",
+    ing_lechuga_romana: "🍏 1 small romaine lettuce",
+conclusion_jugos_titulo: "🌿 Beyond the Juice",
+conclusion_jugos_texto: "Green juices can be an enjoyable way to incorporate fruits and vegetables into our diet, but their true value depends on the context in which we consume them. They do not need to be miraculous to be part of a healthy diet.",
+conclusion_jugos_reflexion_titulo: "💭 A Conscious Choice",
+conclusion_jugos_reflexion_texto: "Knowing the ingredients, understanding how a drink is prepared, and recognizing its benefits and limitations allows us to make more informed choices. Well-being does not depend on a single food, but on the relationship we build with our diet and everyday habits.",
+
+
+ footer_col1_titulo: "Explore",
+    footer_menu_inicio: "Home",
+    footer_menu_betarraga: "Beetroot",
+    footer_menu_nutricion: "Nutrition",
+    footer_menu_peso: "Weight control",
+    footer_menu_isometricos: "Isometric exercises",
+    
+    footer_col2_titulo: "Information",
+    footer_menu_quienes: "About Us",
+    footer_menu_contacto: "Contact",
+    footer_menu_privacidad: "Privacy Policy",
+    footer_menu_terminos: "Terms and Conditions",
+    
+    footer_col3_titulo: "Contact",
+    footer_ubicacion: "Medellin, Antioquia",
+    
+    footer_copyright: "&copy; 2026 AAPMental. All rights reserved.",
+    footer_small: "Content created by AAPMental – Conscious Well-being.",
+
+
+
+ 
+    },
+    fr: {
+        intro_jugos_titulo: "🌿 Explorez l’univers des jus verts",
+intro_jugos_parrafo: "Les jus et préparations à base de fruits et de légumes peuvent être un moyen pratique d’intégrer des aliments végétaux à l’alimentation quotidienne. Cependant, ils ne remplacent pas une alimentation équilibrée et ne constituent pas des traitements contre les maladies.",
+intro_jugos_reflexion_titulo: "💭 Avant de commencer, posez-vous une question",
+intro_jugos_reflexion_texto: "Lorsque vous choisissez un jus vert, que recherchez-vous réellement : le goût, la variété, l’hydratation, davantage de légumes ou simplement le plaisir de découvrir une boisson différente ?",
+intro_jugos_frase: "🌱 Il ne s’agit pas de rechercher une boisson miraculeuse, mais d’apprendre à établir une relation consciente avec les aliments que nous choisissons.",
+
+cuestionario_titulo: "🌿 Votre moment d’exploration",
+cuestionario_intro: "Avant de continuer, réfléchissez à ces questions et découvrez quelques aspects intéressants des jus verts.",
+pregunta_1: "🥬 Que devient la fibre lorsqu’un jus conserve sa pulpe ?",
+respuesta_1: "Lorsque la pulpe est conservée, une plus grande quantité de fibres alimentaires est généralement préservée que dans un jus filtré. Les fibres contribuent à la satiété et font partie d’une alimentation favorable à la santé intestinale.",
+pregunta_2: "🍎 Un jus vert doit-il contenir uniquement des légumes ?",
+respuesta_2: "Non. Il peut associer des fruits et des légumes. Le choix dépendra du goût, des ingrédients disponibles et de l’ensemble de l’alimentation.",
+pregunta_3: "🔬 Les jus verts détoxifient-ils l’organisme ?",
+respuesta_3: "Il n’existe pas de preuves scientifiques solides démontrant que les jus verts produisent un effet détoxifiant particulier. L’organisme dispose de ses propres systèmes physiologiques pour traiter et éliminer les substances.",
+pregunta_4: "💧 Un jus vert peut-il remplacer une alimentation équilibrée ?",
+respuesta_4: "Non. Il peut faire partie d’une alimentation variée, mais il ne remplace pas la diversité des aliments et des nutriments apportés par une alimentation équilibrée.",
+cuestionario_reflexion_titulo: "💭 Qu’avez-vous découvert ?",
+cuestionario_reflexion_texto: "La prochaine fois que vous préparerez un jus vert, observez ses ingrédients, la quantité de pulpe qu’il conserve et la place qu’il occupe dans votre alimentation. Comprendre nos choix est également une façon de nous alimenter consciemment.",
+ beneficios_titulo_1: "Jus verts sains pour une alimentation équilibrée",
+        beneficios_titulo_2: "Bienfaits des jus verts et preuves scientifiques",
+        beneficios_introduccion: "Les jus verts apportent de hautes concentrations d'antioxydants, de vitamines, de minéraux et de chlorophylle. La science soutient leur consommation comme un bon complément nutritionnel (surtout s'ils sont consommés sans être filtrés pour profiter des fibres) ; cependant, il n'existe aucune preuve scientifique les validant comme des régimes détox miraculeux.",
+
+exploracion_titulo: "🔎 Pause and Observe",
+exploracion_texto: "Before continuing, think about the preparation you usually consume. Does it retain the pulp? What fruits and vegetables does it contain? Do you use it as part of a varied diet, or do you expect it to produce an extraordinary effect?",
+exploracion_reflexion: "💭 Conscious eating begins when we understand what we choose, without turning a food into a miraculous promise.",
+        beneficios_referencias_num: "[1, 2, 3, 4, 5]",
+        beneficios_subtitulo: "Preuves scientifiques et principales conclusions",
+        beneficios_referencias_titulo: "Références",
+        ref_1: "Harvard T.H. Chan School of Public Health. Vegetables and Fruits.",
+        ref_2: "National Institutes of Health (NIH). Office of Dietary Supplements.",
+        ref_3: "Organisation mondiale de la santé. Healthy Diet.",
+        ref_4: "MDPI Nutrients.",
+        ref_5: "SciELO.",
+ cardio_titulo: "Santé Cardiovasculaire",
+        cardio_texto: "Une étude clinique (publiée dans MDPI) a analysé la consommation de jus de légumes biologiques chez les adultes, concluant qu'ils contribuent à améliorer les indicateurs de circulation sanguine et le profil lipidique. D'autres recherches confirment que les mélanges de jus de fruits et de légumes ont des effets positifs sur la réduction de la tension artérielle, grâce à leurs polyphénols et nitrates.",
+        digestiva_titulo: "Activité Digestive",
+        digestiva_texto: "Les revues scientifiques indiquent que les jus verts améliorent le microbiome intestinal et le transit, grâce à l'apport de fibres végétales.",
+        antioxidante_titulo: "Capacité Antioxydante",
+        antioxidante_texto: "Plusieurs études sur des modèles précliniques (comme celle publiée dans SciELO) ont démontré le rôle protecteur du jus vert contre les espèces réactives (stress oxydatif) par rapport à d'autres boissons riches en vitamine C.",
+ contraindicaciones_titulo: "Contre-indications possibles",
+        contraindicaciones_texto: "La littérature médicale prévient que le mélange de trop de légumes (tels que les épinards ou les betteraves) augmente l'apport en oxalates, ce qui peut accroître le risque de calculs rénaux. De plus, l'excès de liquides et de minéraux peut être contre-indiqué pour les personnes souffrant d'insuffisance cardiaque ou rénale.",
+        instrucciones_aviso_principal: "Les informations présentées sont à des fins éducatives et ne remplacent pas l'évaluation individuelle d'un professionnel de la santé. En cas de maladies chroniques, de grossesse ou de traitements médicaux, consultez un professionnel avant d'apporter des changements majeurs à votre alimentation.",
+        pasos_titulo: "Étapes pour une préparation parfaite",
+        paso_1: "Lavez bien tous les fruits et légumes.",
+        paso_2: "Coupez en morceaux et mettez dans le mixeur avec l'eau.",
+        paso_3: "Buvez immédiatement pour profiter des nutriments.",
+        info_fibra: "Les jus préparés sans être filtrés conservent une plus grande quantité de fibres alimentaires, favorisant la satiété et un bon fonctionnement intestinal.",
+        instrucciones_aviso_secundario: "Les informations présentées sont à des fins éducatives et ne remplacent pas l'évaluation individuelle d'un professionnel de la santé.",
+ jugo_berros_titulo: "Jus de Cresson et Concombre",
+    jugo_berros_desc: "Favorise la purification du sang et accélère l'élimination des déchets.",
+    ing_berros: "🍏 1 bouquet de cresson",
+    ing_berros_pepino: "🍏 1 concombre",
+    ing_berros_manzana: "🍏 1 pomme verte",
+    ing_berros_limon: "🍏 1 citron",
+
+reflexion_beneficios_titulo: "💭 Observez maintenant votre choix",
+reflexion_beneficios_texto: "Votre préparation conserve-t-elle la pulpe ou a-t-elle été filtrée ? Contient-elle principalement des légumes, des fruits ou une combinaison des deux ? Comprendre ces différences permet de mieux apprécier chaque préparation dans le cadre de notre alimentation globale.",
+
+
+    jugo_depurativo_titulo: "Jus Purifiant au Concombre",
+    jugo_depurativo_desc: "Améliore les fonctions hépatiques et rénales. Aide à éliminer les calculs rénaux.",
+    ing_depurativo_pepinos: "🍏 2 concombres",
+    ing_esparragos: "🍏 1 bouquet d'asperges",
+    ing_depurativo_agua: "🍏 1 verre d'eau",
+    aviso_complemento: "🥗 Ce jus est un complément à votre alimentation.",
+    aviso_consulta: "⚠️ Consultez votre médecin ou nutritionniste.",
+
+    jugo_apio_pina_titulo: "Jus Détox Céleri et Ananas",
+    jugo_apio_pina_desc: "Très recherché pour ses qualités diurétiques. Très peu de calories.",
+    ing_tallo_apio: "🍏 1 branche de céleri",
+    ing_pina: "🍏 50g d'ananas",
+    ing_apio_pina_agua: "🍏 1 verre d'eau",
+
+    jugo_apio_pepino_pro_titulo: "Jus de Céleri et Concombre (Saveur Pro)",
+    jugo_apio_pepino_pro_desc: "Élimine les ballonnements abdominaux et le ventre gênant. Goût gratifiant.",
+    ing_medio_pepino: "🍏 demi-concombre",
+    ing_rama_apio: "🍏 1 branche de céleri",
+    ing_una_pina: "🍏 1 ananas",
+    ing_miel_opcional: "🍏 miel (facultatif)",
+
+    jugo_pina_perejil_titulo: "Jus d'Ananas et de Persil",
+    jugo_pina_perejil_desc: "Régule l'équilibre hormonal et procure de la satiété. Idéal pour le dîner.",
+    ing_dos_zanahorias: "🍏 2 carottes",
+    ing_pina_perejil_pepino: "🍏 1 concombre",
+    ing_ramas_perejil: "🍏 5 branches de persil",
+    ing_manzana_verde: "🍏 1 pomme verte",
+    ing_rodajas_pina: "🍏 2 tranches d'ananas",
+    ing_litro_agua: "🍏 1 litre d'eau",
+
+    jugo_perejil_limon_titulo: "Jus Traditionnel de Persil et Citron",
+    jugo_perejil_limon_desc: "Lutte contre la rétention d'eau et purifie profondément les reins.",
+    ing_cilantro: "🍏 coriandre",
+    ing_cuatro_ramas_perejil: "🍏 4 branches de persil",
+    ing_un_limon: "🍏 1 citron",
+    ing_jengibre: "🍏 gingembre",
+    ing_quinientos_ml_agua: "🍏 500 ml d'eau",
+
+    jugo_pepino_titulo: "Jus de Concombre, Céleri et Pomme",
+    jugo_pepino_desc: "Idéal pour la perte de poids, grâce à ses propriétés diurétiques et purifiantes. Un brûleur de graisse naturel !",
+    ing_pepino: "🍏 1 concombre",
+    ing_manzana: "🍏 1 pomme verte",
+    ing_pera: "🍏 1 poire",
+    ing_apio: "🍏 une demi-branche de céleri",
+    ing_datiles: "🍏 4 dattes",
+    ing_jengibre: "🍏 1 gingembre frais",
+    ing_agua: "🍏 1 verre d'eau",
+
+    jugo_espinacas_titulo: "Jus d'Épinards, Céleri et Pomme",
+    jugo_espinacas_desc: "Multivitamines : renforce le système immunitaire, réduit l'inflammation et contrôle la glycémie.",
+    ing_naranjas: "🍏 4 oranges",
+    ing_platano: "🍏 1 banane",
+    ing_espinacas: "🍏 1 bouquet d'épinards",
+    ing_manzanas_verdes: "🍏 2 pommes vertes",
+    ing_jengibre_curcuma: "🍏 gingembre et curcuma",
+
+    jugo_brocoli_titulo: "Jus de Brocoli et Concombre",
+    jugo_brocoli_desc: "Purifie le corps sans le déséquilibrer. Améliore le transit intestinal et hydrate.",
+    ing_brocoli: "🍏 100g de brocoli",
+    ing_zanahoria: "🍏 1 carotte",
+    ing_brocoli_pepino: "🍏 1 concombre",
+    ing_brocoli_limon: "🍏 1 citron",
+    ing_agua_brocoli: "🍏 500 ml d'eau",
+
+    jugo_detox_titulo: "Jus Détox aux Épinards",
+    jugo_detox_desc: "Libère le foie des toxines et protège la peau. Agit comme un diurétique naturel.",
+    ing_detox_espinacas: "🍏 2 tasses d'épinards",
+    ing_detox_pepino: "🍏 demi-concombre",
+    ing_detox_manzana: "🍏 demi-pomme verte",
+    ing_detox_limon: "🍏 1 citron",
+    ing_detox_agua: "🍏 150 ml d'eau",
+
+    jugo_lechuga_titulo: "Jus de Laitue et Chayote (Cidra)",
+    jugo_lechuga_desc: "Spécial pour affiner la zone abdominale et réduire le cholestérol.",
+    ing_chayote: "🍏 1 chayote",
+    ing_lechuga_pepino: "🍏 1 concombre",
+    ing_lechuga_espinacas: "🍏 1 tasse d'épinards",
+    ing_zumo_limon: "🍏 1/4 de tasse de jus de citron",
+    ing_lechuga_romana: "🍏 1 petite laitue romaine",
+
+conclusion_jugos_titulo: "🌿 Au-delà du jus",
+conclusion_jugos_texto: "Les jus verts peuvent être une manière agréable d’intégrer des fruits et des légumes à notre alimentation, mais leur véritable valeur dépend du contexte dans lequel nous les consommons. Ils n’ont pas besoin d’être miraculeux pour faire partie d’une alimentation saine.",
+conclusion_jugos_reflexion_titulo: "💭 Un choix conscient",
+conclusion_jugos_reflexion_texto: "Connaître les ingrédients, comprendre comment une boisson est préparée et reconnaître ses bénéfices et ses limites nous permet de faire des choix plus éclairés. Le bien-être ne dépend pas d’un seul aliment, mais de la relation que nous construisons avec notre alimentation et nos habitudes quotidiennes.",
+
+
+ footer_col1_titulo: "Explorer",
+    footer_menu_inicio: "Accueil",
+    footer_menu_betarraga: "Betterave",
+    footer_menu_nutricion: "Nutrition",
+    footer_menu_peso: "Contrôle du poids",
+    footer_menu_isometricos: "Exercices isométriques",
+    
+    footer_col2_titulo: "Information",
+    footer_menu_quienes: "Qui Sommes-Nous",
+    footer_menu_contacto: "Contact",
+    footer_menu_privacidad: "Politique de Confidentialité",
+    footer_menu_terminos: "Termes et Conditions",
+    
+    footer_col3_titulo: "Contact",
+    footer_ubicacion: "Medellín, Antioquia",
+    
+    footer_copyright: "&copy; 2026 AAPMental. Tous droits réservés.",
+    footer_small: "Contenu élaboré par AAPMental – Bien-être Conscient."
+ 
+
+       
+    },
+
+    it: {
+       
+       intro_jugos_titulo: "🌿 Esplora il mondo dei succhi verdi",
+intro_jugos_parrafo: "I succhi e le preparazioni a base di frutta e verdura possono essere un modo pratico per integrare alimenti vegetali nell’alimentazione quotidiana. Tuttavia, non sostituiscono un’alimentazione equilibrata né costituiscono trattamenti per le malattie.",
+intro_jugos_reflexion_titulo: "💭 Prima di iniziare, poniti una domanda",
+intro_jugos_reflexion_texto: "Quando scegli un succo verde, che cosa cerchi veramente: sapore, varietà, idratazione, più verdure o semplicemente il piacere di gustare una bevanda diversa?",
+
+cuestionario_titulo: "🌿 Il tuo momento di esplorazione",
+cuestionario_intro: "Prima di continuare, rifletti su queste domande e scopri alcuni aspetti interessanti dei succhi verdi.",
+pregunta_1: "🥬 Cosa succede alla fibra quando un succo conserva la polpa?",
+respuesta_1: "Quando la polpa viene conservata, generalmente si mantiene una maggiore quantità di fibra alimentare rispetto a un succo filtrato. La fibra contribuisce al senso di sazietà e fa parte di un’alimentazione favorevole alla salute intestinale.",
+pregunta_2: "🍎 Un succo verde deve contenere solamente verdure?",
+respuesta_2: "No. Può combinare frutta e verdura. La scelta dipenderà dal gusto, dagli ingredienti disponibili e dall’insieme dell’alimentazione.",
+pregunta_3: "🔬 I succhi verdi disintossicano l’organismo?",
+respuesta_3: "Non esistono solide evidenze scientifiche che dimostrino che i succhi verdi producano uno speciale effetto disintossicante. L’organismo dispone di propri sistemi fisiologici per elaborare ed eliminare le sostanze.",
+pregunta_4: "💧 Un succo verde può sostituire un’alimentazione equilibrata?",
+respuesta_4: "No. Può far parte di un’alimentazione varia, ma non può sostituire la diversità di alimenti e nutrienti fornita da un’alimentazione equilibrata.",
+cuestionario_reflexion_titulo: "💭 Che cosa hai scoperto?",
+cuestionario_reflexion_texto: "La prossima volta che preparerai un succo verde, osserva i suoi ingredienti, la quantità di polpa che conserva e il ruolo che svolge nella tua alimentazione. Comprendere le nostre scelte è anche un modo per alimentarci consapevolmente.",
+intro_jugos_frase: "🌱 Non si tratta di cercare una bevanda miracolosa, ma di imparare a rapportarci consapevolmente agli alimenti che scegliamo.",
+        beneficios_titulo_1: "Succhi verdi sani per un'alimentazione equilibrata",
+        beneficios_titulo_2: "Benefici dei succhi verdi ed evidenze scientifiche",
+        beneficios_introduccion: "I succhi verdi forniscono alte concentrazioni di antiossidanti, vitamine, minerali e clorofilla. La scienza ne sostiene il consumo come un buon integratore nutrizionale (soprattutto se consumati senza essere filtrati per sfruttare le fibre); tuttavia, non esistono prove scientifiche che li convalidino come diete disintossicanti miracolose.",
+
+exploracion_titulo: "🔎 Fermati e osserva",
+exploracion_texto: "Prima di continuare, pensa alla preparazione che consumi abitualmente. Conserva la polpa? Quali frutti e verdure contiene? La utilizzi come parte di un’alimentazione varia o ti aspetti che produca un effetto straordinario?",
+exploracion_reflexion: "💭 Un’alimentazione consapevole inizia quando comprendiamo ciò che scegliamo, senza trasformare un alimento in una promessa miracolosa.",
+        beneficios_referencias_num: "[1, 2, 3, 4, 5]",
+        beneficios_subtitulo: "Evidenze scientifiche e scoperte principali",
+        beneficios_referencias_titulo: "Riferimenti",
+        ref_1: "Harvard T.H. Chan School of Public Health. Vegetables and Fruits.",
+        ref_2: "National Institutes of Health (NIH). Office of Dietary Supplements.",
+        ref_3: "Organizzazione Mondiale della Sanità. Healthy Diet.",
+        ref_4: "MDPI Nutrients.",
+        ref_5: "SciELO.",
+        cardio_titulo: "Salute Cardiovascolare",
+        cardio_texto: "Uno studio clinico (pubblicato su MDPI) ha analizzato il consumo di succhi di verdura biologici negli adulti, concludendo che aiutano a migliorare gli indicatori della circolazione sanguigna e il profilo lipidico. Altre ricerche confermano che i mix di succhi di frutta e verdura hanno effetti positivi sulla riduzione della pressione sanguigna, grazie ai loro polifenoli e nitrati.",
+        digestiva_titulo: "Attività Digestiva",
+        digestiva_texto: "Le revisioni scientifiche indicano che i succhi verdi migliorano il microbioma intestinale e il transito, grazie all'apporto di fibra vegetale.",
+        antioxidante_titulo: "Capacità Antiossidante",
+        antioxidante_texto: "Diversi studi su modelli preclinici (come quello pubblicato su SciELO) hanno dimostrato il ruolo protettivo del succo verde contro le specie reattive (stress ossidativo) rispetto ad altre bevande ricche di vitamina C.",
+        contraindicaciones_titulo: "Possibili controindicazioni",
+        contraindicaciones_texto: "La letteratura medica avverte che mescolare troppe verdure (come spinaci o barbabietole) aumenta l'apporto di ossalati, il che può aumentare il rischio di calcoli renali. Inoltre, un eccesso di liquidi e minerali può essere controindicato per le persone con insufficienza cardiaca o renale.",
+        instrucciones_aviso_principal: "Le informazioni presentate hanno uno scopo educativo e non sostituiscono la valutazione individuale di un professionista sanitario. In caso di malattie croniche, gravidanza o trattamenti medici, consulta un professionista prima di apportare modifiche importanti alla tua dieta.",
+        pasos_titulo: "Passaggi per la preparazione perfetta",
+        paso_1: "Lava bene tutta la frutta e la verdura.",
+        paso_2: "Taglia a pezzi e metti nel frullatore con l'acqua.",
+        paso_3: "Bevi immediatamente per sfruttare al meglio i nutrienti.",
+        info_fibra: "I succhi preparati senza essere filtrati conservano una maggiore quantità di fibra alimentare, favorendo il senso di sazietà e la normale funzionalità intestinale.",
+        instrucciones_aviso_secundario: "Le informazioni presentate hanno uno scopo educativo e non sostituiscono la valutazione individuale di un professionista sanitario.",
+       jugo_berros_titulo: "Succo di Crescione e Cetriolo",
+    jugo_berros_desc: "Favorisce la depurazione del sangue e accelera l'eliminazione delle scorie.",
+    ing_berros: "🍏 1 mazzetto di crescione",
+    ing_berros_pepino: "🍏 1 cetriolo",
+    ing_berros_manzana: "🍏 1 mela verde",
+    ing_berros_limon: "🍏 1 limone",
+
+reflexion_beneficios_titulo: "💭 Ora osserva la tua scelta",
+reflexion_beneficios_texto: "La tua preparazione conserva la polpa oppure è stata filtrata? Contiene principalmente verdure, frutta o una combinazione di entrambe? Comprendere queste differenze aiuta a valutare ogni preparazione nel contesto complessivo della nostra alimentazione.",
+
+    jugo_depurativo_titulo: "Succo Depurativo di Cetriolo",
+    jugo_depurativo_desc: "Migliora le funzioni epatiche e renali. Aiuta a eliminare i calcoli renali.",
+    ing_depurativo_pepinos: "🍏 2 cetrioli",
+    ing_esparragos: "🍏 1 mazzetto di asparagi",
+    ing_depurativo_agua: "🍏 1 bicchiere d'acqua",
+    aviso_complemento: "🥗 Questo succo è un integratore della tua alimentazione.",
+    aviso_consulta: "⚠️ Consulta il tuo medico o nutrizionista.",
+
+    jugo_apio_pina_titulo: "Succo Detox di Sedano e Ananas",
+    jugo_apio_pina_desc: "Molto richiesto per le sue qualità diuretiche. Molto basso in calorie.",
+    ing_tallo_apio: "🍏 1 costa di sedano",
+    ing_pina: "🍏 50g di ananas",
+    ing_apio_pina_agua: "🍏 1 bicchiere d'acqua",
+
+    jugo_apio_pepino_pro_titulo: "Succo di Sedano e Cetriolo (Gusto Pro)",
+    jugo_apio_pepino_pro_desc: "Elimina il gonfiore addominale e la fastidiosa pancia. Sapore gratificante.",
+    ing_medio_pepino: "🍏 mezzo cetriolo",
+    ing_rama_apio: "🍏 1 costa di sedano",
+    ing_una_pina: "🍏 1 ananas",
+    ing_miel_opcional: "🍏 miele (facoltativo)",
+
+    jugo_pina_perejil_titulo: "Succo di Ananas e Prezzemolo",
+    jugo_pina_perejil_desc: "Regola l'equilibrio ormonale e dona sazietà. Ideale per la cena.",
+    ing_dos_zanahorias: "🍏 2 carote",
+    ing_pina_perejil_pepino: "🍏 1 cetriolo",
+    ing_ramas_perejil: "🍏 5 rametti di prezzemolo",
+    ing_manzana_verde: "🍏 1 mela verde",
+    ing_rodajas_pina: "🍏 2 fette di ananas",
+    ing_litro_agua: "🍏 1 litro d'acqua",
+
+    jugo_perejil_limon_titulo: "Succo Tradizionale di Prezzemolo e Limone",
+    jugo_perejil_limon_desc: "Combatte la ritenzione idrica e depura a fondo i reni.",
+    ing_cilantro: "🍏 coriandolo",
+    ing_cuatro_ramas_perejil: "🍏 4 rametti di prezzemolo",
+    ing_un_limon: "🍏 1 limone",
+    ing_jengibre: "🍏 zenzero",
+    ing_quinientos_ml_agua: "🍏 500 ml d'acqua",
+
+    jugo_pepino_titulo: "Succo di Cetriolo, Sedano e Mela",
+    jugo_pepino_desc: "Ideale per dimagrire, grazie alle sue proprietà diuretiche e depurative. Un bruciagrassi naturale!",
+    ing_pepino: "🍏 1 cetriolo",
+    ing_manzana: "🍏 1 mela verde",
+    ing_pera: "🍏 1 pera",
+    ing_apio: "🍏 mezza costa di sedano",
+    ing_datiles: "🍏 4 datteri",
+    ing_jengibre: "🍏 1 zenzero fresco",
+    ing_agua: "🍏 1 bicchiere d'acqua",
+
+    jugo_espinacas_titulo: "Succo di Spinaci, Sedano e Mela",
+    jugo_espinacas_desc: "Multivitaminico: rafforza il sistema immunitario, riduce l'infiammazione e controlla la glicemia.",
+    ing_naranjas: "🍏 4 arance",
+    ing_platano: "🍏 1 banana",
+    ing_espinacas: "🍏 1 mazzetto di spinaci",
+    ing_manzanas_verdes: "🍏 2 mele verdi",
+    ing_jengibre_curcuma: "🍏 zenzero e curcuma",
+
+    jugo_brocoli_titulo: "Succo di Broccoli e Cetriolo",
+    jugo_brocoli_desc: "Purifica il corpo senza squilibrarlo. Migliora il transito intestinale e idrata.",
+    ing_brocoli: "🍏 100g di broccoli",
+    ing_zanahoria: "🍏 1 carota",
+    ing_brocoli_pepino: "🍏 1 cetriolo",
+    ing_brocoli_limon: "🍏 1 limone",
+    ing_agua_brocoli: "🍏 500 ml d'acqua",
+
+    jugo_detox_titulo: "Succo Detox agli Spinaci",
+    jugo_detox_desc: "Libera il fegato dalle tossine e protegge la pelle. Agisce come diuretico naturale.",
+    ing_detox_espinacas: "🍏 2 tazze di spinaci",
+    ing_detox_pepino: "🍏 mezzo cetriolo",
+    ing_detox_manzana: "🍏 mezza mela verde",
+    ing_detox_limon: "🍏 1 limone",
+    ing_detox_agua: "🍏 150 ml d'acqua",
+
+    jugo_lechuga_titulo: "Succo di Lattuga e Chayote (Cidra)",
+    jugo_lechuga_desc: "Speciale per snellire la zona addominale e ridurre il colesterolo.",
+    ing_chayote: "🍏 1 chayote",
+    ing_lechuga_pepino: "🍏 1 cetriolo",
+    ing_lechuga_espinacas: "🍏 1 tazza di spinaci",
+    ing_zumo_limon: "🍏 1/4 di tazza di succo di limone",
+    ing_lechuga_romana: "🍏 1 piccola lattuga romana",
+
+conclusion_jugos_titulo: "🌿 Oltre il succo",
+conclusion_jugos_texto: "I succhi verdi possono essere un modo piacevole per integrare frutta e verdura nella nostra alimentazione, ma il loro vero valore dipende dal contesto in cui li consumiamo. Non devono essere miracolosi per poter far parte di un’alimentazione sana.",
+conclusion_jugos_reflexion_titulo: "💭 Una scelta consapevole",
+conclusion_jugos_reflexion_texto: "Conoscere gli ingredienti, comprendere come viene preparata una bevanda e riconoscerne i benefici e i limiti ci permette di fare scelte più consapevoli. Il benessere non dipende da un singolo alimento, ma dal rapporto che costruiamo con la nostra alimentazione e le nostre abitudini quotidiane.",
+footer_col1_titulo: "Esplora",
+    footer_menu_inicio: "Home",
+    footer_menu_betarraga: "Barbabietola",
+    footer_menu_nutricion: "Nutrizione",
+    footer_menu_peso: "Controllo del peso",
+    footer_menu_isometricos: "Esercizi isometrici",
+    
+    footer_col2_titulo: "Informazioni",
+    footer_menu_quienes: "Chi Siamo",
+    footer_menu_contacto: "Contatto",
+    footer_menu_privacidad: "Politica sulla Riservatezza",
+    footer_menu_terminos: "Termini e Condizioni",
+    
+    footer_col3_titulo: "Contatto",
+    footer_ubicacion: "Medellín, Antioquia",
+    
+    footer_copyright: "&copy; 2026 AAPMental. Tutti i diritti riservati.",
+    footer_small: "Contenuto sviluppato da AAPMental – Benessere Consapevole."
+
+    }
+};
+
+// ===============================
+// CARGAR IDIOMA AL ABRIR LA PÁGINA
+// ===============================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const idiomaNavegador = navigator.language.slice(0, 2);
+    const idiomasPermitidos = ["es", "en", "fr", "it"];
+
+    const idioma =
+        localStorage.getItem("idioma") ||
+        (idiomasPermitidos.includes(idiomaNavegador) ? idiomaNavegador : "es");
+
+    localStorage.setItem("idioma", idioma);
+
+    // Selector de idioma
+    const selector = document.getElementById("idioma-nav");
+    if (selector) {
+        selector.value = idioma;
+    }
+
+    // Traducir TEXTOS GLOBALES (Menú, Footer, etc.)
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const clave = el.dataset.i18n;
+
+        if (typeof textosGlobales !== "undefined" && textosGlobales[idioma] && textosGlobales[idioma][clave]) {
+            el.innerHTML = textosGlobales[idioma][clave];
+        }
+    });
+
+    // Traducir CONTENIDO DE LA PÁGINA (Usando también data-i18n unificado)
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const clave = el.dataset.i18n;
+
+        if (typeof traducciones !== "undefined" && traducciones[idioma] && traducciones[idioma][clave]) {
+            el.innerHTML = traducciones[idioma][clave];
+        }
+    });
+
+    // Traducir ATRIBUTOS ALT (Para las imágenes)
+    document.querySelectorAll("[data-i18n-alt]").forEach(el => {
+        const clave = el.dataset.i18nAlt;
+
+        if (typeof traducciones !== "undefined" && traducciones[idioma] && traducciones[idioma][clave]) {
+            el.alt = traducciones[idioma][clave];
+        }
+    });
+
+});
+
+// ===============================
+// CAMBIAR IDIOMA DESDE EL SELECT
+// ===============================
+
+function cambiarIdioma(idioma) {
+    localStorage.setItem("idioma", idioma);
+    location.reload();
+}
+
+</script>
+   
 
 <footer class="footer">
     <div class="footer-container">
         
         <!-- Columna 1: Explorar -->
         <div class="footer-col">
-            <h3>Explorar</h3>
+            <h3 data-i18n="footer_col1_titulo">Explorar</h3>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="betarraga.html">Betarraga</a></li>
-                <li><a href="nutricion.html">Nutrición</a></li>
-                <li><a href="masa-corporal.html">Control de peso</a></li>
-                <li><a href="isometricos.html">Ejercicios isométricos</a></li>
+                <li><a href="index.html" data-i18n="footer_menu_inicio">Inicio</a></li>
+                <li><a href="betarraga.html" data-i18n="footer_menu_betarraga">Betarraga</a></li>
+                <li><a href="nutricion.html" data-i18n="footer_menu_nutricion">Nutrición</a></li>
+                <li><a href="masa-corporal.html" data-i18n="footer_menu_peso">Control de peso</a></li>
+                <li><a href="isometricos.html" data-i18n="footer_menu_isometricos">Ejercicios isométricos</a></li>
             </ul>
         </div> <!-- Cierre Columna 1 -->
 
         <!-- Columna 2: Información -->
         <div class="footer-col">
-            <h3>Información</h3>
+            <h3 data-i18n="footer_col2_titulo">Información</h3>
             <ul>
-                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="privacidad.html">Política de Privacidad</a></li>
-                <li><a href="terminos.html">Términos y Condiciones</a></li>
+                <li><a href="quienes-somos.html" data-i18n="footer_menu_quienes">Quiénes Somos</a></li>
+                <li><a href="contacto.html" data-i18n="footer_menu_contacto">Contacto</a></li>
+                <li><a href="privacidad.html" data-i18n="footer_menu_privacidad">Política de Privacidad</a></li>
+                <li><a href="terminos.html" data-i18n="footer_menu_terminos">Términos y Condiciones</a></li>
             </ul>
         </div> <!-- Cierre Columna 2 -->
 
         <!-- Columna 3: Contacto -->
         <div class="footer-col">
-            <h3>Contacto</h3>
+            <h3 data-i18n="footer_col3_titulo">Contacto</h3>
             <p><i class="fas fa-envelope"></i> info@aapmental.com</p>
-            <p><i class="fas fa-map-marker-alt"></i> Medellín, Antioquia</p>
+            <p><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer_ubicacion">Medellín, Antioquia</span></p>
         </div> <!-- Cierre Columna 3 -->
 
     </div> <!-- ¡Cierre correcto del footer-container! -->
 
     <!-- Barra Inferior de Copyright -->
     <div class="footer-bottom">
-        <p>&copy; 2026 AAPMental. Todos los derechos reservados.</p>
-        <small>Contenido elaborado por AAPMental – Bienestar Consciente.</small>
+        <p data-i18n="footer_copyright">&copy; 2026 AAPMental. Todos los derechos reservados.</p>
+        <small data-i18n="footer_small">Contenido elaborado por AAPMental – Bienestar Consciente.</small>
     </div>
 </footer>
 </body>
