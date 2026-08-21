@@ -1,5 +1,5 @@
 /* =======================================================
-   🎨 PARTE 1: CONFIGURACIÓN RAÍZ, BASE Y ANIMACIONES
+    🎨 PARTE 1: CONFIGURACIÓN RAÍZ, BASE Y ANIMACIONES
 ======================================================= */
 
 /* Estilos Relajantes Base */
@@ -19,13 +19,13 @@ body {
     flex-direction: column;
     align-items: stretch; 
     justify-content: space-between;  
-    min-height: 100vh;          
+    min-height: 100vh;           
     overflow-y: auto;            
-    overflow-x: hidden;          
+    overflow-x: hidden;           
     text-align: center;
 }
 
-/* 🛠️ Añade o asegura esta regla para tu footer */
+/* 🛠️ Regla para el footer */
 footer {
     width: 100%;
     padding: 20px 0;
@@ -61,12 +61,13 @@ header span {
 }
 
 /* =======================================================
-   🎮 PARTE 2: CONTROLES DE AUDIO, NAVBAR Y DROPDOWNS
+    🎮 PARTE 2: CONTROLES DE AUDIO, NAVBAR Y DROPDOWNS
 ======================================================= */
 
 .controls {
     width: 80%;
     max-width: 400px;
+    margin: 0 auto;
 }
 
 .audio-options {
@@ -86,7 +87,8 @@ button.audio-btn {
     transition: 0.3s;
 }
 
-button.audio-btn:hover, button.audio-btn.active {
+button.audio-btn:hover, 
+button.audio-btn.active {
     background: var(--azul-relajante);
 }
 
@@ -94,7 +96,7 @@ button.audio-btn:hover, button.audio-btn.active {
     margin: 20px 0;
 }
 
-input[type=range] {
+input[type="range"] {
     width: 100%;
     cursor: pointer;
 }
@@ -112,6 +114,12 @@ input[type=range] {
     font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+#start-btn:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
 }
 
 /* ==============================
@@ -185,7 +193,7 @@ input[type=range] {
 }
 
 /* =======================================================
-   📖 PARTE 3: OPTIMIZACIÓN DEL SUEÑO Y FOOTER RESPONSIVO
+    📖 PARTE 3: OPTIMIZACIÓN DEL SUEÑO Y FOOTER RESPONSIVO
 ======================================================= */
 
 .header-banner {
@@ -319,22 +327,20 @@ tr:nth-child(even) td {
     font-style: italic;
 }
 
+
+
 /* ==========================================
     FOOTER (Verde Bosque / Relajante)
 ========================================== */
-.footer{
-
+.footer {
     background: linear-gradient(
         180deg,
         #111111 0%,
         #0c0c0c 50%,
         #050505 100%
     );
-
-    color:#ffffff;
-
-    border-top:2px solid rgba(212,175,55,.35);
-
+    color: #ffffff;
+    border-top: 2px solid rgba(212, 175, 55, 0.35);
 }
 
 .footer-container {
@@ -410,6 +416,11 @@ tr:nth-child(even) td {
     color: #64748b;
     font-size: 0.85rem;
 }
+
+
+
+
+
 
 /* ==========================================
     MEDIA QUERIES (Ajustes Responsivos)
