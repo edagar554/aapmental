@@ -64,13 +64,21 @@
                 </li>
                 <li><a href="masa-corporal.html" data-i18n="menu_salud">masa-corporal</a></li>
             </ul>
+
+           <div class="nav-lang">
+            <select id="idioma-nav" onchange="cambiarIdioma(this.value)">
+                <option value="es">ESPAÑOL</option>
+                <option value="en">ENGLISH</option>
+                <option value="fr">FRANÇAIS</option>
+                <option value="it">ITALIANO</option>
+                </select>
+          </div>
         </div>
     </nav>
 
     <header>
         <h1>AAP<span>Sleep</span></h1>
-        <p>Fluye hacia el descanso profundo</p>
-        <p>elige tu frecuencia favorita y dar click en iniciar flujo</p>
+        
     </header>
 
     <!-- El círculo ahora representa el fluir del agua -->
@@ -92,337 +100,1395 @@
         <div class="play-footer">
             <button id="start-btn" onclick="toggleDescanso()">INICIAR FLUJO</button>
         </div>
+
     </main>
+    
 
-    <!-- =======================================================
-         📖 SECCIÓN CONTENIDO: OPTIMIZACIÓN NATURAL DEL SUEÑO
-    ======================================================= -->
-    <section style="max-width: 600px; margin: 40px auto; padding: 0 20px;">
+   <!-- =======================================================
+     📖 SECCIÓN CONTENIDO: OPTIMIZACIÓN NATURAL DEL SUEÑO
+======================================================= -->
 
-        <div class="header-banner">
-            <h1 style="font-size: 20pt; margin: 0 0 8px 0; font-weight: bold; letter-spacing: -0.5px;">Optimización Natural del Sueño</h1>
-            <div class="subtitle">Guía de Frecuencias Sonoras, Ritmos Circadianos y Nutrición Terapéutica</div>
+<section class="sleep-optimization-container">
+
+    <div class="header-banner">
+
+        <h1 data-i18n="idn01">
+    Optimización Natural del Sueño
+</h1>
+
+        <div class="subtitle" data-i18n="idn02">
+            Guía de Frecuencias Sonoras, Ritmos Circadianos y Nutrición Terapéutica
         </div>
 
-        <p>Las frecuencias de sonido terapéuticas actúan como un guía biológico, orientando las ondas cerebrales hacia estados de relajación profunda. Mediante el uso de herramientas como los pulsos binaurales, los tonos isocrónicos o los sonidos ambientales de la naturaleza, es posible disminuir de manera controlada la actividad mental acelerada y facilitar una transición armónica hacia el descanso.</p>
-        <p>si comprendemos el sueño como un proceso de regeneracion natural,el cual podemos activar en forma conciente y disciplinado </p>
-        <p>ahora toda esta  lineas son  informativas y didacticas,la cual podemos llevar a experimentacion en forma individual desde la comodidad de nuestra casa</p>
-        <h2>1. Tipos de Frecuencias y Ondas Cerebrales</h2>
-        <p>El cerebro humano opera en diferentes rangos de frecuencia según su nivel de actividad. La estimulación auditiva externa permite sintonizar estas ondas para propósitos terapéuticos específicos:</p>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th style="width: 25%;">Onda / Frecuencia</th>
-                    <th style="width: 20%;">Rango de Medida</th>
-                    <th style="width: 55%;">Efecto Fisiológico y Aplicación Práctica</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span class="strong-term">Ondas Delta</span></td>
-                    <td><span class="math">0.5 &rarr; 4 Hz</span></td>
-                    <td>Representan la frecuencia ideal para el sueño profundo y reparador. Escucharlas antes de dormir ayuda a conciliar el sueño con mayor rapidez y reduce significativamente los despertares nocturnos espontáneos.</td>
-                </tr>
-                <tr>
-                    <td><span class="strong-term">Ondas Theta</span></td>
-                    <td><span class="math">4 &rarr; 8 Hz</span></td>
-                    <td>Asociadas directamente con la fase inicial del sueño ligero y la etapa del sueño REM. Son excelentes herramientas para mitigar los estados de ansiedad y propiciar una relajación mental profunda.</td>
-                </tr>
-                <tr>
-                    <td><span class="strong-term">Ondas Alfa</span></td>
-                    <td><span class="math">8 &rarr; 13 Hz</span></td>
-                    <td>Vinculadas a un estado de calma despierta (similar al estado alcanzado durante la meditación). Ayudan a transicionar del estrés cognitivo diario a un estado de relajación física y mental.</td>
-                </tr>
-                <tr>
-                    <td><span class="strong-term">Tono Holístico 432 Hz</span></td>
-                    <td>Frecuencia Base</td>
-                    <td>Conocida tradicionalmente como la frecuencia de la naturaleza. Estudios sugieren que disminuye la frecuencia cardíaca y estimula un incremento en el tiempo de permanencia en las fases de sueño profundo.</td>
-                </tr>
-                <tr>
-                    <td><span class="strong-term">Tono Holístico 174 Hz</span></td>
-                    <td>Frecuencia Base</td>
-                    <td>Funciona en terapias alternativas como un analgésico natural tanto físico como mental, ayudando a disipar las tensiones musculares acumuladas y a inducir bienestar general.</td>
-                </tr>
-                <tr>
-                    <td><span class="strong-term">Tono Holístico 528 Hz</span></td>
-                    <td>Frecuencia Base</td>
-                    <td>Denominada la frecuencia de la transformación o reparación (asociada históricamente a la optimización celular). Promueve un entorno de relajación mental óptimo para reducir el insomnio.</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h2>2. Estimulación de la Melatonina y Control Circadiano</h2>
-        <p>La melatonina es la hormona fundamental encargada de regular el reloj biológico humano. Su segregación natural está intrínsecamente ligada a la ausencia de luz. Para optimizar su producción de forma orgánica, se recomienda estructurar los hábitos diarios en torno a tres pilares fundamentales:</p>
-        <p>todos nuestros procesos biologicos estan orquestados en forma magestuosa por esas pequeñas y colosales glandulas endocrinas,las cuales con su produccion  hormonal regula este importante proceso </p>
-
-        <h3>A. Control estricto de la exposición a la luz</h3>
-        <ul>
-            <li><span class="strong-term">Luz natural diurna:</span> Exponerse entre 5 y 10 minutos a la luz solar al aire libre inmediatamente después de despertar. Esta acción suprime la melatonina matutina e indica al cerebro el inicio óptimo del ciclo diario.</li>
-            <li><span class="strong-term">Restricción de luz azul:</span> Apagar dispositivos emisores de luz azul (televisores, computadoras y teléfonos móviles) de 1 a 2 horas antes de acostarse. La luz azul inhibe de forma drástica la secreción de melatonina. En caso de uso inevitable, se deben activar filtros de tono cálido.</li>
-            <li><span class="strong-term">Oscuridad nocturna total:</span> Mantener el dormitorio en un estado de oscuridad absoluta. El uso de cortinas opacas (blackout) previene que la contaminación lumínica externa altere los receptores oculares durante la noche.</li>
-        </ul>
-
-        <h3>B. Ajuste dietético estratégico</h3>
-        <ul>
-            <li><span class="strong-term">Precursores bioquímicos:</span> Incorporar alimentos con un alto contenido de triptófano, un aminoácido esencial indispensable para que el organismo sintetice serotonina y, posteriormente, melatonina. Entre ellos destacan los lácteos, huevos, avena, almendras, nueces y legumbres.</li>
-            <li><span class="strong-term">Fuentes alimenticias directas:</span> Consumir alimentos que contienen concentraciones medibles de melatonina en su propia matriz biológica, tales como el arroz integral, la avena, el maíz dulce, los tomates y las cerezas ácidas.</li>
-        </ul>
-
-        <h3>C. Modificación de hábitos y entorno</h3>
-        <ul>
-            <li><span class="strong-term">Cena ligera y oportuna:</span> Evitar ingestas copiosas o elevadas en grasas saturadas al menos 2 horas antes de acostarse para asegurar que los procesos digestivos pesados no interfieran con las fases iniciales del sueño.</li>
-            <li><span class="strong-term">Planificación del ejercicio:</span> Limitar los entrenamientos de alta intensidad a altas horas de la noche, dado que elevan la temperatura corporal central y el cortisol, retrasando la conciliación del descanso.</li>
-            <li><span class="strong-term">Ritual de desconexión:</span> Disminuir de manera progresiva la intensidad de las luces del hogar al caer la noche y realizar actividades de baja demanda cognitiva, tales como la lectura con luz tenue o ejercicios de respiración consciente orientados a reducir el cortisol.</li>
-        </ul>
-
-        <div class="callout-box">
-            <p><strong>Nota técnica:</strong> De acuerdo con directrices de salud de instituciones especializadas como <em>GoodRx Health</em>, la sincronización correcta de estos hábitos reduce la necesidad de recurrir a suplementos exógenos y mejora la arquitectura natural del sueño.</p>
-        </div>
-
-        <h2>3. Análisis Detallado de Alimentos Reguladores</h2>
-        <p>A continuación se desglosan los principales elementos de la dieta que impactan positivamente en la calidad del descanso, validados por fuentes científicas y clínicas de referencia:</p>
-
-        <div class="food-grid">
-            <div class="food-item">
-                <div class="food-title">Nueces y Frutos Secos <span class="source-tag">(Fuente: WebMD / Healthline)</span></div>
-                <p>Destacan especialmente los pistachos y las almendras como fuentes sobresalientes de melatonina natural. Adicionalmente, aportan un perfil rico en antioxidantes, minerales y ácidos grasos insaturados saludables. Debido a su alta densidad calórica, se aconseja su consumo en porciones moderadas como refrigerio diurno.</p>
-            </div>
-
-            <div class="food-item">
-                <div class="food-title">Plátano <span class="source-tag">(Fuente: Healthline)</span></div>
-                <p>Además de contener dosis moderadas de la hormona, posee una combinación sinérgica de magnesio y triptófano. El magnesio actúa reduciendo los niveles sistémicos de cortisol (la hormona del estrés) y relajando el sistema neuromuscular, mientras que el triptófano es metabolizado directamente en serotonina.</p>
-            </div>
-
-            <div class="food-item">
-                <div class="food-title">Cerezas Ácidas <span class="source-tag">(Fuente: WebMD)</span></div>
-                <p>Es uno de los recursos naturales con mayor concentración fitoquímica de melatonina. Las revisiones clínicas sugieren consumir la fruta en su estado fresco o en extractos puros no endulzados, evitando jugos comerciales que adicionan azúcares refinados perjudiciales para los picos glucémicos nocturnos.</p>
-            </div>
-
-            <div class="food-item">
-                <div class="food-title">Carbohidratos Complejos (Arroz, Avena y Maíz Dulce) <span class="source-tag">(Fuente: Dietary Sources and Bioactivities of Melatonin)</span></div>
-                <p>Los carbohidratos de bajo índice glucémico facilitan bioquímicamente el cruce del triptófano a través de la barrera hematoencefálica. Las mayores concentraciones se localizan específicamente en las variedades de arroz negro no glutinoso y en el arroz integral.</p>
-            </div>
-
-            <div class="food-item">
-                <div class="food-title">Tomates <span class="source-tag">(Fuente: GoodRx Health)</span></div>
-                <p>Aportan una base de melatonina combinada con altos niveles de licopeno, un potente antioxidante celular. Sus nutrientes ayudan a mitigar los procesos inflamatorios crónicos y el estrés oxidativo de los tejidos, variables que suelen fragmentar el sueño.</p>
-            </div>
-        </div>
-
-        <h2>4. Beneficios Clínicos de la Melatonina Natural</h2>
-        <p>El mantenimiento de niveles óptimos de melatonina de procedencia orgánica genera impactos positivos integrales en la homeostasis del cuerpo humano:</p>
-        <ul>
-            <li><span class="strong-term">Regulación del ciclo circadiano:</span> Optimiza de forma precisa las fases del sueño. Es altamente efectiva para sincronizar el reloj interno tras sufrir desajustes por cambios de zona horaria (<em>jet lag</em>) o turnos laborales rotativos.</li>
-            <li><span class="strong-term">Establecimiento de higiene del sueño:</span> Provee una base sólida para un patrón de descanso consistente tanto en adultos como en la población pediátrica.</li>
-            <li><span class="strong-term">Soporte en condiciones pediátricas específicas:</span> La evidencia clínica demuestra que una correcta gestión de la melatonina coadyuva de forma muy positiva en la estabilización y mejora de la calidad del descanso en niños que presentan condiciones crónicas asociadas como el asma, la dermatitis atópica y el Trastorno por Déficit de Atención e Hiperactividad (TDAH).</li>
-        </ul>
-    </section>
-
-    <script>
-        // Añadimos variables para oscilador, filtros extras y control de modo
-        let audioCtx, whiteNoise, lowPass, highPass, oscilador, gainNode, animacionFiltro;
-        let estaSonando = false;
-        let modoActual = 'rio'; // Rastrea qué sonido está activo
-
-        function updateTimer(val) {
-            document.getElementById('timer-val').innerText = val;
-        }
-
-        function configurarModo(modo, event) {
-    modoActual = modo; // Guardamos el modo seleccionado
-    
-    // Removemos la clase activa de todos los botones de audio
-    document.querySelectorAll('.audio-btn').forEach(btn => btn.classList.remove('active'));
-    
-    // Añadimos la clase activa al botón que recibió el clic de forma segura
-    if (event && event.currentTarget) {
-        event.currentTarget.classList.add('active');
-    }
-    
-    // Si ya está sonando, reinicia el flujo inmediatamente con la nueva acústica
-    if(estaSonando) {
-        detenerRio();
-        iniciarRio();
-    }
-}
-            
-           
-        function iniciarRio() {
-            if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-
-            // 1. Generador de ruido base (sirve para Río, Lluvia y Mar)
-            const bufferSize = 2 * audioCtx.sampleRate;
-            const noiseBuffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
-            const output = noiseBuffer.getChannelData(0);
-            for (let i = 0; i < bufferSize; i++) {
-                output[i] = Math.random() * 2 - 1;
-            }
-
-            whiteNoise = audioCtx.createBufferSource();
-            whiteNoise.buffer = noiseBuffer;
-            whiteNoise.loop = true;
-
-            // 2. Inicialización de Filtros
-            lowPass = audioCtx.createBiquadFilter();
-            lowPass.type = 'lowpass';
-            
-            highPass = audioCtx.createBiquadFilter();
-            highPass.type = 'highpass';
-
-            // 3. Nodo de Volumen Principal (Gain)
-            gainNode = audioCtx.createGain();
-            gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
-            gainNode.gain.linearRampToValueAtTime(0.15, audioCtx.currentTime + 2);
-
-            // ==========================================
-            // 🎛️ ARQUITECTURA DINÁMICA SEGÚN EL MODO
-            // ==========================================
-            if (modoActual === 'rio') {
-                lowPass.frequency.setValueAtTime(400, audioCtx.currentTime);
-                whiteNoise.connect(lowPass);
-                lowPass.connect(gainNode);
-                whiteNoise.start();
-
-                // Movimiento fluido del agua del río
-                animacionFiltro = setInterval(() => {
-                    const variacion = Math.sin(audioCtx.currentTime * 0.4) * 150;
-                    lowPass.frequency.setValueAtTime(450 + variacion, audioCtx.currentTime);
-                }, 100);
-
-            } else if (modoActual === 'lluvia') {
-                // Frecuencias más altas y dispersas para gotas de lluvia
-                lowPass.frequency.setValueAtTime(1300, audioCtx.currentTime);
-                highPass.frequency.setValueAtTime(400, audioCtx.currentTime);
-                
-                whiteNoise.connect(highPass);
-                highPass.connect(lowPass);
-                lowPass.connect(gainNode);
-                whiteNoise.start();
-
-                // Pequeño siseo variable de la tormenta
-                animacionFiltro = setInterval(() => {
-                    const variacion = Math.sin(audioCtx.currentTime * 1.5) * 50;
-                    lowPass.frequency.setValueAtTime(1300 + variacion, audioCtx.currentTime);
-                }, 120);
-
-            } else if (modoActual === 'oceano') {
-                // Filtro ultra bajo para simular la masa del mar profundo
-                lowPass.frequency.setValueAtTime(200, audioCtx.currentTime);
-                whiteNoise.connect(lowPass);
-                lowPass.connect(gainNode);
-                whiteNoise.start();
-
-                // Oleaje lento (ciclos largos simulando la marea)
-                animacionFiltro = setInterval(() => {
-                    const oleaje = Math.sin(audioCtx.currentTime * 0.15) * 100;
-                    lowPass.frequency.setValueAtTime(220 + oleaje, audioCtx.currentTime);
-                }, 60);
-
-            } else if (modoActual === 'delta') {
-                // Las ondas Delta reales no usan ruido, requieren tonos puros (Oscilador)
-                oscilador = audioCtx.createOscillator();
-                oscilador.type = 'sine';
-                // Tono base sub-grave de 80Hz modulado para inducir el estado
-                oscilador.frequency.setValueAtTime(80, audioCtx.currentTime);
-                
-                lowPass.frequency.setValueAtTime(120, audioCtx.currentTime);
-                oscilador.connect(lowPass);
-                lowPass.connect(gainNode);
-                oscilador.start();
-
-                // Oscilación entnergetica Delta sutil de ~2.5Hz
-                animacionFiltro = setInterval(() => {
-                    const pulsoDelta = Math.sin(audioCtx.currentTime * 2.5) * 8;
-                    oscilador.frequency.setValueAtTime(80 + pulsoDelta, audioCtx.currentTime);
-                }, 40);
-            }
-
-            gainNode.connect(audioCtx.destination);
-        }
-
-        function detenerRio() {
-            clearInterval(animacionFiltro);
-            
-            if (gainNode && audioCtx) {
-                try {
-                    gainNode.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 1);
-                } catch(e){}
-            }
-
-            // Apagado limpio de las fuentes activas
-            setTimeout(() => {
-                if (whiteNoise) { try { whiteNoise.stop(); } catch(e){} whiteNoise = null; }
-                if (oscilador) { try { oscilador.stop(); } catch(e){} oscilador = null; }
-            }, 1000);
-        }
-
-        function toggleDescanso() {
-            const btn = document.getElementById('start-btn');
-            const visual = document.getElementById('visual-element');
-
-            if (!estaSonando) {
-                iniciarRio();
-                btn.innerText = "DETENER FLUJO";
-                btn.style.backgroundColor = "#450a0a";
-                btn.style.color = "white";
-                visual.style.animationPlayState = "running";
-                estaSonando = true;
-            } else {
-                detenerRio();
-                btn.innerText = "INICIAR FLUJO";
-                btn.style.backgroundColor = "#d4af37";
-                btn.style.color = "black";
-                visual.style.animationPlayState = "paused";
-                estaSonando = false;
-            }
-        }
-    </script>
-
-    <!-- Contenedor del Traductor -->
-    <div style="text-align: center; margin: 20px 0; opacity: 0.7;">
-        <div id="google_translate_element"></div>
     </div>
 
-   <footer class="footer">
+    <p data-i18n="idn03">
+        Las frecuencias de sonido terapéuticas actúan como un guía biológico,
+        orientando las ondas cerebrales hacia estados de relajación profunda.
+        Mediante el uso de herramientas como los pulsos binaurales, los tonos
+        isocrónicos o los sonidos ambientales de la naturaleza, es posible
+        disminuir de manera controlada la actividad mental acelerada y facilitar
+        una transición armónica hacia el descanso.
+    </p>
+
+    <p data-i18n="idn04">
+        si comprendemos el sueño como un proceso de regeneracion natural,
+       el cual podemos activar en forma conciente y disciplinado
+    </p>
+
+    <p data-i18n="idn05">
+        ahora toda esta lineas son informativas y didacticas,la cual podemos
+        llevar a experimentacion en forma individual desde la comodidad de
+        nuestra casa
+    </p>
+
+    <h2 data-i18n="idn06">
+        1. Tipos de Frecuencias y Ondas Cerebrales
+    </h2>
+
+    <p data-i18n="idn07">
+        El cerebro humano opera en diferentes rangos de frecuencia según su
+        nivel de actividad. La estimulación auditiva externa permite sintonizar
+        estas ondas para propósitos terapéuticos específicos:
+    </p>
+
+</section>
+       <table>
+    <thead>
+       <tr>
+            <th data-i18n="idn08">
+                Onda / Frecuencia
+            </th>
+
+            <th data-i18n="idn09">
+                Rango de Medida
+            </th>
+
+            <th data-i18n="idn10">
+                Efecto Fisiológico y Aplicación Práctica
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>
+                <span class="strong-term" data-i18n="idn11">
+                    Ondas Delta
+                </span>
+            </td>
+
+            <td>
+                <span class="math">0.5 &rarr; 4 Hz</span>
+            </td>
+
+            <td data-i18n="idn12">
+                Representan la frecuencia ideal para el sueño profundo y reparador.
+                Escucharlas antes de dormir ayuda a conciliar el sueño con mayor
+                rapidez y reduce significativamente los despertares nocturnos
+                espontáneos.
+            </td>
+        </tr>
+
+
+
+
+
+
+
+        <tr>
+            <td>
+                <span class="strong-term" data-i18n="idn13">
+                    Ondas Theta
+                </span>
+            </td>
+
+            <td>
+                <span class="math">4 &rarr; 8 Hz</span>
+            </td>
+
+            <td data-i18n="idn14">
+                Asociadas directamente con la fase inicial del sueño ligero y la
+                etapa del sueño REM. Son excelentes herramientas para mitigar los
+                estados de ansiedad y propiciar una relajación mental profunda.
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <span class="strong-term" data-i18n="idn15">
+                    Ondas Alfa
+                </span>
+            </td>
+
+            <td>
+                <span class="math">8 &rarr; 13 Hz</span>
+            </td>
+
+            <td data-i18n="idn16">
+                Vinculadas a un estado de calma despierta (similar al estado
+                alcanzado durante la meditación). Ayudan a transicionar del
+                estrés cognitivo diario a un estado de relajación física y mental.
+            </td>
+        </tr>
+
+
+
+
+
+
+
+    </tbody>
+</table>
+               
+   <!-- Bloque 432 Hz -->
+<div class="frequency-item">
+    <div class="strong-term" data-i18n="idn17">Tono Holístico 432 Hz</div>
+    <p data-i18n="idn18">Frecuencia Base: Conocida tradicionalmente como la frecuencia de la naturaleza. Estudios sugieren que disminuye la frecuencia cardíaca y estimula un incremento en el tiempo de permanencia en las fases de sueño profundo.</p>
+</div>
+
+<!-- Bloque 174 Hz -->
+<div class="frequency-item">
+    <div class="strong-term" data-i18n="idn19">Tono Holístico 174 Hz</div>
+    <p data-i18n="idn20">Frecuencia Base: Funciona en terapias alternativas como un analgésico natural tanto físico como mental, ayudando a disipar las tensiones musculares acumuladas y a inducir bienestar general.</p>
+</div>
+
+<!-- Bloque 528 Hz -->
+<div class="frequency-item">
+    <div class="strong-term" data-i18n="idn21">Tono Holístico 528 Hz</div>
+    <p data-i18n="idn22">Frecuencia Base: Denominada la frecuencia de la transformación o reparación (asociada históricamente a la optimización celular). Promueve un entorno de relajación mental óptimo para reducir el insomnio.</p>
+</div>
+
+       <h2 data-i18n="idn23">
+    2. Estimulación de la Melatonina y Control Circadiano
+</h2>
+
+<p data-i18n="idn24">
+    La melatonina es la hormona fundamental encargada de regular el reloj biológico humano.
+    Su segregación natural está intrínsecamente ligada a la ausencia de luz.
+    Para optimizar su producción de forma orgánica, se recomienda estructurar
+    los hábitos diarios en torno a tres pilares fundamentales:
+</p>
+
+<p data-i18n="idn25">
+    todos nuestros procesos biologicos estan orquestados en forma magestuosa por esas
+    pequeñas y colosales glandulas endocrinas,las cuales con su produccion hormonal
+    regula este importante proceso
+</p>
+
+<h3 data-i18n="idn26">
+    A. Control estricto de la exposición a la luz
+</h3>
+
+<ul>
+
+    <li>
+        <span class="strong-term" data-i18n="idn27">
+            Luz natural diurna:
+        </span>
+
+        <span data-i18n="idn28">
+            Exponerse entre 5 y 10 minutos a la luz solar al aire libre inmediatamente
+            después de despertar. Esta acción suprime la melatonina matutina e indica
+            al cerebro el inicio óptimo del ciclo diario.
+        </span>
+    </li>
+
+    <li>
+        <span class="strong-term" data-i18n="idn29">
+            Restricción de luz azul:
+        </span>
+
+        <span data-i18n="idn30">
+            Apagar dispositivos emisores de luz azul (televisores, computadoras y
+            teléfonos móviles) de 1 a 2 horas antes de acostarse. La luz azul inhibe
+            de forma drástica la secreción de melatonina. En caso de uso inevitable,
+            se deben activar filtros de tono cálido.
+        </span>
+    </li>
+
+
+
+
+
+
+
+    <li>
+        <span class="strong-term" data-i18n="idn31">
+            Oscuridad nocturna total:
+        </span>
+
+        <span data-i18n="idn32">
+            Mantener el dormitorio en un estado de oscuridad absoluta. El uso de
+            cortinas opacas (blackout) previene que la contaminación lumínica externa
+            altere los receptores oculares durante la noche.
+        </span>
+    </li>
+
+</ul>
+
+       <h3 data-i18n="idn33">
+    B. Ajuste dietético estratégico
+</h3>
+
+<ul>
+
+    <li>
+        <span class="strong-term" data-i18n="idn34">
+            Precursores bioquímicos:
+        </span>
+
+        <span data-i18n="idn35">
+            Incorporar alimentos con un alto contenido de triptófano, un aminoácido
+            esencial indispensable para que el organismo sintetice serotonina y,
+            posteriormente, melatonina. Entre ellos destacan los lácteos, huevos,
+            avena, almendras, nueces y legumbres.
+        </span>
+    </li>
+
+    <li>
+        <span class="strong-term" data-i18n="idn36">
+            Fuentes alimenticias directas:
+        </span>
+
+        <span data-i18n="idn37">
+            Consumir alimentos que contienen concentraciones medibles de melatonina
+            en su propia matriz biológica, tales como el arroz integral, la avena,
+            el maíz dulce, los tomates y las cerezas ácidas.
+        </span>
+    </li>
+
+</ul>
+
+
+<h3 data-i18n="idn38">
+    C. Modificación de hábitos y entorno
+</h3>
+
+<ul>
+    <li>
+        <span class="strong-term" data-i18n="idn39">
+            Cena ligera y oportuna:
+        </span>
+        <span data-i18n="idn40">
+            Evitar ingestas copiosas o elevadas en grasas saturadas al menos 2 horas
+            antes de acostarse para asegurar que los procesos digestivos pesados no
+            interfieran con las fases iniciales del sueño.
+        </span>
+    </li>
+    <li>
+        <span class="strong-term" data-i18n="idn41">
+            Planificación del ejercicio:
+        </span>
+        <span data-i18n="idn42">
+            Limitar los entrenamientos de alta intensidad a altas horas de la noche,
+            dado que elevan la temperatura corporal central y el cortisol, retrasando
+            la conciliación del descanso.
+        </span>
+    </li>
+    <li>
+        <span class="strong-term" data-i18n="idn43">
+            Ritual de desconexión:
+        </span>
+        <span data-i18n="idn44">
+            Disminuir de manera progresiva la intensidad de las luces del hogar al
+            caer la noche y realizar actividades de baja demanda cognitiva, tales como
+            la lectura con luz tenue o ejercicios de respiración consciente orientados
+            a reducir el cortisol.
+        </span>
+    </li>
+</ul>
+
+<div class="callout-box">
+    <p>
+        <strong data-i18n="idn45">
+            Nota técnica:
+        </strong>
+        <span data-i18n="idn46">
+            De acuerdo con directrices de salud de instituciones especializadas
+            como <em>GoodRx Health</em>, la sincronización correcta de estos hábitos
+            reduce la necesidad de recurrir a suplementos exógenos y mejora la
+            arquitectura natural del sueño.
+        </span>
+    </p>
+</div>
+
+<h2 data-i18n="idn47">
+    3. Análisis Detallado de Alimentos Reguladores
+</h2>
+
+<p data-i18n="idn48">
+    A continuación se desglosan los principales elementos de la dieta que impactan
+    positivamente en la calidad del descanso, validados por fuentes científicas y
+    clínicas de referencia:
+</p>
+
+<div class="food-grid">
+    <div class="food-item">
+        <div class="food-title">
+            <span data-i18n="idn49">
+                Nueces y Frutos Secos
+            </span>
+            <span class="source-tag" data-i18n="idn50">
+                (Fuente: WebMD / Healthline)
+            </span>
+        </div>
+        <p data-i18n="idn51">
+            Destacan especialmente los pistachos y las almendras como fuentes
+            sobresalientes de melatonina natural. Adicionalmente, aportan un perfil
+            rico en antioxidantes, minerales y ácidos grasos insaturados saludables.
+            Debido a su alta densidad calórica, se aconseja su consumo en porciones
+            moderadas como refrigerio diurno.
+        </p>
+    </div>
+
+    <div class="food-item">
+        <div class="food-title">
+            <span data-i18n="idn52">
+                Plátano
+            </span>
+            <span class="source-tag" data-i18n="idn53">
+                (Fuente: Healthline)
+            </span>
+        </div>
+        <p data-i18n="idn54">
+            Además de contener dosis moderadas de la hormona, posee una combinación
+            sinérgica de magnesio y triptófano. El magnesio actúa reduciendo los niveles
+            sistémicos de cortisol (la hormona del estrés) y relajando el sistema
+            neuromuscular, mientras que el triptófano es metabolizado directamente
+            en serotonina.
+        </p>
+    </div>
+
+    <div class="food-item">
+        <div class="food-title">
+            <span data-i18n="idn55">
+                Cerezas Ácidas
+            </span>
+            <span class="source-tag" data-i18n="idn56">
+                (Fuente: WebMD)
+            </span>
+        </div>
+        <p data-i18n="idn57">
+            Es uno de los recursos naturales con mayor concentración fitoquímica de
+            melatonina. Las revisiones clínicas sugieren consumir la fruta en su estado
+            fresco o en extractos puros no endulzados, evitando jugos comerciales que
+            adicionan azúcares refinados perjudiciales para los picos glucémicos nocturnos.
+        </p>
+    </div>
+
+    <div class="food-item">
+        <div class="food-title">
+            <span data-i18n="idn58">
+                Carbohidratos Complejos (Arroz, Avena y Maíz Dulce)
+            </span>
+            <span class="source-tag" data-i18n="idn59">
+                (Fuente: Dietary Sources and Bioactivities of Melatonin)
+            </span>
+        </div>
+        <p data-i18n="idn60">
+            Los carbohidratos de bajo índice glucémico facilitan bioquímicamente el
+            cruce del triptófano a través de la barrera hematoencefálica. Las mayores
+            concentraciones se localizan específicamente en las variedades de arroz
+            negro no glutinoso y en el arroz integral.
+        </p>
+    </div>
+
+    <div class="food-item">
+        <div class="food-title">
+            <span data-i18n="idn61">
+                Tomates
+            </span>
+            <span class="source-tag" data-i18n="idn62">
+                (Fuente: GoodRx Health)
+            </span>
+        </div>
+        <p data-i18n="idn63">
+            Aportan una base de melatonina combinada con altos niveles de licopeno,
+            un potente antioxidante celular. Sus nutrientes ayudan a mitigar los
+            procesos inflamatorios crónicos y el estrés oxidativo de los tejidos,
+            variables que suelen fragmentar el sueño.
+        </p>
+    </div>
+</div>
+
+<h2 data-i18n="idn64">
+    4. Beneficios Clínicos de la Melatonina Natural
+</h2>
+
+<p data-i18n="idn65">
+    El mantenimiento de niveles óptimos de melatonina de procedencia orgánica
+    genera impactos positivos integrales en la homeostasis del cuerpo humano:
+</p>
+
+<ul>
+    <li>
+        <span class="strong-term" data-i18n="idn66">
+            Regulación del ciclo circadiano:
+        </span>
+        <span data-i18n="idn67">
+            Optimiza de forma precisa las fases del sueño. Es altamente efectiva
+            para sincronizar el reloj interno tras sufrir desajustes por cambios
+            de zona horaria (<em>jet lag</em>) o turnos laborales rotativos.
+        </span>
+    </li>
+    <li>
+        <span class="strong-term" data-i18n="idn68">
+            Establecimiento de higiene del sueño:
+        </span>
+        <span data-i18n="idn69">
+            Provee una base sólida para un patrón de descanso consistente tanto
+            en adultos como en la población pediátrica.
+        </span>
+    </li>
+    <li>
+        <span class="strong-term" data-i18n="idn70">
+            Soporte en condiciones pediátricas específicas:
+        </span>
+        <span data-i18n="idn71">
+            La evidencia clínica demuestra que una correcta gestión de la melatonina
+            coadyuva de forma muy positiva en la estabilización y mejora de la calidad
+            del descanso en niños que presentan condiciones crónicas asociadas como
+            el asma, la dermatitis atópica y el Trastorno por Déficit de Atención e
+            Hiperactividad (TDAH).
+        </span>
+    </li>
+
+
+ 
+</ul>
+
+
+
+<section class="sleep-consciousness">
+
+    <h2 data-i18n="idn72">
+        🌙 Primero, reduce el ritmo
+    </h2>
+
+    <p data-i18n="idn73">
+        Si tu mente continúa activa, no intentes obligarla a dormir.
+        Primero, reduce el ritmo.
+    </p>
+
+
+    <details>
+        <summary data-i18n="idn74">
+            🧠 ¿Qué está ocurriendo en este momento?
+        </summary>
+
+        <p data-i18n="idn75">
+            Cuando llega la noche, el cuerpo puede estar cansado mientras la
+            mente continúa activa. Preocupaciones, pensamientos repetitivos,
+            tensión emocional o simplemente un día demasiado estimulante pueden
+            dificultar la transición hacia el descanso.
+        </p>
+
+        <p data-i18n="idn76">
+            En lugar de luchar contra esos pensamientos, haz una pausa.
+            Observa tu respiración y permite que tu atención se desplace
+            suavemente hacia el cuerpo.
+        </p>
+    </details>
+
+
+    <details>
+        <summary data-i18n="idn77">
+            🫁 Respiración consciente y diafragmática
+        </summary>
+
+        <p data-i18n="idn78">
+            Coloca una mano sobre el abdomen y otra sobre el pecho. Respira
+            lentamente por la nariz y observa cómo el abdomen se expande
+            suavemente durante la inhalación.
+        </p>
+
+        <p data-i18n="idn79">
+            Después, permite que el aire salga lentamente, sin forzar la
+            exhalación, mientras el abdomen vuelve progresivamente a su
+            posición inicial.
+        </p>
+
+        <p data-i18n="idn80">
+            Continúa durante unos minutos, llevando tu atención al movimiento
+            natural de la respiración.
+        </p>
+    </details>
+
+
+    <details>
+        <summary data-i18n="idn81">
+            🌿 ¿Por qué prestar atención a la respiración?
+        </summary>
+
+        <p data-i18n="idn82">
+            La respiración lenta y consciente puede favorecer un estado de
+            relajación y participar en la regulación del sistema nervioso
+            autónomo. El nervio vago forma parte importante de las vías
+            parasimpáticas relacionadas con esta regulación.
+        </p>
+
+        <p data-i18n="idn83">
+            La intención no es forzar el sueño, sino crear un momento de calma
+            en el que cuerpo y mente puedan disminuir progresivamente su ritmo.
+        </p>
+    </details>
+
+
+    <div class="sleep-reflection">
+        <p data-i18n="idn84">
+            🌙 Haz una pausa.
+        </p>
+
+        <p data-i18n="idn85">
+            Antes de continuar, observa cómo respiras.
+            ¿Tu respiración es rápida, superficial o tranquila?
+        </p>
+
+        <p data-i18n="idn86">
+            No necesitas cambiarla inmediatamente.
+            Primero, simplemente obsérvala.
+        </p>
+    </div>
+
+
+    <div class="sleep-reflection">
+        <p data-i18n="idn87">
+            🌙 Ahora puedes elegir.
+        </p>
+
+        <p data-i18n="idn88">
+            Puedes elegir una de nuestras frecuencias sonoras.
+            Escoge la que más te agrade y permite que acompañe este momento.
+        </p>
+
+        <p data-i18n="idn89">
+            Observa tus pensamientos y déjalos pasar.
+            No necesitas perseguirlos ni luchar contra ellos.
+        </p>
+
+        <p data-i18n="idn90">
+            🫁 Simplemente concentra tu atención en tu respiración,
+            en el movimiento suave de tu abdomen y en el ritmo de cada
+            inhalación y cada exhalación.
+        </p>
+    </div>
+
+</section>
+
+
+          <script>
+    // Variables globales declaradas directamente en el script del HTML
+    let audioCtx = null;
+    let whiteNoise = null;
+    let oscilador = null;
+    let lowPass = null;
+    let highPass = null;
+    let gainNode = null;
+    let animacionFiltro = null;
+    let estaSonando = false;
+    let modoActual = 'rio'; // Cambia esto según el modo activo que manejes
+
+    function iniciarRio() {
+        // 1. Inicializar o reactivar el contexto de audio
+        if (!audioCtx) {
+            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        if (audioCtx.state === 'suspended') {
+            audioCtx.resume();
+        }
+
+        // 2. Limpieza previa para evitar cruces de audio
+        detenerRioInmediato();
+
+        // 3. Generador de ruido base
+        const bufferSize = 2 * audioCtx.sampleRate;
+        const noiseBuffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+        const output = noiseBuffer.getChannelData(0);
+        for (let i = 0; i < bufferSize; i++) {
+            output[i] = Math.random() * 2 - 1;
+        }
+
+        whiteNoise = audioCtx.createBufferSource();
+        whiteNoise.buffer = noiseBuffer;
+        whiteNoise.loop = true;
+
+        // 4. Inicialización de Filtros
+        lowPass = audioCtx.createBiquadFilter();
+        lowPass.type = 'lowpass';
+        
+        highPass = audioCtx.createBiquadFilter();
+        highPass.type = 'highpass';
+
+        // 5. Nodo de Volumen Principal (Gain) con entrada suave
+        gainNode = audioCtx.createGain();
+        gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+        gainNode.gain.linearRampToValueAtTime(0.15, audioCtx.currentTime + 2);
+
+        // ==========================================
+        // 🎛️ ARQUITECTURA DINÁMICA SEGÚN EL MODO
+        // ==========================================
+        if (modoActual === 'rio') {
+            lowPass.frequency.setValueAtTime(400, audioCtx.currentTime);
+            whiteNoise.connect(lowPass);
+            lowPass.connect(gainNode);
+            whiteNoise.start();
+
+            animacionFiltro = setInterval(() => {
+                if (!audioCtx) return;
+                const variacion = Math.sin(audioCtx.currentTime * 0.4) * 150;
+                lowPass.frequency.setValueAtTime(450 + variacion, audioCtx.currentTime);
+            }, 100);
+
+        } else if (modoActual === 'lluvia') {
+            lowPass.frequency.setValueAtTime(1300, audioCtx.currentTime);
+            highPass.frequency.setValueAtTime(400, audioCtx.currentTime);
+            
+            whiteNoise.connect(highPass);
+            highPass.connect(lowPass);
+            lowPass.connect(gainNode);
+            whiteNoise.start();
+
+            animacionFiltro = setInterval(() => {
+                if (!audioCtx) return;
+                const variacion = Math.sin(audioCtx.currentTime * 1.5) * 50;
+                lowPass.frequency.setValueAtTime(1300 + variacion, audioCtx.currentTime);
+            }, 120);
+
+        } else if (modoActual === 'oceano') {
+            lowPass.frequency.setValueAtTime(200, audioCtx.currentTime);
+            whiteNoise.connect(lowPass);
+            lowPass.connect(gainNode);
+            whiteNoise.start();
+
+            animacionFiltro = setInterval(() => {
+                if (!audioCtx) return;
+                const oleaje = Math.sin(audioCtx.currentTime * 0.15) * 100;
+                lowPass.frequency.setValueAtTime(220 + oleaje, audioCtx.currentTime);
+            }, 60);
+
+        } else if (modoActual === 'delta') {
+            oscilador = audioCtx.createOscillator();
+            oscilador.type = 'sine';
+            oscilador.frequency.setValueAtTime(80, audioCtx.currentTime);
+            
+            lowPass.frequency.setValueAtTime(120, audioCtx.currentTime);
+            oscilador.connect(lowPass);
+            lowPass.connect(gainNode);
+            oscilador.start();
+
+            animacionFiltro = setInterval(() => {
+                if (!audioCtx) return;
+                const pulsoDelta = Math.sin(audioCtx.currentTime * 2.5) * 8;
+                oscilador.frequency.setValueAtTime(80 + pulsoDelta, audioCtx.currentTime);
+            }, 40);
+        }
+
+        gainNode.connect(audioCtx.destination);
+    }
+
+    function detenerRioInmediato() {
+        clearInterval(animacionFiltro);
+        if (whiteNoise) { 
+            try { whiteNoise.stop(); } catch(e){} 
+            whiteNoise.disconnect();
+            whiteNoise = null; 
+        }
+        if (oscilador) { 
+            try { oscilador.stop(); } catch(e){} 
+            oscilador.disconnect();
+            oscilador = null; 
+        }
+    }
+
+    function detenerRio() {
+        clearInterval(animacionFiltro);
+        
+        if (gainNode && audioCtx) {
+            try {
+                gainNode.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 1);
+            } catch(e){}
+        }
+
+        setTimeout(() => {
+            detenerRioInmediato();
+        }, 1000);
+    }
+
+    function toggleDescanso() {
+        const btn = document.getElementById('start-btn');
+        const visual = document.getElementById('visual-element');
+
+        if (!estaSonando) {
+            iniciarRio();
+            btn.innerText = "DETENER FLUJO";
+            btn.style.backgroundColor = "#450a0a";
+            btn.style.color = "white";
+            if (visual) visual.style.animationPlayState = "running";
+            estaSonando = true;
+        } else {
+            detenerRio();
+            btn.innerText = "INICIAR FLUJO";
+            btn.style.backgroundColor = "#d4af37";
+            btn.style.color = "black";
+            if (visual) visual.style.animationPlayState = "paused";
+            estaSonando = false;
+        }
+    }
+</script>
+
+<script>
+
+
+    
+
+   const textosGlobales = {
+    es: {
+        menu_inicio: "Inicio",
+        menu_terapias: "Terapias ▾",
+        menu_grounding: "Grounding",
+        menu_solfeggio: "Solfeggio",
+        menu_equilibrio: "Equilibrio",
+        menu_isometricos: "isometricos",
+        menu_nutricion: "nutricion",
+        menu_semillas: "semillas",
+        menu_conexion: "conexion",
+        menu_jugos_verdes: "jugos verdes",
+        menu_betarraga: "Betarraga",
+        menu_mente_ciencia: "Mente & Ciencia ▾",
+        menu_reprogramacion: "Reprogramación",
+        menu_mecanica: "Mecánica Cuántica",
+        menu_kybalion: "Kybalión",
+        menu_universo: "universo-conciente",
+        menu_retribucion: "reciclaje",
+        menu_salud: "masa-corporal"
+    },
+    en: {
+        menu_inicio: "Home",
+        menu_terapias: "Therapies ▾",
+        menu_grounding: "Grounding",
+        menu_solfeggio: "Solfeggio",
+        menu_equilibrio: "Equilibrium",
+        menu_isometricos: "Isometrics",
+        menu_nutricion: "Nutrition",
+        menu_semillas: "Seeds",
+        menu_conexion: "Connection",
+        menu_jugos_verdes: "Green Juices",
+        menu_betarraga: "Beetroot",
+        menu_mente_ciencia: "Mind & Science ▾",
+        menu_reprogramacion: "Reprogramming",
+        menu_mecanica: "Quantum Mechanics",
+        menu_kybalion: "Kybalion",
+        menu_universo: "Conscious Universe",
+        menu_retribucion: "Recycling",
+        menu_salud: "Body Mass"
+    },
+    fr: {
+        menu_inicio: "Accueil",
+        menu_terapias: "Thérapies ▾",
+        menu_grounding: "Grounding",
+        menu_solfeggio: "Solfeggio",
+        menu_equilibrio: "Équilibre",
+        menu_isometricos: "Isométriques",
+        menu_nutricion: "Nutrition",
+        menu_semillas: "Graines",
+        menu_conexion: "Connexion",
+        menu_jugos_verdes: "Jus Verts",
+        menu_betarraga: "Betterave",
+        menu_mente_ciencia: "Esprit & Science ▾",
+        menu_reprogramacion: "Reprogrammation",
+        menu_mecanica: "Mécanique Quantique",
+        menu_kybalion: "Le Kybalion",
+        menu_universo: "Univers Conscient",
+        menu_retribucion: "Recyclage",
+        menu_salud: "Masse Corporelle"
+    },
+    it: {
+        menu_inicio: "Inizio",
+        menu_terapias: "Terapie ▾",
+        menu_grounding: "Grounding",
+        menu_solfeggio: "Solfeggio",
+        menu_equilibrio: "Equilibrio",
+        menu_isometricos: "Isometrici",
+        menu_nutricion: "Nutrizione",
+        menu_semillas: "Semi",
+        menu_conexion: "Connessione",
+        menu_jugos_verdes: "Succhi Verdi",
+        menu_betarraga: "Barbabietola",
+        menu_mente_ciencia: "Mente & Scienza ▾",
+        menu_reprogramacion: "Riprogrammazione",
+        menu_mecanica: "Meccanica Quantistica",
+        menu_kybalion: "Il Kybalion",
+        menu_universo: "Universo Cosciente",
+        menu_retribucion: "Riciclaggio",
+        menu_salud: "Massa Corporea"
+    }
+};
+
+
+const traducciones = {
+    
+    es: {
+        
+        idn01: "Optimización Natural del Sueño",
+        idn02: "Guía de Frecuencias Sonoras, Ritmos Circadianos y Nutrición Terapéutica",
+         idn03: "Las frecuencias de sonido terapéuticas actúan como un guía biológico, orientando las ondas cerebrales hacia estados de relajación profunda. Mediante el uso de herramientas como los pulsos binaurales, los tonos isocrónicos o los sonidos ambientales de la naturaleza, es posible disminuir de manera controlada la actividad mental acelerada y facilitar una transición armónica hacia el descanso.",
+        idn04: "Si comprendemos el sueño como un proceso de regeneración natural, el cual podemos activar en forma consciente y disciplinada.",
+ idn05: "Ahora todas estas líneas son informativas y didácticas, las cuales podemos llevar a experimentación en forma individual desde la comodidad de nuestra casa.",
+        idn06: "1. Tipos de Frecuencias y Ondas Cerebrales",
+        idn07: "El cerebro humano opera en diferentes rangos de frecuencia según su nivel de actividad. La estimulación auditiva externa permite sintonizar estas ondas para propósitos terapéuticos específicos:",
+idn08: "Onda / Frecuencia",
+        idn09: "Rango de Medida",
+        idn10: "Efecto Fisiológico y Aplicación Práctica",
+        idn11: "Ondas Delta",
+        idn12: "Representan la frecuencia ideal para el sueño profundo y reparador. Escucharlas antes de dormir ayuda a conciliar el sueño con mayor rapidez y reduce significativamente los despertares nocturnos espontáneos.",
+ idn13: "Ondas Theta",
+        idn14: "Asociadas directamente con la fase inicial del sueño ligero y la etapa del sueño REM. Son excelentes herramientas para mitigar los estados de ansiedad y propiciar una relajación mental profunda.",
+        idn15: "Ondas Alfa",
+        idn16: "Vinculadas a un estado de calma despierta (similar al estado alcanzado durante la meditación). Ayudan a transicionar del estrés cognitivo diario a un estado de relajación física y mental.",
+idn17: "Tono Holístico 432 Hz",
+idn18: "Frecuencia Base: Conocida tradicionalmente como la frecuencia de la naturaleza. Estudios sugieren que disminuye la frecuencia cardíaca y estimula un incremento en el tiempo de permanencia en las fases de sueño profundo.",
+idn19: "Tono Holístico 174 Hz",
+idn20: "Frecuencia Base: Funciona en terapias alternativas como un analgésico natural tanto físico como mental, ayudando a disipar las tensiones musculares acumuladas y a inducir bienestar general.",
+idn21: "Tono Holístico 528 Hz",
+idn22: "Frecuencia Base: Denominada la frecuencia de la transformación o reparación (asociada históricamente a la optimización celular). Promueve un entorno de relajación mental óptimo para reducir el insomnio.",
+idn23: "2. Estimulación de la Melatonina y Control Circadiano",
+idn24: "La melatonina es la hormona fundamental encargada de regular el reloj biológico humano. Su segregación natural está intrínsecamente ligada a la ausencia de luz. Para optimizar su producción de forma orgánica, se recomienda estructurar los hábitos diarios en torno a tres pilares fundamentales:",
+idn25: "todos nuestros procesos biologicos estan orquestados en forma magestuosa por esas pequeñas y colosales glandulas endocrinas,las cuales con su produccion hormonal regula este importante proceso",
+idn26: "A. Control estricto de la exposición a la luz",
+idn27: "Luz natural diurna:",
+idn28: "Exponerse entre 5 y 10 minutos a la luz solar al aire libre inmediatamente después de despertar. Esta acción suprime la melatonina matutina e indica al cerebro el inicio óptimo del ciclo diario.",
+idn29: "Restricción de luz azul:",
+idn30: "Apagar dispositivos emisores de luz azul (televisores, computadoras y teléfonos móviles) de 1 a 2 horas antes de acostarse. La luz azul inhibe de forma drástica la secreción de melatonina. En caso de uso inevitable, se deben activar filtros de tono cálido.",
+
+
+idn31: "Oscuridad nocturna total:",
+idn32: "Mantener el dormitorio en un estado de oscuridad absoluta. El uso de cortinas opacas (blackout) previene que la contaminación lumínica externa altere los receptores oculares durante la noche.",
+idn33: "B. Ajuste dietético estratégico",
+idn34: "Precursores bioquímicos:",
+idn35: "Incorporar alimentos con un alto contenido de triptófano, un aminoácido esencial indispensable para que el organismo sintetice serotonina y, posteriormente, melatonina. Entre ellos destacan los lácteos, huevos, avena, almendras, nueces y legumbres.",
+idn36: "Fuentes alimenticias directas:",
+idn37: "Consumir alimentos que contienen concentraciones medibles de melatonina en su propia matriz biológica, tales como el arroz integral, la avena, el maíz dulce, los tomates y las cerezas ácidas.",
+idn38: "C. Modificación de hábitos y entorno",
+idn39: "Cena ligera y oportuna:",
+idn40: "Evitar ingestas copiosas o elevadas en grasas saturadas al menos 2 horas antes de acostarse para asegurar que los procesos digestivos pesados no interfieran con las fases iniciales del sueño.",
+idn41: "Planificación del ejercicio:",
+idn42: "Limitar los entrenamientos de alta intensidad a altas horas de la noche, dado que elevan la temperatura corporal central y el cortisol, retrasando la conciliación del descanso.",
+idn43: "Ritual de desconexión:",
+idn44: "Disminuir de manera progresiva la intensidad de las luces del hogar al caer la noche y realizar actividades de baja demanda cognitiva, tales como la lectura con luz tenue o ejercicios de respiración consciente orientados a reducir el cortisol.",
+idn45: "Nota técnica:",
+idn46: "De acuerdo con directrices de salud de instituciones especializadas como GoodRx Health, la sincronización correcta de estos hábitos reduce la necesidad de recurrir a suplementos exógenos y mejora la arquitectura natural del sueño.",
+
+idn47: "3. Análisis Detallado de Alimentos Reguladores",
+idn48: "A continuación se desglosan los principales elementos de la dieta que impactan positivamente en la calidad del descanso, validados por fuentes científicas y clínicas de referencia:",
+idn49: "Nueces y Frutos Secos",
+idn50: "(Fuente: WebMD / Healthline)",
+idn51: "Destacan especialmente los pistachos y las almendras como fuentes sobresalientes de melatonina natural. Adicionalmente, aportan un perfil rico en antioxidantes, minerales y ácidos grasos insaturados saludables. Debido a su alta densidad calórica, se aconseja su consumo en porciones moderadas como refrigerio diurno.",
+idn52: "Plátano",
+idn53: "(Fuente: Healthline)",
+idn54: "Además de contener dosis moderadas de la hormona, posee una combinación sinérgica de magnesio y triptófano. El magnesio actúa reduciendo los niveles sistémicos de cortisol (la hormona del estrés) y relajando el sistema neuromuscular, mientras que el triptófano es metabolizado directamente en serotonina.",
+idn55: "Cerezas Ácidas",
+idn56: "(Fuente: WebMD)",
+idn57: "Es uno de los recursos naturales con mayor concentración fitoquímica de melatonina. Las revisiones clínicas sugieren consumir la fruta en su estado fresco o en extractos puros no endulzados, evitando jugos comerciales que adicionan azúcares refinados perjudiciales para los picos glucémicos nocturnos.",
+idn58: "Carbohidratos Complejos (Arroz, Avena y Maíz Dulce)",
+idn59: "(Fuente: Dietary Sources and Bioactivities of Melatonin)",
+idn60: "Los carbohidratos de bajo índice glucémico facilitan bioquímicamente el cruce del triptófano a través de la barrera hematoencefálica. Las mayores concentraciones se localizan específicamente en las variedades de arroz negro no glutinoso y en el arroz integral.",
+idn61: "Tomates",
+idn62: "(Fuente: GoodRx Health)",
+idn63: "Aportan una base de melatonina combinada con altos niveles de licopeno, un potente antioxidante celular. Sus nutrientes ayudan a mitigar los procesos inflamatorios crónicos y el estrés oxidativo de los tejidos, variables que suelen fragmentar el sueño.",
+idn64: "4. Beneficios Clínicos de la Melatonina Natural",
+idn65: "El mantenimiento de niveles óptimos de melatonina de procedencia orgánica genera impactos positivos integrales en la homeostasis del cuerpo humano:",
+idn66: "Regulación del ciclo circadiano:",
+idn67: "Optimiza de forma precisa las fases del sueño. Es altamente efectiva para sincronizar el reloj interno tras sufrir desajustes por cambios de zona horaria (jet lag) o turnos laborales rotativos.",
+idn68: "Establecimiento de higiene del sueño:",
+idn69: "Provee una base sólida para un patrón de descanso consistente tanto en adultos como en la población pediátrica.",
+idn70: "Soporte en condiciones pediátricas específicas:",
+idn71: "La evidencia clínica demuestra que una correcta gestión de la melatonina coadyuva de forma muy positiva en la estabilización y mejora de la calidad del descanso en niños que presentan condiciones crónicas asociadas como el asma, la dermatitis atópica y el Trastorno por Déficit de Atención e Hiperactividad (TDAH).",
+
+ idn72: "🌙 Primero, reduce el ritmo",
+        idn73: "Si tu mente continúa activa, no intentes obligarla a dormir. Primero, reduce el ritmo.",
+        idn74: "🧠 ¿Qué está ocurriendo en este momento?",
+        idn75: "Cuando llega la noche, el cuerpo puede estar cansado mientras la mente continúa activa. Preocupaciones, pensamientos repetitivos, tensión emocional o simplemente un día demasiado estimulante pueden dificultar la transición hacia el descanso.",
+        idn76: "En lugar de luchar contra esos pensamientos, haz una pausa. Observa tu respiración y permite que tu atención se desplace suavemente hacia el cuerpo.",
+        idn77: "🫁 Respiración consciente y diafragmática",
+        idn78: "Coloca una mano sobre el abdomen y otra sobre el pecho. Respira lentamente por la nariz y observa cómo el abdomen se expande suavemente durante la inhalación.",
+        idn79: "Después, permite que el aire salga lentamente, sin forzar la exhalación, mientras el abdomen vuelve progresivamente a su posición inicial.",
+        idn80: "Continúa durante unos minutos, llevando tu atención al movimiento natural de la respiración.",
+        idn81: "🌿 ¿Por qué prestar atención a la respiración?",
+        idn82: "La respiración lenta y consciente puede favorecer un estado de relajación y participar en la regulación del sistema nervioso autónomo. El nervio vago forma parte importante de las vías parasimpáticas relacionadas con esta regulación.",
+        idn83: "La intención no es forzar el sueño, sino crear un momento de calma en el que cuerpo y mente puedan disminuir progresivamente su ritmo.",
+        idn84: "🌙 Haz una pausa.",
+        idn85: "Antes de continuar, observa cómo respiras. ¿Tu respiración es rápida, superficial o tranquila?",
+        idn86: "No necesitas cambiarla inmediatamente. Primero, simplemente obsérvala.",
+        idn87: "🌙 Ahora puedes elegir.",
+        idn88: "Puedes elegir una de nuestras frecuencias sonoras. Escoge la que más te agrade y permite que acompañe este momento.",
+        idn89: "Observa tus pensamientos y déjalos pasar. No necesitas perseguirlos ni luchar contra ellos.",
+        idn90: "🫁 Simplemente concentra tu atención en tu respiración, en el movimiento suave de tu abdomen y en el ritmo de cada inhalación y cada exhalación.",
+idn91: "Explorar",
+idn92: "Inicio",
+idn93: "grounding",
+idn94: "Nutrición",
+idn95: "frecuencias solfeguio",
+idn96: "Información",
+idn97: "Quiénes Somos",
+idn98: "Contacto",
+idn99: "Política de Privacidad",
+idn100: "Términos y Condiciones",
+idn101: "Contacto",
+idn102: "Medellín, Antioquia",
+idn103: "© 2026 AAPMental. Todos los derechos reservados.",
+idn104: "Contenido elaborado por AAPMental – Bienestar Consciente."
+
+
+
+
+
+
+
+
+    },
+    en: {
+        
+        idn01: "Natural Sleep Optimization",
+        idn02: "Guide to Sound Frequencies, Circadian Rhythms, and Therapeutic Nutrition",
+ idn03: "Therapeutic sound frequencies act as a biological guide, directing brainwaves toward states of deep relaxation. Through tools such as binaural beats, isochronic tones, or ambient nature sounds, it is possible to controlledly decrease accelerated mental activity and facilitate a harmonic transition into rest.",
+        idn04: "If we understand sleep as a process of natural regeneration, which we can activate consciously and with discipline.",
+ idn05: "Now all these lines are informative and didactic, which we can take to individual experimentation from the comfort of our home.",
+        idn06: "1. Types of Frequencies and Brainwaves",
+        idn07: "The human brain operates in different frequency ranges depending on its activity level. External auditory stimulation allows tuning these waves for specific therapeutic purposes:",
+ idn08: "Wave / Frequency",
+        idn09: "Measurement Range",
+        idn10: "Physiological Effect and Practical Application",
+        idn11: "Delta Waves",
+        idn12: "They represent the ideal frequency for deep and restorative sleep. Listening to them before bedtime helps fall asleep faster and significantly reduces spontaneous nighttime awakenings.",
+idn13: "Theta Waves",
+        idn14: "Directly associated with the initial phase of light sleep and the REM sleep stage. They are excellent tools to mitigate anxiety states and promote deep mental relaxation.",
+        idn15: "Alpha Waves",
+        idn16: "Linked to a state of awake calm (similar to the state reached during meditation). They help transition from daily cognitive stress to a state of physical and mental relaxation.",
+ idn17: "Holistic Tone 432 Hz",
+idn18: "Base Frequency: Traditionally known as the frequency of nature. Studies suggest it lowers heart rate and stimulates an increase in deep sleep duration.",
+idn19: "Holistic Tone 174 Hz",
+idn20: "Base Frequency: Works in alternative therapies as a natural physical and mental pain reliever, helping to dissipate accumulated muscle tension and induce general well-being.",
+idn21: "Holistic Tone 528 Hz",
+idn22: "Base Frequency: Called the frequency of transformation or repair (historically associated with cellular optimization). Promotes an optimal mental relaxation environment to reduce insomnia.",
+idn23: "2. Melatonin Stimulation and Circadian Control",
+idn24: "Melatonin is the fundamental hormone responsible for regulating the human biological clock. Its natural segregation is intrinsically linked to the absence of light. To optimize its production organically, it is recommended to structure daily habits around three fundamental pillars:",
+idn25: "all our biological processes are majestically orchestrated by those small and colossal endocrine glands, which with their hormonal production regulate this important process",
+idn26: "A. Strict control of light exposure",
+idn27: "Natural daytime light:",
+idn28: "Expose yourself to outdoor sunlight for 5 to 10 minutes immediately after waking up. This action suppresses morning melatonin and signals the brain of the optimal start of the daily cycle.",
+idn29: "Blue light restriction:",
+idn30: "Turn off blue light emitting devices (televisions, computers, and mobile phones) 1 to 2 hours before bed. Blue light drastically inhibits melatonin secretion. In case of inevitable use, warm tone filters must be activated.",
+idn31: "Total nocturnal darkness:",
+idn32: "Keep the bedroom in a state of absolute darkness. The use of blackout curtains prevents external light pollution from altering ocular receptors during the night.",
+idn33: "B. Strategic dietary adjustment",
+idn34: "Biochemical precursors:",
+idn35: "Incorporate foods with a high content of tryptophan, an essential amino acid indispensable for the body to synthesize serotonin and, subsequently, melatonin. Among them, dairy products, eggs, oats, almonds, walnuts, and legumes stand out.",
+idn36: "Direct food sources:",
+idn37: "Consume foods that contain measurable concentrations of melatonin in their own biological matrix, such as brown rice, oats, sweet corn, tomatoes, and tart cherries.",
+idn38: "C. Modification of habits and environment",
+idn39: "Light and timely dinner:",
+idn40: "Avoid heavy or high saturated fat intakes at least 2 hours before bedtime to ensure that heavy digestive processes do not interfere with the initial stages of sleep.",
+idn41: "Exercise planning:",
+idn42: "Limit high-intensity workouts late at night, as they elevate core body temperature and cortisol, delaying the onset of rest.",
+idn43: "Disconnection ritual:",
+idn44: "Gradually decrease the intensity of home lighting at nightfall and engage in low cognitive demand activities, such as reading under dim light or conscious breathing exercises aimed at reducing cortisol.",
+
+idn45: "Technical note:",
+idn46: "According to health guidelines from specialized institutions such as GoodRx Health, the correct synchronization of these habits reduces the need for exogenous supplements and improves natural sleep architecture.",
+
+idn47: "3. Detailed Analysis of Regulating Foods",
+idn48: "Below are the main dietary elements that positively impact rest quality, validated by reference scientific and clinical sources:",
+idn49: "Nuts and Dried Fruits",
+idn50: "(Source: WebMD / Healthline)",
+idn51: "Pistachios and almonds stand out especially as outstanding sources of natural melatonin. Additionally, they provide a profile rich in antioxidants, minerals, and healthy unsaturated fatty acids. Due to their high caloric density, moderate consumption as a daytime snack is advised.",
+idn52: "Banana",
+idn53: "(Source: Healthline)",
+idn54: "In addition to containing moderate doses of the hormone, it possesses a synergistic combination of magnesium and tryptophan. Magnesium acts by reducing systemic levels of cortisol (the stress hormone) and relaxing the neuromuscular system, while tryptophan is directly metabolized into serotonin.",
+idn55: "Tart Cherries",
+idn56: "(Source: WebMD)",
+idn57: "It is one of the natural resources with the highest phytochemical concentration of melatonin. Clinical reviews suggest consuming the fruit in its fresh state or in pure unsweetened extracts, avoiding commercial juices that add refined sugars harmful to nocturnal glycemic spikes.",
+idn58: "Complex Carbohydrates (Rice, Oats, and Sweet Corn)",
+idn59: "(Source: Dietary Sources and Bioactivities of Melatonin)",
+idn60: "Low glycemic index carbohydrates biochemically facilitate the crossing of tryptophan through the blood-brain barrier. The highest concentrations are specifically located in non-glutinous black rice and brown rice varieties.",
+idn61: "Tomatoes",
+idn62: "(Source: GoodRx Health)",
+idn63: "They provide a base of melatonin combined with high levels of lycopene, a potent cellular antioxidant. Their nutrients help mitigate chronic inflammatory processes and tissue oxidative stress, variables that usually fragment sleep.",
+idn64: "4. Clinical Benefits of Natural Melatonin",
+idn65: "Maintaining optimal levels of organically sourced melatonin generates comprehensive positive impacts on the homeostasis of the human body:",
+idn66: "Circadian cycle regulation:",
+idn67: "It precisely optimizes sleep phases. It is highly effective in synchronizing the internal clock after suffering misalignments due to time zone changes (jet lag) or rotating work shifts.",
+idn68: "Sleep hygiene establishment:",
+idn69: "It provides a solid foundation for a consistent rest pattern in both adults and pediatric populations.",
+idn70: "Support in specific pediatric conditions:",
+idn71: "Clinical evidence demonstrates that proper management of melatonin positively contributes to the stabilization and improvement of rest quality in children with associated chronic conditions such as asthma, atopic dermatitis, and Attention Deficit Hyperactivity Disorder (ADHD).",
+ idn72: "🌙 First, slow down the pace",
+        idn73: "If your mind remains active, do not try to force it to sleep. First, slow down the pace.",
+        idn74: "🧠 What is happening right now?",
+        idn75: "When night falls, the body may be tired while the mind remains active. Worries, repetitive thoughts, emotional tension, or simply an overstimulating day can make the transition to rest difficult.",
+        idn76: "Instead of fighting those thoughts, take a pause. Observe your breathing and allow your attention to gently shift toward the body.",
+        idn77: "🫁 Conscious and diaphragmatic breathing",
+        idn78: "Place one hand on your abdomen and the other on your chest. Breathe slowly through your nose and watch how your abdomen gently expands during inhalation.",
+        idn79: "Then, allow the air to leave slowly, without forcing the exhalation, as your abdomen progressively returns to its initial position.",
+        idn80: "Continue for a few minutes, bringing your attention to the natural movement of breathing.",
+        idn81: "🌿 Why pay attention to breathing?",
+        idn82: "Slow and conscious breathing can promote a state of relaxation and participate in the regulation of the autonomic nervous system. The vagus nerve is an important part of the parasympathetic pathways related to this regulation.",
+        idn83: "The intention is not to force sleep, but to create a moment of calm in which body and mind can progressively slow down.",
+        idn84: "🌙 Take a pause.",
+        idn85: "Before continuing, observe how you breathe. Is your breathing fast, shallow, or calm?",
+        idn86: "You don't need to change it immediately. First, simply observe it.",
+        idn87: "🌙 Now you can choose.",
+        idn88: "You can choose one of our sound frequencies. Pick the one you like most and let it accompany this moment.",
+        idn89: "Observe your thoughts and let them pass. You don't need to chase them or fight against them.",
+        idn90: "🫁 Simply focus your attention on your breathing, on the smooth movement of your abdomen, and on the rhythm of each inhalation and exhalation.",
+
+idn91: "Explore",
+idn92: "Home",
+idn93: "grounding",
+idn94: "Nutrition",
+idn95: "solfeggio frequencies",
+idn96: "Information",
+idn97: "About Us",
+idn98: "Contact",
+idn99: "Privacy Policy",
+idn100: "Terms and Conditions",
+idn101: "Contact",
+idn102: "Medellín, Antioquia",
+idn103: "© 2026 AAPMental. All rights reserved.",
+idn104: "Content crafted by AAPMental – Conscious Well-being."
+
+
+
+
+
+
+    },
+    fr: {
+        
+        idn01: "Optimisation Naturelle du Sommeil",
+        idn02: "Guide des Fréquences Sonores, Rythmes Circadiens et Nutrition Thérapeutique",
+ idn03: "Les fréquences sonores thérapeutiques agissent comme un guide biologique, orientant les ondes cérébrales vers des états de relaxation profonde. Grâce à l'utilisation d'outils tels que les battements binauraux, les tons isochroniques ou les sons ambiants de la nature, il est possible de diminuer de manière contrôlée l'activité mentale accélérée et de faciliter une transition harmonieuse vers le repos.",
+        idn04: "Si nous comprenons le sommeil comme un processus de régénération naturelle, que nous pouvons activer de manière consciente et disciplinée.",
+ idn05: "Maintenant, toutes ces lignes sont informatives et didactiques, que nous pouvons mener à l'expérimentation individuelle dans le confort de notre maison.",
+        idn06: "1. Types de Fréquences et Ondes Cérébrales",
+        idn07: "Le cerveau humain fonctionne dans différentes plages de fréquences selon son niveau d'activité. La stimulation auditive externe permet de syntoniser ces ondes à des fins thérapeutiques spécifiques :",
+ idn08: "Onde / Fréquence",
+        idn09: "Plage de Mesure",
+        idn10: "Effet Physiologique et Application Pratique",
+        idn11: "Ondes Delta",
+        idn12: "Elles représentent la fréquence idéale pour un sommeil profond et réparateur. Les écouter avant de dormir aide à s'endormir plus rapidement et réduit considérablement les réveils nocturnes spontanés.",
+ idn13: "Ondes Theta",
+        idn14: "Associées directement à la phase initiale du sommeil léger et à l'étape du sommeil REM. Ce sont d'excellents outils pour atténuer les états d'anxiété et favoriser une relaxation mentale profonde.",
+        idn15: "Ondes Alpha",
+        idn16: "Liées à un état de calme éveillé (similaire à l'état atteint pendant la méditation). Elles aident à passer du stress cognitif quotidien à un état de relaxation physique et mentale.",
+idn17: "Ton Holistique 432 Hz",
+idn18: "Fréquence de Base : Traditionnellement connue comme la fréquence de la nature. Des études suggèrent qu'elle diminue la fréquence cardiaque et stimule une augmentation du temps de sommeil profond.",
+idn19: "Ton Holistique 174 Hz",
+idn20: "Fréquence de Base : Fonctionne dans les thérapies alternatives comme un analgésique naturel tant physique que mental, aidant à dissiper les tensions musculaires accumulées et à induire un bien-être général.",
+idn21: "Ton Holistique 528 Hz",
+idn22: "Fréquence de Base : Appelée la fréquence de transformation ou de réparation (historiquement associée à l'optimisation cellulaire). Favorise un environnement de relaxation mentale optimal pour réduire l'insomnie.",
+idn23: "2. Stimulation de la Mélatonine et Contrôle Circadien",
+idn24: "La mélatonine est l'hormone fondamentale chargée de réguler l'horloge biologique humaine. Sa ségrégation naturelle est intrinsèquement liée à l'absence de lumière. Pour optimiser sa production de manière organique, il est recommandé de structurer les habitudes quotidiennes autour de trois piliers fondamentaux :",
+idn25: "tous nos processus biologiques sont orchestrés de manière majestueuse par ces petites et colossales glandes endocrines, qui avec leur production hormonale régulent cet important processus",
+idn26: "A. Contrôle strict de l'exposition à la lumière",
+idn27: "Lumière naturelle diurne :",
+idn28: "S'exposer entre 5 et 10 minutes à la lumière du soleil en plein air immédiatement après le réveil. Cette action supprime la mélatonine matinale et indique au cerveau le début optimal du cycle quotidien.",
+idn29: "Restriction de la lumière bleue :",
+idn30: "Éteindre les appareils émettant de la lumière bleue (téléviseurs, ordinateurs et téléphones portables) 1 à 2 heures avant de se coucher. La lumière bleue inhibe radicalement la sécrétion de mélatonine. En cas d'utilisation inévitable, des filtres à ton chaud doivent être activés.",
+idn31: "Obscurité nocturne totale :",
+idn32: "Maintenir la chambre dans un état d'obscurité absolue. L'utilisation de rideaux occultants (blackout) empêche la pollution lumineuse externe d'altérer les récepteurs oculaires pendant la nuit.",
+idn33: "B. Ajustement diététique stratégique",
+idn34: "Précurseurs biochimiques :",
+idn35: "Incorporer des aliments riches en tryptophane, un acide aminé essentiel indispensable pour que l'organisme synthétise la sérotonine, puis la mélatonine. Parmi eux, les produits laitiers, les œufs, l'avoine, les amandes, les noix et les légumineuses se distinguent.",
+idn36: "Sources alimentaires directes :",
+idn37: "Consommer des aliments qui contiennent des concentrations mesurables de mélatonine dans leur propre matrice biologique, tels que le riz complet, l'avoine, le maïs doux, les tomates et les cerises acides.",
+idn38: "C. Modification des habitudes et de l'environnement",
+idn39: "Dîner léger et opportun :",
+idn40: "Éviter les repas copieux ou riches en graisses saturées au moins 2 heures avant le coucher pour s'assurer que les processus digestifs lourds n'interfèrent pas avec les phases initiales du sommeil.",
+idn41: "Planification de l'exercice :",
+idn42: "Limiter les entraînements de haute intensité tard le soir, car ils élèvent la température corporelle centrale et le cortisol, retardant l'endormissement.",
+idn43: "Rituel de déconnexion :",
+idn44: "Diminuer progressivement l'intensité de l'éclairage domestique à la tombée de la nuit et pratiquer des activités à faible demande cognitive, telles que la lecture sous une lumière tamisée ou des exercices de respiration consciente visant à réduire le cortisol.",
+idn45: "Note technique :",
+idn46: "Selon les directives de santé d'institutions spécialisées telles que GoodRx Health, la synchronisation correcte de ces habitudes réduit le besoin de recourir à des suppléments exogènes et améliore l'architecture naturelle du sommeil.",
+
+idn47: "3. Analyse Détaillée des Aliments Régulateurs",
+idn48: "Ci-dessous sont détaillés les principaux éléments de l'alimentation qui ont un impact positif sur la qualité du repos, validés par des sources scientifiques et cliniques de référence :",
+idn49: "Noix et Fruits Secs",
+idn50: "(Source : WebMD / Healthline)",
+idn51: "Les pistaches et les amandes se distinguent particulièrement comme d'excellentes sources de mélatonine naturelle. De plus, elles apportent un profil riche en antioxydants, en minéraux et en acides gras insaturés sains. En raison de leur haute densité calorique, il est conseillé de les consommer en portions modérées comme collation diurne.",
+idn52: "Banane",
+idn53: "(Source : Healthline)",
+idn54: "En plus de contenir des doses modérées de l'hormone, elle possède une combinaison synergique de magnésium et de tryptophane. Le magnésium agit en réduisant les niveaux systémiques de cortisol (l'hormone du stress) et en relaxant le système neuromusculaire, tandis que le tryptophane est directement métabolisé en sérotonine.",
+idn55: "Cerises Acides",
+idn56: "(Source : WebMD)",
+idn57: "C'est l'une des ressources naturelles ayant la plus forte concentration phytochimique en mélatonine. Les revues cliniques suggèrent de consommer le fruit à l'état frais ou en extraits purs non sucrés, en évitant les jus commerciaux qui ajoutent des sucres raffinés nocifs pour les pics glycémiques nocturnes.",
+idn58: "Glucides Complexes (Riz, Avoine et Maïs Doux)",
+idn59: "(Source : Dietary Sources and Bioactivities of Melatonin)",
+idn60: "Les glucides à faible indice glycémique facilitent biochimiquement le passage du tryptophane à travers la barrière hémato-encéphalique. Les concentrations les plus élevées se trouvent spécifiquement dans les variétés de riz noir non gluant et de riz complet.",
+idn61: "Tomates",
+idn62: "(Source : GoodRx Health)",
+idn63: "Elles fournissent une base de mélatonine combinée à des niveaux élevés de lycopène, un puissant antioxydant cellulaire. Leurs nutriments aident à atténuer les processus inflammatoires chroniques et le stress oxydatif des tissus, des variables qui fragmentent souvent le sommeil.",
+
+idn64: "4. Avantages Cliniques de la Mélatonine Naturelle",
+idn65: "Le maintien de niveaux optimaux de mélatonine d'origine organique génère des impacts positifs globaux sur l'homéostasie du corps humain :",
+idn66: "Régulation du cycle circadien :",
+idn67: "Optimise avec précision les phases du sommeil. Elle est très efficace pour synchroniser l'horloge interne après des décalages dus aux changements de fuseau horaire (jet lag) ou à des horaires de travail alternés.",
+idn68: "Établissement de l'hygiène du sommeil :",
+idn69: "Fournit une base solide pour un schéma de repos cohérent tant chez les adultes que dans la population pédiatrique.",
+idn70: "Soutien dans des conditions pédiatriques spécifiques :",
+idn71: "Les preuves cliniques démontrent qu'une bonne gestion de la mélatonine contribue très positivement à la stabilisation et à l'amélioration de la qualité du repos chez les enfants présentant des affections chroniques associées telles que l'asthme, la dermatite atopique et le trouble déficitaire de l'attention avec ou sans hyperactivité (TDAH).",
+ idn72: "🌙 D'abord, ralentissez le rythme",
+        idn73: "Si votre esprit reste actif, n'essayez pas de le forcer à dormir. D'abord, ralentissez le rythme.",
+        idn74: "🧠 Que se passe-t-il en ce moment ?",
+        idn75: "La nuit venue, le corps peut être fatigué tandis que l'esprit reste actif. Les soucis, les pensées répétitives, la tension émotionnelle ou simplement une journée trop stimulante peuvent rendre difficile la transition vers le repos.",
+        idn76: "Au lieu de lutter contre ces pensées, faites une pause. Observez votre respiration et laissez votre attention se déplacer doucement vers le corps.",
+        idn77: "🫁 Respiration consciente et diaphragmatique",
+        idn78: "Placez une main sur l'abdomen et l'autre sur la poitrine. Respirez lentement par le nez et observez comment l'abdomen se dilate doucement pendant l'inspiration.",
+        idn79: "Ensuite, laissez l'air sortir lentement, sans forcer l'expiration, tandis que l'abdomen reprend progressivement sa position initiale.",
+        idn80: "Continuez pendant quelques minutes, en portant votre attention sur le mouvement naturel de la respiration.",
+        idn81: "🌿 Pourquoi prêter attention à la respiration ?",
+        idn82: "Une respiration lente et consciente peut favoriser un état de relaxation et participer à la régulation du système nerveux autonome. Le nerf vagues fait partie intégrante des voies parasympathiques liées à cette régulation.",
+        idn83: "L'intention n'est pas de forcer le sommeil, mais de créer un moment de calme où le corps et l'esprit peuvent ralentir progressivement.",
+        idn84: "🌙 Faites une pause.",
+        idn85: "Avant de continuer, observez comment vous respirez. Votre respiration est-elle rapide, superficielle ou calme ?",
+        idn86: "Vous n'avez pas besoin de la changer immédiatement. D'abord, observez-la simplement.",
+        idn87: "🌙 Maintenant, vous pouvez choisir.",
+        idn88: "Vous pouvez choisir l'une de nos fréquences sonores. Choisissez celle qui vous plaît le plus et laissez-la accompagner ce moment.",
+        idn89: "Observez vos pensées et laissez-les passer. Vous n'avez pas besoin de les poursuivre ni de lutter contre elles.",
+        idn90: "🫁 Concentrez simplement votre attention sur votre respiration, sur le mouvement doux de votre abdomen et sur le rythme de chaque inspiration et de chaque expiration.",
+
+idn91: "Explorer",
+idn92: "Accueil",
+idn93: "grounding",
+idn94: "Nutrition",
+idn95: "fréquences solfeggio",
+idn96: "Information",
+idn97: "Qui Sommes-Nous",
+idn98: "Contact",
+idn99: "Politique de Confidentialité",
+idn100: "Termes et Conditions",
+idn101: "Contact",
+idn102: "Medellín, Antioquia",
+idn103: "© 2026 AAPMental. Tous droits réservés.",
+idn104: "Contenu élaboré par AAPMental – Bien-être Conscient."
+
+
+    },
+    it: {
+        
+        idn01: "Ottimizzazione Naturale del Sonno",
+        idn02: "Guida alle Frequenze Sonore, Ritmi Circadiani e Nutrizione Terapeutica",
+idn03: "Le frequenze sonore terapeutiche agiscono come una guida biologica, orientando le onde cerebrali verso stati di profondo rilassamento. Attraverso l'uso di strumenti come i battiti binaurali, i toni isocronici o i suoni ambientali della natura, è possibile diminuire in modo controllato l'attività mentale accelerata e facilitare una transizione armonica verso il riposo.",
+        idn04: "Se comprendiamo il sonno come un processo di rigenerazione naturale, che possiamo attivare in modo consapevole e disciplinato.",
+ idn05: "Ora tutte queste linee sono informative e didattiche, che possiamo portare alla sperimentazione individuale nel comfort di casa nostra.",
+        idn06: "1. Tipi di Frequenze e Onde Cerebrali",
+        idn07: "Il cervello umano opera in diverse gamme di frequenza a seconda del suo livello di attività. La stimolazione acustica esterna consente di sintonizzare queste onde per specifici scopi terapeutici:",
+idn08: "Onda / Frequenza",
+        idn09: "Intervallo di Misura",
+        idn10: "Effetto Fisiologico e Applicazione Pratica",
+        idn11: "Onde Delta",
+        idn12: "Rappresentano la frequenza ideale per un sonno profondo e ristoratore. Ascoltarle prima di dormire aiuta ad addormentarsi più rapidamente e riduce significativamente i risvegli notturni spontanei.",
+idn13: "Onde Theta",
+        idn14: "Associate direttamente alla fase iniziale del sonno leggero e alla fase del sonno REM. Sono eccellenti strumenti per mitigare gli stati di ansia e favorire un profondo rilassamento mentale.",
+        idn15: "Onde Alfa",
+        idn16: "Collegate a uno stato di calma vigile (simile allo stato raggiunto durante la meditazione). Aiutano a passare dallo stress cognitivo quotidiano a uno stato di rilassamento fisico e mentale.",
+ idn17: "Tono Olistico 432 Hz",
+idn18: "Frequenza Base: Tradizionalmente nota come la frequenza della natura. Gli studi suggeriscono che riduce la frequenza cardiaca e stimola un aumento del tempo di sonno profondo.",
+idn19: "Tono Olistico 174 Hz",
+idn20: "Frequenza Base: Funziona nelle terapie alternative come antidolorifico naturale sia fisico che mentale, aiutando a dissipare le tensioni muscolari accumulate e a indurre benessere generale.",
+idn21: "Tono Olistico 528 Hz",
+idn22: "Frequenza Base: Denominata la frequenza della trasformazione o riparazione (storicamente associata all'ottimizzazione cellulare). Promuove un ambiente di rilassamento mentale ottimale per ridurre l'insonnia.",
+idn23: "2. Stimolazione della Melatonina e Controllo Circadiano",
+idn24: "La melatonina è l'ormone fondamentale responsabile della regolazione dell'orologio biologico umano. La sua segregazione naturale è intrinsecamente legata all'assenza di luce. Per ottimizzare la sua produzione in modo organico, si consiglia di strutturare le abitudini quotidiane attorno a tre pilastri fondamentali:",
+idn25: "tutti i nostri processi biologici sono orchestrati in modo maestoso da quelle piccole e colossali ghiandole endocrine, che con la loro produzione ormonale regolano questo importante processo",
+idn26: "A. Controllo rigoroso dell'esposizione alla luce",
+idn27: "Luce naturale diurna:",
+idn28: "Esporsi alla luce solare all'aperto per 5-10 minuti immediatamente dopo il risveglio. Questa azione sopprime la melatonina mattutina e indica al cervello l'inizio ottimale del ciclo giornaliero.",
+idn29: "Restrizione della luce blu:",
+idn30: "Spegnere i dispositivi emettitori di luce blu (televisori, computer e telefoni cellulari) da 1 a 2 ore prima di coricarsi. La luce blu inibisce drasticamente la secrezione di melatonina. In caso di uso inevitabile, è necessario attivare filtri a toni caldi.",
+idn31: "Oscurità notturna totale:",
+idn32: "Mantenere la camera da letto in uno stato di buio assoluto. L'uso di tende oscuranti (blackout) impedisce all'inquinamento luminoso esterno di alterare i recettori oculari durante la notte.",
+idn33: "B. Adeguamento dietetico strategico",
+idn34: "Precursori biochimici:",
+idn35: "Incorporare alimenti ad alto contenuto di triptofano, un amminoacido essenziale indispensabile affinché l'organismo sintetizzi serotonina e, successivamente, melatonina. Tra questi spiccano latticini, uova, avena, mandorle, noci e legumi.",
+idn36: "Fonti alimentari dirette:",
+idn37: "Consumare alimenti che contengono concentrazioni misurabili di melatonina nella propria matrice biologica, come riso integrale, avena, mais dolce, pomodori e ciliegie aspre.",
+idn38: "C. Modifica delle abitudini e dell'ambiente",
+idn39: "Cena leggera e tempestiva:",
+idn40: "Evitare pasti abbondanti o ricchi di grassi saturi almeno 2 ore prima di coricarsi per garantire che i pesanti processi digestivi non interferiscano con le fasi iniziali del sonno.",
+idn41: "Pianificazione dell'esercizio:",
+idn42: "Limitare gli allenamenti ad alta intensità a tarda notte, poiché elevano la temperatura corporea centrale e il cortisolo, ritardando l'addormentamento.",
+idn43: "Rituale di disconnessione:",
+idn44: "Diminuire progressivamente l'intensità delle luci domestiche al calar della notte e svolgere attività a bassa richiesta cognitiva, come la lettura con luce soffusa o esercizi di respirazione consapevole volti a ridurre il cortisolo.",
+idn45: "Nota tecnica:",
+idn46: "Secondo le linee guida sanitarie di istituzioni specializzate come GoodRx Health, la corretta sincronizzazione di queste abitudini riduce la necessità di ricorrere a integratori esogeni e migliora l'architettura naturale del sonno.",
+idn47: "3. Analisi Dettagliata degli Alimenti Regolatori",
+idn48: "Di seguito vengono analizzati i principali elementi della dieta che influiscono positivamente sulla qualità del riposo, convalidati da fonti scientifiche e cliniche di riferimento:",
+idn49: "Noci e Frutta Secca",
+idn50: "(Fonte: WebMD / Healthline)",
+idn51: "Pistacchi e mandorle si distinguono in particolare come eccellenti fonti di melatonina naturale. Inoltre, offrono un profilo ricco di antiossidanti, minerali e acidi grassi insaturi sani. Data la loro elevata densità calorica, se ne consiglia il consumo in porzioni moderate come spuntino diurno.",
+idn52: "Banana",
+idn53: "(Fonte: Healthline)",
+idn54: "Oltre a contenere dosi moderate dell'ormone, possiede una combinazione sinergica di magnesio e triptofano. Il magnesio agisce riducendo i livelli sistemici di cortisolo (l'ormone dello stress) e rilassando il sistema neuromuscolare, mentre il triptofano viene metabolizzato direttamente in serotonina.",
+idn55: "Ciliegie Aspre",
+idn56: "(Fonte: WebMD)",
+idn57: "È una delle risorse naturali con la maggiore concentrazione fitochimica di melatonina. Le revisioni cliniche suggeriscono di consumare il frutto allo stato fresco o in estratti puri non zuccherati, evitando i succhi commerciali che aggiungono zuccheri raffinati dannosi per i picchi glicemici notturni.",
+idn58: "Carboidrati Complessi (Riso, Avena e Mais Dolce)",
+idn59: "(Fonte: Dietary Sources and Bioactivities of Melatonin)",
+idn60: "I carboidrati a basso indice glicemico facilitano biochimicamente il passaggio del triptofano attraverso la barriera emato-encefalica. Le concentrazioni più elevate si trovano specificamente nelle varietà di riso nero non glutinoso e riso integrale.",
+idn61: "Pomodori",
+idn62: "(Fonte: GoodRx Health)",
+idn63: "Forniscono una base di melatonina combinata con alti livelli di licopene, un potente antiossidante cellulare. I loro nutrienti aiutano ad attenuare i processi infiammatori cronici e lo stress ossidativo dei tessuti, variabili che solitamente frammentano il sonno.",
+idn64: "4. Benefici Clinici della Melatonina Naturale",
+idn65: "Il mantenimento di livelli ottimali di melatonina di origine organica genera impatti positivi complessivi sull'omeostasi del corpo umano:",
+idn66: "Regolazione del ciclo circadiano:",
+idn67: "Ottimizza con precisione le fasi del sonno. È altamente efficace nel sincronizzare l'orologio interno dopo aver subito disallineamenti dovuti a cambiamenti di fuso orario (jet lag) o turni di lavoro rotativi.",
+idn68: "Stabilizzazione dell'igiene del sonno:",
+idn69: "Fornisce una solida base per un modello di riposo coerente sia negli adulti che nella popolazione pediatrica.",
+idn70: "Supporto in condizioni pediatriche specifiche:",
+idn71: "Le evidenze cliniche dimostrano che una corretta gestione della melatonina contribuisce in modo molto positivo alla stabilizzazione e al miglioramento della qualità del riposo nei bambini che presentano condizioni croniche associate come asma, dermatite atopica e disturbo da deficit di attenzione e iperattività (ADHD).",
+ idn72: "🌙 Per prima cosa, rallenta il ritmo",
+        idn73: "Se la tua mente è ancora attiva, non cercare di costringerla a dormire. Per prima cosa, rallenta il ritmo.",
+        idn74: "🧠 Cosa sta succedendo in questo momento?",
+        idn75: "Quando arriva la notte, il corpo può essere stanco mentre la mente rimane attiva. Preoccupazioni, pensieri ripetitivi, tensione emotiva o semplicemente una giornata troppo stimolante possono rendere difficile la transizione verso il riposo.",
+        idn76: "Invece di lottare contro questi pensieri, fai una pausa. Osserva il tuo respiro e permetti alla tua attenzione di spostarsi dolcemente verso il corpo.",
+        idn77: "🫁 Respirazione consapevole e diaframmatica",
+        idn78: "Posiziona una mano sull'addome e l'altra sul petto. Respira lentamente dal naso e osserva come l'addome si espande dolcemente durante l'inspirazione.",
+        idn79: "Dopodiché, lascia che l'aria esca lentamente, senza forzare l'espirazione, mentre l'addome torna progressivamente alla sua posizione iniziale.",
+        idn80: "Continua per qualche minuto, portando la tua attenzione sul movimento naturale della respirazione.",
+        idn81: "🌿 Perché prestare attenzione alla respirazione?",
+        idn82: "La respirazione lenta e consapevole può favorire uno stato di rilassamento e partecipare alla regolazione del sistema nervoso autonomo. Il nervo vago è una parte importante delle vie parasimpatiche collegate a questa regolazione.",
+        idn83: "L'intenzione non è forzare il sonno, ma creare un momento di calma in cui corpo e mente possano diminuire progressivamente il loro ritmo.",
+        idn84: "🌙 Fai una pausa.",
+        idn85: "Prima di continuare, osserva come respiri. Il tuo respiro è veloce, superficiale o tranquillo?",
+        idn86: "Non hai bisogno di cambiarlo immediatamente. Per prima cosa, osservalo semplicemente.",
+        idn87: "🌙 Ora puoi scegliere.",
+        idn88: "Puoi scegliere una delle nostre frequenze sonore. Scegli quella che più ti piace e lascia che accompagni questo momento.",
+        idn89: "Osserva i tuoi pensieri e lasciali andare. Non hai bisogno di inseguirli o lottare contro di essi.",
+        idn90: "🫁 Concentra semplicemente la tua attenzione sul tuo respiro, sul movimento morbido del tuo addome e sul ritmo di ogni inspirazione ed espirazione.",
+
+
+idn91: "Esplora",
+idn92: "Home",
+idn93: "grounding",
+idn94: "Nutrizione",
+idn95: "frequenze solfeggio",
+idn96: "Informazioni",
+idn97: "Chi Siamo",
+idn98: "Contatto",
+idn99: "Informativa sulla Privacy",
+idn100: "Termini e Condizioni",
+idn101: "Contatto",
+idn102: "Medellín, Antioquia",
+idn103: "© 2026 AAPMental. Tutti i diritti riservati.",
+idn104: "Contenuto elaborato da AAPMental – Benessere Consapevole."
+
+
+
+
+
+
+
+    }
+};
+
+
+// ===============================
+// CARGAR IDIOMA AL ABRIR LA PÁGINA
+// ===============================
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+    const idiomaNavegador = navigator.language.slice(0,2);
+
+    const idiomasPermitidos = ["es","en","fr","it"];
+
+    const idioma =
+    localStorage.getItem("idioma") ||
+    (idiomasPermitidos.includes(idiomaNavegador) ? idiomaNavegador : "es");
+
+    localStorage.setItem("idioma", idioma);
+
+    // Cambiar el selector al idioma actual
+    const selector = document.getElementById("idioma-nav");
+    if(selector){
+        selector.value = idioma;
+    }
+
+    // Traducir elementos de la página (buscando en textosGlobales o traducciones)
+    document.querySelectorAll("[data-i18n]").forEach(el=>{
+
+        const clave = el.dataset.i18n;
+
+        // Revisa primero en textosGlobales, y si no está, busca en traducciones
+        if(typeof textosGlobales !== "undefined" && textosGlobales[idioma] && textosGlobales[idioma][clave]){
+            el.textContent = textosGlobales[idioma][clave];
+        } else if(typeof traducciones !== "undefined" && traducciones[idioma] && traducciones[idioma][clave]){
+            el.textContent = traducciones[idioma][clave];
+        }
+
+    });
+
+});
+
+
+// ===============================
+// CAMBIAR IDIOMA DESDE EL SELECT
+// ===============================
+
+function cambiarIdioma(idioma){
+
+    localStorage.setItem("idioma", idioma);
+
+    location.reload();
+
+}
+</script>
+
+
+
+
+
+ <footer class="footer">
     <div class="footer-container">
         
         <!-- Columna 1: Explorar -->
         <div class="footer-col">
-            <h3>Explorar</h3>
+            <h3 data-i18n="idn91">Explorar</h3>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="grounding.html">grounding</a></li>
-                <li><a href="nutricion.html">Nutrición</a></li>
-                <li><a href="solfeguio.html">frecuencias solfeguio</a></li>
-                
+                <li><a href="index.html" data-i18n="idn92">Inicio</a></li>
+                <li><a href="grounding.html" data-i18n="idn93">grounding</a></li>
+                <li><a href="nutricion.html" data-i18n="idn94">Nutrición</a></li>
+                <li><a href="solfeguio.html" data-i18n="idn95">frecuencias solfeguio</a></li>
             </ul>
-        </div> <!-- Cierre Columna 1 -->
+        </div>
 
         <!-- Columna 2: Información -->
         <div class="footer-col">
-            <h3>Información</h3>
+            <h3 data-i18n="idn96">Información</h3>
             <ul>
-                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="privacidad.html">Política de Privacidad</a></li>
-                <li><a href="terminos.html">Términos y Condiciones</a></li>
+                <li><a href="quienes-somos.html" data-i18n="idn97">Quiénes Somos</a></li>
+                <li><a href="contacto.html" data-i18n="idn98">Contacto</a></li>
+                <li><a href="privacidad.html" data-i18n="idn99">Política de Privacidad</a></li>
+                <li><a href="terminos.html" data-i18n="idn100">Términos y Condiciones</a></li>
             </ul>
-        </div> <!-- Cierre Columna 2 -->
+        </div>
 
         <!-- Columna 3: Contacto -->
         <div class="footer-col">
-            <h3>Contacto</h3>
+            <h3 data-i18n="idn101">Contacto</h3>
             <p><i class="fas fa-envelope"></i> info@aapmental.com</p>
-            <p><i class="fas fa-map-marker-alt"></i> Medellín, Antioquia</p>
-        </div> <!-- Cierre Columna 3 -->
+            <p><i class="fas fa-map-marker-alt"></i> <span data-i18n="idn102">Medellín, Antioquia</span></p>
+        </div>
 
-    </div> <!-- ¡Cierre correcto del footer-container! -->
+    </div>
 
     <!-- Barra Inferior de Copyright -->
     <div class="footer-bottom">
-        <p>&copy; 2026 AAPMental. Todos los derechos reservados.</p>
-        <small>Contenido elaborado por AAPMental – Bienestar Consciente.</small>
+        <p><span data-i18n="idn103">&copy; 2026 AAPMental. Todos los derechos reservados.</span></p>
+        <small data-i18n="idn104">Contenido elaborado por AAPMental – Bienestar Consciente.</small>
     </div>
 </footer>
 </body>
