@@ -333,6 +333,26 @@ body.bg-dark{
     font-size: 0.85rem;
 }
 
+/* 1. Estilo para el section contenedor */
+section.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+/* 2. Estilo para los contenedores dentro del grid */
+section.video-grid .video-wrapper {
+  width: 100%;
+}
+
+/* 3. Estilo para los videos correspondientes */
+section.video-grid .video-wrapper video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ==========================================
    RESPONSIVO PROPIO DEL FOOTER (MÓVILES Y TABLETS)
 ========================================== */
