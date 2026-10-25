@@ -14,13 +14,43 @@ body {
     padding: 20px;
 }
 
-header {
-    text-align: center;
-    padding: 40px 20px;
-    background: var(--verde-primario);
-    color: white;
-    border-radius: 15px;
-    margin-bottom: 30px;
+/* Contenedor principal que divide la portada en dos */
+.hero-media-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide el espacio exactamente 50% y 50% */
+    width: 100%;
+    align-items: center;
+    gap: 20px; /* Espacio opcional entre la imagen y el video */
+}
+
+/* Estilo para la imagen dentro de su caja */
+.hero-imagen {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la imagen se deforme */
+    display: block;
+}
+
+/* Estilo para el video dentro de su caja */
+.hero-video {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que el video cubra su espacio estéticamente sin deformarse */
+    display: block;
+}
+    }
 }
 
 .jugo-card {
