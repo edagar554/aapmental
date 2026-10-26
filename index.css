@@ -507,28 +507,65 @@ EFECTO NAVBAR
     box-shadow:var(--sombra-navbar);
 
 }
-/*=========================================
-PORTADA
-=========================================*/
+/* --- Sección Portada Dividida --- */
+.portada {
+    width: 100%;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+}
 
-.portada{
+.contenedor-dividido {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    min-height:100vh;
+/* Estilo para cada columna (50% de ancho aproximadamente) */
+.portada-columna {
+    flex: 1;
+    width: 100%;
+}
 
-    display:flex;
+/* Ajustes de Imagen */
+.portada-imagen-wrapper img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 1rem 0;
+}
 
-    align-items:center;
+/* Estilos para la Columna de Video */
+.video-container {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    background-color: #000;
+}
 
-    justify-content:center;
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
 
-    position:relative;
+/* --- Responsive Adaptativo para Móviles y Tablets --- */
+@media (max-width: 768px) {
+    .contenedor-dividido {
+        flex-direction: column; /* Pasa de 2 columnas a 1 sola apilada */
+        gap: 1.5rem;
+    }
 
-    z-index:1;
-
-    overflow:hidden;
-
-    padding:150px 30px 80px;
-
+    .portada-imagen-wrapper img {
+        margin: 1rem auto; /* Centra la imagen en pantallas pequeñas */
+    }
 }
 
 
